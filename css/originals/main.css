@@ -4,8 +4,6 @@
   --bg: #fff;     /* Background */
   --ft: #222;  /* Font */
   --tag: #333;  /* Tag Font */
-
-  --w-mobile: 640px;
 }
 
 html.dark {
