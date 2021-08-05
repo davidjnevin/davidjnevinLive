@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#262d33">
+  <title>
+    
+    David J Nevin - Emoji Support
+    
+  </title>
+  
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@700&family=EB+Garamond:ital,wght@0,400;0,700;1,500&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Merriweather:wght@900&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="https://unpkg.com/normalize.css">
+  
+  <link rel="stylesheet" href="/style.css">
+  <script src="/script.js"></script>
+</head>
+<script>
+  try {
+    if (!('theme' in localStorage)) {
+      localStorage.theme = window.matchMedia('(prefer-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+    document.querySelector('html').classList.add(localStorage.theme);
+  } catch (e) {
+    console.error(e);
+  }
+</script>
+<body>
+  <div class="container">
+    
+    <header>
+  <h1 class="row gap-1">
+    <div id="theme-switcher" class="btn lg-1"></div><a href="/">
+    David J Nevin</a>
+  </h1>
+  
+  <hr>
+</header>
+    
+    
+<main>
+	
+	<div class="sm-1 mtb-1">
+		Posted at &mdash; Jul 18, 2021
+		
+	</div>
+	<p>Guide to emoji usage in Hugo</p>
+	<article class="md">
+		<p>Emoji can be enabled in a Hugo project in a number of ways.</p>
+<p>The <a href="https://gohugo.io/functions/emojify/"><code>emojify</code></a> function can be called directly in templates or <a href="https://gohugo.io/templates/shortcode-templates/#inline-shortcodes">Inline Shortcodes</a>.</p>
+<p>To enable emoji globally, set <code>enableEmoji</code> to <code>true</code> in your site&rsquo;s <a href="https://gohugo.io/getting-started/configuration/">configuration</a> and then you can type emoji shorthand codes directly in content files; e.g.</p>
+<!-- raw HTML omitted -->
+<p>The <a href="http://www.emoji-cheat-sheet.com/">Emoji cheat sheet</a> is a useful reference for emoji shorthand codes.</p>
+<hr>
+<p><strong>N.B.</strong> The above steps enable Unicode Standard emoji characters and sequences in Hugo, however the rendering of these glyphs depends on the browser and the platform. To style the emoji you can either use a third party emoji font or a font stack; e.g.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">.emoji {
+  font-family: Apple Color Emoji, Segoe UI Emoji, NotoColorEmoji, Segoe UI Symbol, Android Emoji, EmojiSymbols;
+}</code></pre></div>
+	</article>
+</main>
+	
+
+	
+
+	
+
+
+    <footer class="row row-mob al-c-mob col-rev-mob sm-2-mob  jc-bt mtb-2">
+  <p>
+     |
+    
+  </p>
+  <p class="row gap-0_5">
+    
+  </p>
+</footer>
+    
+  </div>
+</body>
+</html>

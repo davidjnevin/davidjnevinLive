@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>syntax on David J Nevin</title>
+    <link>https://www.davidjnevin.com/categories/syntax/</link>
+    <description>Recent content in syntax on David J Nevin</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 18 Jul 2021 10:52:59 +0800</lastBuildDate><atom:link href="https://www.davidjnevin.com/categories/syntax/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Markdown Syntax Guide</title>
+      <link>https://www.davidjnevin.com/markdown-syntax/</link>
+      <pubDate>Sun, 18 Jul 2021 10:52:59 +0800</pubDate>
+      
+      <guid>https://www.davidjnevin.com/markdown-syntax/</guid>
+      <description>&lt;p&gt;This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
