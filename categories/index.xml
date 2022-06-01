@@ -6,34 +6,6 @@
     <description>Recent content in Categories on David J Nevin</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>© 2022 David J. Nevin</copyright>
-    <lastBuildDate>Sun, 18 Jul 2021 10:52:59 +0800</lastBuildDate><atom:link href="https://www.davidjnevin.com/categories/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>emoji</title>
-      <link>https://www.davidjnevin.com/categories/emoji/</link>
-      <pubDate>Sun, 18 Jul 2021 10:52:59 +0800</pubDate>
-      
-      <guid>https://www.davidjnevin.com/categories/emoji/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>syntax</title>
-      <link>https://www.davidjnevin.com/categories/syntax/</link>
-      <pubDate>Sun, 18 Jul 2021 10:52:59 +0800</pubDate>
-      
-      <guid>https://www.davidjnevin.com/categories/syntax/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>themes</title>
-      <link>https://www.davidjnevin.com/categories/themes/</link>
-      <pubDate>Sun, 18 Jul 2021 10:52:59 +0800</pubDate>
-      
-      <guid>https://www.davidjnevin.com/categories/themes/</guid>
-      <description></description>
-    </item>
-    
+    <copyright>© 2022 David J. Nevin</copyright><atom:link href="https://www.davidjnevin.com/categories/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
