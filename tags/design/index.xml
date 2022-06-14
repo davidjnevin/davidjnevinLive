@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Design on David J Nevin</title>
+    <link>https://www.davidjnevin.com/tags/design/</link>
+    <description>Recent content in Design on David J Nevin</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>© 2022 David J. Nevin</copyright>
+    <lastBuildDate>Wed, 15 Jun 2022 00:25:06 +0200</lastBuildDate><atom:link href="https://www.davidjnevin.com/tags/design/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo_section_theme</title>
+      <link>https://www.davidjnevin.com/code/hugo_section_theme/</link>
+      <pubDate>Wed, 15 Jun 2022 00:25:06 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/hugo_section_theme/</guid>
+      <description>Hugo Section: A different look and feel. In order to set a different look and feel for a Hugo section, create a folder in the current theme layout folder with the same name as the section. In my case that&amp;rsquo;s code.
+The theme I&amp;rsquo;m interested in using and adapting is Book but that requires the extened Hugo version. I don&amp;rsquo;t know what that will do to my main site and SASS setup with gulp, so I&amp;rsquo;m steering clear of that for now.</description>
+    </item>
+    
+  </channel>
+</rss>

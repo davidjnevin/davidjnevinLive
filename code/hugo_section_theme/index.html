@@ -3,15 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta property="og:title" content="Tags" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://www.davidjnevin.com/tags/" />
+  <meta property="og:title" content="Hugo_section_theme" />
+<meta property="og:description" content="Setting a distinct Hugo theme for a subsection of a site" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.davidjnevin.com/code/hugo_section_theme/" /><meta property="article:section" content="code" />
+<meta property="article:published_time" content="2022-06-15T00:25:06&#43;02:00" />
+<meta property="article:modified_time" content="2022-06-15T00:25:06&#43;02:00" />
 
 
   <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Tags"/>
-<meta name="twitter:description" content=""/>
+<meta name="twitter:title" content="Hugo_section_theme"/>
+<meta name="twitter:description" content="Setting a distinct Hugo theme for a subsection of a site"/>
 
   
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-VGVQ6SM9N7"></script>
@@ -28,7 +30,7 @@ if (!doNotTrack) {
   
   <title>
     
-    David J Nevin - Tags
+    David J Nevin - Hugo_section_theme
     
   </title>
   
@@ -72,58 +74,26 @@ if (!doNotTrack) {
   
 </header>
   
-  
+   
 <main>
-  <h2>Tags</h2>
-  <nav class="col">
   
+  <div class="sm-1 mtb-1">
+    Posted at &mdash; Jun 15, 2022 
+  </div>
   
-    <a class="row as-s mb-1" href="/tags/.net">
-      .net
-      <span class="tag-pm ml-1">1</span>
-    </a>
-  
-    <a class="row as-s mb-1" href="/tags/blazor">
-      blazor
-      <span class="tag-pm ml-1">1</span>
-    </a>
-  
-    <a class="row as-s mb-1" href="/tags/c#">
-      c#
-      <span class="tag-pm ml-1">1</span>
-    </a>
-  
-    <a class="row as-s mb-1" href="/tags/critiquewheel">
-      critiquewheel
-      <span class="tag-pm ml-1">1</span>
-    </a>
-  
-    <a class="row as-s mb-1" href="/tags/css">
-      css
-      <span class="tag-pm ml-1">1</span>
-    </a>
-  
-    <a class="row as-s mb-1" href="/tags/design">
-      design
-      <span class="tag-pm ml-1">1</span>
-    </a>
-  
-    <a class="row as-s mb-1" href="/tags/first">
-      first
-      <span class="tag-pm ml-1">1</span>
-    </a>
-  
-    <a class="row as-s mb-1" href="/tags/hugo">
-      hugo
-      <span class="tag-pm ml-1">1</span>
-    </a>
-  
-    <a class="row as-s mb-1" href="/tags/razorpages">
-      razorpages
-      <span class="tag-pm ml-1">1</span>
-    </a>
-  
-  </nav>
+
+  <article class="md">
+     
+
+    <h1>Hugo_section_theme</h1>
+     <nav id="TableOfContents"></nav>  <h1 id="hugo-section-a-different-look-and-feel">Hugo Section: A different look and feel.</h1>
+<p>In order to set a different look and feel for a Hugo section, create a folder in the current theme <code>layout</code> folder with the same name as the section. In my case that&rsquo;s <code>code</code>.</p>
+<p>The theme I&rsquo;m interested in using and adapting is <a href="https://themes.gohugo.io/themes/hugo-book/">Book</a> but that requires the extened <code>Hugo</code> version. I don&rsquo;t know what that will do to my main site and SASS setup with gulp, so I&rsquo;m steering clear of that for now.</p>
+<p>Instead, I&rsquo;m going to try out <a href="https://themes.gohugo.io/themes/cupper-hugo-theme/">Cupper</a> using the git command <code>git submodule add https://github.com/zwbetz-gh/cupper-hugo-theme.git themes/cupper-hugo-theme</code> from the root directory of my site. Once it&rsquo;s in place I&rsquo;ll try move it over to my section folder and see what happens.</p>
+<p>Before I do, I check my git status and make sure I&rsquo;ve pushed and pulled everything. That way I&rsquo;ll have a rollback point.</p>
+<p>Let&rsquo;s see what happens.</p>
+
+  </article>
 </main>
 
 

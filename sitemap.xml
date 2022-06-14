@@ -2,6 +2,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://www.davidjnevin.com/categories/</loc>
+    <lastmod>2022-06-15T00:25:06+02:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/code/</loc>
+    <lastmod>2022-06-15T00:25:06+02:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/tags/design/</loc>
+    <lastmod>2022-06-15T00:25:06+02:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/categories/hugo/</loc>
+    <lastmod>2022-06-15T00:25:06+02:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/code/hugo_section_theme/</loc>
+    <lastmod>2022-06-15T00:25:06+02:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/tags/</loc>
+    <lastmod>2022-06-15T00:25:06+02:00</lastmod>
+  </url><url>
     <loc>https://www.davidjnevin.com/tags/.net/</loc>
     <lastmod>2022-06-14T21:43:57+02:00</lastmod>
   </url><url>
@@ -11,13 +29,7 @@
     <loc>https://www.davidjnevin.com/tags/c#/</loc>
     <lastmod>2022-06-14T21:43:57+02:00</lastmod>
   </url><url>
-    <loc>https://www.davidjnevin.com/categories/</loc>
-    <lastmod>2022-06-14T21:43:57+02:00</lastmod>
-  </url><url>
     <loc>https://www.davidjnevin.com/categories/code/</loc>
-    <lastmod>2022-06-14T21:43:57+02:00</lastmod>
-  </url><url>
-    <loc>https://www.davidjnevin.com/code/</loc>
     <lastmod>2022-06-14T21:43:57+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/code/critique_wheel_csharp/</loc>
@@ -36,9 +48,6 @@
     <lastmod>2022-06-14T21:43:57+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/tags/razorpages/</loc>
-    <lastmod>2022-06-14T21:43:57+02:00</lastmod>
-  </url><url>
-    <loc>https://www.davidjnevin.com/tags/</loc>
     <lastmod>2022-06-14T21:43:57+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/tags/first/</loc>
