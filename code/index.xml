@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Codes on David J Nevin</title>
+    <link>https://www.davidjnevin.com/code/</link>
+    <description>Recent content in Codes on David J Nevin</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>© 2022 David J. Nevin</copyright>
+    <lastBuildDate>Tue, 14 Jun 2022 21:43:57 +0200</lastBuildDate><atom:link href="https://www.davidjnevin.com/code/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Critique Wheel C#</title>
+      <link>https://www.davidjnevin.com/code/critique_wheel_csharp/</link>
+      <pubDate>Tue, 14 Jun 2022 21:43:57 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/critique_wheel_csharp/</guid>
+      <description>Raison d&amp;rsquo;être o el porque I built and deployed the Beta version of the critique wheel site in response to a need for the fiction writers in my writing groups to get faster and more actionable critiques on their short stories.
+From my Github records, I added the .gitignore on 15 May 2021, so I consider that the start date of the project.
+Razor Pages, MySQL The wheel is build on .</description>
+    </item>
+    
+    <item>
+      <title>First Commit</title>
+      <link>https://www.davidjnevin.com/code/first_commit/</link>
+      <pubDate>Tue, 14 Jun 2022 21:01:56 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/first_commit/</guid>
+      <description>Start here As of today, I&amp;rsquo;ve been re-experimenting with programming for 13 months.
+This is the first blog post on the topic of my coding experiences. I&amp;rsquo;ve no doubt this layout will develop and mature as I add content.
+I hope it serves as a useful resource for anyone that stumbles across it.
+This Site This site itself is built using Hugo, a static site generator written in Go. I don&amp;rsquo;t know Go and Hugo doesn&amp;rsquo;t require any deep programming skills.</description>
+    </item>
+    
+  </channel>
+</rss>
