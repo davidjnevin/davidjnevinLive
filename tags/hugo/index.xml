@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>CSS on David J Nevin</title>
-    <link>https://www.davidjnevin.com/tags/css/</link>
-    <description>Recent content in CSS on David J Nevin</description>
+    <title>Hugo on David J Nevin</title>
+    <link>https://www.davidjnevin.com/tags/hugo/</link>
+    <description>Recent content in Hugo on David J Nevin</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© 2022 David J. Nevin</copyright>
-    <lastBuildDate>Tue, 14 Jun 2022 21:43:57 +0200</lastBuildDate><atom:link href="https://www.davidjnevin.com/tags/css/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 14 Jun 2022 21:43:57 +0200</lastBuildDate><atom:link href="https://www.davidjnevin.com/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Critique Wheel C#</title>
       <link>https://www.davidjnevin.com/code/critique_wheel_csharp/</link>

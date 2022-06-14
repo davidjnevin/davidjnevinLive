@@ -2,6 +2,21 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://www.davidjnevin.com/tags/.net/</loc>
+    <lastmod>2022-06-14T21:43:57+02:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/tags/blazor/</loc>
+    <lastmod>2022-06-14T21:43:57+02:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/tags/c#/</loc>
+    <lastmod>2022-06-14T21:43:57+02:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/categories/</loc>
+    <lastmod>2022-06-14T21:43:57+02:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/categories/code/</loc>
+    <lastmod>2022-06-14T21:43:57+02:00</lastmod>
+  </url><url>
     <loc>https://www.davidjnevin.com/code/</loc>
     <lastmod>2022-06-14T21:43:57+02:00</lastmod>
   </url><url>
@@ -11,8 +26,23 @@
     <loc>https://www.davidjnevin.com/tags/critiquewheel/</loc>
     <lastmod>2022-06-14T21:43:57+02:00</lastmod>
   </url><url>
+    <loc>https://www.davidjnevin.com/tags/css/</loc>
+    <lastmod>2022-06-14T21:43:57+02:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/tags/hugo/</loc>
+    <lastmod>2022-06-14T21:43:57+02:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/categories/projects/</loc>
+    <lastmod>2022-06-14T21:43:57+02:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/tags/razorpages/</loc>
+    <lastmod>2022-06-14T21:43:57+02:00</lastmod>
+  </url><url>
     <loc>https://www.davidjnevin.com/tags/</loc>
     <lastmod>2022-06-14T21:43:57+02:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/tags/first/</loc>
+    <lastmod>2022-06-14T21:01:56+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/code/first_commit/</loc>
     <lastmod>2022-06-14T21:01:56+02:00</lastmod>
@@ -49,8 +79,6 @@
   </url><url>
     <loc>https://www.davidjnevin.com/</loc>
     <lastmod>2021-08-05T21:57:27+02:00</lastmod>
-  </url><url>
-    <loc>https://www.davidjnevin.com/categories/</loc>
   </url><url>
     <loc>https://www.davidjnevin.com/series/</loc>
   </url>
