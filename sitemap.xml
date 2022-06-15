@@ -5,9 +5,6 @@
     <loc>https://www.davidjnevin.com/categories/</loc>
     <lastmod>2022-06-15T02:16:41+02:00</lastmod>
   </url><url>
-    <loc>https://www.davidjnevin.com/code/</loc>
-    <lastmod>2022-06-15T02:16:41+02:00</lastmod>
-  </url><url>
     <loc>https://www.davidjnevin.com/tags/design/</loc>
     <lastmod>2022-06-15T02:16:41+02:00</lastmod>
   </url><url>
@@ -15,6 +12,12 @@
     <lastmod>2022-06-15T02:16:41+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/code/hugo_section_theme_002/</loc>
+    <lastmod>2022-06-15T02:16:41+02:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/series/hugo-styling/</loc>
+    <lastmod>2022-06-15T02:16:41+02:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/series/</loc>
     <lastmod>2022-06-15T02:16:41+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/tags/</loc>
@@ -89,9 +92,10 @@
     <loc>https://www.davidjnevin.com/critique/</loc>
     <lastmod>2021-08-06T01:41:16+02:00</lastmod>
   </url><url>
-    <loc>https://www.davidjnevin.com/</loc>
+    <loc>https://www.davidjnevin.com/code/</loc>
     <lastmod>2021-08-05T21:57:27+02:00</lastmod>
   </url><url>
-    <loc>https://www.davidjnevin.com/series/</loc>
+    <loc>https://www.davidjnevin.com/</loc>
+    <lastmod>2021-08-05T21:57:27+02:00</lastmod>
   </url>
 </urlset>
