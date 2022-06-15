@@ -6,6 +6,16 @@
     <description>Recent content in Series on David J Nevin</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>© 2021 David J. Nevin</copyright><atom:link href="https://www.davidjnevin.com/series/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>© 2022 David J. Nevin</copyright>
+    <lastBuildDate>Wed, 15 Jun 2022 22:03:26 +0200</lastBuildDate><atom:link href="https://www.davidjnevin.com/series/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo Styling</title>
+      <link>https://www.davidjnevin.com/series/hugo-styling/</link>
+      <pubDate>Wed, 15 Jun 2022 22:03:26 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/series/hugo-styling/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Code on David J Nevin</title>
+    <link>https://www.davidjnevin.com/code/</link>
+    <description>Recent content in Code on David J Nevin</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>© 2022 David J. Nevin</copyright>
+    <lastBuildDate>Thu, 05 Aug 2021 21:57:27 +0200</lastBuildDate><atom:link href="https://www.davidjnevin.com/code/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo Section Theme 3</title>
+      <link>https://www.davidjnevin.com/code/hugo_section_theme_003/</link>
+      <pubDate>Wed, 15 Jun 2022 22:03:26 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/hugo_section_theme_003/</guid>
+      <description>Okay so that&amp;rsquo;s better. A simpler approach worked. I got playing with a copy of my primary *.html pages in the theme layout folder. I followed the advice to create a subfolder with the same name as my section.
+I copied in my files and then altered them there. Also I added a _index.md to my section folder in the content folder.
+These tweaks allowed me to alter the site title, adding a link to the section homepage as an additional text in the original title.</description>
+    </item>
+    
+    <item>
+      <title>Hugo Section Theme 2 (didn&#39;t work)</title>
+      <link>https://www.davidjnevin.com/code/hugo_section_theme_002/</link>
+      <pubDate>Wed, 15 Jun 2022 02:16:41 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/hugo_section_theme_002/</guid>
+      <description>Question: If I just copy the template? What happens if I just copy the single.html into the layout/code folder?
+This is what happens, which in hindsight makes sense.
+I copied over the partial in question and plonked it into the same sub-folder. That didn&amp;rsquo;t work.
+I tried copying over the partials, editing the references in the template but without knowing what I&amp;rsquo;m doing I don&amp;rsquo;t know ifI&amp;rsquo;m getting closer or not to a solution or just digging a hole.</description>
+    </item>
+    
+    <item>
+      <title>Hugo Section Theme (didn&#39;t work)</title>
+      <link>https://www.davidjnevin.com/code/hugo_section_theme/</link>
+      <pubDate>Wed, 15 Jun 2022 00:25:06 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/hugo_section_theme/</guid>
+      <description>Hugo Section: A different look and feel. I though that in order to set a different look and feel for a Hugo section, I&amp;rsquo;d create a folder in the current theme layout folder with the same name as the section. In my case that&amp;rsquo;s code.
+The theme I&amp;rsquo;m interested in using and adapting is Book or Geekdoc but both require the extened Hugo version. I don&amp;rsquo;t know what that will do to my main site and SASS setup with gulp, so I&amp;rsquo;m steering clear of that for now.</description>
+    </item>
+    
+    <item>
+      <title>Critique Wheel C#</title>
+      <link>https://www.davidjnevin.com/code/critique_wheel_csharp/</link>
+      <pubDate>Tue, 14 Jun 2022 21:43:57 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/critique_wheel_csharp/</guid>
+      <description>Raison d&amp;rsquo;être o el porque I built and deployed the Beta version of the critique wheel site in response to a need for the fiction writers in my writing groups to get faster and more actionable critiques on their short stories.
+From my Github records, I added the .gitignore on 15 May 2021, so I consider that the start date of the project.
+Razor Pages, MySQL The wheel is build on .</description>
+    </item>
+    
+    <item>
+      <title>First Commit</title>
+      <link>https://www.davidjnevin.com/code/first_commit/</link>
+      <pubDate>Tue, 14 Jun 2022 21:01:56 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/first_commit/</guid>
+      <description>Start here As of today, I&amp;rsquo;ve been re-experimenting with programming for 13 months.
+This is the first blog post on the topic of my coding experiences. I&amp;rsquo;ve no doubt this layout will develop and mature as I add content.
+I hope it serves as a useful resource for anyone that stumbles across it.
+This Site This site itself is built using Hugo, a static site generator written in Go. I don&amp;rsquo;t know Go and Hugo doesn&amp;rsquo;t require any deep programming skills.</description>
+    </item>
+    
+  </channel>
+</rss>

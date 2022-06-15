@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>RazorPages on David J Nevin</title>
+    <link>https://www.davidjnevin.com/tags/razorpages/</link>
+    <description>Recent content in RazorPages on David J Nevin</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>© 2022 David J. Nevin</copyright>
+    <lastBuildDate>Tue, 14 Jun 2022 21:43:57 +0200</lastBuildDate><atom:link href="https://www.davidjnevin.com/tags/razorpages/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Critique Wheel C#</title>
+      <link>https://www.davidjnevin.com/code/critique_wheel_csharp/</link>
+      <pubDate>Tue, 14 Jun 2022 21:43:57 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/critique_wheel_csharp/</guid>
+      <description>Raison d&amp;rsquo;être o el porque I built and deployed the Beta version of the critique wheel site in response to a need for the fiction writers in my writing groups to get faster and more actionable critiques on their short stories.
+From my Github records, I added the .gitignore on 15 May 2021, so I consider that the start date of the project.
+Razor Pages, MySQL The wheel is build on .</description>
+    </item>
+    
+  </channel>
+</rss>
