@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta property="og:title" content="Hugo_section_theme" />
+  <meta property="og:title" content="Hugo Section Theme" />
 <meta property="og:description" content="Setting a distinct Hugo theme for a subsection of a site" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.davidjnevin.com/code/hugo_section_theme/" /><meta property="article:section" content="code" />
-<meta property="article:published_time" content="2022-06-15T00:25:06&#43;02:00" />
-<meta property="article:modified_time" content="2022-06-15T00:25:06&#43;02:00" />
+<meta property="article:published_time" content="2022-06-15T00:25:06+02:00" />
+<meta property="article:modified_time" content="2022-06-15T00:25:06+02:00" />
 
 
   <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Hugo_section_theme"/>
+<meta name="twitter:title" content="Hugo Section Theme"/>
 <meta name="twitter:description" content="Setting a distinct Hugo theme for a subsection of a site"/>
 
   
@@ -30,7 +30,7 @@ if (!doNotTrack) {
   
   <title>
     
-    David J Nevin - Hugo_section_theme
+    David J Nevin - Hugo Section Theme
     
   </title>
   
@@ -85,13 +85,61 @@ if (!doNotTrack) {
   <article class="md">
      
 
-    <h1>Hugo_section_theme</h1>
-     <nav id="TableOfContents"></nav>  <h1 id="hugo-section-a-different-look-and-feel">Hugo Section: A different look and feel.</h1>
+    <h1>Hugo Section Theme</h1>
+     <nav id="TableOfContents">
+  <ul>
+    <li><a href="#hugo-section-a-different-look-and-feel">Hugo Section: A different look and feel.</a></li>
+    <li><a href="#rabbit-hole-warning">Rabbit Hole Warning</a></li>
+    <li><a href="#images-insertion-in-hugo">Images insertion in Hugo</a></li>
+    <li><a href="#user-and-writer-friendly-theme">User and Writer Friendly Theme</a></li>
+  </ul>
+</nav>  <h2 id="hugo-section-a-different-look-and-feel">Hugo Section: A different look and feel.</h2>
 <p>In order to set a different look and feel for a Hugo section, create a folder in the current theme <code>layout</code> folder with the same name as the section. In my case that&rsquo;s <code>code</code>.</p>
-<p>The theme I&rsquo;m interested in using and adapting is <a href="https://themes.gohugo.io/themes/hugo-book/">Book</a> but that requires the extened <code>Hugo</code> version. I don&rsquo;t know what that will do to my main site and SASS setup with gulp, so I&rsquo;m steering clear of that for now.</p>
-<p>Instead, I&rsquo;m going to try out <a href="https://themes.gohugo.io/themes/cupper-hugo-theme/">Cupper</a> using the git command <code>git submodule add https://github.com/zwbetz-gh/cupper-hugo-theme.git themes/cupper-hugo-theme</code> from the root directory of my site. Once it&rsquo;s in place I&rsquo;ll try move it over to my section folder and see what happens.</p>
+<p>The theme I&rsquo;m interested in using and adapting is <a href="https://themes.gohugo.io/themes/hugo-book/">Book</a> or <a href="https://themes.gohugo.io/themes/hugo-geekdoc/">Geekdoc</a> but both require the extened <code>Hugo</code> version. I don&rsquo;t know what that will do to my main site and SASS setup with gulp, so I&rsquo;m steering clear of that for now.</p>
+<p>Instead, I&rsquo;m going to try out <a href="https://themes.gohugo.io/themes/cupper-hugo-theme/">Cupper</a> using the git command from the root directory of my site. Once it&rsquo;s in place I&rsquo;ll try move it over to my section folder and see what happens.</p>
 <p>Before I do, I check my git status and make sure I&rsquo;ve pushed and pulled everything. That way I&rsquo;ll have a rollback point.</p>
 <p>Let&rsquo;s see what happens.</p>
+<pre><code>&gt; Nope didn't like that.
+</code></pre>
+<h2 id="rabbit-hole-warning">Rabbit Hole Warning</h2>
+<p>I saw a few themes I liked, and decided to try upgrade my <code>Hugo</code> version, and my <code>Go</code> version. Rabbit hole.</p>
+<p>So I discovered that my <code>homebrew</code> was outdated. I hadn&rsquo;t updated in a while and not since I upgraded the OS to <code>Monterey</code>.</p>
+<p>I tried updating <code>mac ports</code>. Nope. Then <code>brew</code>, tired <code>brew doctor</code> and saw instructions to upgrade <code>xcode</code>. That&rsquo;s still happening.</p>
+<h2 id="images-insertion-in-hugo">Images insertion in Hugo</h2>
+<p>30 mins later&hellip;</p>
+<p>Gave me time to edit the screen shot in <a href="https://www.gimp.org/" title="For a brief moment it should 162 hours remaining. It was not a good brief moment.">Gimp</a></p>
+<p><img src="/images/xcode-install-2022-6-15.png" alt="Xcode upgrade" title="That was more involved."></p>
+<p>Needed to look up how to do that with alt text.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">!<span class="o">[</span>Xcode upgrade<span class="o">](</span>/images/xcode-install-2022-6-15.png <span class="s2">&#34;That was more involved.&#34;</span><span class="o">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>A future task will be to write some <code>CSS</code> to work on blockquote. That&rsquo;ll come after the theme decisions. Function first.</p>
+<pre><code>&gt; Don't believe in the estimated time of downloads.
+</code></pre>
+<p>One minute and 42 seconds left. The tension rises as the time runs out, and then stops and then increases.</p>
+<p><img src="/images/repetition-2022-06-15.png" alt="Xcode downloaded" title="It's the repetition that worries me. me. me."></p>
+<p>Not sure I should be running updates from the terminal and from the system preferences panes at the same time. Fingers crossed the Apple techs taught of this mayhem when testing.</p>
+<h2 id="user-and-writer-friendly-theme">User and Writer Friendly Theme</h2>
+<p>I looked for a theme that I feel would reflect a little the idea of this blog and also give me reign to play wth it a little if I needed to. But right now, the goal is to get a nice clean, user and writer friendly theme up and running in this section.</p>
+<p>This one is great. <a href="https://themes.gohugo.io/themes/hugo-whisper-theme/" title="Whisper Hugo Theme">Whisper</a> but it requires <code>Hugo Pipelines</code>.</p>
+<p>No. Wait.</p>
+<p>This is the one. <a href="https://www.wangchucheng.com/en/docs/hugo-eureka/getting-started/#install-with-git-submodules">Eureka</a>. I installed using git submodules.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git submodule add https://github.com/wangchucheng/hugo-eureka.git themes/eureka
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Now the commits are getting hairy.</p>
+<p>Downloaded no problems. The theme is now siting in my themes folder, but that&rsquo;s not where I want it. I&rsquo;m going to do a dirty copy and past of the single.html and see what happens.</p>
+<p><a href="/code/hugo_section_theme_002/">continued</a></p>
 
   </article>
 </main>
