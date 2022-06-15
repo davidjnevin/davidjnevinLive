@@ -7,13 +7,85 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© 2022 David J. Nevin</copyright>
-    <lastBuildDate>Tue, 14 Jun 2022 21:43:57 +0200</lastBuildDate><atom:link href="https://www.davidjnevin.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 15 Jun 2022 02:16:41 +0200</lastBuildDate><atom:link href="https://www.davidjnevin.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Design</title>
+      <link>https://www.davidjnevin.com/tags/design/</link>
+      <pubDate>Wed, 15 Jun 2022 02:16:41 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/design/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>.Net</title>
+      <link>https://www.davidjnevin.com/tags/.net/</link>
+      <pubDate>Tue, 14 Jun 2022 21:43:57 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/.net/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Blazor</title>
+      <link>https://www.davidjnevin.com/tags/blazor/</link>
+      <pubDate>Tue, 14 Jun 2022 21:43:57 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/blazor/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>C#</title>
+      <link>https://www.davidjnevin.com/tags/c#/</link>
+      <pubDate>Tue, 14 Jun 2022 21:43:57 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/c#/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>critiquewheel</title>
       <link>https://www.davidjnevin.com/tags/critiquewheel/</link>
       <pubDate>Tue, 14 Jun 2022 21:43:57 +0200</pubDate>
       
       <guid>https://www.davidjnevin.com/tags/critiquewheel/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>CSS</title>
+      <link>https://www.davidjnevin.com/tags/css/</link>
+      <pubDate>Tue, 14 Jun 2022 21:43:57 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/css/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hugo</title>
+      <link>https://www.davidjnevin.com/tags/hugo/</link>
+      <pubDate>Tue, 14 Jun 2022 21:43:57 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/hugo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>RazorPages</title>
+      <link>https://www.davidjnevin.com/tags/razorpages/</link>
+      <pubDate>Tue, 14 Jun 2022 21:43:57 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/razorpages/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>First</title>
+      <link>https://www.davidjnevin.com/tags/first/</link>
+      <pubDate>Tue, 14 Jun 2022 21:01:56 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/first/</guid>
       <description></description>
     </item>
     
