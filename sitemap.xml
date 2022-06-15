@@ -3,6 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://www.davidjnevin.com/categories/</loc>
+<<<<<<< HEAD
     <lastmod>2022-06-15T22:03:26+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/tags/design/</loc>
@@ -24,6 +25,26 @@
     <lastmod>2022-06-15T22:03:26+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/code/hugo_section_theme_002/</loc>
+=======
+    <lastmod>2022-06-15T02:16:41+02:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/tags/design/</loc>
+    <lastmod>2022-06-15T02:16:41+02:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/categories/hugo/</loc>
+    <lastmod>2022-06-15T02:16:41+02:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/code/hugo_section_theme_002/</loc>
+    <lastmod>2022-06-15T02:16:41+02:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/series/hugo-styling/</loc>
+    <lastmod>2022-06-15T02:16:41+02:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/series/</loc>
+    <lastmod>2022-06-15T02:16:41+02:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/tags/</loc>
+>>>>>>> ace586a5e772b80d7c3d94d49c4833ac2b73de60
     <lastmod>2022-06-15T02:16:41+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/code/hugo_section_theme/</loc>

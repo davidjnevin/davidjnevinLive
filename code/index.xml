@@ -9,6 +9,7 @@
     <copyright>© 2022 David J. Nevin</copyright>
     <lastBuildDate>Thu, 05 Aug 2021 21:57:27 +0200</lastBuildDate><atom:link href="https://www.davidjnevin.com/code/index.xml" rel="self" type="application/rss+xml" />
     <item>
+<<<<<<< HEAD
       <title>Hugo Section Theme 3</title>
       <link>https://www.davidjnevin.com/code/hugo_section_theme_003/</link>
       <pubDate>Wed, 15 Jun 2022 22:03:26 +0200</pubDate>
@@ -20,6 +21,8 @@ These tweaks allowed me to alter the site title, adding a link to the section ho
     </item>
     
     <item>
+=======
+>>>>>>> ace586a5e772b80d7c3d94d49c4833ac2b73de60
       <title>Hugo Section Theme 2 (didn&#39;t work)</title>
       <link>https://www.davidjnevin.com/code/hugo_section_theme_002/</link>
       <pubDate>Wed, 15 Jun 2022 02:16:41 +0200</pubDate>
