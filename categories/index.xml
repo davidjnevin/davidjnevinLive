@@ -7,19 +7,11 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© 2022 David J. Nevin</copyright>
-<<<<<<< HEAD
-    <lastBuildDate>Wed, 15 Jun 2022 22:03:26 +0200</lastBuildDate><atom:link href="https://www.davidjnevin.com/categories/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Hugo</title>
-      <link>https://www.davidjnevin.com/categories/hugo/</link>
-      <pubDate>Wed, 15 Jun 2022 22:03:26 +0200</pubDate>
-=======
     <lastBuildDate>Wed, 15 Jun 2022 02:16:41 +0200</lastBuildDate><atom:link href="https://www.davidjnevin.com/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hugo</title>
       <link>https://www.davidjnevin.com/categories/hugo/</link>
       <pubDate>Wed, 15 Jun 2022 02:16:41 +0200</pubDate>
->>>>>>> ace586a5e772b80d7c3d94d49c4833ac2b73de60
       
       <guid>https://www.davidjnevin.com/categories/hugo/</guid>
       <description></description>
