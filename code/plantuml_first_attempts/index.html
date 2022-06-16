@@ -3,15 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta property="og:title" content="Markdown" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://www.davidjnevin.com/tags/markdown/" />
+  <meta property="og:title" content="PlantUML: First Attempts" />
+<meta property="og:description" content="Question: How would I create a linked list diagram?" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.davidjnevin.com/code/plantuml_first_attempts/" /><meta property="article:section" content="code" />
+<meta property="article:published_time" content="2022-06-16T23:06:34+02:00" />
+<meta property="article:modified_time" content="2022-06-16T23:06:34+02:00" />
+<meta property="og:see_also" content="https://www.davidjnevin.com/code/mermaid_first_attempts/" />
 
 
   <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Markdown"/>
-<meta name="twitter:description" content=""/>
+<meta name="twitter:title" content="PlantUML: First Attempts"/>
+<meta name="twitter:description" content="Question: How would I create a linked list diagram?"/>
 
   
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-VGVQ6SM9N7"></script>
@@ -28,7 +31,7 @@ if (!doNotTrack) {
   
   <title>
     
-    David J Nevin - Markdown
+    David J Nevin - PlantUML: First Attempts
     
   </title>
   
@@ -66,26 +69,97 @@ if (!doNotTrack) {
   <header>
   <h1 class="row gap-1 nowrap">
     
-    <a href="/">David J Nevin</a>
+    <a href="/">David J Nevin</a><a href="/code">+= code</a>
   </h1>
+  <nav class="row gap-1">
   
+  </nav>
   
 </header>
   
+   
+<main>
   
-	<main>
-		
-			<h2>Tag - "Markdown"</h2>
-		
-		<div>
-			
-				<div class="row row-mob mb-1 mb-1_5-mob gap-3">
-					<div class="sm-2-mob mb-0_5-mob">Jun 16, 2022</div>
-					<a href="/code/plantuml_first_attempts/">PlantUML: First Attempts</a>
-				</div>
-			
-		</div>
-	</main>
+  
+  <div class="sm-1 mtb-1">
+    Posted on &mdash; Jun 16, 2022 
+  </div>
+  
+
+  <article class="md">
+     
+
+    <h1>PlantUML: First Attempts</h1>
+     <nav id="TableOfContents">
+  <ul>
+    <li><a href="#lets-try-out-plantuml">Let&rsquo;s try out PlantUML</a></li>
+    <li><a href="#back-to-linked-lists">Back to linked lists</a></li>
+    <li><a href="#but-wait">But wait</a></li>
+    <li><a href="#install-a-previewer-in-vscode">Install a previewer in VSCOde.</a></li>
+  </ul>
+</nav>  <h2 id="lets-try-out-plantuml">Let&rsquo;s try out PlantUML</h2>
+<p>PlantUML seems at first glance somewhat similar to <a href="/code/mermaid_first_attempts/">Mermaid</a> but with a wider function list.</p>
+<p>Following instructions from <a href="https://paul.dugas.cc/post/plantuml-shortcode/">Paul Dugas</a> I set up a <code>shortcode</code> and added a <code>js</code> file to the <code>assets&gt;static</code> folder.</p>
+<p>Let&rsquo;s see:</p>
+<p><img src="/images/ut99BCjCKT2rK_1BBSlCirBmuW80.png" alt="Image added from PlantUML server to local assets once I installed and setup local PlantUML server.&quot;" title="Plant UML Image David -J-&gt; Nevin"></p>
+<p>Hey that worked!</p>
+<p>Code:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="p">{{&lt;</span> <span class="nx">plantuml</span> <span class="nx">id</span><span class="p">=</span><span class="s">&#34;example&#34;</span> <span class="p">&gt;}}</span>
+</span></span><span class="line"><span class="cl"><span class="nx">David</span> <span class="o">-</span><span class="p">&gt;</span> <span class="nx">Nevin</span><span class="p">:</span> <span class="nx">J</span>
+</span></span><span class="line"><span class="cl"><span class="p">{{&lt;</span> <span class="o">/</span><span class="nx">plantuml</span> <span class="p">&gt;}}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>The <code>id</code> created a <code>&lt;img id=&quot;plantuml-example&quot;...</code> tag.</p>
+<h2 id="back-to-linked-lists">Back to linked lists</h2>
+<p>First some experimentation with sequences.</p>
+<h2 id="but-wait">But wait</h2>
+<p>The above <code>PlantUML</code> image is stored and pulled from <code>http://www.plantuml.com/plantuml/img/ut99BCjCKT2rK_1BBSlCirBmuW80</code>. That&rsquo;s not ideal. I&rsquo;d prefer to use a local server and output the image into my <code>assets&gt;images</code> folder.</p>
+<p>So for my MacOS following these <a href="https://marketplace.visualstudio.com/items?itemName=jebbs.plantuml">instructions</a>:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">brew install --cask temurin
+</span></span><span class="line"><span class="cl">brew install graphviz
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Then tried this in an *.md file.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">@startuml
+</span></span><span class="line"><span class="cl">David -&gt; Nevin: J
+</span></span><span class="line"><span class="cl">@enduml
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>No joy.</p>
+<h2 id="install-a-previewer-in-vscode">Install a previewer in VSCOde.</h2>
+<p>I installed the <code>PlantUML Previewer</code> extension and it started to work. I have to create <code>*.puml</code> files.</p>
+<p>Next step is to see how I can process these files into SVG, and save them into the images folder. Beginning to think maybe I&rsquo;m over thinking the problem. Mightn&rsquo;t it be easier to just create the images I want in an image editor.</p>
+<p>But I know the answer to that already. I want something I can source control and also use git <code>diff</code> with. An image file won&rsquo;t give me that.</p>
+<p>So, I can experiment with <code>*.puml</code> files but can&rsquo;t output the <code>svg</code> file yet.</p>
+<p>And then, I managed to export the <code>svg</code> below with minimum hassle.</p>
+<p><img src="/images/Hello_World.svg" alt="Hello World in PlantUML"></p>
+<p>Ok, I&rsquo;ve found a <a href="https://stackoverflow.com/questions/62410162/how-can-i-put-background-color-to-entity-relationship-diagram-in-plantuml">stackoverflow question</a> that shows some real promise in terms of me showing a linked list.</p>
+<p><img src="/images/testingMore.svg" alt="Database Schema from Stackoverflow"></p>
+<p>That&rsquo;s enough for tonight. Educative&rsquo;s <a href="https://www.educative.io/courses/ds-and-algorithms-in-python">Data Structures and Algorithms in Python</a> awaits.</p>
+
+  </article>
+
+</main>
 
 
   
