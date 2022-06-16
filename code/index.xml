@@ -9,6 +9,43 @@
     <copyright>© 2022 David J. Nevin</copyright>
     <lastBuildDate>Thu, 05 Aug 2021 21:57:27 +0200</lastBuildDate><atom:link href="https://www.davidjnevin.com/code/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>PlantUML: First Attempts</title>
+      <link>https://www.davidjnevin.com/code/plantuml_first_attempts/</link>
+      <pubDate>Thu, 16 Jun 2022 23:06:34 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/plantuml_first_attempts/</guid>
+      <description>Let&amp;rsquo;s try out PlantUML PlantUML seems at first glance somewhat similar to Mermaid but with a wider function list.
+Following instructions from Paul Dugas I set up a shortcode and added a js file to the assets&amp;gt;static folder.
+Let&amp;rsquo;s see:
+Hey that worked!
+Code:
+1 2 3 {{&amp;lt; plantuml id=&amp;#34;example&amp;#34; &amp;gt;}} David -&amp;gt; Nevin: J {{&amp;lt; /plantuml &amp;gt;}} The id created a &amp;lt;img id=&amp;quot;plantuml-example&amp;quot;... tag.
+Back to linked lists First some experimentation with sequences.</description>
+    </item>
+    
+    <item>
+      <title>Mermaid: First Attempts</title>
+      <link>https://www.davidjnevin.com/code/mermaid_first_attempts/</link>
+      <pubDate>Thu, 16 Jun 2022 09:23:13 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/mermaid_first_attempts/</guid>
+      <description>Mermaid setup. Really basic first effort.
+I created a shortcodes folder under my theme layouts folder, adn there created a mermaid.html with the following code.
+1 2 3 4 5 6 7 8 9 10 11 12 13 &amp;lt;script async type=&amp;#34;application/javascript&amp;#34; src=&amp;#34;https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js&amp;#34;&amp;gt; var config = { startOnLoad:true, theme: &amp;#39;{{ if .Get &amp;#34;theme&amp;#34; }}{{ .Get &amp;#34;theme&amp;#34; }}{{ else }}dark{{ end }}&amp;#39;, align:&amp;#39;{{ if .Get &amp;#34;align&amp;#34; }}{{ .Get &amp;#34;align&amp;#34; }}{{ else }} center{{ end }}&amp;#39; }; mermaid.</description>
+    </item>
+    
+    <item>
+      <title>Hugo Section Theme 3</title>
+      <link>https://www.davidjnevin.com/code/hugo_section_theme_003/</link>
+      <pubDate>Wed, 15 Jun 2022 22:03:26 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/hugo_section_theme_003/</guid>
+      <description>Okay so that&amp;rsquo;s better. A simpler approach worked. I got playing with a copy of my primary *.html pages in the theme layout folder. I followed the advice to create a subfolder with the same name as my section.
+I copied in my files and then altered them there. Also I added a _index.md to my section folder in the content folder.
+These tweaks allowed me to alter the site title, adding a link to the section homepage as an additional text in the original title.</description>
+    </item>
+    
+    <item>
       <title>Hugo Section Theme 2 (didn&#39;t work)</title>
       <link>https://www.davidjnevin.com/code/hugo_section_theme_002/</link>
       <pubDate>Wed, 15 Jun 2022 02:16:41 +0200</pubDate>
