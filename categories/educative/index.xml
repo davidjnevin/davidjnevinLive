@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Educative on David J Nevin</title>
+    <link>https://www.davidjnevin.com/categories/educative/</link>
+    <description>Recent content in Educative on David J Nevin</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>© 2022 David J. Nevin</copyright>
+    <lastBuildDate>Fri, 17 Jun 2022 20:43:36 +0200</lastBuildDate><atom:link href="https://www.davidjnevin.com/categories/educative/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Arrays Educative</title>
+      <link>https://www.davidjnevin.com/code/arrays_educative/</link>
+      <pubDate>Fri, 17 Jun 2022 20:43:36 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/arrays_educative/</guid>
+      <description>Finished the Arrays section I&amp;rsquo;ve been working through the Data Structures and Algorithms course on Educative to develop my python skills.
+Learned the two sum problem, optimal task assignment, intersections of two sorted lists, arbitrary precision increment and array advance games solutions.
+Fascinating look into the the world of algorithms. Lots more to se of course but really enjoying the progress and the insights.
+I also did a quick &amp;ldquo;level test&amp;rdquo; and received a proficiency badge.</description>
+    </item>
+    
+  </channel>
+</rss>

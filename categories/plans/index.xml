@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Projects on David J Nevin</title>
-    <link>https://www.davidjnevin.com/categories/projects/</link>
-    <description>Recent content in Projects on David J Nevin</description>
+    <title>Plans on David J Nevin</title>
+    <link>https://www.davidjnevin.com/categories/plans/</link>
+    <description>Recent content in Plans on David J Nevin</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© 2022 David J. Nevin</copyright>
-    <lastBuildDate>Fri, 17 Jun 2022 20:57:48 +0200</lastBuildDate><atom:link href="https://www.davidjnevin.com/categories/projects/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 17 Jun 2022 20:57:48 +0200</lastBuildDate><atom:link href="https://www.davidjnevin.com/categories/plans/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Site Projects - June 6th</title>
       <link>https://www.davidjnevin.com/code/site_projects_17_06_2022/</link>
@@ -17,17 +17,6 @@
       <description>Certificates Section Next mini-project here on this site is to start to put together a list of certificates and courses I&amp;rsquo;ve done. I am loath to do it in html as opposed to some kind of db solution but we&amp;rsquo;ll see.
 First I want to get something visible and linkable, as I&amp;rsquo;m unhappy with the LinkedIn certificates section. Too inflexible and not customizable.
 It might be as simple as creating new subsection and a matching hugo archetype for certificates.</description>
-    </item>
-    
-    <item>
-      <title>Critique Wheel C#</title>
-      <link>https://www.davidjnevin.com/code/critique_wheel_csharp/</link>
-      <pubDate>Tue, 14 Jun 2022 21:43:57 +0200</pubDate>
-      
-      <guid>https://www.davidjnevin.com/code/critique_wheel_csharp/</guid>
-      <description>Raison d&amp;rsquo;être o el porque I built and deployed the Beta version of the critique wheel site in response to a need for the fiction writers in my writing groups to get faster and more actionable critiques on their short stories.
-From my Github records, I added the .gitignore on 15 May 2021, so I consider that the start date of the project.
-Razor Pages, MySQL The wheel is build on .</description>
     </item>
     
   </channel>
