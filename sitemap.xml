@@ -3,6 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://www.davidjnevin.com/categories/</loc>
+
     <lastmod>2022-06-17T20:57:48+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/tags/certificates/</loc>
@@ -31,26 +32,10 @@
   </url><url>
     <loc>https://www.davidjnevin.com/categories/python/</loc>
     <lastmod>2022-06-17T20:43:36+02:00</lastmod>
-  </url><url>
-    <loc>https://www.davidjnevin.com/tags/design/</loc>
+
     <lastmod>2022-06-16T23:06:34+02:00</lastmod>
-  </url><url>
-    <loc>https://www.davidjnevin.com/series/displaying-linked-lists/</loc>
-    <lastmod>2022-06-16T23:06:34+02:00</lastmod>
-  </url><url>
-    <loc>https://www.davidjnevin.com/categories/hugo/</loc>
-    <lastmod>2022-06-16T23:06:34+02:00</lastmod>
-  </url><url>
-    <loc>https://www.davidjnevin.com/tags/markdown/</loc>
-    <lastmod>2022-06-16T23:06:34+02:00</lastmod>
-  </url><url>
-    <loc>https://www.davidjnevin.com/categories/plant-uml/</loc>
-    <lastmod>2022-06-16T23:06:34+02:00</lastmod>
-  </url><url>
-    <loc>https://www.davidjnevin.com/code/plantuml_first_attempts/</loc>
-    <lastmod>2022-06-16T23:06:34+02:00</lastmod>
-  </url><url>
-    <loc>https://www.davidjnevin.com/series/</loc>
+
+    <loc>https://www.davidjnevin.com/tags/</loc>
     <lastmod>2022-06-16T23:06:34+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/categories/markup/</loc>
