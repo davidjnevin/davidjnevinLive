@@ -7,7 +7,6 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© 2022 David J. Nevin</copyright>
-
     <lastBuildDate>Fri, 17 Jun 2022 20:57:48 +0200</lastBuildDate><atom:link href="https://www.davidjnevin.com/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Plans</title>
@@ -45,9 +44,6 @@
       <description></description>
     </item>
     
-
-    <lastBuildDate>Thu, 16 Jun 2022 23:06:34 +0200</lastBuildDate><atom:link href="https://www.davidjnevin.com/categories/index.xml" rel="self" type="application/rss+xml" />
-
     <item>
       <title>Hugo</title>
       <link>https://www.davidjnevin.com/categories/hugo/</link>
@@ -61,33 +57,6 @@
       <title>Plant UML</title>
       <link>https://www.davidjnevin.com/categories/plant-uml/</link>
       <pubDate>Thu, 16 Jun 2022 23:06:34 +0200</pubDate>
-      
-      <guid>https://www.davidjnevin.com/categories/plant-uml/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Markup</title>
-      <link>https://www.davidjnevin.com/categories/markup/</link>
-      <pubDate>Thu, 16 Jun 2022 09:23:13 +0200</pubDate>
-      
-      <guid>https://www.davidjnevin.com/categories/markup/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Mermaid</title>
-      <link>https://www.davidjnevin.com/categories/mermaid/</link>
-      <pubDate>Thu, 16 Jun 2022 09:23:13 +0200</pubDate>
-      
-      <guid>https://www.davidjnevin.com/categories/mermaid/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Code</title>
-      <link>https://www.davidjnevin.com/categories/code/</link>
-      <pubDate>Tue, 14 Jun 2022 21:43:57 +0200</pubDate>
       
       <guid>https://www.davidjnevin.com/categories/plant-uml/</guid>
       <description></description>
