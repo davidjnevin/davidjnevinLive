@@ -9,6 +9,29 @@
     <copyright>© 2022 David J. Nevin</copyright>
     <lastBuildDate>Thu, 05 Aug 2021 21:57:27 +0200</lastBuildDate><atom:link href="https://www.davidjnevin.com/code/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Site Projects - June 6th</title>
+      <link>https://www.davidjnevin.com/code/site_projects_17_06_2022/</link>
+      <pubDate>Fri, 17 Jun 2022 20:57:48 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/site_projects_17_06_2022/</guid>
+      <description>Certificates Section Next mini-project here on this site is to start to put together a list of certificates and courses I&amp;rsquo;ve done. I am loath to do it in html as opposed to some kind of db solution but we&amp;rsquo;ll see.
+First I want to get something visible and linkable, as I&amp;rsquo;m unhappy with the LinkedIn certificates section. Too inflexible and not customizable.
+It might be as simple as creating new subsection and a matching hugo archetype for certificates.</description>
+    </item>
+    
+    <item>
+      <title>Arrays Educative</title>
+      <link>https://www.davidjnevin.com/code/arrays_educative/</link>
+      <pubDate>Fri, 17 Jun 2022 20:43:36 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/arrays_educative/</guid>
+      <description>Finished the Arrays section I&amp;rsquo;ve been working through the Data Structures and Algorithms course on Educative to develop my python skills.
+Learned the two sum problem, optimal task assignment, intersections of two sorted lists, arbitrary precision increment and array advance games solutions.
+Fascinating look into the the world of algorithms. Lots more to se of course but really enjoying the progress and the insights.
+I also did a quick &amp;ldquo;level test&amp;rdquo; and received a proficiency badge.</description>
+    </item>
+    
+    <item>
       <title>PlantUML: First Attempts</title>
       <link>https://www.davidjnevin.com/code/plantuml_first_attempts/</link>
       <pubDate>Thu, 16 Jun 2022 23:06:34 +0200</pubDate>
