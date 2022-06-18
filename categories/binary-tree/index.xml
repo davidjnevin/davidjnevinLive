@@ -7,9 +7,25 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© 2022 David J. Nevin</copyright>
-    <lastBuildDate>Fri, 17 Jun 2022 23:42:31 +0200</lastBuildDate><atom:link href="https://www.davidjnevin.com/categories/binary-tree/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 18 Jun 2022 15:10:51 +0200</lastBuildDate><atom:link href="https://www.davidjnevin.com/categories/binary-tree/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Binary Tree Terms &amp; Depth Traversals</title>
+      <title>Level Order Traversals: Binary Tree</title>
+      <link>https://www.davidjnevin.com/code/binary_tree_traversals/</link>
+      <pubDate>Sat, 18 Jun 2022 15:10:51 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/binary_tree_traversals/</guid>
+      <description>Tree Traversals (Preorder, Inorder and Postorder) From the root of a binary tree, traverse deeper before going laterally.
+Preorder - Node Left Right
+Inorder - Left Node Right
+Postorder - Left Right Node
+Preorder Traversal (nlr) A useful collection type to navigate the nodes traversed is a stack1.
+Iteration of Preorder Traversal Push the root to the stack.
+Is the stack empty?
+Then pop the stack, and record/output the node name/value as visited.</description>
+    </item>
+    
+    <item>
+      <title>Binary Tree Terms</title>
       <link>https://www.davidjnevin.com/code/binary_tree_terms/</link>
       <pubDate>Fri, 17 Jun 2022 23:42:31 +0200</pubDate>
       
@@ -17,8 +33,9 @@
       <description>Binary Tree Terms A tree has a root and leaves.
 A root node has no parent nodes.
 A leaf node has zero children.
-The lines between nodes are called edges.
-Binary Tree Characteristics In a binary tree, each node has a maximum of two children. In a classic binary tree there is one root. There is only one unique path from any node to the root An empty tree has no nodes, and should be considered a binary tree.</description>
+A lef node is an external node, non leaf node are internal nodes.
+The degree of a node is the number of children of that node. The lines between nodes are called edges.
+Binary Tree Characteristics In a binary tree, each node has a maximum of two children.</description>
     </item>
     
   </channel>
