@@ -7,7 +7,52 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© 2022 David J. Nevin</copyright>
-    <lastBuildDate>Fri, 17 Jun 2022 23:42:31 +0200</lastBuildDate><atom:link href="https://www.davidjnevin.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 18 Jun 2022 15:10:51 +0200</lastBuildDate><atom:link href="https://www.davidjnevin.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Binary Tree</title>
+      <link>https://www.davidjnevin.com/tags/binary-tree/</link>
+      <pubDate>Sat, 18 Jun 2022 15:10:51 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/binary-tree/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Inorder</title>
+      <link>https://www.davidjnevin.com/tags/inorder/</link>
+      <pubDate>Sat, 18 Jun 2022 15:10:51 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/inorder/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Level order</title>
+      <link>https://www.davidjnevin.com/tags/level-order/</link>
+      <pubDate>Sat, 18 Jun 2022 15:10:51 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/level-order/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Postorder</title>
+      <link>https://www.davidjnevin.com/tags/postorder/</link>
+      <pubDate>Sat, 18 Jun 2022 15:10:51 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/postorder/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Preorder</title>
+      <link>https://www.davidjnevin.com/tags/preorder/</link>
+      <pubDate>Sat, 18 Jun 2022 15:10:51 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/preorder/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Data Structure</title>
       <link>https://www.davidjnevin.com/tags/data-structure/</link>

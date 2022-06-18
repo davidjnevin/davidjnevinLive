@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Traversal on David J Nevin</title>
-    <link>https://www.davidjnevin.com/categories/traversal/</link>
-    <description>Recent content in Traversal on David J Nevin</description>
+    <title>Postorder on David J Nevin</title>
+    <link>https://www.davidjnevin.com/tags/postorder/</link>
+    <description>Recent content in Postorder on David J Nevin</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© 2022 David J. Nevin</copyright>
-    <lastBuildDate>Sat, 18 Jun 2022 15:10:51 +0200</lastBuildDate><atom:link href="https://www.davidjnevin.com/categories/traversal/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 18 Jun 2022 15:10:51 +0200</lastBuildDate><atom:link href="https://www.davidjnevin.com/tags/postorder/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Level Order Traversals: Binary Tree</title>
       <link>https://www.davidjnevin.com/code/binary_tree_traversals/</link>
