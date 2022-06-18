@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Post Order Traversal on David J Nevin</title>
+    <link>https://www.davidjnevin.com/tags/post-order-traversal/</link>
+    <description>Recent content in Post Order Traversal on David J Nevin</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>© 2022 David J. Nevin</copyright>
+    <lastBuildDate>Fri, 17 Jun 2022 23:42:31 +0200</lastBuildDate><atom:link href="https://www.davidjnevin.com/tags/post-order-traversal/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Binary Tree Terms &amp; Depth Traversals</title>
+      <link>https://www.davidjnevin.com/code/binary_tree_terms/</link>
+      <pubDate>Fri, 17 Jun 2022 23:42:31 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/binary_tree_terms/</guid>
+      <description>Binary Tree Terms A tree has a root and leaves.
+A root node has no parent nodes.
+A leaf node has zero children.
+The lines between nodes are called edges.
+Binary Tree Characteristics In a binary tree, each node has a maximum of two children. In a classic binary tree there is one root. There is only one unique path from any node to the root An empty tree has no nodes, and should be considered a binary tree.</description>
+    </item>
+    
+  </channel>
+</rss>
