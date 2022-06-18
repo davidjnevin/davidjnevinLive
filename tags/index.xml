@@ -9,15 +9,6 @@
     <copyright>© 2022 David J. Nevin</copyright>
     <lastBuildDate>Fri, 17 Jun 2022 23:42:31 +0200</lastBuildDate><atom:link href="https://www.davidjnevin.com/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Breath first Traversal</title>
-      <link>https://www.davidjnevin.com/tags/breath-first-traversal/</link>
-      <pubDate>Fri, 17 Jun 2022 23:42:31 +0200</pubDate>
-      
-      <guid>https://www.davidjnevin.com/tags/breath-first-traversal/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Data Structure</title>
       <link>https://www.davidjnevin.com/tags/data-structure/</link>
       <pubDate>Fri, 17 Jun 2022 23:42:31 +0200</pubDate>
@@ -27,38 +18,38 @@
     </item>
     
     <item>
-      <title>Depth First Traversal</title>
-      <link>https://www.davidjnevin.com/tags/depth-first-traversal/</link>
+      <title>Depth</title>
+      <link>https://www.davidjnevin.com/tags/depth/</link>
       <pubDate>Fri, 17 Jun 2022 23:42:31 +0200</pubDate>
       
-      <guid>https://www.davidjnevin.com/tags/depth-first-traversal/</guid>
+      <guid>https://www.davidjnevin.com/tags/depth/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>In-order traversal</title>
-      <link>https://www.davidjnevin.com/tags/in-order-traversal/</link>
+      <title>Height</title>
+      <link>https://www.davidjnevin.com/tags/height/</link>
       <pubDate>Fri, 17 Jun 2022 23:42:31 +0200</pubDate>
       
-      <guid>https://www.davidjnevin.com/tags/in-order-traversal/</guid>
+      <guid>https://www.davidjnevin.com/tags/height/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Post Order Traversal</title>
-      <link>https://www.davidjnevin.com/tags/post-order-traversal/</link>
+      <title>Node</title>
+      <link>https://www.davidjnevin.com/tags/node/</link>
       <pubDate>Fri, 17 Jun 2022 23:42:31 +0200</pubDate>
       
-      <guid>https://www.davidjnevin.com/tags/post-order-traversal/</guid>
+      <guid>https://www.davidjnevin.com/tags/node/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Pre-order Traversal</title>
-      <link>https://www.davidjnevin.com/tags/pre-order-traversal/</link>
+      <title>Size</title>
+      <link>https://www.davidjnevin.com/tags/size/</link>
       <pubDate>Fri, 17 Jun 2022 23:42:31 +0200</pubDate>
       
-      <guid>https://www.davidjnevin.com/tags/pre-order-traversal/</guid>
+      <guid>https://www.davidjnevin.com/tags/size/</guid>
       <description></description>
     </item>
     

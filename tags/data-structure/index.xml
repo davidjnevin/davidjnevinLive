@@ -9,7 +9,7 @@
     <copyright>© 2022 David J. Nevin</copyright>
     <lastBuildDate>Fri, 17 Jun 2022 23:42:31 +0200</lastBuildDate><atom:link href="https://www.davidjnevin.com/tags/data-structure/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Binary Tree Terms &amp; Depth Traversals</title>
+      <title>Binary Tree Terms</title>
       <link>https://www.davidjnevin.com/code/binary_tree_terms/</link>
       <pubDate>Fri, 17 Jun 2022 23:42:31 +0200</pubDate>
       
@@ -17,8 +17,9 @@
       <description>Binary Tree Terms A tree has a root and leaves.
 A root node has no parent nodes.
 A leaf node has zero children.
-The lines between nodes are called edges.
-Binary Tree Characteristics In a binary tree, each node has a maximum of two children. In a classic binary tree there is one root. There is only one unique path from any node to the root An empty tree has no nodes, and should be considered a binary tree.</description>
+A lef node is an external node, non leaf node are internal nodes.
+The degree of a node is the number of children of that node. The lines between nodes are called edges.
+Binary Tree Characteristics In a binary tree, each node has a maximum of two children.</description>
     </item>
     
   </channel>
