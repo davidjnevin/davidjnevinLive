@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Level Order on David J Nevin</title>
-    <link>https://www.davidjnevin.com/tags/level-order/</link>
-    <description>Recent content in Level Order on David J Nevin</description>
+    <title>Level Order Traversal on David J Nevin</title>
+    <link>https://www.davidjnevin.com/tags/level-order-traversal/</link>
+    <description>Recent content in Level Order Traversal on David J Nevin</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© 2022 David J. Nevin</copyright>
-    <lastBuildDate>Sun, 19 Jun 2022 02:08:09 +0200</lastBuildDate><atom:link href="https://www.davidjnevin.com/tags/level-order/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 19 Jun 2022 02:08:09 +0200</lastBuildDate><atom:link href="https://www.davidjnevin.com/tags/level-order-traversal/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Level Order Traversal Binary Tree</title>
       <link>https://www.davidjnevin.com/code/level_order_traversal_binary_tree/</link>
