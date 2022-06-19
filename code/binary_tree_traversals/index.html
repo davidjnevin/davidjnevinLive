@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta property="og:title" content="Level Order Traversals: Binary Tree" />
+  <meta property="og:title" content="Depth Order Traversals: Binary Tree" />
 <meta property="og:description" content="Tree Traversals (Preorder, Inorder and Postorder) From the root of a binary tree, traverse deeper before going laterally.
 Preorder - Node Left Right
 Inorder - Left Node Right
@@ -19,7 +19,7 @@ Then pop the stack, and record/output the node name/value as visited." />
 
 
   <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Level Order Traversals: Binary Tree"/>
+<meta name="twitter:title" content="Depth Order Traversals: Binary Tree"/>
 <meta name="twitter:description" content="Tree Traversals (Preorder, Inorder and Postorder) From the root of a binary tree, traverse deeper before going laterally.
 Preorder - Node Left Right
 Inorder - Left Node Right
@@ -44,7 +44,7 @@ if (!doNotTrack) {
   
   <title>
     
-    David J Nevin - Level Order Traversals: Binary Tree
+    David J Nevin - Depth Order Traversals: Binary Tree
     
   </title>
   
@@ -102,14 +102,13 @@ if (!doNotTrack) {
   <article class="md">
      
 
-    <h1>Level Order Traversals: Binary Tree</h1>
+    <h1>Depth Order Traversals: Binary Tree</h1>
      <nav id="TableOfContents">
   <ul>
     <li><a href="#tree-traversals-preorder-inorder-and-postorder">Tree Traversals (Preorder, Inorder and Postorder)</a></li>
     <li><a href="#preorder-traversal-nlr">Preorder Traversal (nlr)</a></li>
-    <li><a href="#inorder-traversal">Inorder Traversal</a></li>
-    <li><a href="#postorder-traversal---extremities-first">Postorder Traversal - Extremities First</a></li>
-    <li><a href="#level-order-traversal">Level order traversal</a></li>
+    <li><a href="#inorder-traversal-lnr">Inorder Traversal (lnr)</a></li>
+    <li><a href="#postorder-traversal-lrn">Postorder Traversal (lrn)</a></li>
   </ul>
 </nav>  <h2 id="tree-traversals-preorder-inorder-and-postorder">Tree Traversals (Preorder, Inorder and Postorder)</h2>
 <p>From the root of a binary tree, traverse deeper before going laterally.</p>
@@ -155,15 +154,15 @@ if (!doNotTrack) {
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-Python" data-lang="Python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">preorder_print</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">start</span><span class="p">,</span> <span class="n">traversal</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">        <span class="s2">&#34;&#34;&#34;Root-&gt;Left-Right&#34;&#34;&#34;</span>
-</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">start</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">            <span class="n">traversal</span> <span class="o">+=</span> <span class="nb">str</span><span class="p">(</span><span class="n">start</span><span class="o">.</span><span class="n">value</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&#34;-&#34;</span>
-</span></span><span class="line"><span class="cl">            <span class="n">traversal</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">preorder_print</span><span class="p">(</span><span class="n">start</span><span class="o">.</span><span class="n">left</span><span class="p">,</span> <span class="n">traversal</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">            <span class="n">traversal</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">preorder_print</span><span class="p">(</span><span class="n">start</span><span class="o">.</span><span class="n">right</span><span class="p">,</span> <span class="n">traversal</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">traversal</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;&#34;&#34;Node-&gt;Left-Right&#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">start</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">traversal</span> <span class="o">+=</span> <span class="nb">str</span><span class="p">(</span><span class="n">start</span><span class="o">.</span><span class="n">value</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&#34;-&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">traversal</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">preorder_print</span><span class="p">(</span><span class="n">start</span><span class="o">.</span><span class="n">left</span><span class="p">,</span> <span class="n">traversal</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">traversal</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">preorder_print</span><span class="p">(</span><span class="n">start</span><span class="o">.</span><span class="n">right</span><span class="p">,</span> <span class="n">traversal</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">traversal</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h2 id="inorder-traversal">Inorder Traversal</h2>
+</div><h2 id="inorder-traversal-lnr">Inorder Traversal (lnr)</h2>
 <p>From the root of a binary tree, traverse laterally before going deeper.</p>
 <p>A useful collection type to navigate the nodes traversed is a <code>queue</code>.<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup></p>
 <h3 id="iteration-of-inorder-traversal">Iteration of Inorder Traversal</h3>
@@ -190,8 +189,28 @@ if (!doNotTrack) {
 <p>Repeat for the top value in the stack and continue.</p>
 </li>
 </ol>
-<p>This traversal is Time O(n), and Space O(n). Assumes maximum efficiency of add and remove operations from teh queue.</p>
-<h2 id="postorder-traversal---extremities-first">Postorder Traversal - Extremities First</h2>
+<p>This traversal is Time O(n), and Space O(n). Assumes maximum efficiency of add and remove operations from the queue.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-1-100"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-1-100">100</a>
+</span><span class="lnt" id="hl-1-101"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-1-101">101</a>
+</span><span class="lnt" id="hl-1-102"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-1-102">102</a>
+</span><span class="lnt" id="hl-1-103"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-1-103">103</a>
+</span><span class="lnt" id="hl-1-104"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-1-104">104</a>
+</span><span class="lnt" id="hl-1-105"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-1-105">105</a>
+</span><span class="lnt" id="hl-1-106"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-1-106">106</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-Python" data-lang="Python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">inorder_print</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">start</span><span class="p">,</span> <span class="n">traversal</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;&#34;&#34;Left-&gt;Node-&gt;Right&#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">start</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">traversal</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">inorder_print</span><span class="p">(</span><span class="n">start</span><span class="o">.</span><span class="n">left</span><span class="p">,</span> <span class="n">traversal</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">traversal</span> <span class="o">+=</span> <span class="nb">str</span><span class="p">(</span><span class="n">start</span><span class="o">.</span><span class="n">value</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&#34;-&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">traversal</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">inorder_print</span><span class="p">(</span><span class="n">start</span><span class="o">.</span><span class="n">right</span><span class="p">,</span> <span class="n">traversal</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">traversal</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="postorder-traversal-lrn">Postorder Traversal (lrn)</h2>
 <p>From the root traverse to the leaves first then back to the root. This algorithm can be used to delete trees.</p>
 <h3 id="iteration-of-postorder-traversal">Iteration of <code>Postorder Traversal</code></h3>
 <ol>
@@ -211,10 +230,28 @@ if (!doNotTrack) {
 <p>Repeat until the current node is the root and act upon the root.</p>
 </li>
 </ol>
-<p>Admittedly, I&rsquo;m finding this topic challenging to study on my own, however writing down what I understand has always helped that process.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-2-100"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-100">100</a>
+</span><span class="lnt" id="hl-2-101"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-101">101</a>
+</span><span class="lnt" id="hl-2-102"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-102">102</a>
+</span><span class="lnt" id="hl-2-103"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-103">103</a>
+</span><span class="lnt" id="hl-2-104"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-104">104</a>
+</span><span class="lnt" id="hl-2-105"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-105">105</a>
+</span><span class="lnt" id="hl-2-106"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-106">106</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-Python" data-lang="Python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">postorder_print</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">start</span><span class="p">,</span> <span class="n">traversal</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;&#34;&#34;Left-&gt;Right-&gt;Node&#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">start</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">traversal</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">postorder_print</span><span class="p">(</span><span class="n">start</span><span class="o">.</span><span class="n">left</span><span class="p">,</span> <span class="n">traversal</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">traversal</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">postorder_print</span><span class="p">(</span><span class="n">start</span><span class="o">.</span><span class="n">right</span><span class="p">,</span> <span class="n">traversal</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">traversal</span> <span class="o">+=</span> <span class="nb">str</span><span class="p">(</span><span class="n">start</span><span class="o">.</span><span class="n">value</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&#34;-&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">traversal</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Admittedly, I&rsquo;m finding this topic challenging to study on my own, however writing down what I understand has always helped that process.</p>
 <p>At some point I think it will be useful to return here and put together some cohesive notes for myself and any one else poking around these posts.</p>
-<h2 id="level-order-traversal">Level order traversal</h2>
-<p>We go level by level, top to bottom, left to right. We use a queue to hold our nodes until each level has been processed and their</p>
 <hr>
 <p>Sources:</p>
 <p><a href="https://www.youtube.com/watch?v%3DfAAZixBzIAI">Binary Tree Algorithms for Technical Interviews - Full Course</a></p>
@@ -225,9 +262,9 @@ if (!doNotTrack) {
 <p><a href="https://www.tutorialsandyou.com/markdown/how-to-add-footnotes-in-markdown-9.html">How to add footnotes in Markdown?</a></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-1-100"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-1-100">100</a>
-</span><span class="lnt" id="hl-1-101"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-1-101">101</a>
-</span><span class="lnt" id="hl-1-102"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-1-102">102</a>
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-3-100"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-3-100">100</a>
+</span><span class="lnt" id="hl-3-101"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-3-101">101</a>
+</span><span class="lnt" id="hl-3-102"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-3-102">102</a>
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">This is an example of how to create a footnote[^1] in Markdown.

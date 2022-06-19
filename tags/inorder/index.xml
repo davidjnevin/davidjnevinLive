@@ -9,7 +9,7 @@
     <copyright>© 2022 David J. Nevin</copyright>
     <lastBuildDate>Sat, 18 Jun 2022 15:10:51 +0200</lastBuildDate><atom:link href="https://www.davidjnevin.com/tags/inorder/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Level Order Traversals: Binary Tree</title>
+      <title>Depth Order Traversals: Binary Tree</title>
       <link>https://www.davidjnevin.com/code/binary_tree_traversals/</link>
       <pubDate>Sat, 18 Jun 2022 15:10:51 +0200</pubDate>
       

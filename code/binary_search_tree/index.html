@@ -3,15 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta property="og:title" content="Postorder" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://www.davidjnevin.com/tags/postorder/" />
+  <meta property="og:title" content="Binary Search Tree" />
+<meta property="og:description" content="Binary Tree Search" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.davidjnevin.com/code/binary_search_tree/" /><meta property="article:section" content="code" />
+<meta property="article:published_time" content="2022-06-19T02:08:26+02:00" />
+<meta property="article:modified_time" content="2022-06-19T02:08:26+02:00" />
 
 
   <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Postorder"/>
-<meta name="twitter:description" content=""/>
+<meta name="twitter:title" content="Binary Search Tree"/>
+<meta name="twitter:description" content="Binary Tree Search"/>
 
   
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-VGVQ6SM9N7"></script>
@@ -28,7 +30,7 @@ if (!doNotTrack) {
   
   <title>
     
-    David J Nevin - Postorder
+    David J Nevin - Binary Search Tree
     
   </title>
   
@@ -66,26 +68,99 @@ if (!doNotTrack) {
   <header>
   <h1 class="row gap-1 nowrap">
     
-    <a href="/">David J Nevin</a>
+    <a href="/">David J Nevin</a><a href="/code">+= code</a>
   </h1>
+  <nav class="row gap-1">
   
+  </nav>
   
 </header>
   
+   
+<main>
   
-	<main>
-		
-			<h2>Tag - "Postorder"</h2>
-		
-		<div>
-			
-				<div class="row row-mob mb-1 mb-1_5-mob gap-3">
-					<div class="sm-2-mob mb-0_5-mob">Jun 18, 2022</div>
-					<a href="/code/binary_tree_traversals/">Depth Order Traversals: Binary Tree</a>
-				</div>
-			
-		</div>
-	</main>
+  
+  <div class="sm-1 mtb-1">
+    Posted on &mdash; Jun 19, 2022 
+  </div>
+  
+
+  <article class="md">
+     
+
+    <h1>Binary Search Tree</h1>
+     <nav id="TableOfContents">
+  <ul>
+    <li><a href="#definition">Definition</a></li>
+    <li><a href="#search">Search</a></li>
+    <li><a href="#time-operation">Time Operation</a></li>
+    <li><a href="#implementation">Implementation</a></li>
+  </ul>
+</nav>  <h2 id="definition">Definition</h2>
+<p>A <code>binary search tree</code> (BST) is a tree data structure in which nodes are arranged according to the following property.</p>
+<p>The value of the left child of any node will be less than whatever value in that node, and the value of the right child of the node will be greater than the value in that node.</p>
+<p>If there aren&rsquo;t exactly two children, the reference to the non-existent child will contain null value.</p>
+<h2 id="search">Search</h2>
+<p>We employ the same criteria when searching. Starting form the <code>root</code> we decide which branch to search by comparing the search value with the current node. We then traverse the appropriate branch and repeat the process, thus greatly speeding up the search.</p>
+<h2 id="time-operation">Time Operation</h2>
+<p>If the tree is non-linear the search time is O(<em>logn</em>) and in the worst case where the <code>tree</code> is linear, O(n).</p>
+<h2 id="implementation">Implementation</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-0-100"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-100">100</a>
+</span><span class="lnt" id="hl-0-101"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-101">101</a>
+</span><span class="lnt" id="hl-0-102"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-102">102</a>
+</span><span class="lnt" id="hl-0-103"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-103">103</a>
+</span><span class="lnt" id="hl-0-104"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-104">104</a>
+</span><span class="lnt" id="hl-0-105"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-105">105</a>
+</span><span class="lnt" id="hl-0-106"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-106">106</a>
+</span><span class="lnt" id="hl-0-107"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-107">107</a>
+</span><span class="lnt" id="hl-0-108"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-108">108</a>
+</span><span class="lnt" id="hl-0-109"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-109">109</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-Python" data-lang="Python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Node</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">  <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">data</span>
+</span></span><span class="line"><span class="cl">    <span class="bp">self</span><span class="o">.</span><span class="n">left</span> <span class="o">=</span> <span class="kc">None</span>
+</span></span><span class="line"><span class="cl">    <span class="bp">self</span><span class="o">.</span><span class="n">right</span> <span class="o">=</span> <span class="kc">None</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">BST</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">  <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">root</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="bp">self</span><span class="o">.</span><span class="n">root</span> <span class="o">=</span> <span class="n">Node</span><span class="p">(</span><span class="n">root</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><table>
+<thead>
+<tr>
+<th style="text-align:center">Algorithm</th>
+<th style="text-align:center">Average Case</th>
+<th style="text-align:center">Worst Case</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">Search</td>
+<td style="text-align:center">O(<em>logn</em>)</td>
+<td style="text-align:center">O(n)</td>
+</tr>
+<tr>
+<td style="text-align:center">Insert</td>
+<td style="text-align:center">O(<em>logn</em>)</td>
+<td style="text-align:center">O(n)</td>
+</tr>
+<tr>
+<td style="text-align:center">Delete</td>
+<td style="text-align:center">O(<em>logn</em>)</td>
+<td style="text-align:center">O(n)</td>
+</tr>
+</tbody>
+</table>
+
+  </article>
+
+</main>
 
 
   
