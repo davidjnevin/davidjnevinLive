@@ -7,7 +7,17 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© 2022 David J. Nevin</copyright>
-    <lastBuildDate>Fri, 17 Jun 2022 20:57:48 +0200</lastBuildDate><atom:link href="https://www.davidjnevin.com/tags/certificates/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 19 Jun 2022 12:41:56 +0200</lastBuildDate><atom:link href="https://www.davidjnevin.com/tags/certificates/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Site Projects June 19th</title>
+      <link>https://www.davidjnevin.com/code/site_projects_june_19th/</link>
+      <pubDate>Sun, 19 Jun 2022 12:41:56 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/site_projects_june_19th/</guid>
+      <description>This post is a culmination of previous project related posts. It&amp;rsquo;s useful for me to see the needs develop and to decide when and what to implement and how I can combine the requirements into clear actions to take.
+Sidebar Although I chose the minima theme for it&amp;rsquo;s simplicity, it&amp;rsquo;s purpose was to present a personal writing related site. I wanted and still do want a clean experience for the writing posts and pages.</description>
+    </item>
+    
     <item>
       <title>Site Projects - June 17th</title>
       <link>https://www.davidjnevin.com/code/site_projects_17_06_2022/</link>
