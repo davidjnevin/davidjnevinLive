@@ -7,7 +7,34 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© 2022 David J. Nevin</copyright>
-    <lastBuildDate>Sat, 18 Jun 2022 15:10:51 +0200</lastBuildDate><atom:link href="https://www.davidjnevin.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 19 Jun 2022 02:08:26 +0200</lastBuildDate><atom:link href="https://www.davidjnevin.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Binary</title>
+      <link>https://www.davidjnevin.com/tags/binary/</link>
+      <pubDate>Sun, 19 Jun 2022 02:08:26 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/binary/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Search</title>
+      <link>https://www.davidjnevin.com/tags/search/</link>
+      <pubDate>Sun, 19 Jun 2022 02:08:26 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/search/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tree</title>
+      <link>https://www.davidjnevin.com/tags/tree/</link>
+      <pubDate>Sun, 19 Jun 2022 02:08:26 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/tree/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Binary Tree</title>
       <link>https://www.davidjnevin.com/tags/binary-tree/</link>
@@ -23,15 +50,6 @@
       <pubDate>Sat, 18 Jun 2022 15:10:51 +0200</pubDate>
       
       <guid>https://www.davidjnevin.com/tags/inorder/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Level order</title>
-      <link>https://www.davidjnevin.com/tags/level-order/</link>
-      <pubDate>Sat, 18 Jun 2022 15:10:51 +0200</pubDate>
-      
-      <guid>https://www.davidjnevin.com/tags/level-order/</guid>
       <description></description>
     </item>
     

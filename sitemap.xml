@@ -2,31 +2,49 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://www.davidjnevin.com/tags/binary/</loc>
+    <lastmod>2022-06-19T02:08:26+02:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/code/binary_search_tree/</loc>
+    <lastmod>2022-06-19T02:08:26+02:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/categories/binary-tree/</loc>
+    <lastmod>2022-06-19T02:08:26+02:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/categories/binary-tree-search/</loc>
+    <lastmod>2022-06-19T02:08:26+02:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/categories/</loc>
+    <lastmod>2022-06-19T02:08:26+02:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/categories/python/</loc>
+    <lastmod>2022-06-19T02:08:26+02:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/tags/search/</loc>
+    <lastmod>2022-06-19T02:08:26+02:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/tags/</loc>
+    <lastmod>2022-06-19T02:08:26+02:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/tags/tree/</loc>
+    <lastmod>2022-06-19T02:08:26+02:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/categories/algorithms/</loc>
+    <lastmod>2022-06-18T15:10:51+02:00</lastmod>
+  </url><url>
     <loc>https://www.davidjnevin.com/tags/binary-tree/</loc>
     <lastmod>2022-06-18T15:10:51+02:00</lastmod>
   </url><url>
-    <loc>https://www.davidjnevin.com/categories/binary-tree/</loc>
-    <lastmod>2022-06-18T15:10:51+02:00</lastmod>
-  </url><url>
-    <loc>https://www.davidjnevin.com/categories/</loc>
+    <loc>https://www.davidjnevin.com/code/binary_tree_traversals/</loc>
     <lastmod>2022-06-18T15:10:51+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/tags/inorder/</loc>
-    <lastmod>2022-06-18T15:10:51+02:00</lastmod>
-  </url><url>
-    <loc>https://www.davidjnevin.com/tags/level-order/</loc>
-    <lastmod>2022-06-18T15:10:51+02:00</lastmod>
-  </url><url>
-    <loc>https://www.davidjnevin.com/code/binary_tree_traversals/</loc>
     <lastmod>2022-06-18T15:10:51+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/tags/postorder/</loc>
     <lastmod>2022-06-18T15:10:51+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/tags/preorder/</loc>
-    <lastmod>2022-06-18T15:10:51+02:00</lastmod>
-  </url><url>
-    <loc>https://www.davidjnevin.com/tags/</loc>
     <lastmod>2022-06-18T15:10:51+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/categories/traversal/</loc>
@@ -45,9 +63,6 @@
     <lastmod>2022-06-17T23:42:31+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/tags/node/</loc>
-    <lastmod>2022-06-17T23:42:31+02:00</lastmod>
-  </url><url>
-    <loc>https://www.davidjnevin.com/categories/python/</loc>
     <lastmod>2022-06-17T23:42:31+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/tags/size/</loc>
