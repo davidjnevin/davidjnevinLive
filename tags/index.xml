@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© 2022 David J. Nevin</copyright>
-    <lastBuildDate>Mon, 20 Jun 2022 22:04:42 +0200</lastBuildDate><atom:link href="https://www.davidjnevin.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 20 Jun 2022 23:58:38 +0200</lastBuildDate><atom:link href="https://www.davidjnevin.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Binary Search</title>
+      <link>https://www.davidjnevin.com/tags/binary-search/</link>
+      <pubDate>Mon, 20 Jun 2022 23:58:38 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/binary-search/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Hash Function</title>
       <link>https://www.davidjnevin.com/tags/hash-function/</link>
