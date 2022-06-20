@@ -9,6 +9,18 @@
     <copyright>© 2022 David J. Nevin</copyright>
     <lastBuildDate>Thu, 05 Aug 2021 21:57:27 +0200</lastBuildDate><atom:link href="https://www.davidjnevin.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Binary Search</title>
+      <link>https://www.davidjnevin.com/code/binary_search/</link>
+      <pubDate>Mon, 20 Jun 2022 23:58:38 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/binary_search/</guid>
+      <description>Binary Search The divide and conquer search method.
+Linear Search The sequential searching through all data entries one by until until we find a match.
+100 101 102 103 104 def linear_search(data, target): for i in range(len(data)): if data[i] == target: return True return False The worst-case runtime of a linear search would be O(n).
+Binary Search (Iterative) Note: assumes that the array on which the search will take place is sorted in ascending order.</description>
+    </item>
+    
+    <item>
       <title>Hashing First Steps</title>
       <link>https://www.davidjnevin.com/code/hashing_first_steps/</link>
       <pubDate>Mon, 20 Jun 2022 22:04:42 +0200</pubDate>
