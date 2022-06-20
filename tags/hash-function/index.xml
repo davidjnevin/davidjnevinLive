@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hash Function on David J Nevin</title>
+    <link>https://www.davidjnevin.com/tags/hash-function/</link>
+    <description>Recent content in Hash Function on David J Nevin</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>© 2022 David J. Nevin</copyright>
+    <lastBuildDate>Mon, 20 Jun 2022 22:04:42 +0200</lastBuildDate><atom:link href="https://www.davidjnevin.com/tags/hash-function/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hashing First Steps</title>
+      <link>https://www.davidjnevin.com/code/hashing_first_steps/</link>
+      <pubDate>Mon, 20 Jun 2022 22:04:42 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/hashing_first_steps/</guid>
+      <description>Tentative steps. Today, I took some first tentative steps into understanding Hash tables:
+Fascinating topic, and one I&amp;rsquo;m using at present to complete a Caesar Cipher project. (link to here when complete #TODO)
+Here are some excellent resources, I&amp;rsquo;ve found through Engineering with Utsav
+Intro to Hash tables
+Hashing and chaining
+Simple Hash table in Python</description>
+    </item>
+    
+  </channel>
+</rss>
