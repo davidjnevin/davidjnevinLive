@@ -104,16 +104,31 @@ if (!doNotTrack) {
 <p>Seven hours later&hellip;</p>
 <p>A break in class and I&rsquo;ve found this useful <a href="https://discourse.gohugo.io/t/how-to-have-two-themes-for-different-sections-of-a-site/1948/9">hugo discourse thread</a>. The solution proposed is to add the template <code>foo.html</code> file to the section folder, and using <code>layout: foo</code> parameter in the front matter of the items in the folder.</p>
 <p>I copied the <code>single.html</code> and updated the front matter to the following:</p>
-<pre tabindex="0"><code>title: &#34;Hugo Section Theme 002&#34;
-date: 2022-06-15T02:16:41+02:00
-draft: false
-showthedate: true
-showtoc: true
-description: &#34;This is part two of me trying to setup a distinct theme for a subsection of this Hugo site &#34;
-tags: [&#34;Design&#34;]
-categories: [&#34;Hugo&#34;]
-layout: &#34;single.html&#34;
-</code></pre><p>That doesn&rsquo;t work.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-0-100"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-100">100</a>
+</span><span class="lnt" id="hl-0-101"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-101">101</a>
+</span><span class="lnt" id="hl-0-102"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-102">102</a>
+</span><span class="lnt" id="hl-0-103"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-103">103</a>
+</span><span class="lnt" id="hl-0-104"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-104">104</a>
+</span><span class="lnt" id="hl-0-105"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-105">105</a>
+</span><span class="lnt" id="hl-0-106"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-106">106</a>
+</span><span class="lnt" id="hl-0-107"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-107">107</a>
+</span><span class="lnt" id="hl-0-108"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-108">108</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;Hugo Section Theme 002&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">date</span><span class="p">:</span><span class="w"> </span><span class="ld">2022-06-15T02:16:41</span><span class="m">+02</span><span class="p">:</span><span class="m">00</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">draft</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">showthedate</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">showtoc</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;This is part two of me trying to setup a distinct theme for a subsection of this Hugo site &#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&#34;Design&#34;</span><span class="p">]</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">categories</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&#34;Hugo&#34;</span><span class="p">]</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">layout</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;single.html&#34;</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>That doesn&rsquo;t work.</p>
 <p>Suffice to say, that after a few video tutorials, a number of blog posts, and a few stackoverflow searches there appears to be two solutions.</p>
 <ol>
 <li>

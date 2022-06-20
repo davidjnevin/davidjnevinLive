@@ -7,7 +7,25 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© 2022 David J. Nevin</copyright>
-    <lastBuildDate>Sun, 19 Jun 2022 12:41:56 +0200</lastBuildDate><atom:link href="https://www.davidjnevin.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 20 Jun 2022 22:04:42 +0200</lastBuildDate><atom:link href="https://www.davidjnevin.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Data Structure</title>
+      <link>https://www.davidjnevin.com/categories/data-structure/</link>
+      <pubDate>Mon, 20 Jun 2022 22:04:42 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/categories/data-structure/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hash</title>
+      <link>https://www.davidjnevin.com/categories/hash/</link>
+      <pubDate>Mon, 20 Jun 2022 22:04:42 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/categories/hash/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Plans</title>
       <link>https://www.davidjnevin.com/categories/plans/</link>
