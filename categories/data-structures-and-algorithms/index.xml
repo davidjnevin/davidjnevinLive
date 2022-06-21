@@ -7,7 +7,17 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© 2022 David J. Nevin</copyright>
-    <lastBuildDate>Mon, 20 Jun 2022 23:58:38 +0200</lastBuildDate><atom:link href="https://www.davidjnevin.com/categories/data-structures-and-algorithms/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 21 Jun 2022 19:02:01 +0200</lastBuildDate><atom:link href="https://www.davidjnevin.com/categories/data-structures-and-algorithms/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Binary Search Extended</title>
+      <link>https://www.davidjnevin.com/code/binary_search_extended/</link>
+      <pubDate>Tue, 21 Jun 2022 19:02:01 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/binary_search_extended/</guid>
+      <description>Binary Search Recommended Youtube Playlist Binary searching has been a difficult learning curve for me. It didn&amp;rsquo;t immediately click, so I&amp;rsquo;ve been doing a series of tutorials on youtube. This playlist is excellent.
+So far, I&amp;rsquo;ve gotten my head around the binary Search itself, Find Closest NUmber, FInd fixed Point, Find Bitonic Peak, Find First Occurrence. Later this evening I&amp;rsquo;m going to be going through and studying Bisect Method, Square Root and Cyclically Shifted Array.</description>
+    </item>
+    
     <item>
       <title>Binary Search</title>
       <link>https://www.davidjnevin.com/code/binary_search/</link>
@@ -16,6 +26,7 @@
       <guid>https://www.davidjnevin.com/code/binary_search/</guid>
       <description>Binary Search The divide and conquer search method.
 Linear Search The sequential searching through all data entries one by until until we find a match.
+Time complexity is O(n).
 100 101 102 103 104 def linear_search(data, target): for i in range(len(data)): if data[i] == target: return True return False The worst-case runtime of a linear search would be O(n).
 Binary Search (Iterative) Note: assumes that the array on which the search will take place is sorted in ascending order.</description>
     </item>
