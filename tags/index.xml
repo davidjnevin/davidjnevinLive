@@ -7,13 +7,67 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© 2022 David J. Nevin</copyright>
-    <lastBuildDate>Mon, 20 Jun 2022 23:58:38 +0200</lastBuildDate><atom:link href="https://www.davidjnevin.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 21 Jun 2022 19:02:01 +0200</lastBuildDate><atom:link href="https://www.davidjnevin.com/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Binary Search</title>
       <link>https://www.davidjnevin.com/tags/binary-search/</link>
-      <pubDate>Mon, 20 Jun 2022 23:58:38 +0200</pubDate>
+      <pubDate>Tue, 21 Jun 2022 19:02:01 +0200</pubDate>
       
       <guid>https://www.davidjnevin.com/tags/binary-search/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Bitonic Point</title>
+      <link>https://www.davidjnevin.com/tags/bitonic-point/</link>
+      <pubDate>Tue, 21 Jun 2022 19:02:01 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/bitonic-point/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Duplicates</title>
+      <link>https://www.davidjnevin.com/tags/duplicates/</link>
+      <pubDate>Tue, 21 Jun 2022 19:02:01 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/duplicates/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Find Closest Number</title>
+      <link>https://www.davidjnevin.com/tags/find-closest-number/</link>
+      <pubDate>Tue, 21 Jun 2022 19:02:01 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/find-closest-number/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Fixed Point</title>
+      <link>https://www.davidjnevin.com/tags/fixed-point/</link>
+      <pubDate>Tue, 21 Jun 2022 19:02:01 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/fixed-point/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Upwork</title>
+      <link>https://www.davidjnevin.com/tags/upwork/</link>
+      <pubDate>Tue, 21 Jun 2022 19:02:01 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/upwork/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Vim</title>
+      <link>https://www.davidjnevin.com/tags/vim/</link>
+      <pubDate>Tue, 21 Jun 2022 19:02:01 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/vim/</guid>
       <description></description>
     </item>
     
