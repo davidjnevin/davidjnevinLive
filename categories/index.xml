@@ -7,22 +7,31 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© 2022 David J. Nevin</copyright>
-    <lastBuildDate>Tue, 21 Jun 2022 19:02:01 +0200</lastBuildDate><atom:link href="https://www.davidjnevin.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 22 Jun 2022 10:47:37 +0200</lastBuildDate><atom:link href="https://www.davidjnevin.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Data Structures and Algorithms</title>
+      <link>https://www.davidjnevin.com/categories/data-structures-and-algorithms/</link>
+      <pubDate>Wed, 22 Jun 2022 10:47:37 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/categories/data-structures-and-algorithms/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Recursion</title>
+      <link>https://www.davidjnevin.com/categories/recursion/</link>
+      <pubDate>Wed, 22 Jun 2022 10:47:37 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/categories/recursion/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Binary Search</title>
       <link>https://www.davidjnevin.com/categories/binary-search/</link>
       <pubDate>Tue, 21 Jun 2022 19:02:01 +0200</pubDate>
       
       <guid>https://www.davidjnevin.com/categories/binary-search/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Data Structures and Algorithms</title>
-      <link>https://www.davidjnevin.com/categories/data-structures-and-algorithms/</link>
-      <pubDate>Tue, 21 Jun 2022 19:02:01 +0200</pubDate>
-      
-      <guid>https://www.davidjnevin.com/categories/data-structures-and-algorithms/</guid>
       <description></description>
     </item>
     
