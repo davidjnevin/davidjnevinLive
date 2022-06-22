@@ -16,7 +16,7 @@
       <guid>https://www.davidjnevin.com/code/vim_commands/</guid>
       <description>Too Many Vim Commands These are based on my obsidian notes from when I started using Vim in April of 2021.
 Stage One Commands There were too many commands to get stated, so following the advise of The Primeagen Youtube Channel, I&amp;rsquo;m focusing for my first week on the following commands. w, b, h, j, k, l, y, p, d, v, V, u, :w and :q.
-Stage One Commands Explained command explanation w move forward one word b backwards one word h, j, k, l left, down, up, right y yank p paste/put d delete v enter visual mode V enter line select visual mode u undo :w write file/save :q quit Stage Two Commands The goals is to feel comfortable with the week one commands before moving on.</description>
+Stage One Commands Explained command explanation w move forward one word b backwards one word h, j, k, l move left, down, up, right y yank p paste/put d delete v enter visual mode V enter line select visual mode u undo :w write file/save :q quit Stage Two Commands The goals is to feel comfortable with the week one commands before moving on.</description>
     </item>
     
   </channel>
