@@ -2,6 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://www.davidjnevin.com/categories/</loc>
+    <lastmod>2022-06-22T10:47:37+02:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/tags/commands/</loc>
+    <lastmod>2022-06-22T10:47:37+02:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/categories/getting-started/</loc>
+    <lastmod>2022-06-22T10:47:37+02:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/tags/stages/</loc>
+    <lastmod>2022-06-22T10:47:37+02:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/tags/</loc>
+    <lastmod>2022-06-22T10:47:37+02:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/tags/vim/</loc>
+    <lastmod>2022-06-22T10:47:37+02:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/categories/vim/</loc>
+    <lastmod>2022-06-22T10:47:37+02:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/code/vim_commands/</loc>
+    <lastmod>2022-06-22T10:47:37+02:00</lastmod>
+  </url><url>
     <loc>https://www.davidjnevin.com/tags/binary-search/</loc>
     <lastmod>2022-06-21T19:02:01+02:00</lastmod>
   </url><url>
@@ -12,9 +36,6 @@
     <lastmod>2022-06-21T19:02:01+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/tags/bitonic-point/</loc>
-    <lastmod>2022-06-21T19:02:01+02:00</lastmod>
-  </url><url>
-    <loc>https://www.davidjnevin.com/categories/</loc>
     <lastmod>2022-06-21T19:02:01+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/categories/data-structures-and-algorithms/</loc>
@@ -29,13 +50,7 @@
     <loc>https://www.davidjnevin.com/tags/fixed-point/</loc>
     <lastmod>2022-06-21T19:02:01+02:00</lastmod>
   </url><url>
-    <loc>https://www.davidjnevin.com/tags/</loc>
-    <lastmod>2022-06-21T19:02:01+02:00</lastmod>
-  </url><url>
     <loc>https://www.davidjnevin.com/tags/upwork/</loc>
-    <lastmod>2022-06-21T19:02:01+02:00</lastmod>
-  </url><url>
-    <loc>https://www.davidjnevin.com/tags/vim/</loc>
     <lastmod>2022-06-21T19:02:01+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/code/binary_search/</loc>

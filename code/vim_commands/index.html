@@ -1,0 +1,1553 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:title" content="Vim Commands" />
+<meta property="og:description" content="Too Many Vim Commands These are based on my obsidian notes from when I started using Vim in April of 2021.
+Stage One Commands There were too many commands to get stated, so following the advise of The Primeagen Youtube Channel, I&rsquo;m focusing for my first week on the following commands. w, b, h, j, k, l, y, p, d, v, V, u, :w and :q.
+Stage One Commands Explained command explanation w move forward one word b backwards one word h, j, k, l left, down, up, right y yank p paste/put d delete v enter visual mode V enter line select visual mode u undo :w write file/save :q quit Stage Two Commands The goals is to feel comfortable with the week one commands before moving on." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.davidjnevin.com/code/vim_commands/" /><meta property="article:section" content="code" />
+<meta property="article:published_time" content="2022-06-22T10:47:37+02:00" />
+<meta property="article:modified_time" content="2022-06-22T10:47:37+02:00" />
+
+
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Vim Commands"/>
+<meta name="twitter:description" content="Too Many Vim Commands These are based on my obsidian notes from when I started using Vim in April of 2021.
+Stage One Commands There were too many commands to get stated, so following the advise of The Primeagen Youtube Channel, I&rsquo;m focusing for my first week on the following commands. w, b, h, j, k, l, y, p, d, v, V, u, :w and :q.
+Stage One Commands Explained command explanation w move forward one word b backwards one word h, j, k, l left, down, up, right y yank p paste/put d delete v enter visual mode V enter line select visual mode u undo :w write file/save :q quit Stage Two Commands The goals is to feel comfortable with the week one commands before moving on."/>
+
+  
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VGVQ6SM9N7"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-VGVQ6SM9N7', { 'anonymize_ip': false });
+}
+</script>
+
+  
+  <title>
+    
+    David J Nevin - Vim Commands
+    
+  </title>
+  
+  <link rel="icon" href="https://davidjnevin.com/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://davidjnevin.com/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://davidjnevin.com/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://davidjnevin.com/apple-touch-icon.png">
+<link rel="mask-icon" href="https://davidjnevin.com/%3Clink%20/%20abs%20url%3E">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<meta name="generator" content="Hugo 0.81.0" />
+<link rel="alternate" type="application/rss&#43;xml" href="https://davidjnevin.com/index.xml">
+<link rel="alternate" type="application/json" href="https://davidjnevin.com/index.json">
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@700&amp;family=EB+Garamond:ital,wght@0,400;0,700;1,500&amp;family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&amp;family=Merriweather:wght@900&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/normalize.css">
+  <link rel="stylesheet" href="/css/style.css"> 
+
+  <script defer src="/js/main.js"></script>
+</head>
+<script>
+  try {
+    if (!('theme' in localStorage)) {
+      localStorage.theme = window.matchMedia('(prefer-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+    document.querySelector('html').classList.add(localStorage.theme);
+  } catch (e) {
+    console.error(e);
+  }
+</script>
+<body>
+  <header>
+  <h1 class="row gap-1 nowrap">
+    
+    <a href="/">David J Nevin</a><a href="/code">+= code</a>
+  </h1>
+  <nav class="row gap-1">
+  
+  </nav>
+  
+</header>
+  
+   
+<main>
+  
+  
+  <div class="sm-1 mtb-1">
+    Posted on &mdash; Jun 22, 2022 
+  </div>
+  
+
+  <article class="md">
+     
+
+    <h1>Vim Commands</h1>
+     <nav id="TableOfContents">
+  <ul>
+    <li><a href="#too-many-vim-commands">Too Many Vim Commands</a></li>
+    <li><a href="#stage-one-commands">Stage One Commands</a></li>
+    <li><a href="#stage-one-commands-explained">Stage One Commands Explained</a></li>
+    <li><a href="#stage-two-commands">Stage Two Commands</a></li>
+    <li><a href="#stage-two-commands-explained">Stage Two Commands Explained</a></li>
+    <li><a href="#so-far-so-good">So far so good.</a></li>
+    <li><a href="#todo">#todo</a></li>
+    <li><a href="#delete">Delete</a></li>
+    <li><a href="#insert-and-append">Insert and Append</a></li>
+    <li><a href="#three-modified-inserts">Three modified inserts</a></li>
+    <li><a href="#wow">Wow</a></li>
+    <li><a href="#write-quit-open">Write, Quit, Open</a></li>
+    <li><a href="#yank-and-put">Yank and Put</a></li>
+    <li><a href="#search-and-replace">Search and replace</a></li>
+    <li><a href="#visual-mode">Visual Mode</a></li>
+    <li><a href="#key-mappings">Key Mappings</a></li>
+    <li><a href="#surround-and-motion">Surround and Motion</a></li>
+    <li><a href="#moving-around-and-find">Moving Around and Find</a></li>
+    <li><a href="#editing-text">Editing Text</a></li>
+    <li><a href="#delete-1">Delete</a></li>
+    <li><a href="#insert-and-append-1">Insert and Append</a></li>
+    <li><a href="#three-modified-inserts-1">Three modified inserts</a></li>
+    <li><a href="#wow-1">Wow</a></li>
+    <li><a href="#write-quit-open-1">Write, Quit, Open</a></li>
+    <li><a href="#yank-and-put-1">Yank and Put</a></li>
+    <li><a href="#search-and-replace-1">Search and replace</a></li>
+    <li><a href="#visual-mode-1">Visual Mode</a></li>
+    <li><a href="#key-mappings-1">Key Mappings</a></li>
+    <li><a href="#surround-and-motion-1">Surround and Motion</a></li>
+    <li><a href="#moving-around-and-find-1">Moving Around and Find</a></li>
+    <li><a href="#editing-text-1">Editing Text</a></li>
+    <li><a href="#delete-2">Delete</a></li>
+    <li><a href="#insert-and-append-2">Insert and Append</a></li>
+    <li><a href="#three-modified-inserts-2">Three modified inserts</a></li>
+    <li><a href="#wow-2">Wow</a></li>
+    <li><a href="#write-quit-open-2">Write, Quit, Open</a></li>
+    <li><a href="#yank-and-put-2">Yank and Put</a></li>
+    <li><a href="#search-and-replace-2">Search and replace</a></li>
+    <li><a href="#visual-mode-2">Visual Mode</a></li>
+    <li><a href="#key-mappings-2">Key Mappings</a></li>
+    <li><a href="#surround-and-motion-2">Surround and Motion</a></li>
+  </ul>
+</nav>  <h2 id="too-many-vim-commands">Too Many Vim Commands</h2>
+<p>These are based on my <code>obsidian</code> notes from when I started using <code>Vim</code> in April of 2021.</p>
+<h2 id="stage-one-commands">Stage One Commands</h2>
+<p>There were too many commands to get stated, so following the advise of <a href="https://www.youtube.com/playlist?list=PLm323Lc7iSW_wuxqmKx_xxNtJC_hJbQ7R">The Primeagen Youtube Channel</a>, I&rsquo;m focusing for my first week on the following commands. <code>w, b, h, j, k, l, y, p, d, v, V, u, :w</code> and <code>:q</code>.</p>
+<h2 id="stage-one-commands-explained">Stage One Commands Explained</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">command</th>
+<th style="text-align:left">explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>w</strong></td>
+<td style="text-align:left">move forward <strong>one word</strong></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>b</strong></td>
+<td style="text-align:left">backwards <strong>one word</strong></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>h, j, k, l</strong></td>
+<td style="text-align:left">left, down, up, right</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>y</strong></td>
+<td style="text-align:left">yank</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>p</strong></td>
+<td style="text-align:left">paste/put</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>d</strong></td>
+<td style="text-align:left">delete</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>v</strong></td>
+<td style="text-align:left">enter visual mode</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>V</strong></td>
+<td style="text-align:left">enter line select visual mode</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>u</strong></td>
+<td style="text-align:left">undo</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>:w</strong></td>
+<td style="text-align:left">write file/save</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>:q</strong></td>
+<td style="text-align:left">quit</td>
+</tr>
+</tbody>
+</table>
+<h2 id="stage-two-commands">Stage Two Commands</h2>
+<p>The goals is to feel comfortable with the week one commands before moving on. Week two commands are <code>o, O, P, a, A, I, /, n, N, *, $</code>.</p>
+<h2 id="stage-two-commands-explained">Stage Two Commands Explained</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">command</th>
+<th style="text-align:left">result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>o</strong></td>
+<td style="text-align:left">open a new line and insert</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>O</strong></td>
+<td style="text-align:left">open a new line above and insert</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>p</strong></td>
+<td style="text-align:left">puts the yanked on the next line</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>P</strong></td>
+<td style="text-align:left">puts the yanked on the previous line</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>i</strong></td>
+<td style="text-align:left">insert before the cursor</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>I</strong></td>
+<td style="text-align:left">insert at the beginning of the line</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>a</strong></td>
+<td style="text-align:left">insert after the cursor (append)</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>A</strong></td>
+<td style="text-align:left">insert at the end of the line (Append)</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>/</strong></td>
+<td style="text-align:left">find</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>n</strong></td>
+<td style="text-align:left">go to next search result</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>N</strong></td>
+<td style="text-align:left">go to previous search result</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>*</strong></td>
+<td style="text-align:left">go to next search result</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>$</strong></td>
+<td style="text-align:left">go to previous search result</td>
+</tr>
+</tbody>
+</table>
+<h2 id="so-far-so-good">So far so good.</h2>
+<p>Below are my scattered notes from <code>obsidian</code>, as I progress through the newer commands, I&rsquo;ll add them here. For me at the moment it&rsquo;s about practicing stage one. Once I move onto stage two I&rsquo;ll add stage three etc. Why? Because it&rsquo;ll be great practice using those commands when editing this post.</p>
+<p>Meanwhile hope the notes are helpful.</p>
+<p>Also discovered a great looking cheat sheet at <a href="http://vim.rtorr.com/">rtoor Vim Cheat Sheet</a> code at (rtoor github)[http://vim.rtorr.com/].</p>
+<hr>
+<h2 id="todo">#todo</h2>
+<h2 id="delete">Delete</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">command</th>
+<th style="text-align:left">result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>dd</strong></td>
+<td style="text-align:left">delete line</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>D</strong></td>
+<td style="text-align:left">delete from cursor to end of line</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>dd</strong></td>
+<td style="text-align:left">delete line</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>D</strong></td>
+<td style="text-align:left">delete from cursor to line end</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>dw</strong></td>
+<td style="text-align:left">delete word</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>d2W</strong></td>
+<td style="text-align:left">delete two words</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>dt;</strong></td>
+<td style="text-align:left">delete until ;</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>d/hell</strong></td>
+<td style="text-align:left">delete until hell*</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">command</th>
+<th style="text-align:left">result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>cw</strong></td>
+<td style="text-align:left">change word</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>ci</strong></td>
+<td style="text-align:left">change inner</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>ca</strong></td>
+<td style="text-align:left">change around</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>ci</strong></td>
+<td style="text-align:left">change inside quotes from line beginning</td>
+</tr>
+</tbody>
+</table>
+<h2 id="insert-and-append">Insert and Append</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">command</th>
+<th style="text-align:left">result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>i</strong></td>
+<td style="text-align:left">insert before the cursor</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>a</strong></td>
+<td style="text-align:left">insert after the cursor (append)</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>I</strong></td>
+<td style="text-align:left">insert at the beginning of the line</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>A</strong></td>
+<td style="text-align:left">insert at the end of the line (Append)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="three-modified-inserts">Three modified inserts</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">command</th>
+<th style="text-align:left">result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>o</strong></td>
+<td style="text-align:left">open a new line and insert</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>O</strong></td>
+<td style="text-align:left">open a new line above and insert</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>gi</strong></td>
+<td style="text-align:left">go to last insert change point and insert</td>
+</tr>
+</tbody>
+</table>
+<h2 id="wow">Wow</h2>
+<p>Just realized the power of VIm in the following example. [[Vim Learn]].</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-0-100"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-100">100</a>
+</span><span class="lnt" id="hl-0-101"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-101">101</a>
+</span><span class="lnt" id="hl-0-102"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-102">102</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="line"><span class="cl"><span class="c1">// d + i=&gt; wdtSpolite&lt;ESC&gt;fcdsipolite&lt;ESPACE&gt;&lt;ESC&gt;
+</span></span></span><span class="line"><span class="cl"><span class="c1">// c =&gt; wctSpolite&lt;ESC&gt;fccwpolitely&lt;ESPACE&gt;&lt;ESC&gt;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">const</span> <span class="nx">courteousSalute</span> <span class="o">=</span> <span class="nx">I</span> <span class="nx">courteously</span> <span class="nx">salute</span> <span class="nx">you</span> <span class="nx">good</span> <span class="nx">person</span><span class="p">.</span><span class="err">&#34;</span><span class="p">;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p>well that example was nothing! Wait till you see what&rsquo;s coming.</p>
+</blockquote>
+<h2 id="write-quit-open">Write, Quit, Open</h2>
+<p>EX commands start with a :
+:write saves the file
+:quit closes the file if there are no changes
+:edit creates or opens a new or existing file</p>
+<h2 id="yank-and-put">Yank and Put</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">command</th>
+<th style="text-align:left">result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>y{motion}</strong></td>
+<td style="text-align:left">yank in a direction</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>yaw</strong></td>
+<td style="text-align:left">yanks a word</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>yas</strong></td>
+<td style="text-align:left">yanks a sentence</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>yap</strong></td>
+<td style="text-align:left">yanks a paragraph</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>p</strong></td>
+<td style="text-align:left">puts the after yanked</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>P</strong></td>
+<td style="text-align:left">puts the yanked before the cursor</td>
+</tr>
+</tbody>
+</table>
+<h2 id="search-and-replace">Search and replace</h2>
+<p><strong><code>:#,#s/older/new/g</code></strong> where #,# are the line numbers of the range of lines where the substitution is to be done.</p>
+<p><strong><code>:%s/older/new/g</code></strong> to change every occurrence in the whole file.</p>
+<p><strong><code>:%s/older/new/gc</code></strong> to find every occurrence in the whole file,</p>
+<p><strong><code>%</code></strong> typing when on a bracket takes you to the matching bracket.</p>
+<h2 id="visual-mode">Visual Mode</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">command</th>
+<th style="text-align:left">explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>v</strong></td>
+<td style="text-align:left">for character-wise visual mode</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>V</strong></td>
+<td style="text-align:left">for line-wise visual mode</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>C-V</strong></td>
+<td style="text-align:left">for block-wise visual mode</td>
+</tr>
+</tbody>
+</table>
+<h2 id="key-mappings">Key Mappings</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">command</th>
+<th style="text-align:left">explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>Leader</strong></td>
+<td style="text-align:left">Spacebar</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Leader + t</strong></td>
+<td style="text-align:left">:tabnew</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Leader + t + n</strong></td>
+<td style="text-align:left">:tabnext</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Leader + t + p</strong></td>
+<td style="text-align:left">:tabprev</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Leader + t + o</strong></td>
+<td style="text-align:left">:tabo</td>
+</tr>
+<tr>
+<td style="text-align:left">**Leader + / **</td>
+<td style="text-align:left">:noh</td>
+</tr>
+</tbody>
+</table>
+<h2 id="surround-and-motion">Surround and Motion</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Sneak</th>
+<th style="text-align:left">explanation</th>
+<th style="text-align:left">options</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">s{char}{char}</td>
+<td style="text-align:left">jump to the f</td>
+<td style="text-align:left">;next ,previous</td>
+</tr>
+<tr>
+<td style="text-align:left">{operator}z{char}{char}</td>
+<td style="text-align:left">jump to on the previous linence and carry out the operator.</td>
+<td style="text-align:left">; next , previous</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>w</strong></td>
+<td style="text-align:left">move forward <strong>one word</strong></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>b</strong></td>
+<td style="text-align:left">backwards <strong>one word</strong></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>W</strong></td>
+<td style="text-align:left">move forward <strong>one WORD</strong></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>B</strong></td>
+<td style="text-align:left">backwards <strong>one WORD</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Easy Motion</th>
+<th style="text-align:left">explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Leader Leader +w</td>
+<td style="text-align:left">Label the beginning of all words ahead</td>
+</tr>
+<tr>
+<td style="text-align:left">Leader Leader +f{char}</td>
+<td style="text-align:left">Label the beginning of {char} ahead</td>
+</tr>
+<tr>
+<td style="text-align:left">Leader Leader +b</td>
+<td style="text-align:left">Label the beginning of all words behind</td>
+</tr>
+<tr>
+<td style="text-align:left">Leader Leader +bd+w/b/f{char}</td>
+<td style="text-align:left">Label the beginning of all words bidirection</td>
+</tr>
+<tr>
+<td style="text-align:left">Leader Leader +e</td>
+<td style="text-align:left">Label the end of all words</td>
+</tr>
+<tr>
+<td style="text-align:left">Leader Leader +ge</td>
+<td style="text-align:left">Label the beginning of all words backwards</td>
+</tr>
+<tr>
+<td style="text-align:left">Leader Leader +j/k</td>
+<td style="text-align:left">Label the beginning of lines down/up</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Multiple Cursors</th>
+<th style="text-align:left">explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>gb</strong></td>
+<td style="text-align:left">select a word, command to select others</td>
+</tr>
+<tr>
+<td style="text-align:left">switch to VISUAL mode</td>
+<td style="text-align:left">move up or down to set cursors</td>
+</tr>
+<tr>
+<td style="text-align:left">switch to VISUAL mode</td>
+<td style="text-align:left">move to the end or beginning to set cursors</td>
+</tr>
+</tbody>
+</table>
+<h2 id="moving-around-and-find">Moving Around and Find</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">command</th>
+<th style="text-align:left">explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>w</strong></td>
+<td style="text-align:left">move forward <strong>one word</strong></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>b</strong></td>
+<td style="text-align:left">backwards <strong>one word</strong></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>W</strong></td>
+<td style="text-align:left">move forward <strong>one WORD</strong></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>B</strong></td>
+<td style="text-align:left">backwards <strong>one WORD</strong></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>e</strong></td>
+<td style="text-align:left"><strong>end</strong> of word</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>ge</strong></td>
+<td style="text-align:left">go to the end of the previous word</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>gE</strong></td>
+<td style="text-align:left">go to the end of the previous WORD</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>f{character}</strong></td>
+<td style="text-align:left">(find) next {character}</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>F{character}</strong></td>
+<td style="text-align:left">(find) previous {character}</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>t{character}</strong></td>
+<td style="text-align:left">until next character</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>T{character}</strong></td>
+<td style="text-align:left">until previous character</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>%</strong></td>
+<td style="text-align:left">find matching</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>0</strong></td>
+<td style="text-align:left">move to the fist character of a line</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>$</strong></td>
+<td style="text-align:left">move to the end of the line</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>g_</strong></td>
+<td style="text-align:left">move to the non-blank character at the end of a line</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>{</strong></td>
+<td style="text-align:left">jump up one paragraph</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>}</strong></td>
+<td style="text-align:left">jump down one paragraph</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>CTRL+D</strong></td>
+<td style="text-align:left">Jump down one page</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>CTRL+U</strong></td>
+<td style="text-align:left">jump up one page</td>
+</tr>
+</tbody>
+</table>
+<h2 id="editing-text">Editing Text</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">command</th>
+<th style="text-align:left">result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>d</strong></td>
+<td style="text-align:left">delete</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>f or / or ?</strong></td>
+<td style="text-align:left">find</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>c</strong></td>
+<td style="text-align:left">change</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>t</strong></td>
+<td style="text-align:left">unTil</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>r{char}</strong></td>
+<td style="text-align:left">replace character under the cursor with {char}</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>R</strong></td>
+<td style="text-align:left">replace more than one character, it functions like delete but acts on as many characters as you type.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="delete-1">Delete</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">command</th>
+<th style="text-align:left">result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>dd</strong></td>
+<td style="text-align:left">delete line</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>D</strong></td>
+<td style="text-align:left">delete from cursor to end of line</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>dd</strong></td>
+<td style="text-align:left">delete line</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>D</strong></td>
+<td style="text-align:left">delete from cursor to line end</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>dw</strong></td>
+<td style="text-align:left">delete word</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>d2W</strong></td>
+<td style="text-align:left">delete two words</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>dt;</strong></td>
+<td style="text-align:left">delete until ;</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>d/hell</strong></td>
+<td style="text-align:left">delete until hell*</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">command</th>
+<th style="text-align:left">result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>cw</strong></td>
+<td style="text-align:left">change word</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>ci</strong></td>
+<td style="text-align:left">change inner</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>ca</strong></td>
+<td style="text-align:left">change around</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>ci</strong></td>
+<td style="text-align:left">change inside quotes from line beginning</td>
+</tr>
+</tbody>
+</table>
+<h2 id="insert-and-append-1">Insert and Append</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">command</th>
+<th style="text-align:left">result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>i</strong></td>
+<td style="text-align:left">insert before the cursor</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>a</strong></td>
+<td style="text-align:left">insert after the cursor (append)</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>I</strong></td>
+<td style="text-align:left">insert at the beginning of the line</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>A</strong></td>
+<td style="text-align:left">insert at the end of the line (Append)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="three-modified-inserts-1">Three modified inserts</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">command</th>
+<th style="text-align:left">result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>o</strong></td>
+<td style="text-align:left">open a new line and insert</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>O</strong></td>
+<td style="text-align:left">open a new line above and insert</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>gi</strong></td>
+<td style="text-align:left">go to last insert change point and insert</td>
+</tr>
+</tbody>
+</table>
+<h2 id="wow-1">Wow</h2>
+<p>Just realized the power of VIm in the following example. [[Vim Learn]].</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-1-100"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-1-100">100</a>
+</span><span class="lnt" id="hl-1-101"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-1-101">101</a>
+</span><span class="lnt" id="hl-1-102"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-1-102">102</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="line"><span class="cl"><span class="c1">// d + i=&gt; wdtSpolite&lt;ESC&gt;fcdsipolite&lt;ESPACE&gt;&lt;ESC&gt;
+</span></span></span><span class="line"><span class="cl"><span class="c1">// c =&gt; wctSpolite&lt;ESC&gt;fccwpolitely&lt;ESPACE&gt;&lt;ESC&gt;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">const</span> <span class="nx">courteousSalute</span> <span class="o">=</span> <span class="nx">I</span> <span class="nx">courteously</span> <span class="nx">salute</span> <span class="nx">you</span> <span class="nx">good</span> <span class="nx">person</span><span class="p">.</span><span class="err">&#34;</span><span class="p">;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p>well that example was nothing! Wait till you see what&rsquo;s coming.</p>
+</blockquote>
+<h2 id="write-quit-open-1">Write, Quit, Open</h2>
+<p>EX commands start with a :
+:write saves the file
+:quit closes the file if there are no changes
+:edit creates or opens a new or existing file</p>
+<h2 id="yank-and-put-1">Yank and Put</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">command</th>
+<th style="text-align:left">result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>y{motion}</strong></td>
+<td style="text-align:left">yank in a direction</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>yaw</strong></td>
+<td style="text-align:left">yanks a word</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>yas</strong></td>
+<td style="text-align:left">yanks a sentence</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>yap</strong></td>
+<td style="text-align:left">yanks a paragraph</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>p</strong></td>
+<td style="text-align:left">puts the after yanked</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>P</strong></td>
+<td style="text-align:left">puts the yanked before the cursor</td>
+</tr>
+</tbody>
+</table>
+<h2 id="search-and-replace-1">Search and replace</h2>
+<p><strong><code>:#,#s/older/new/g</code></strong> where #,# are the line numbers of the range of lines where the substitution is to be done.</p>
+<p><strong><code>:%s/older/new/g</code></strong> to change every occurrence in the whole file.</p>
+<p><strong><code>:%s/older/new/gc</code></strong> to find every occurrence in the whole file,</p>
+<p><strong><code>%</code></strong> typing when on a bracket takes you to the matching bracket.</p>
+<h2 id="visual-mode-1">Visual Mode</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">command</th>
+<th style="text-align:left">explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>v</strong></td>
+<td style="text-align:left">for character-wise visual mode</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>V</strong></td>
+<td style="text-align:left">for line-wise visual mode</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>C-V</strong></td>
+<td style="text-align:left">for block-wise visual mode</td>
+</tr>
+</tbody>
+</table>
+<h2 id="key-mappings-1">Key Mappings</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">command</th>
+<th style="text-align:left">explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>Leader</strong></td>
+<td style="text-align:left">Spacebar</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Leader + t</strong></td>
+<td style="text-align:left">:tabnew</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Leader + t + n</strong></td>
+<td style="text-align:left">:tabnext</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Leader + t + p</strong></td>
+<td style="text-align:left">:tabprev</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Leader + t + o</strong></td>
+<td style="text-align:left">:tabo</td>
+</tr>
+<tr>
+<td style="text-align:left">**Leader + / **</td>
+<td style="text-align:left">:noh</td>
+</tr>
+</tbody>
+</table>
+<h2 id="surround-and-motion-1">Surround and Motion</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Sneak</th>
+<th style="text-align:left">explanation</th>
+<th style="text-align:left">options</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">s{char}{char}</td>
+<td style="text-align:left">jump to the first occurrence</td>
+<td style="text-align:left">;next ,previous</td>
+</tr>
+<tr>
+<td style="text-align:left">{operator}z{char}{char}</td>
+<td style="text-align:left">jump to the first occurrence and carry out the operator.</td>
+<td style="text-align:left">; next , previous</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Easy Motion</th>
+<th style="text-align:left">explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Leader Leader +w</td>
+<td style="text-align:left">Label the beginning of all words ahead</td>
+</tr>
+<tr>
+<td style="text-align:left">Leader Leader +f{char}</td>
+<td style="text-align:left">Label the beginning of {char} ahead</td>
+</tr>
+<tr>
+<td style="text-align:left">Leader Leader +b</td>
+<td style="text-align:left">Label the beginning of all words behind</td>
+</tr>
+<tr>
+<td style="text-align:left">Leader Leader +bd+w/b/f{char}</td>
+<td style="text-align:left">Label the beginning of all words bidirection</td>
+</tr>
+<tr>
+<td style="text-align:left">Leader Leader +e</td>
+<td style="text-align:left">Label the end of all words</td>
+</tr>
+<tr>
+<td style="text-align:left">Leader Leader +ge</td>
+<td style="text-align:left">Label the beginning of all words backwards</td>
+</tr>
+<tr>
+<td style="text-align:left">Leader Leader +j/k</td>
+<td style="text-align:left">Label the beginning of lines down/up</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Multiple Cursors</th>
+<th style="text-align:left">explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>gb</strong></td>
+<td style="text-align:left">select a word, command to select others</td>
+</tr>
+<tr>
+<td style="text-align:left">switch to VISUAL mode</td>
+<td style="text-align:left">move up or down to set cursors</td>
+</tr>
+<tr>
+<td style="text-align:left">switch to VISUAL mode</td>
+<td style="text-align:left">move to the end or beginning to set cursors</td>
+</tr>
+</tbody>
+</table>
+<h2 id="moving-around-and-find-1">Moving Around and Find</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">command</th>
+<th style="text-align:left">explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>w</strong></td>
+<td style="text-align:left">move forward <strong>one word</strong></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>b</strong></td>
+<td style="text-align:left">backwards <strong>one word</strong></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>W</strong></td>
+<td style="text-align:left">move forward <strong>one WORD</strong></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>B</strong></td>
+<td style="text-align:left">backwards <strong>one WORD</strong></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>e</strong></td>
+<td style="text-align:left"><strong>end</strong> of word</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>ge</strong></td>
+<td style="text-align:left">go to the end of the previous word</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>gE</strong></td>
+<td style="text-align:left">go to the end of the previous WORD</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>f{character}</strong></td>
+<td style="text-align:left">(find) next {character}</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>F{character}</strong></td>
+<td style="text-align:left">(find) previous {character}</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>t{character}</strong></td>
+<td style="text-align:left">until next character</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>T{character}</strong></td>
+<td style="text-align:left">until previous character</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>%</strong></td>
+<td style="text-align:left">find matching</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>0</strong></td>
+<td style="text-align:left">move to the fist character of a line</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>$</strong></td>
+<td style="text-align:left">move to the end of the line</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>g_</strong></td>
+<td style="text-align:left">move to the non-blank character at the end of a line</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>{</strong></td>
+<td style="text-align:left">jump up one paragraph</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>}</strong></td>
+<td style="text-align:left">jump down one paragraph</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>CTRL+D</strong></td>
+<td style="text-align:left">Jump down one page</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>CTRL+U</strong></td>
+<td style="text-align:left">jump up one page</td>
+</tr>
+</tbody>
+</table>
+<h2 id="editing-text-1">Editing Text</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">command</th>
+<th style="text-align:left">result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>d</strong></td>
+<td style="text-align:left">delete</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>f or / or ?</strong></td>
+<td style="text-align:left">find</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>c</strong></td>
+<td style="text-align:left">change</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>t</strong></td>
+<td style="text-align:left">unTil</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>r{char}</strong></td>
+<td style="text-align:left">replace character under the cursor with {char}</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>R</strong></td>
+<td style="text-align:left">replace more than one character, it functions like delete but acts on as many characters as you type.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="delete-2">Delete</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">command</th>
+<th style="text-align:left">result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>dd</strong></td>
+<td style="text-align:left">delete line</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>D</strong></td>
+<td style="text-align:left">delete from cursor to end of line</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>dd</strong></td>
+<td style="text-align:left">delete line</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>D</strong></td>
+<td style="text-align:left">delete from cursor to line end</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>dw</strong></td>
+<td style="text-align:left">delete word</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>d2W</strong></td>
+<td style="text-align:left">delete two words</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>dt;</strong></td>
+<td style="text-align:left">delete until ;</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>d/hell</strong></td>
+<td style="text-align:left">delete until hell*</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">command</th>
+<th style="text-align:left">result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>cw</strong></td>
+<td style="text-align:left">change word</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>ci</strong></td>
+<td style="text-align:left">change inner</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>ca</strong></td>
+<td style="text-align:left">change around</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>ci</strong></td>
+<td style="text-align:left">change inside quotes from line beginning</td>
+</tr>
+</tbody>
+</table>
+<h2 id="insert-and-append-2">Insert and Append</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">command</th>
+<th style="text-align:left">result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>i</strong></td>
+<td style="text-align:left">insert before the cursor</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>a</strong></td>
+<td style="text-align:left">insert after the cursor (append)</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>I</strong></td>
+<td style="text-align:left">insert at the beginning of the line</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>A</strong></td>
+<td style="text-align:left">insert at the end of the line (Append)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="three-modified-inserts-2">Three modified inserts</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">command</th>
+<th style="text-align:left">result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>o</strong></td>
+<td style="text-align:left">open a new line and insert</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>O</strong></td>
+<td style="text-align:left">open a new line above and insert</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>gi</strong></td>
+<td style="text-align:left">go to last insert change point and insert</td>
+</tr>
+</tbody>
+</table>
+<h2 id="wow-2">Wow</h2>
+<p>Just realized the power of VIm in the following example. [[Vim Learn]].</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-2-100"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-100">100</a>
+</span><span class="lnt" id="hl-2-101"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-101">101</a>
+</span><span class="lnt" id="hl-2-102"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-102">102</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="line"><span class="cl"><span class="c1">// d + i=&gt; wdtSpolite&lt;ESC&gt;fcdsipolite&lt;ESPACE&gt;&lt;ESC&gt;
+</span></span></span><span class="line"><span class="cl"><span class="c1">// c =&gt; wctSpolite&lt;ESC&gt;fccwpolitely&lt;ESPACE&gt;&lt;ESC&gt;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">const</span> <span class="nx">courteousSalute</span> <span class="o">=</span> <span class="nx">I</span> <span class="nx">courteously</span> <span class="nx">salute</span> <span class="nx">you</span> <span class="nx">good</span> <span class="nx">person</span><span class="p">.</span><span class="err">&#34;</span><span class="p">;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p>well that example was nothing! Wait till you see what&rsquo;s coming.</p>
+</blockquote>
+<h2 id="write-quit-open-2">Write, Quit, Open</h2>
+<p>EX commands start with a :
+:write saves the file
+:quit closes the file if there are no changes
+:edit creates or opens a new or existing file</p>
+<h2 id="yank-and-put-2">Yank and Put</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">command</th>
+<th style="text-align:left">result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>y{motion}</strong></td>
+<td style="text-align:left">yank in a direction</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>yaw</strong></td>
+<td style="text-align:left">yanks a word</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>yas</strong></td>
+<td style="text-align:left">yanks a sentence</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>yap</strong></td>
+<td style="text-align:left">yanks a paragraph</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>p</strong></td>
+<td style="text-align:left">puts the after yanked</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>P</strong></td>
+<td style="text-align:left">puts the yanked before the cursor</td>
+</tr>
+</tbody>
+</table>
+<h2 id="search-and-replace-2">Search and replace</h2>
+<p><strong><code>:#,#s/older/new/g</code></strong> where #,# are the line numbers of the range of lines where the substitution is to be done.</p>
+<p><strong><code>:%s/older/new/g</code></strong> to change every occurrence in the whole file.</p>
+<p><strong><code>:%s/older/new/gc</code></strong> to find every occurrence in the whole file,</p>
+<p><strong><code>%</code></strong> typing when on a bracket takes you to the matching bracket.</p>
+<h2 id="visual-mode-2">Visual Mode</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">command</th>
+<th style="text-align:left">explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>v</strong></td>
+<td style="text-align:left">for character-wise visual mode</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>V</strong></td>
+<td style="text-align:left">for line-wise visual mode</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>C-V</strong></td>
+<td style="text-align:left">for block-wise visual mode</td>
+</tr>
+</tbody>
+</table>
+<h2 id="key-mappings-2">Key Mappings</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">command</th>
+<th style="text-align:left">explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>Leader</strong></td>
+<td style="text-align:left">Spacebar</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Leader + t</strong></td>
+<td style="text-align:left">:tabnew</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Leader + t + n</strong></td>
+<td style="text-align:left">:tabnext</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Leader + t + p</strong></td>
+<td style="text-align:left">:tabprev</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Leader + t + o</strong></td>
+<td style="text-align:left">:tabo</td>
+</tr>
+<tr>
+<td style="text-align:left">**Leader + / **</td>
+<td style="text-align:left">:noh</td>
+</tr>
+</tbody>
+</table>
+<h2 id="surround-and-motion-2">Surround and Motion</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Sneak</th>
+<th style="text-align:left">explanation</th>
+<th style="text-align:left">options</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">s{char}{char}</td>
+<td style="text-align:left">jump to the first occurrence</td>
+<td style="text-align:left">;next ,previous</td>
+</tr>
+<tr>
+<td style="text-align:left">{operator}z{char}{char}</td>
+<td style="text-align:left">jump to the first occurrence and carry out the operator.</td>
+<td style="text-align:left">; next , previous</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Easy Motion</th>
+<th style="text-align:left">explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Leader Leader +w</td>
+<td style="text-align:left">Label the beginning of all words ahead</td>
+</tr>
+<tr>
+<td style="text-align:left">Leader Leader +f{char}</td>
+<td style="text-align:left">Label the beginning of {char} ahead</td>
+</tr>
+<tr>
+<td style="text-align:left">Leader Leader +b</td>
+<td style="text-align:left">Label the beginning of all words behind</td>
+</tr>
+<tr>
+<td style="text-align:left">Leader Leader +bd+w/b/f{char}</td>
+<td style="text-align:left">Label the beginning of all words bidirection</td>
+</tr>
+<tr>
+<td style="text-align:left">Leader Leader +e</td>
+<td style="text-align:left">Label the end of all words</td>
+</tr>
+<tr>
+<td style="text-align:left">Leader Leader +ge</td>
+<td style="text-align:left">Label the beginning of all words backwards</td>
+</tr>
+<tr>
+<td style="text-align:left">Leader Leader +j/k</td>
+<td style="text-align:left">Label the beginning of lines down/up</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Multiple Cursors</th>
+<th style="text-align:left">explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>gb</strong></td>
+<td style="text-align:left">select a word, command to select others</td>
+</tr>
+<tr>
+<td style="text-align:left">switch to VISUAL mode</td>
+<td style="text-align:left">move up or down to set cursors</td>
+</tr>
+<tr>
+<td style="text-align:left">switch to VISUAL mode</td>
+<td style="text-align:left">move to the end or beginning to set cursors</td>
+</tr>
+</tbody>
+</table>
+
+  </article>
+  <article class="md prev_next">
+    <hr>
+    
+    <div class="post_previous">
+      Previous: <a href=/code/binary_search_extended/>Binary Search Extended</a>
+    
+  </article>
+</main>
+
+
+  
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VGVQ6SM9N7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-VGVQ6SM9N7');
+</script>
+  
+<footer class="row row-mob al-c-mob col-rev-mob sm-2-mob jc-bt mtb-2">
+  <p class="c-tag footer-small-text">© 2022 David J. Nevin
+    
+  </p>
+  <div class=" row gap-0_5">
+    
+      <a class="icon" href="https://twitter.com/davidjnevin" title="twitter">
+      
+        <svg fill="#1da1f2" width="18" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Twitter</title><path d="M23.954 4.569c-.885.389-1.83.654-2.825.775 1.014-.611 1.794-1.574 2.163-2.723-.951.555-2.005.959-3.127 1.184-.896-.959-2.173-1.559-3.591-1.559-2.717 0-4.92 2.203-4.92 4.917 0 .39.045.765.127 1.124C7.691 8.094 4.066 6.13 1.64 3.161c-.427.722-.666 1.561-.666 2.475 0 1.71.87 3.213 2.188 4.096-.807-.026-1.566-.248-2.228-.616v.061c0 2.385 1.693 4.374 3.946 4.827-.413.111-.849.171-1.296.171-.314 0-.615-.03-.916-.086.631 1.953 2.445 3.377 4.604 3.417-1.68 1.319-3.809 2.105-6.102 2.105-.39 0-.779-.023-1.17-.067 2.189 1.394 4.768 2.209 7.557 2.209 9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63.961-.689 1.8-1.56 2.46-2.548l-.047-.02z"/></svg>
+      
+      </a>
+    
+      <a class="icon" href="https://www.linkedin.com/in/davidnevin/" title="linkedin">
+      
+        <svg fill="#0073b1" width="18" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>LinkedIn</title><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+      
+      </a>
+    
+      <a class="icon" href="https://github.com/davidjnevin" title="github">
+      
+        <svg fill="#63636f" width="18" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+      
+      </a>
+    
+      <a class="icon" href="https://leetcode.com/davidjnevin/" title="leetcode">
+      
+        <svg fill="#1da1f2" width="18" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Leetcode</title><path d="M21.469 23.907l-3.595 3.473c-0.624 0.625-1.484 0.885-2.432 0.885s-1.807-0.26-2.432-0.885l-5.776-5.812c-0.62-0.625-0.937-1.537-0.937-2.485 0-0.952 0.317-1.812 0.937-2.432l5.76-5.844c0.62-0.619 1.5-0.859 2.448-0.859s1.808 0.26 2.432 0.885l3.595 3.473c0.687 0.688 1.823 0.663 2.536-0.052 0.708-0.713 0.735-1.848 0.047-2.536l-3.473-3.511c-0.901-0.891-2.032-1.505-3.261-1.787l3.287-3.333c0.688-0.687 0.667-1.823-0.047-2.536s-1.849-0.735-2.536-0.052l-13.469 13.469c-1.307 1.312-1.989 3.113-1.989 5.113 0 1.996 0.683 3.86 1.989 5.168l5.797 5.812c1.307 1.307 3.115 1.937 5.115 1.937 1.995 0 3.801-0.683 5.109-1.989l3.479-3.521c0.688-0.683 0.661-1.817-0.052-2.531s-1.849-0.74-2.531-0.052zM27.749 17.349h-13.531c-0.932 0-1.692 0.801-1.692 1.791 0 0.991 0.76 1.797 1.692 1.797h13.531c0.933 0 1.693-0.807 1.693-1.797 0-0.989-0.76-1.791-1.693-1.791z"/></path></svg>
+      
+      </a>
+    
+    </div>
+</footer>
+</body>
+
+</html>
