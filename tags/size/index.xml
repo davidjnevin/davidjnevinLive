@@ -14,12 +14,7 @@
       <pubDate>Fri, 17 Jun 2022 23:42:31 +0200</pubDate>
       
       <guid>https://www.davidjnevin.com/code/binary_tree_terms/</guid>
-      <description>Binary Tree Terms A tree has a root and leaves.
-A root node has no parent nodes.
-A leaf node has zero children.
-A lef node is an external node, non leaf node are internal nodes.
-The degree of a node is the number of children of that node. The lines between nodes are called edges.
-Binary Tree Characteristics In a binary tree, each node has a maximum of two children.</description>
+      <description>Binary Tree Terms A tree has a root and leaves.</description>
     </item>
     
   </channel>

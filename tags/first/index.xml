@@ -14,10 +14,7 @@
       <pubDate>Tue, 14 Jun 2022 21:01:56 +0200</pubDate>
       
       <guid>https://www.davidjnevin.com/code/first_commit/</guid>
-      <description>Start here As of today, I&amp;rsquo;ve been re-experimenting with programming for 13 months.
-This is the first blog post on the topic of my coding experiences. I&amp;rsquo;ve no doubt this layout will develop and mature as I add content.
-I hope it serves as a useful resource for anyone that stumbles across it.
-This Site This site itself is built using Hugo, a static site generator written in Go. I don&amp;rsquo;t know Go and Hugo doesn&amp;rsquo;t require any deep programming skills.</description>
+      <description>Start here As of today, I&amp;rsquo;ve been re-experimenting with programming for 13 months.</description>
     </item>
     
   </channel>

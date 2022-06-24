@@ -14,13 +14,7 @@
       <pubDate>Thu, 16 Jun 2022 23:06:34 +0200</pubDate>
       
       <guid>https://www.davidjnevin.com/code/plantuml_first_attempts/</guid>
-      <description>Let&amp;rsquo;s try out PlantUML PlantUML seems at first glance somewhat similar to Mermaid but with a wider function list.
-Following instructions from Paul Dugas I set up a shortcode and added a js file to the assets&amp;gt;static folder.
-Let&amp;rsquo;s see:
-Hey that worked!
-Code:
-100 101 102 {{&amp;lt; plantuml id=&amp;#34;example&amp;#34; &amp;gt;}} David -&amp;gt; Nevin: J {{&amp;lt; /plantuml &amp;gt;}} The id created a &amp;lt;img id=&amp;quot;plantuml-example&amp;quot;... tag.
-Back to linked lists First some experimentation with sequences.</description>
+      <description>Let&amp;rsquo;s try out PlantUML PlantUML seems at first glance somewhat similar to Mermaid but with a wider function list.</description>
     </item>
     
     <item>
@@ -30,8 +24,7 @@ Back to linked lists First some experimentation with sequences.</description>
       
       <guid>https://www.davidjnevin.com/code/mermaid_first_attempts/</guid>
       <description>Mermaid setup. Really basic first effort.
-I created a shortcodes folder under my theme layouts folder, adn there created a mermaid.html with the following code.
-100 101 102 103 104 105 106 107 108 109 110 111 112 &amp;lt;script async type=&amp;#34;application/javascript&amp;#34; src=&amp;#34;https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js&amp;#34;&amp;gt; var config = { startOnLoad:true, theme: &amp;#39;{{ if .Get &amp;#34;theme&amp;#34; }}{{ .Get &amp;#34;theme&amp;#34; }}{{ else }}dark{{ end }}&amp;#39;, align:&amp;#39;{{ if .Get &amp;#34;align&amp;#34; }}{{ .Get &amp;#34;align&amp;#34; }}{{ else }} center{{ end }}&amp;#39; }; mermaid.</description>
+I created a shortcodes folder under my theme layouts folder, adn there created a mermaid.</description>
     </item>
     
   </channel>

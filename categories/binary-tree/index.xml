@@ -14,9 +14,7 @@
       <pubDate>Sun, 19 Jun 2022 02:08:26 +0200</pubDate>
       
       <guid>https://www.davidjnevin.com/code/binary_search_tree/</guid>
-      <description>Definition A binary search tree (BST) is a tree data structure in which nodes are arranged according to the following property.
-The value of the left child of any node will be less than whatever value in that node, and the value of the right child of the node will be greater than the value in that node.
-If there aren&amp;rsquo;t exactly two children, the reference to the non-existent child will contain null value.</description>
+      <description>Definition A binary search tree (BST) is a tree data structure in which nodes are arranged according to the following property.</description>
     </item>
     
     <item>
@@ -25,8 +23,7 @@ If there aren&amp;rsquo;t exactly two children, the reference to the non-existen
       <pubDate>Sun, 19 Jun 2022 02:08:09 +0200</pubDate>
       
       <guid>https://www.davidjnevin.com/code/level_order_traversal_binary_tree/</guid>
-      <description>Definition Level Order traversal is a breath first transversal. The traversal starts at the root and explores all the nodes at the same depth prior to moving onto the next depth level. A queue is normally needed to capture and keep track of the child nodes encountered bu not yet explored.
-A breath-first traversal works well on infinite or cyclical tree, where a depth first traversal might never return with an answer or get lost in the data structure.</description>
+      <description>Definition Level Order traversal is a breath first transversal. The traversal starts at the root and explores all the nodes at the same depth prior to moving onto the next depth level.</description>
     </item>
     
     <item>
@@ -35,14 +32,7 @@ A breath-first traversal works well on infinite or cyclical tree, where a depth 
       <pubDate>Sat, 18 Jun 2022 15:10:51 +0200</pubDate>
       
       <guid>https://www.davidjnevin.com/code/binary_tree_traversals/</guid>
-      <description>Tree Traversals (Preorder, Inorder and Postorder) From the root of a binary tree, traverse deeper before going laterally.
-Preorder - Node Left Right
-Inorder - Left Node Right
-Postorder - Left Right Node
-Preorder Traversal (nlr) A useful collection type to navigate the nodes traversed is a stack1.
-Iteration of Preorder Traversal Push the root to the stack.
-Is the stack empty?
-Then pop the stack, and record/output the node name/value as visited.</description>
+      <description>Tree Traversals (Preorder, Inorder and Postorder) From the root of a binary tree, traverse deeper before going laterally.</description>
     </item>
     
     <item>
@@ -51,12 +41,7 @@ Then pop the stack, and record/output the node name/value as visited.</descripti
       <pubDate>Fri, 17 Jun 2022 23:42:31 +0200</pubDate>
       
       <guid>https://www.davidjnevin.com/code/binary_tree_terms/</guid>
-      <description>Binary Tree Terms A tree has a root and leaves.
-A root node has no parent nodes.
-A leaf node has zero children.
-A lef node is an external node, non leaf node are internal nodes.
-The degree of a node is the number of children of that node. The lines between nodes are called edges.
-Binary Tree Characteristics In a binary tree, each node has a maximum of two children.</description>
+      <description>Binary Tree Terms A tree has a root and leaves.</description>
     </item>
     
   </channel>
