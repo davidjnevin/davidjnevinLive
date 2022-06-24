@@ -14,8 +14,7 @@
       <pubDate>Sun, 19 Jun 2022 02:08:09 +0200</pubDate>
       
       <guid>https://www.davidjnevin.com/code/level_order_traversal_binary_tree/</guid>
-      <description>Definition Level Order traversal is a breath first transversal. The traversal starts at the root and explores all the nodes at the same depth prior to moving onto the next depth level. A queue is normally needed to capture and keep track of the child nodes encountered bu not yet explored.
-A breath-first traversal works well on infinite or cyclical tree, where a depth first traversal might never return with an answer or get lost in the data structure.</description>
+      <description>Definition Level Order traversal is a breath first transversal. The traversal starts at the root and explores all the nodes at the same depth prior to moving onto the next depth level.</description>
     </item>
     
     <item>
@@ -24,14 +23,7 @@ A breath-first traversal works well on infinite or cyclical tree, where a depth 
       <pubDate>Sat, 18 Jun 2022 15:10:51 +0200</pubDate>
       
       <guid>https://www.davidjnevin.com/code/binary_tree_traversals/</guid>
-      <description>Tree Traversals (Preorder, Inorder and Postorder) From the root of a binary tree, traverse deeper before going laterally.
-Preorder - Node Left Right
-Inorder - Left Node Right
-Postorder - Left Right Node
-Preorder Traversal (nlr) A useful collection type to navigate the nodes traversed is a stack1.
-Iteration of Preorder Traversal Push the root to the stack.
-Is the stack empty?
-Then pop the stack, and record/output the node name/value as visited.</description>
+      <description>Tree Traversals (Preorder, Inorder and Postorder) From the root of a binary tree, traverse deeper before going laterally.</description>
     </item>
     
   </channel>

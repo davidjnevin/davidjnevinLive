@@ -14,8 +14,7 @@
       <pubDate>Sun, 19 Jun 2022 12:41:56 +0200</pubDate>
       
       <guid>https://www.davidjnevin.com/code/site_projects_june_19th/</guid>
-      <description>This post is a culmination of previous project related posts. It&amp;rsquo;s useful for me to see the needs develop and to decide when and what to implement and how I can combine the requirements into clear actions to take.
-Sidebar Although I chose the minima theme for it&amp;rsquo;s simplicity, it&amp;rsquo;s purpose was to present a personal writing related site. I wanted and still do want a clean experience for the writing posts and pages.</description>
+      <description>This post is a culmination of previous project related posts. It&amp;rsquo;s useful for me to see the needs develop and to decide when and what to implement and how I can combine the requirements into clear actions to take.</description>
     </item>
     
     <item>
@@ -24,9 +23,7 @@ Sidebar Although I chose the minima theme for it&amp;rsquo;s simplicity, it&amp;
       <pubDate>Fri, 17 Jun 2022 20:57:48 +0200</pubDate>
       
       <guid>https://www.davidjnevin.com/code/site_projects_17_06_2022/</guid>
-      <description>Certificates Section Next mini-project here on this site is to start to put together a list of certificates and courses I&amp;rsquo;ve done. I am loath to do it in html as opposed to some kind of db solution but we&amp;rsquo;ll see.
-First I want to get something visible and linkable, as I&amp;rsquo;m unhappy with the LinkedIn certificates section. Too inflexible and not customizable.
-It might be as simple as creating new subsection and a matching hugo archetype for certificates.</description>
+      <description>Certificates Section Next mini-project here on this site is to start to put together a list of certificates and courses I&amp;rsquo;ve done.</description>
     </item>
     
   </channel>

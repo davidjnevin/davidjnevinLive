@@ -14,14 +14,7 @@
       <pubDate>Sat, 18 Jun 2022 15:10:51 +0200</pubDate>
       
       <guid>https://www.davidjnevin.com/code/binary_tree_traversals/</guid>
-      <description>Tree Traversals (Preorder, Inorder and Postorder) From the root of a binary tree, traverse deeper before going laterally.
-Preorder - Node Left Right
-Inorder - Left Node Right
-Postorder - Left Right Node
-Preorder Traversal (nlr) A useful collection type to navigate the nodes traversed is a stack1.
-Iteration of Preorder Traversal Push the root to the stack.
-Is the stack empty?
-Then pop the stack, and record/output the node name/value as visited.</description>
+      <description>Tree Traversals (Preorder, Inorder and Postorder) From the root of a binary tree, traverse deeper before going laterally.</description>
     </item>
     
   </channel>

@@ -9,12 +9,21 @@
     <copyright>© 2022 David J. Nevin</copyright>
     <lastBuildDate>Thu, 05 Aug 2021 21:57:27 +0200</lastBuildDate><atom:link href="https://www.davidjnevin.com/code/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Taking Stock</title>
+      <link>https://www.davidjnevin.com/code/taking_stock_2022_06_24/</link>
+      <pubDate>Fri, 24 Jun 2022 21:53:12 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/taking_stock_2022_06_24/</guid>
+      <description>Vim Update I&amp;rsquo;m feeling more comfortable using Vim these last few days, although I admit the arrow keys are getting too much attention.</description>
+    </item>
+    
+    <item>
       <title>Vim Commands</title>
       <link>https://www.davidjnevin.com/code/vim_commands/</link>
       <pubDate>Wed, 22 Jun 2022 10:47:37 +0200</pubDate>
       
       <guid>https://www.davidjnevin.com/code/vim_commands/</guid>
-      <description>Too Many Vim Commands Getting back into Vim again and decided this time to take it slower and get the basics well in place before I try and incorporate too many commands. It&amp;rsquo;s the same mentality I&amp;rsquo;m bringing to my Python journey and will reapply to C#. The notes below are a mix of my obsidian notes from when I started using Vim in April of 2021 and resources I&amp;rsquo;ve used to better understand the commands this time round.</description>
+      <description>Too Many Vim Commands Getting back into Vim again and decided this time to take it slower and get the basics well in place before I try and incorporate too many commands.</description>
     </item>
     
     <item>
@@ -23,9 +32,7 @@
       <pubDate>Tue, 21 Jun 2022 19:02:01 +0200</pubDate>
       
       <guid>https://www.davidjnevin.com/code/binary_search_extended/</guid>
-      <description>Binary Search Recommended Youtube Playlist Binary searching has been a difficult learning curve for me. It didn&amp;rsquo;t immediately click, so I&amp;rsquo;ve been doing a series of tutorials on youtube. This playlist is excellent.
-So far, I&amp;rsquo;ve gotten my head around the binary Search itself, Find Closest NUmber, FInd fixed Point, Find Bitonic Peak, Find First Occurrence.
-Later I went through and studied Bisect Method, Square Root and Cyclically Shifted Array.</description>
+      <description>Binary Search Recommended Youtube Playlist Binary searching has been a difficult learning curve for me.</description>
     </item>
     
     <item>
@@ -35,10 +42,7 @@ Later I went through and studied Bisect Method, Square Root and Cyclically Shift
       
       <guid>https://www.davidjnevin.com/code/binary_search/</guid>
       <description>Binary Search The divide and conquer search method.
-Linear Search The sequential searching through all data entries one by until until we find a match.
-Time complexity is O(n).
-100 101 102 103 104 def linear_search(data, target): for i in range(len(data)): if data[i] == target: return True return False The worst-case runtime of a linear search would be O(n).
-Binary Search (Iterative) Note: assumes that the array on which the search will take place is sorted in ascending order.</description>
+Linear Search The sequential searching through all data entries one by until until we find a match.</description>
     </item>
     
     <item>
@@ -47,12 +51,7 @@ Binary Search (Iterative) Note: assumes that the array on which the search will 
       <pubDate>Mon, 20 Jun 2022 22:04:42 +0200</pubDate>
       
       <guid>https://www.davidjnevin.com/code/hashing_first_steps/</guid>
-      <description>Tentative steps. Today, I took some first tentative steps into understanding Hash tables:
-Fascinating topic, and one I&amp;rsquo;m using at present to complete a Caesar Cipher project. (link to here when complete #TODO)
-Here are some excellent resources, I&amp;rsquo;ve found through Engineering with Utsav
-Intro to Hash tables
-Hashing and chaining
-Simple Hash table in Python</description>
+      <description>Tentative steps. Today, I took some first tentative steps into understanding Hash tables:</description>
     </item>
     
     <item>
@@ -61,8 +60,7 @@ Simple Hash table in Python</description>
       <pubDate>Sun, 19 Jun 2022 12:41:56 +0200</pubDate>
       
       <guid>https://www.davidjnevin.com/code/site_projects_june_19th/</guid>
-      <description>This post is a culmination of previous project related posts. It&amp;rsquo;s useful for me to see the needs develop and to decide when and what to implement and how I can combine the requirements into clear actions to take.
-Sidebar Although I chose the minima theme for it&amp;rsquo;s simplicity, it&amp;rsquo;s purpose was to present a personal writing related site. I wanted and still do want a clean experience for the writing posts and pages.</description>
+      <description>This post is a culmination of previous project related posts. It&amp;rsquo;s useful for me to see the needs develop and to decide when and what to implement and how I can combine the requirements into clear actions to take.</description>
     </item>
     
     <item>
@@ -71,9 +69,7 @@ Sidebar Although I chose the minima theme for it&amp;rsquo;s simplicity, it&amp;
       <pubDate>Sun, 19 Jun 2022 02:08:26 +0200</pubDate>
       
       <guid>https://www.davidjnevin.com/code/binary_search_tree/</guid>
-      <description>Definition A binary search tree (BST) is a tree data structure in which nodes are arranged according to the following property.
-The value of the left child of any node will be less than whatever value in that node, and the value of the right child of the node will be greater than the value in that node.
-If there aren&amp;rsquo;t exactly two children, the reference to the non-existent child will contain null value.</description>
+      <description>Definition A binary search tree (BST) is a tree data structure in which nodes are arranged according to the following property.</description>
     </item>
     
     <item>
@@ -82,8 +78,7 @@ If there aren&amp;rsquo;t exactly two children, the reference to the non-existen
       <pubDate>Sun, 19 Jun 2022 02:08:09 +0200</pubDate>
       
       <guid>https://www.davidjnevin.com/code/level_order_traversal_binary_tree/</guid>
-      <description>Definition Level Order traversal is a breath first transversal. The traversal starts at the root and explores all the nodes at the same depth prior to moving onto the next depth level. A queue is normally needed to capture and keep track of the child nodes encountered bu not yet explored.
-A breath-first traversal works well on infinite or cyclical tree, where a depth first traversal might never return with an answer or get lost in the data structure.</description>
+      <description>Definition Level Order traversal is a breath first transversal. The traversal starts at the root and explores all the nodes at the same depth prior to moving onto the next depth level.</description>
     </item>
     
     <item>
@@ -92,14 +87,7 @@ A breath-first traversal works well on infinite or cyclical tree, where a depth 
       <pubDate>Sat, 18 Jun 2022 15:10:51 +0200</pubDate>
       
       <guid>https://www.davidjnevin.com/code/binary_tree_traversals/</guid>
-      <description>Tree Traversals (Preorder, Inorder and Postorder) From the root of a binary tree, traverse deeper before going laterally.
-Preorder - Node Left Right
-Inorder - Left Node Right
-Postorder - Left Right Node
-Preorder Traversal (nlr) A useful collection type to navigate the nodes traversed is a stack1.
-Iteration of Preorder Traversal Push the root to the stack.
-Is the stack empty?
-Then pop the stack, and record/output the node name/value as visited.</description>
+      <description>Tree Traversals (Preorder, Inorder and Postorder) From the root of a binary tree, traverse deeper before going laterally.</description>
     </item>
     
     <item>
@@ -108,12 +96,7 @@ Then pop the stack, and record/output the node name/value as visited.</descripti
       <pubDate>Fri, 17 Jun 2022 23:42:31 +0200</pubDate>
       
       <guid>https://www.davidjnevin.com/code/binary_tree_terms/</guid>
-      <description>Binary Tree Terms A tree has a root and leaves.
-A root node has no parent nodes.
-A leaf node has zero children.
-A lef node is an external node, non leaf node are internal nodes.
-The degree of a node is the number of children of that node. The lines between nodes are called edges.
-Binary Tree Characteristics In a binary tree, each node has a maximum of two children.</description>
+      <description>Binary Tree Terms A tree has a root and leaves.</description>
     </item>
     
     <item>
@@ -122,9 +105,7 @@ Binary Tree Characteristics In a binary tree, each node has a maximum of two chi
       <pubDate>Fri, 17 Jun 2022 20:57:48 +0200</pubDate>
       
       <guid>https://www.davidjnevin.com/code/site_projects_17_06_2022/</guid>
-      <description>Certificates Section Next mini-project here on this site is to start to put together a list of certificates and courses I&amp;rsquo;ve done. I am loath to do it in html as opposed to some kind of db solution but we&amp;rsquo;ll see.
-First I want to get something visible and linkable, as I&amp;rsquo;m unhappy with the LinkedIn certificates section. Too inflexible and not customizable.
-It might be as simple as creating new subsection and a matching hugo archetype for certificates.</description>
+      <description>Certificates Section Next mini-project here on this site is to start to put together a list of certificates and courses I&amp;rsquo;ve done.</description>
     </item>
     
     <item>
@@ -133,10 +114,7 @@ It might be as simple as creating new subsection and a matching hugo archetype f
       <pubDate>Fri, 17 Jun 2022 20:43:36 +0200</pubDate>
       
       <guid>https://www.davidjnevin.com/code/arrays_educative/</guid>
-      <description>Finished the Arrays section I&amp;rsquo;ve been working through the Data Structures and Algorithms course on Educative to develop my python skills.
-Learned the two sum problem, optimal task assignment, intersections of two sorted lists, arbitrary precision increment and array advance games solutions.
-Fascinating look into the the world of algorithms. Lots more to se of course but really enjoying the progress and the insights.
-I also did a quick &amp;ldquo;level test&amp;rdquo; and received a proficiency badge.</description>
+      <description>Finished the Arrays section I&amp;rsquo;ve been working through the Data Structures and Algorithms course on Educative to develop my python skills.</description>
     </item>
     
     <item>
@@ -145,13 +123,7 @@ I also did a quick &amp;ldquo;level test&amp;rdquo; and received a proficiency b
       <pubDate>Thu, 16 Jun 2022 23:06:34 +0200</pubDate>
       
       <guid>https://www.davidjnevin.com/code/plantuml_first_attempts/</guid>
-      <description>Let&amp;rsquo;s try out PlantUML PlantUML seems at first glance somewhat similar to Mermaid but with a wider function list.
-Following instructions from Paul Dugas I set up a shortcode and added a js file to the assets&amp;gt;static folder.
-Let&amp;rsquo;s see:
-Hey that worked!
-Code:
-100 101 102 {{&amp;lt; plantuml id=&amp;#34;example&amp;#34; &amp;gt;}} David -&amp;gt; Nevin: J {{&amp;lt; /plantuml &amp;gt;}} The id created a &amp;lt;img id=&amp;quot;plantuml-example&amp;quot;... tag.
-Back to linked lists First some experimentation with sequences.</description>
+      <description>Let&amp;rsquo;s try out PlantUML PlantUML seems at first glance somewhat similar to Mermaid but with a wider function list.</description>
     </item>
     
     <item>
@@ -161,8 +133,7 @@ Back to linked lists First some experimentation with sequences.</description>
       
       <guid>https://www.davidjnevin.com/code/mermaid_first_attempts/</guid>
       <description>Mermaid setup. Really basic first effort.
-I created a shortcodes folder under my theme layouts folder, adn there created a mermaid.html with the following code.
-100 101 102 103 104 105 106 107 108 109 110 111 112 &amp;lt;script async type=&amp;#34;application/javascript&amp;#34; src=&amp;#34;https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js&amp;#34;&amp;gt; var config = { startOnLoad:true, theme: &amp;#39;{{ if .Get &amp;#34;theme&amp;#34; }}{{ .Get &amp;#34;theme&amp;#34; }}{{ else }}dark{{ end }}&amp;#39;, align:&amp;#39;{{ if .Get &amp;#34;align&amp;#34; }}{{ .Get &amp;#34;align&amp;#34; }}{{ else }} center{{ end }}&amp;#39; }; mermaid.</description>
+I created a shortcodes folder under my theme layouts folder, adn there created a mermaid.</description>
     </item>
     
     <item>
@@ -171,9 +142,7 @@ I created a shortcodes folder under my theme layouts folder, adn there created a
       <pubDate>Wed, 15 Jun 2022 22:03:26 +0200</pubDate>
       
       <guid>https://www.davidjnevin.com/code/hugo_section_theme_003/</guid>
-      <description>Okay so that&amp;rsquo;s better. A simpler approach worked. I got playing with a copy of my primary *.html pages in the theme layout folder. I followed the advice to create a subfolder with the same name as my section.
-I copied in my files and then altered them there. Also I added a _index.md to my section folder in the content folder.
-These tweaks allowed me to alter the site title, adding a link to the section homepage as an additional text in the original title.</description>
+      <description>Okay so that&amp;rsquo;s better. A simpler approach worked. I got playing with a copy of my primary *.</description>
     </item>
     
     <item>
@@ -182,10 +151,7 @@ These tweaks allowed me to alter the site title, adding a link to the section ho
       <pubDate>Wed, 15 Jun 2022 02:16:41 +0200</pubDate>
       
       <guid>https://www.davidjnevin.com/code/hugo_section_theme_002/</guid>
-      <description>Question: If I just copy the template? What happens if I just copy the single.html into the layout/code folder?
-This is what happens, which in hindsight makes sense.
-I copied over the partial in question and plonked it into the same sub-folder. That didn&amp;rsquo;t work.
-I tried copying over the partials, editing the references in the template but without knowing what I&amp;rsquo;m doing I don&amp;rsquo;t know ifI&amp;rsquo;m getting closer or not to a solution or just digging a hole.</description>
+      <description>Question: If I just copy the template? What happens if I just copy the single.</description>
     </item>
     
     <item>
@@ -194,8 +160,7 @@ I tried copying over the partials, editing the references in the template but wi
       <pubDate>Wed, 15 Jun 2022 00:25:06 +0200</pubDate>
       
       <guid>https://www.davidjnevin.com/code/hugo_section_theme/</guid>
-      <description>Hugo Section: A different look and feel. I though that in order to set a different look and feel for a Hugo section, I&amp;rsquo;d create a folder in the current theme layout folder with the same name as the section. In my case that&amp;rsquo;s code.
-The theme I&amp;rsquo;m interested in using and adapting is Book or Geekdoc but both require the extened Hugo version. I don&amp;rsquo;t know what that will do to my main site and SASS setup with gulp, so I&amp;rsquo;m steering clear of that for now.</description>
+      <description>Hugo Section: A different look and feel. I though that in order to set a different look and feel for a Hugo section, I&amp;rsquo;d create a folder in the current theme layout folder with the same name as the section.</description>
     </item>
     
     <item>
@@ -204,9 +169,7 @@ The theme I&amp;rsquo;m interested in using and adapting is Book or Geekdoc but 
       <pubDate>Tue, 14 Jun 2022 21:43:57 +0200</pubDate>
       
       <guid>https://www.davidjnevin.com/code/critique_wheel_csharp/</guid>
-      <description>Raison d&amp;rsquo;être o el porque I built and deployed the Beta version of the critique wheel site in response to a need for the fiction writers in my writing groups to get faster and more actionable critiques on their short stories.
-From my Github records, I added the .gitignore on 15 May 2021, so I consider that the start date of the project.
-Razor Pages, MySQL The wheel is build on .</description>
+      <description>Raison d&amp;rsquo;être o el porque I built and deployed the Beta version of the critique wheel site in response to a need for the fiction writers in my writing groups to get faster and more actionable critiques on their short stories.</description>
     </item>
     
     <item>
@@ -215,10 +178,7 @@ Razor Pages, MySQL The wheel is build on .</description>
       <pubDate>Tue, 14 Jun 2022 21:01:56 +0200</pubDate>
       
       <guid>https://www.davidjnevin.com/code/first_commit/</guid>
-      <description>Start here As of today, I&amp;rsquo;ve been re-experimenting with programming for 13 months.
-This is the first blog post on the topic of my coding experiences. I&amp;rsquo;ve no doubt this layout will develop and mature as I add content.
-I hope it serves as a useful resource for anyone that stumbles across it.
-This Site This site itself is built using Hugo, a static site generator written in Go. I don&amp;rsquo;t know Go and Hugo doesn&amp;rsquo;t require any deep programming skills.</description>
+      <description>Start here As of today, I&amp;rsquo;ve been re-experimenting with programming for 13 months.</description>
     </item>
     
   </channel>

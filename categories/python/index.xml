@@ -14,9 +14,7 @@
       <pubDate>Sun, 19 Jun 2022 02:08:26 +0200</pubDate>
       
       <guid>https://www.davidjnevin.com/code/binary_search_tree/</guid>
-      <description>Definition A binary search tree (BST) is a tree data structure in which nodes are arranged according to the following property.
-The value of the left child of any node will be less than whatever value in that node, and the value of the right child of the node will be greater than the value in that node.
-If there aren&amp;rsquo;t exactly two children, the reference to the non-existent child will contain null value.</description>
+      <description>Definition A binary search tree (BST) is a tree data structure in which nodes are arranged according to the following property.</description>
     </item>
     
     <item>
@@ -25,12 +23,7 @@ If there aren&amp;rsquo;t exactly two children, the reference to the non-existen
       <pubDate>Fri, 17 Jun 2022 23:42:31 +0200</pubDate>
       
       <guid>https://www.davidjnevin.com/code/binary_tree_terms/</guid>
-      <description>Binary Tree Terms A tree has a root and leaves.
-A root node has no parent nodes.
-A leaf node has zero children.
-A lef node is an external node, non leaf node are internal nodes.
-The degree of a node is the number of children of that node. The lines between nodes are called edges.
-Binary Tree Characteristics In a binary tree, each node has a maximum of two children.</description>
+      <description>Binary Tree Terms A tree has a root and leaves.</description>
     </item>
     
     <item>
@@ -39,10 +32,7 @@ Binary Tree Characteristics In a binary tree, each node has a maximum of two chi
       <pubDate>Fri, 17 Jun 2022 20:43:36 +0200</pubDate>
       
       <guid>https://www.davidjnevin.com/code/arrays_educative/</guid>
-      <description>Finished the Arrays section I&amp;rsquo;ve been working through the Data Structures and Algorithms course on Educative to develop my python skills.
-Learned the two sum problem, optimal task assignment, intersections of two sorted lists, arbitrary precision increment and array advance games solutions.
-Fascinating look into the the world of algorithms. Lots more to se of course but really enjoying the progress and the insights.
-I also did a quick &amp;ldquo;level test&amp;rdquo; and received a proficiency badge.</description>
+      <description>Finished the Arrays section I&amp;rsquo;ve been working through the Data Structures and Algorithms course on Educative to develop my python skills.</description>
     </item>
     
   </channel>

@@ -14,9 +14,7 @@
       <pubDate>Sun, 19 Jun 2022 02:08:26 +0200</pubDate>
       
       <guid>https://www.davidjnevin.com/code/binary_search_tree/</guid>
-      <description>Definition A binary search tree (BST) is a tree data structure in which nodes are arranged according to the following property.
-The value of the left child of any node will be less than whatever value in that node, and the value of the right child of the node will be greater than the value in that node.
-If there aren&amp;rsquo;t exactly two children, the reference to the non-existent child will contain null value.</description>
+      <description>Definition A binary search tree (BST) is a tree data structure in which nodes are arranged according to the following property.</description>
     </item>
     
   </channel>
