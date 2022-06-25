@@ -2,8 +2,38 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://www.davidjnevin.com/projects/visual_site_map_001/</loc>
+    <lastmod>2022-06-25T19:58:59+02:00</lastmod>
+  </url><url>
     <loc>https://www.davidjnevin.com/categories/</loc>
-    <lastmod>2022-06-25T12:14:06+02:00</lastmod>
+    <lastmod>2022-06-25T19:13:51+02:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/categories/coding-projects/</loc>
+    <lastmod>2022-06-25T19:13:51+02:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/tags/python/</loc>
+    <lastmod>2022-06-25T19:13:51+02:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/projects/tag_generator_hugo_001/</loc>
+    <lastmod>2022-06-25T19:13:51+02:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/tags/</loc>
+    <lastmod>2022-06-25T19:13:51+02:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/projects/</loc>
+    <lastmod>2022-06-25T19:11:47+02:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/categories/ideas/</loc>
+    <lastmod>2022-06-25T16:00:49+02:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/tags/projects/</loc>
+    <lastmod>2022-06-25T16:00:49+02:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/code/python_project_ideas_001/</loc>
+    <lastmod>2022-06-25T16:00:49+02:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/categories/python-projects/</loc>
+    <lastmod>2022-06-25T16:00:49+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/categories/design/</loc>
     <lastmod>2022-06-25T12:14:06+02:00</lastmod>
@@ -18,9 +48,6 @@
     <lastmod>2022-06-25T12:14:06+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/code/site_design_update_2022_06_25/</loc>
-    <lastmod>2022-06-25T12:14:06+02:00</lastmod>
-  </url><url>
-    <loc>https://www.davidjnevin.com/tags/</loc>
     <lastmod>2022-06-25T12:14:06+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/tags/templates/</loc>
