@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>LinkedIn on David J Nevin</title>
+    <link>https://www.davidjnevin.com/tags/linkedin/</link>
+    <description>Recent content in LinkedIn on David J Nevin</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>© 2022 David J. Nevin</copyright>
+    <lastBuildDate>Sat, 25 Jun 2022 22:31:48 +0200</lastBuildDate><atom:link href="https://www.davidjnevin.com/tags/linkedin/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Share This Widget</title>
+      <link>https://www.davidjnevin.com/code/share_this_widget/</link>
+      <pubDate>Sat, 25 Jun 2022 22:31:48 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/share_this_widget/</guid>
+      <description>Share This Post Widget I&amp;rsquo;m working on implementing the code and methods detailed by Christian Oliff at this page.</description>
+    </item>
+    
+  </channel>
+</rss>
