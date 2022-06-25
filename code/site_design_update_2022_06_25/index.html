@@ -94,10 +94,17 @@ if (!doNotTrack) {
      <nav id="TableOfContents">
   <ul>
     <li><a href="#adding-some-flair">Adding Some Flair</a></li>
+    <li><a href="#cannibalizing-anubis">Cannibalizing Anubis</a></li>
+    <li><a href="#css-external-link-indicator">CSS External Link Indicator</a></li>
+    <li><a href="#code-snippet-woes">Code Snippet Woes</a></li>
+    <li><a href="#multi-word-tags-and-categories-in-hugo-frontmatter">Multi-word tags and categories in Hugo FrontMatter</a></li>
+    <li><a href="#could-i-use-python-to-generate-tags">Could I use Python to Generate Tags?</a></li>
+    <li><a href="#impact-effort-matrix">Impact Effort Matrix</a></li>
   </ul>
 </nav>  <h2 id="adding-some-flair">Adding Some Flair</h2>
-<p>I was unhappy with the functionality of the standard list page of the <a href="https://opensourcelibs.com/lib/hugo-theme-minima">minima theme</a>. Essentially, I needed something less minimal. So, looking for other themes on the <a href="">Hugo official site</a> I found the [Anubis theme](theme link) and it had what I wanted as regards a more complete list page for the posts.</p>
-<p>I installed it as a <code>git submodule</code> and then began to cannibalize the list <code>templates</code> therein. I&rsquo;m happy with the result and also learned to use some more advanced (for me) features of including <code>summary</code>, adjusting the <code>summaryLenght</code> in the <code>config.toml</code> file and also ensuring that the links generated to the posts themselves, the <code>tag</code> list pages and the <code>category</code> list pages were relative links (<code>relref</code>) and not absolute links.</p>
+<p>I was unhappy with the functionality of the standard list page of the <a href="https://opensourcelibs.com/lib/hugo-theme-minima">minima theme</a>. Essentially, I needed something less minimal. So, looking for other themes on the <a href="https://themes.gohugo.io/">Hugo official site</a> I found the <a href="https://themes.gohugo.io/themes/hugo-theme-anubis/">Anubis theme</a> and it had what I wanted as regards a more complete list page for the posts.</p>
+<h2 id="cannibalizing-anubis">Cannibalizing Anubis</h2>
+<p>I installed it as a <code>git submodule</code> and then began to cannibalize the list <code>templates</code> therein. I&rsquo;m happy with the result and also learned to use some more advanced (for me) features of including <code>summary</code>, adjusting the <code>summaryLenght</code> in the <code>config.toml</code> file and also ensuring that the links generated to the posts themselves, the <code>tag</code> list pages and the <code>category</code> list pages were relative links (<code>relref</code>) and not absolute links to avoid <a href="/code/site_design_update_2022_06_25/#css-external-link-indicator">appending the external link icon</a> to these links.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-0-100"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-100">100</a>
@@ -228,7 +235,10 @@ if (!doNotTrack) {
 </span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="o">/</span><span class="nx">div</span><span class="p">&gt;</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>In the CSS of my site I have an automatic addition of an external link icon to all external links.</p>
+</div><p>That was fun and only took a while to get up and running. The color scheme in <code>dark mode</code> versus <code>light mode</code> might need some revisiting but for the moment I&rsquo;m happy with the results.</p>
+<h2 id="css-external-link-indicator">CSS External Link Indicator</h2>
+<p>If you&rsquo;re interested, I use the following CSS on my site to have an automatic addition of an external link icon to all external links.[](
+This <a href="/code/site_design_update_2022_06_25/">link</a> is internal, while this is to the same destination but uses an <a href="https://www.davidjnevin.com/code/site_design_update_2022_06_25/#css-external-link-indicator">absolute link</a>.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-1-100"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-1-100">100</a>
@@ -253,11 +263,24 @@ if (!doNotTrack) {
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>That was fun and only took a while to get up and running. The color scheme in <code>dark mode</code> versus <code>light mode</code> might need some revisiting but for the moment I&rsquo;m happy with the results.</p>
+</div><h2 id="code-snippet-woes">Code Snippet Woes</h2>
 <p>Next on the cards is to try and reduce the with of the line number column in the code snippets. At present it occupies far too much space and adds to the need for excessive horitzonal scrolling in the snippets.</p>
 <p><img src="/images/code_snippet_too_much_indent.png" alt="Too much Indent due to line number colum size"></p>
 <p>At present the width is set to auto for the line number column and it smells like a rabbit hole.</p>
 <p>Later. #TODO</p>
+<h2 id="multi-word-tags-and-categories-in-hugo-frontmatter">Multi-word tags and categories in Hugo FrontMatter</h2>
+<p>Some of the <code>tags</code> and <code>categories</code> I apply to my posts are multi-word and this is causing problems when creating links to these tag/cat pages from the list page.</p>
+<p>That&rsquo;s one issue, which I don&rsquo;t yet understand, given that I&rsquo;m unsure how the tags/cats info is displayed/processed on the <code>post-info.html</code> template. This is causing the links under each post listing on the code index page, that is, the list of published posts, to fail. this is not good.</p>
+<p>So quick fix, reduce the tags used to single words. This might be the best quick win. However, this means a data loss. What would I choose instead of <code>Binary Search</code>, binary or search. Neither are apt for what I wanted to express. The plot thickens.</p>
+<p>I know the tags pages has no problems displaying and linking the multi-word tags, so it&rsquo;s possible. That&rsquo;s a great first step, knowing it&rsquo;s possible already.</p>
+<p>Time to investigate. #TODO</p>
+<p>note: Meanwhile I&rsquo;m deactivating the tags and categories as shown on the list pages. No point generating broken links.</p>
+<h2 id="could-i-use-python-to-generate-tags">Could I use Python to Generate Tags?</h2>
+<p>But, perhaps more interestingly I&rsquo;m curious now how to automatically generate the tags as opposed to simply trying to remember previous tags that might be relevant and simultaneously come up with new tags that might describe the content accurately.</p>
+<p><code>Pointwise Mutual Information</code> seems to be the <code>stackoverflow</code> recommendation most voted for <a href="https://stackoverflow.com/questions/2661778/tag-generation-from-a-text-content?answertab=trending#tab-top">here</a>. So there&rsquo;s that, which if we&rsquo;re being honest seems like a much more interesting and perhaps applicable skill than fixing the existing multi-word tags/cats issue.</p>
+<h2 id="impact-effort-matrix">Impact Effort Matrix</h2>
+<p>This morning I was learning a little about the use of the <a href="https://www.sixsigmadaily.com/how-to-use-the-impact-effort-matrix/"><code>impact/Effort Matrix</code></a> as a means to decide the next course of action in a project. There&rsquo;s far more to it than that but it piqued my interest, and relates directly to an earlier <a href="/code/taking_stock_2022_06_24/">post&rsquo;s</a> questions regarding burnout.</p>
+<p>So that seems like a fun rabbit hole. #TODO</p>
 
   </article>
   <article class="md prev_next">
