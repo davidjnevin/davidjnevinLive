@@ -2,19 +2,40 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://www.davidjnevin.com/tags/burnout/</loc>
-    <lastmod>2022-06-24T21:53:12+02:00</lastmod>
-  </url><url>
     <loc>https://www.davidjnevin.com/categories/</loc>
+    <lastmod>2022-06-25T12:14:06+02:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/categories/design/</loc>
+    <lastmod>2022-06-25T12:14:06+02:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/tags/design-updates/</loc>
+    <lastmod>2022-06-25T12:14:06+02:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/tags/hugo/</loc>
+    <lastmod>2022-06-25T12:14:06+02:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/categories/hugo/</loc>
+    <lastmod>2022-06-25T12:14:06+02:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/code/site_design_update_2022_06_25/</loc>
+    <lastmod>2022-06-25T12:14:06+02:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/tags/</loc>
+    <lastmod>2022-06-25T12:14:06+02:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/tags/templates/</loc>
+    <lastmod>2022-06-25T12:14:06+02:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/tags/usability/</loc>
+    <lastmod>2022-06-25T12:14:06+02:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/tags/burnout/</loc>
     <lastmod>2022-06-24T21:53:12+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/tags/community/</loc>
     <lastmod>2022-06-24T21:53:12+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/categories/reflections/</loc>
-    <lastmod>2022-06-24T21:53:12+02:00</lastmod>
-  </url><url>
-    <loc>https://www.davidjnevin.com/tags/</loc>
     <lastmod>2022-06-24T21:53:12+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/tags/taking-stock/</loc>
@@ -200,9 +221,6 @@
     <loc>https://www.davidjnevin.com/series/displaying-linked-lists/</loc>
     <lastmod>2022-06-16T23:06:34+02:00</lastmod>
   </url><url>
-    <loc>https://www.davidjnevin.com/categories/hugo/</loc>
-    <lastmod>2022-06-16T23:06:34+02:00</lastmod>
-  </url><url>
     <loc>https://www.davidjnevin.com/tags/markdown/</loc>
     <lastmod>2022-06-16T23:06:34+02:00</lastmod>
   </url><url>
@@ -255,9 +273,6 @@
     <lastmod>2022-06-14T21:43:57+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/tags/css/</loc>
-    <lastmod>2022-06-14T21:43:57+02:00</lastmod>
-  </url><url>
-    <loc>https://www.davidjnevin.com/tags/hugo/</loc>
     <lastmod>2022-06-14T21:43:57+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/tags/razorpages/</loc>
