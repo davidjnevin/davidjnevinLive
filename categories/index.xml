@@ -7,7 +7,34 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© 2022 David J. Nevin</copyright>
-    <lastBuildDate>Sat, 25 Jun 2022 12:14:06 +0200</lastBuildDate><atom:link href="https://www.davidjnevin.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 25 Jun 2022 19:13:51 +0200</lastBuildDate><atom:link href="https://www.davidjnevin.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Coding Projects</title>
+      <link>https://www.davidjnevin.com/categories/coding-projects/</link>
+      <pubDate>Sat, 25 Jun 2022 19:13:51 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/categories/coding-projects/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ideas</title>
+      <link>https://www.davidjnevin.com/categories/ideas/</link>
+      <pubDate>Sat, 25 Jun 2022 16:00:49 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/categories/ideas/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Python Projects</title>
+      <link>https://www.davidjnevin.com/categories/python-projects/</link>
+      <pubDate>Sat, 25 Jun 2022 16:00:49 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/categories/python-projects/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Design</title>
       <link>https://www.davidjnevin.com/categories/design/</link>
