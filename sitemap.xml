@@ -2,10 +2,31 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://www.davidjnevin.com/tags/base-class/</loc>
-    <lastmod>2022-06-26T00:25:42+02:00</lastmod>
-  </url><url>
     <loc>https://www.davidjnevin.com/categories/</loc>
+    <lastmod>2022-06-26T12:41:21+02:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/categories/efficiency/</loc>
+    <lastmod>2022-06-26T12:41:21+02:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/tags/</loc>
+    <lastmod>2022-06-26T12:41:21+02:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/tags/terminal/</loc>
+    <lastmod>2022-06-26T12:41:21+02:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/code/terminal_tweaks/</loc>
+    <lastmod>2022-06-26T12:41:21+02:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/tags/tweaks/</loc>
+    <lastmod>2022-06-26T12:41:21+02:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/tags/vim/</loc>
+    <lastmod>2022-06-26T12:41:21+02:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/categories/workflow/</loc>
+    <lastmod>2022-06-26T12:41:21+02:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/tags/base-class/</loc>
     <lastmod>2022-06-26T00:25:42+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/tags/child-class/</loc>
@@ -33,9 +54,6 @@
     <lastmod>2022-06-26T00:25:42+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/tags/super-class/</loc>
-    <lastmod>2022-06-26T00:25:42+02:00</lastmod>
-  </url><url>
-    <loc>https://www.davidjnevin.com/tags/</loc>
     <lastmod>2022-06-26T00:25:42+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/tags/abstraction/</loc>
@@ -150,9 +168,6 @@
     <lastmod>2022-06-24T21:53:12+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/code/taking_stock_2022_06_24/</loc>
-    <lastmod>2022-06-24T21:53:12+02:00</lastmod>
-  </url><url>
-    <loc>https://www.davidjnevin.com/tags/vim/</loc>
     <lastmod>2022-06-24T21:53:12+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/tags/commands/</loc>
