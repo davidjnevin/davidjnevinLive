@@ -7,8 +7,8 @@
 <meta property="og:description" content="Time to Tweak the Terminal Having played around with and gotten some comfort level with Vim with VS Code, I feel it&rsquo;s time to start exploring using Vim from the terminal." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.davidjnevin.com/code/terminal_tweaks/" /><meta property="article:section" content="code" />
-<meta property="article:published_time" content="2022-06-26T12:41:21+02:00" />
-<meta property="article:modified_time" content="2022-06-26T12:41:21+02:00" />
+<meta property="article:published_time" content="2022-06-26T12:41:21&#43;02:00" />
+<meta property="article:modified_time" content="2022-06-26T12:41:21&#43;02:00" />
 
 
   <meta name="twitter:card" content="summary"/>
@@ -102,21 +102,21 @@ if (!doNotTrack) {
 <p>I want to have an idea of where I am in the terminal, in terms of location, but at present my terminal shows an enormous string on the <code>command prompt</code> line. Here&rsquo;s an example&quot;</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-0-100"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-100">100</a>
+<pre class="chroma"><code><span class="lnt" id="100"><a style="outline: none; text-decoration:none; color:inherit" href="#100">100</a>
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="o">(</span>base<span class="o">)</span> Communitymanager-work@David-Nevins-MacBook-Pro ~ %
-</span></span></code></pre></td></tr></table>
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="o">(</span>base<span class="o">)</span> Communitymanager-work@David-Nevins-MacBook-Pro ~ %
+</code></pre></td></tr></table>
 </div>
 </div><p>This as you can imagine offers a high level of distraction and once I delve deeper into folders it becomes a mess. And yes, I know my computer name is a mess, I set it some years ago when I only ever considered the experience from inside the MacOS environment. Subsequent migrations with using full backups have carried over this mistake many times.</p>
 <p>To change the <code>command prompt text</code> for a single use I found the following command on <a href="https://askubuntu.com/questions/17723/trim-the-terminal-command-prompt-working-directory/17738#17738"><code>stackoverflow</code></a>.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-1-100"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-1-100">100</a>
+<pre class="chroma"><code><span class="lnt" id="100"><a style="outline: none; text-decoration:none; color:inherit" href="#100">100</a>
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nv">PS1</span><span class="o">=</span><span class="s2">&#34;\w\n&gt;&#34;</span>
-</span></span></code></pre></td></tr></table>
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">PS1</span><span class="o">=</span><span class="s2">&#34;\w\n&gt;&#34;</span>
+</code></pre></td></tr></table>
 </div>
 </div><p>Warning: Rabbit hole!</p>
 <p>Following the advise of these two videos by Corey Schafer:</p>
@@ -134,133 +134,135 @@ and then switched my setup to <code>zsh</code> or z-shell, as the preferred/reco
 <p>This is what I ended up with: (edited to remove anaconda and other config details)</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-2-100"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-100">100</a>
-</span><span class="lnt" id="hl-2-101"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-101">101</a>
-</span><span class="lnt" id="hl-2-102"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-102">102</a>
-</span><span class="lnt" id="hl-2-103"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-103">103</a>
-</span><span class="lnt" id="hl-2-104"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-104">104</a>
-</span><span class="lnt" id="hl-2-105"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-105">105</a>
-</span><span class="lnt" id="hl-2-106"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-106">106</a>
-</span><span class="lnt" id="hl-2-107"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-107">107</a>
-</span><span class="lnt" id="hl-2-108"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-108">108</a>
-</span><span class="lnt" id="hl-2-109"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-109">109</a>
-</span><span class="lnt" id="hl-2-110"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-110">110</a>
-</span><span class="lnt" id="hl-2-111"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-111">111</a>
-</span><span class="lnt" id="hl-2-112"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-112">112</a>
-</span><span class="lnt" id="hl-2-113"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-113">113</a>
-</span><span class="lnt" id="hl-2-114"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-114">114</a>
-</span><span class="lnt" id="hl-2-115"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-115">115</a>
-</span><span class="lnt" id="hl-2-116"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-116">116</a>
-</span><span class="lnt" id="hl-2-117"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-117">117</a>
-</span><span class="lnt" id="hl-2-118"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-118">118</a>
-</span><span class="lnt" id="hl-2-119"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-119">119</a>
-</span><span class="lnt" id="hl-2-120"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-120">120</a>
-</span><span class="lnt" id="hl-2-121"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-121">121</a>
-</span><span class="lnt" id="hl-2-122"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-122">122</a>
-</span><span class="lnt" id="hl-2-123"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-123">123</a>
-</span><span class="lnt" id="hl-2-124"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-124">124</a>
-</span><span class="lnt" id="hl-2-125"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-125">125</a>
-</span><span class="lnt" id="hl-2-126"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-126">126</a>
-</span><span class="lnt" id="hl-2-127"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-127">127</a>
-</span><span class="lnt" id="hl-2-128"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-128">128</a>
-</span><span class="lnt" id="hl-2-129"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-129">129</a>
-</span><span class="lnt" id="hl-2-130"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-130">130</a>
-</span><span class="lnt" id="hl-2-131"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-131">131</a>
-</span><span class="lnt" id="hl-2-132"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-132">132</a>
-</span><span class="lnt" id="hl-2-133"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-133">133</a>
-</span><span class="lnt" id="hl-2-134"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-134">134</a>
-</span><span class="lnt" id="hl-2-135"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-135">135</a>
-</span><span class="lnt" id="hl-2-136"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-136">136</a>
-</span><span class="lnt" id="hl-2-137"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-137">137</a>
-</span><span class="lnt" id="hl-2-138"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-138">138</a>
-</span><span class="lnt" id="hl-2-139"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-139">139</a>
-</span><span class="lnt" id="hl-2-140"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-140">140</a>
-</span><span class="lnt" id="hl-2-141"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-141">141</a>
-</span><span class="lnt" id="hl-2-142"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-142">142</a>
-</span><span class="lnt" id="hl-2-143"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-143">143</a>
-</span><span class="lnt" id="hl-2-144"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-144">144</a>
-</span><span class="lnt" id="hl-2-145"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-145">145</a>
-</span><span class="lnt" id="hl-2-146"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-146">146</a>
-</span><span class="lnt" id="hl-2-147"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-147">147</a>
-</span><span class="lnt" id="hl-2-148"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-148">148</a>
-</span><span class="lnt" id="hl-2-149"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-149">149</a>
-</span><span class="lnt" id="hl-2-150"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-150">150</a>
-</span><span class="lnt" id="hl-2-151"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-151">151</a>
-</span><span class="lnt" id="hl-2-152"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-152">152</a>
-</span><span class="lnt" id="hl-2-153"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-153">153</a>
-</span><span class="lnt" id="hl-2-154"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-154">154</a>
-</span><span class="lnt" id="hl-2-155"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-155">155</a>
-</span><span class="lnt" id="hl-2-156"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-156">156</a>
-</span><span class="lnt" id="hl-2-157"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-157">157</a>
-</span><span class="lnt" id="hl-2-158"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-158">158</a>
-</span><span class="lnt" id="hl-2-159"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-159">159</a>
-</span><span class="lnt" id="hl-2-160"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-160">160</a>
-</span><span class="lnt" id="hl-2-161"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-161">161</a>
+<pre class="chroma"><code><span class="lnt" id="100"><a style="outline: none; text-decoration:none; color:inherit" href="#100">100</a>
+</span><span class="lnt" id="101"><a style="outline: none; text-decoration:none; color:inherit" href="#101">101</a>
+</span><span class="lnt" id="102"><a style="outline: none; text-decoration:none; color:inherit" href="#102">102</a>
+</span><span class="lnt" id="103"><a style="outline: none; text-decoration:none; color:inherit" href="#103">103</a>
+</span><span class="lnt" id="104"><a style="outline: none; text-decoration:none; color:inherit" href="#104">104</a>
+</span><span class="lnt" id="105"><a style="outline: none; text-decoration:none; color:inherit" href="#105">105</a>
+</span><span class="lnt" id="106"><a style="outline: none; text-decoration:none; color:inherit" href="#106">106</a>
+</span><span class="lnt" id="107"><a style="outline: none; text-decoration:none; color:inherit" href="#107">107</a>
+</span><span class="lnt" id="108"><a style="outline: none; text-decoration:none; color:inherit" href="#108">108</a>
+</span><span class="lnt" id="109"><a style="outline: none; text-decoration:none; color:inherit" href="#109">109</a>
+</span><span class="lnt" id="110"><a style="outline: none; text-decoration:none; color:inherit" href="#110">110</a>
+</span><span class="lnt" id="111"><a style="outline: none; text-decoration:none; color:inherit" href="#111">111</a>
+</span><span class="lnt" id="112"><a style="outline: none; text-decoration:none; color:inherit" href="#112">112</a>
+</span><span class="lnt" id="113"><a style="outline: none; text-decoration:none; color:inherit" href="#113">113</a>
+</span><span class="lnt" id="114"><a style="outline: none; text-decoration:none; color:inherit" href="#114">114</a>
+</span><span class="lnt" id="115"><a style="outline: none; text-decoration:none; color:inherit" href="#115">115</a>
+</span><span class="lnt" id="116"><a style="outline: none; text-decoration:none; color:inherit" href="#116">116</a>
+</span><span class="lnt" id="117"><a style="outline: none; text-decoration:none; color:inherit" href="#117">117</a>
+</span><span class="lnt" id="118"><a style="outline: none; text-decoration:none; color:inherit" href="#118">118</a>
+</span><span class="lnt" id="119"><a style="outline: none; text-decoration:none; color:inherit" href="#119">119</a>
+</span><span class="lnt" id="120"><a style="outline: none; text-decoration:none; color:inherit" href="#120">120</a>
+</span><span class="lnt" id="121"><a style="outline: none; text-decoration:none; color:inherit" href="#121">121</a>
+</span><span class="lnt" id="122"><a style="outline: none; text-decoration:none; color:inherit" href="#122">122</a>
+</span><span class="lnt" id="123"><a style="outline: none; text-decoration:none; color:inherit" href="#123">123</a>
+</span><span class="lnt" id="124"><a style="outline: none; text-decoration:none; color:inherit" href="#124">124</a>
+</span><span class="lnt" id="125"><a style="outline: none; text-decoration:none; color:inherit" href="#125">125</a>
+</span><span class="lnt" id="126"><a style="outline: none; text-decoration:none; color:inherit" href="#126">126</a>
+</span><span class="lnt" id="127"><a style="outline: none; text-decoration:none; color:inherit" href="#127">127</a>
+</span><span class="lnt" id="128"><a style="outline: none; text-decoration:none; color:inherit" href="#128">128</a>
+</span><span class="lnt" id="129"><a style="outline: none; text-decoration:none; color:inherit" href="#129">129</a>
+</span><span class="lnt" id="130"><a style="outline: none; text-decoration:none; color:inherit" href="#130">130</a>
+</span><span class="lnt" id="131"><a style="outline: none; text-decoration:none; color:inherit" href="#131">131</a>
+</span><span class="lnt" id="132"><a style="outline: none; text-decoration:none; color:inherit" href="#132">132</a>
+</span><span class="lnt" id="133"><a style="outline: none; text-decoration:none; color:inherit" href="#133">133</a>
+</span><span class="lnt" id="134"><a style="outline: none; text-decoration:none; color:inherit" href="#134">134</a>
+</span><span class="lnt" id="135"><a style="outline: none; text-decoration:none; color:inherit" href="#135">135</a>
+</span><span class="lnt" id="136"><a style="outline: none; text-decoration:none; color:inherit" href="#136">136</a>
+</span><span class="lnt" id="137"><a style="outline: none; text-decoration:none; color:inherit" href="#137">137</a>
+</span><span class="lnt" id="138"><a style="outline: none; text-decoration:none; color:inherit" href="#138">138</a>
+</span><span class="lnt" id="139"><a style="outline: none; text-decoration:none; color:inherit" href="#139">139</a>
+</span><span class="lnt" id="140"><a style="outline: none; text-decoration:none; color:inherit" href="#140">140</a>
+</span><span class="lnt" id="141"><a style="outline: none; text-decoration:none; color:inherit" href="#141">141</a>
+</span><span class="lnt" id="142"><a style="outline: none; text-decoration:none; color:inherit" href="#142">142</a>
+</span><span class="lnt" id="143"><a style="outline: none; text-decoration:none; color:inherit" href="#143">143</a>
+</span><span class="lnt" id="144"><a style="outline: none; text-decoration:none; color:inherit" href="#144">144</a>
+</span><span class="lnt" id="145"><a style="outline: none; text-decoration:none; color:inherit" href="#145">145</a>
+</span><span class="lnt" id="146"><a style="outline: none; text-decoration:none; color:inherit" href="#146">146</a>
+</span><span class="lnt" id="147"><a style="outline: none; text-decoration:none; color:inherit" href="#147">147</a>
+</span><span class="lnt" id="148"><a style="outline: none; text-decoration:none; color:inherit" href="#148">148</a>
+</span><span class="lnt" id="149"><a style="outline: none; text-decoration:none; color:inherit" href="#149">149</a>
+</span><span class="lnt" id="150"><a style="outline: none; text-decoration:none; color:inherit" href="#150">150</a>
+</span><span class="lnt" id="151"><a style="outline: none; text-decoration:none; color:inherit" href="#151">151</a>
+</span><span class="lnt" id="152"><a style="outline: none; text-decoration:none; color:inherit" href="#152">152</a>
+</span><span class="lnt" id="153"><a style="outline: none; text-decoration:none; color:inherit" href="#153">153</a>
+</span><span class="lnt" id="154"><a style="outline: none; text-decoration:none; color:inherit" href="#154">154</a>
+</span><span class="lnt" id="155"><a style="outline: none; text-decoration:none; color:inherit" href="#155">155</a>
+</span><span class="lnt" id="156"><a style="outline: none; text-decoration:none; color:inherit" href="#156">156</a>
+</span><span class="lnt" id="157"><a style="outline: none; text-decoration:none; color:inherit" href="#157">157</a>
+</span><span class="lnt" id="158"><a style="outline: none; text-decoration:none; color:inherit" href="#158">158</a>
+</span><span class="lnt" id="159"><a style="outline: none; text-decoration:none; color:inherit" href="#159">159</a>
+</span><span class="lnt" id="160"><a style="outline: none; text-decoration:none; color:inherit" href="#160">160</a>
+</span><span class="lnt" id="161"><a style="outline: none; text-decoration:none; color:inherit" href="#161">161</a>
+</span><span class="lnt" id="162"><a style="outline: none; text-decoration:none; color:inherit" href="#162">162</a>
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-zsh" data-lang="zsh"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">autoload -Uz vcs_info
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">precmd<span class="o">()</span> <span class="o">{</span>
-</span></span><span class="line"><span class="cl">    <span class="c1"># As always first run the system so everything is setup correctly.</span>
-</span></span><span class="line"><span class="cl">    vcs_info
-</span></span><span class="line"><span class="cl">    <span class="c1"># And then just set PS1, RPS1 and whatever you want to. This $PS1</span>
-</span></span><span class="line"><span class="cl">    <span class="c1"># is (as with the other examples above too) just an example of a very</span>
-</span></span><span class="line"><span class="cl">    <span class="c1"># basic single-line prompt. See &#34;man zshmisc&#34; for details on how to</span>
-</span></span><span class="line"><span class="cl">    <span class="c1"># make this less readable. :-)</span>
-</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="o">[[</span> -z <span class="si">${</span><span class="nv">vcs_info_msg_0_</span><span class="si">}</span> <span class="o">]]</span><span class="p">;</span> <span class="k">then</span>
-</span></span><span class="line"><span class="cl">        <span class="c1"># Oh hey, nothing from vcs_info, so we got more space.</span>
-</span></span><span class="line"><span class="cl">        <span class="c1"># Let&#39;s print a longer part of $PWD...</span>
-</span></span><span class="line"><span class="cl">        <span class="nv">PS1</span><span class="o">=</span><span class="s2">&#34;%5~%# &#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="k">else</span>
-</span></span><span class="line"><span class="cl">        <span class="c1"># vcs_info found something, that needs space. So a shorter $PWD</span>
-</span></span><span class="line"><span class="cl">        <span class="c1"># makes sense.</span>
-</span></span><span class="line"><span class="cl">        <span class="nv">PS1</span><span class="o">=</span><span class="s2">&#34;%2~</span><span class="si">${</span><span class="nv">vcs_info_msg_0_</span><span class="si">}</span><span class="s2">%# &#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="k">fi</span>
-</span></span><span class="line"><span class="cl"><span class="o">}</span>
-</span></span><span class="line"><span class="cl">setopt prompt_subst
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># Enable wildcard search and tab through options</span>
-</span></span><span class="line"><span class="cl">setopt NO_CASE_GLOB
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># Auto change to directory if directory name is used</span>
-</span></span><span class="line"><span class="cl">setopt AUTO_CD
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># Remember history from previous sessions</span>
-</span></span><span class="line"><span class="cl"><span class="nv">HISTFILE</span><span class="o">=</span><span class="si">${</span><span class="nv">ZDOTDIR</span><span class="k">:-</span><span class="nv">$HOME</span><span class="si">}</span>/.zsh_history
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># Add additional info to shell history</span>
-</span></span><span class="line"><span class="cl">setopt EXTENDED_HISTORY
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nv">SAVEHIST</span><span class="o">=</span><span class="m">5000</span>
-</span></span><span class="line"><span class="cl"><span class="nv">HISTSIZE</span><span class="o">=</span><span class="m">2000</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># share history across multiple zsh sessions</span>
-</span></span><span class="line"><span class="cl">setopt SHARE_HISTORY
-</span></span><span class="line"><span class="cl"><span class="c1"># append to history</span>
-</span></span><span class="line"><span class="cl">setopt APPEND_HISTORY
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># adds commands as they are typed, not at shell exit</span>
-</span></span><span class="line"><span class="cl">setopt INC_APPEND_HISTORY
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># expire duplicates first</span>
-</span></span><span class="line"><span class="cl">setopt HIST_EXPIRE_DUPS_FIRST
-</span></span><span class="line"><span class="cl"><span class="c1"># do not store duplications</span>
-</span></span><span class="line"><span class="cl">setopt HIST_IGNORE_DUPS
-</span></span><span class="line"><span class="cl"><span class="c1">#ignore duplicates when searching</span>
-</span></span><span class="line"><span class="cl">setopt HIST_FIND_NO_DUPS
-</span></span><span class="line"><span class="cl"><span class="c1"># removes blank lines from history</span>
-</span></span><span class="line"><span class="cl">setopt HIST_REDUCE_BLANKS
-</span></span><span class="line"><span class="cl"><span class="c1"># When you mistype a command or path, the shell is usually unforgiving. In zsh you can enable correction.</span>
-</span></span><span class="line"><span class="cl">setopt CORRECT
-</span></span><span class="line"><span class="cl">setopt CORRECT_ALL
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">#Aliases</span>
-</span></span><span class="line"><span class="cl"><span class="nb">alias</span> <span class="nv">ll</span><span class="o">=</span><span class="s1">&#39;ls -al&#39;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">...
-</span></span></code></pre></td></tr></table>
+<pre class="chroma"><code class="language-zsh" data-lang="zsh">
+autoload -Uz vcs_info
+
+precmd<span class="o">()</span> <span class="o">{</span>
+    <span class="c1"># As always first run the system so everything is setup correctly.</span>
+    vcs_info
+    <span class="c1"># And then just set PS1, RPS1 and whatever you want to. This $PS1</span>
+    <span class="c1"># is (as with the other examples above too) just an example of a very</span>
+    <span class="c1"># basic single-line prompt. See &#34;man zshmisc&#34; for details on how to</span>
+    <span class="c1"># make this less readable. :-)</span>
+    <span class="k">if</span> <span class="o">[[</span> -z <span class="si">${</span><span class="nv">vcs_info_msg_0_</span><span class="si">}</span> <span class="o">]]</span><span class="p">;</span> <span class="k">then</span>
+        <span class="c1"># Oh hey, nothing from vcs_info, so we got more space.</span>
+        <span class="c1"># Let&#39;s print a longer part of $PWD...</span>
+        <span class="nv">PS1</span><span class="o">=</span><span class="s2">&#34;%5~%# &#34;</span>
+    <span class="k">else</span>
+        <span class="c1"># vcs_info found something, that needs space. So a shorter $PWD</span>
+        <span class="c1"># makes sense.</span>
+        <span class="nv">PS1</span><span class="o">=</span><span class="s2">&#34;%2~</span><span class="si">${</span><span class="nv">vcs_info_msg_0_</span><span class="si">}</span><span class="s2">%# &#34;</span>
+    <span class="k">fi</span>
+<span class="o">}</span>
+setopt prompt_subst
+
+
+<span class="c1"># Enable wildcard search and tab through options</span>
+setopt NO_CASE_GLOB
+
+<span class="c1"># Auto change to directory if directory name is used</span>
+setopt AUTO_CD
+
+<span class="c1"># Remember history from previous sessions</span>
+<span class="nv">HISTFILE</span><span class="o">=</span><span class="si">${</span><span class="nv">ZDOTDIR</span><span class="k">:-</span><span class="nv">$HOME</span><span class="si">}</span>/.zsh_history
+
+<span class="c1"># Add additional info to shell history</span>
+setopt EXTENDED_HISTORY
+
+<span class="nv">SAVEHIST</span><span class="o">=</span><span class="m">5000</span>
+<span class="nv">HISTSIZE</span><span class="o">=</span><span class="m">2000</span>
+
+<span class="c1"># share history across multiple zsh sessions</span>
+setopt SHARE_HISTORY
+<span class="c1"># append to history</span>
+setopt APPEND_HISTORY
+
+<span class="c1"># adds commands as they are typed, not at shell exit</span>
+setopt INC_APPEND_HISTORY
+
+<span class="c1"># expire duplicates first</span>
+setopt HIST_EXPIRE_DUPS_FIRST
+<span class="c1"># do not store duplications</span>
+setopt HIST_IGNORE_DUPS
+<span class="c1">#ignore duplicates when searching</span>
+setopt HIST_FIND_NO_DUPS
+<span class="c1"># removes blank lines from history</span>
+setopt HIST_REDUCE_BLANKS
+<span class="c1"># When you mistype a command or path, the shell is usually unforgiving. In zsh you can enable correction.</span>
+setopt CORRECT
+setopt CORRECT_ALL
+
+<span class="c1">#Aliases</span>
+<span class="nb">alias</span> <span class="nv">ll</span><span class="o">=</span><span class="s1">&#39;ls -al&#39;</span>
+
+...
+
+</code></pre></td></tr></table>
 </div>
 </div><h2 id="vim-config">Vim Config</h2>
 <p>This it seems is a whole entire universe. <em>In nuce</em>, I went with a combination of these two configurations. It will evolve as my understanding of my needs evolve.</p>
@@ -268,7 +270,7 @@ and then switched my setup to <code>zsh</code> or z-shell, as the preferred/reco
 <li><a href="https://github.com/oidz1234/vimrc/blob/main/.vimrc">https://github.com/oidz1234/vimrc/blob/main/.vimrc</a></li>
 <li><a href="https://vim.fandom.com/wiki/Example_vimrc">https://vim.fandom.com/wiki/Example_vimrc</a></li>
 </ol>
-<p>and installed the <code>Vim Plug</code> following instructions from here:
+<p>I installed the <code>Vim Plug</code> following instructions from here:
 <a href="https://www.linuxfordevices.com/tutorials/linux/vim-plug-install-plugins">Linux Devices</a> which lead me to simply go with the automatic installation guide from Junegunn Choi <a href="https://github.com/junegunn/vim-plug/wiki/tips#automatic-installation">here</a>.</p>
 <p>So, I&rsquo;m set up in <code>Vim</code>, feeling smooth but still don&rsquo;t know how to use <code>tabs</code>, <code>filetree</code> or everything else beyond basic commands.</p>
 

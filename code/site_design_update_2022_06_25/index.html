@@ -7,8 +7,8 @@
 <meta property="og:description" content="Adding Some Flair I was unhappy with the functionality of the standard list page of the minima theme." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.davidjnevin.com/code/site_design_update_2022_06_25/" /><meta property="article:section" content="code" />
-<meta property="article:published_time" content="2022-06-25T12:14:06+02:00" />
-<meta property="article:modified_time" content="2022-06-25T12:14:06+02:00" />
+<meta property="article:published_time" content="2022-06-25T12:14:06&#43;02:00" />
+<meta property="article:modified_time" content="2022-06-25T12:14:06&#43;02:00" />
 
 
   <meta name="twitter:card" content="summary"/>
@@ -107,133 +107,133 @@ if (!doNotTrack) {
 <p>I installed it as a <code>git submodule</code> and then began to cannibalize the list <code>templates</code> therein. I&rsquo;m happy with the result and also learned to use some more advanced (for me) features of including <code>summary</code>, adjusting the <code>summaryLenght</code> in the <code>config.toml</code> file and also ensuring that the links generated to the posts themselves, the <code>tag</code> list pages and the <code>category</code> list pages were relative links (<code>relref</code>) and not absolute links to avoid <a href="/code/site_design_update_2022_06_25/#css-external-link-indicator">appending the external link icon</a> to these links.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-0-100"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-100">100</a>
-</span><span class="lnt" id="hl-0-101"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-101">101</a>
-</span><span class="lnt" id="hl-0-102"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-102">102</a>
-</span><span class="lnt" id="hl-0-103"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-103">103</a>
-</span><span class="lnt" id="hl-0-104"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-104">104</a>
-</span><span class="lnt" id="hl-0-105"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-105">105</a>
-</span><span class="lnt" id="hl-0-106"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-106">106</a>
-</span><span class="lnt" id="hl-0-107"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-107">107</a>
-</span><span class="lnt" id="hl-0-108"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-108">108</a>
-</span><span class="lnt" id="hl-0-109"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-109">109</a>
-</span><span class="lnt" id="hl-0-110"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-110">110</a>
-</span><span class="lnt" id="hl-0-111"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-111">111</a>
-</span><span class="lnt" id="hl-0-112"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-112">112</a>
-</span><span class="lnt" id="hl-0-113"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-113">113</a>
-</span><span class="lnt" id="hl-0-114"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-114">114</a>
-</span><span class="lnt" id="hl-0-115"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-115">115</a>
-</span><span class="lnt" id="hl-0-116"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-116">116</a>
-</span><span class="lnt" id="hl-0-117"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-117">117</a>
-</span><span class="lnt" id="hl-0-118"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-118">118</a>
-</span><span class="lnt" id="hl-0-119"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-119">119</a>
-</span><span class="lnt" id="hl-0-120"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-120">120</a>
-</span><span class="lnt" id="hl-0-121"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-121">121</a>
-</span><span class="lnt" id="hl-0-122"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-122">122</a>
-</span><span class="lnt" id="hl-0-123"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-123">123</a>
-</span><span class="lnt" id="hl-0-124"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-124">124</a>
-</span><span class="lnt" id="hl-0-125"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-125">125</a>
-</span><span class="lnt" id="hl-0-126"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-126">126</a>
-</span><span class="lnt" id="hl-0-127"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-127">127</a>
-</span><span class="lnt" id="hl-0-128"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-128">128</a>
-</span><span class="lnt" id="hl-0-129"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-129">129</a>
-</span><span class="lnt" id="hl-0-130"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-130">130</a>
-</span><span class="lnt" id="hl-0-131"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-131">131</a>
-</span><span class="lnt" id="hl-0-132"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-132">132</a>
-</span><span class="lnt" id="hl-0-133"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-133">133</a>
-</span><span class="lnt" id="hl-0-134"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-134">134</a>
-</span><span class="lnt" id="hl-0-135"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-135">135</a>
-</span><span class="lnt" id="hl-0-136"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-136">136</a>
-</span><span class="lnt" id="hl-0-137"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-137">137</a>
-</span><span class="lnt" id="hl-0-138"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-138">138</a>
-</span><span class="lnt" id="hl-0-139"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-139">139</a>
-</span><span class="lnt" id="hl-0-140"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-140">140</a>
-</span><span class="lnt" id="hl-0-141"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-141">141</a>
-</span><span class="lnt" id="hl-0-142"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-142">142</a>
-</span><span class="lnt" id="hl-0-143"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-143">143</a>
-</span><span class="lnt" id="hl-0-144"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-144">144</a>
-</span><span class="lnt" id="hl-0-145"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-145">145</a>
-</span><span class="lnt" id="hl-0-146"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-146">146</a>
-</span><span class="lnt" id="hl-0-147"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-147">147</a>
-</span><span class="lnt" id="hl-0-148"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-148">148</a>
-</span><span class="lnt" id="hl-0-149"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-149">149</a>
-</span><span class="lnt" id="hl-0-150"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-150">150</a>
-</span><span class="lnt" id="hl-0-151"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-151">151</a>
-</span><span class="lnt" id="hl-0-152"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-152">152</a>
-</span><span class="lnt" id="hl-0-153"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-153">153</a>
-</span><span class="lnt" id="hl-0-154"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-154">154</a>
-</span><span class="lnt" id="hl-0-155"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-155">155</a>
-</span><span class="lnt" id="hl-0-156"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-156">156</a>
-</span><span class="lnt" id="hl-0-157"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-157">157</a>
-</span><span class="lnt" id="hl-0-158"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-158">158</a>
-</span><span class="lnt" id="hl-0-159"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-159">159</a>
-</span><span class="lnt" id="hl-0-160"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-160">160</a>
-</span><span class="lnt" id="hl-0-161"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-161">161</a>
+<pre class="chroma"><code><span class="lnt" id="100"><a style="outline: none; text-decoration:none; color:inherit" href="#100">100</a>
+</span><span class="lnt" id="101"><a style="outline: none; text-decoration:none; color:inherit" href="#101">101</a>
+</span><span class="lnt" id="102"><a style="outline: none; text-decoration:none; color:inherit" href="#102">102</a>
+</span><span class="lnt" id="103"><a style="outline: none; text-decoration:none; color:inherit" href="#103">103</a>
+</span><span class="lnt" id="104"><a style="outline: none; text-decoration:none; color:inherit" href="#104">104</a>
+</span><span class="lnt" id="105"><a style="outline: none; text-decoration:none; color:inherit" href="#105">105</a>
+</span><span class="lnt" id="106"><a style="outline: none; text-decoration:none; color:inherit" href="#106">106</a>
+</span><span class="lnt" id="107"><a style="outline: none; text-decoration:none; color:inherit" href="#107">107</a>
+</span><span class="lnt" id="108"><a style="outline: none; text-decoration:none; color:inherit" href="#108">108</a>
+</span><span class="lnt" id="109"><a style="outline: none; text-decoration:none; color:inherit" href="#109">109</a>
+</span><span class="lnt" id="110"><a style="outline: none; text-decoration:none; color:inherit" href="#110">110</a>
+</span><span class="lnt" id="111"><a style="outline: none; text-decoration:none; color:inherit" href="#111">111</a>
+</span><span class="lnt" id="112"><a style="outline: none; text-decoration:none; color:inherit" href="#112">112</a>
+</span><span class="lnt" id="113"><a style="outline: none; text-decoration:none; color:inherit" href="#113">113</a>
+</span><span class="lnt" id="114"><a style="outline: none; text-decoration:none; color:inherit" href="#114">114</a>
+</span><span class="lnt" id="115"><a style="outline: none; text-decoration:none; color:inherit" href="#115">115</a>
+</span><span class="lnt" id="116"><a style="outline: none; text-decoration:none; color:inherit" href="#116">116</a>
+</span><span class="lnt" id="117"><a style="outline: none; text-decoration:none; color:inherit" href="#117">117</a>
+</span><span class="lnt" id="118"><a style="outline: none; text-decoration:none; color:inherit" href="#118">118</a>
+</span><span class="lnt" id="119"><a style="outline: none; text-decoration:none; color:inherit" href="#119">119</a>
+</span><span class="lnt" id="120"><a style="outline: none; text-decoration:none; color:inherit" href="#120">120</a>
+</span><span class="lnt" id="121"><a style="outline: none; text-decoration:none; color:inherit" href="#121">121</a>
+</span><span class="lnt" id="122"><a style="outline: none; text-decoration:none; color:inherit" href="#122">122</a>
+</span><span class="lnt" id="123"><a style="outline: none; text-decoration:none; color:inherit" href="#123">123</a>
+</span><span class="lnt" id="124"><a style="outline: none; text-decoration:none; color:inherit" href="#124">124</a>
+</span><span class="lnt" id="125"><a style="outline: none; text-decoration:none; color:inherit" href="#125">125</a>
+</span><span class="lnt" id="126"><a style="outline: none; text-decoration:none; color:inherit" href="#126">126</a>
+</span><span class="lnt" id="127"><a style="outline: none; text-decoration:none; color:inherit" href="#127">127</a>
+</span><span class="lnt" id="128"><a style="outline: none; text-decoration:none; color:inherit" href="#128">128</a>
+</span><span class="lnt" id="129"><a style="outline: none; text-decoration:none; color:inherit" href="#129">129</a>
+</span><span class="lnt" id="130"><a style="outline: none; text-decoration:none; color:inherit" href="#130">130</a>
+</span><span class="lnt" id="131"><a style="outline: none; text-decoration:none; color:inherit" href="#131">131</a>
+</span><span class="lnt" id="132"><a style="outline: none; text-decoration:none; color:inherit" href="#132">132</a>
+</span><span class="lnt" id="133"><a style="outline: none; text-decoration:none; color:inherit" href="#133">133</a>
+</span><span class="lnt" id="134"><a style="outline: none; text-decoration:none; color:inherit" href="#134">134</a>
+</span><span class="lnt" id="135"><a style="outline: none; text-decoration:none; color:inherit" href="#135">135</a>
+</span><span class="lnt" id="136"><a style="outline: none; text-decoration:none; color:inherit" href="#136">136</a>
+</span><span class="lnt" id="137"><a style="outline: none; text-decoration:none; color:inherit" href="#137">137</a>
+</span><span class="lnt" id="138"><a style="outline: none; text-decoration:none; color:inherit" href="#138">138</a>
+</span><span class="lnt" id="139"><a style="outline: none; text-decoration:none; color:inherit" href="#139">139</a>
+</span><span class="lnt" id="140"><a style="outline: none; text-decoration:none; color:inherit" href="#140">140</a>
+</span><span class="lnt" id="141"><a style="outline: none; text-decoration:none; color:inherit" href="#141">141</a>
+</span><span class="lnt" id="142"><a style="outline: none; text-decoration:none; color:inherit" href="#142">142</a>
+</span><span class="lnt" id="143"><a style="outline: none; text-decoration:none; color:inherit" href="#143">143</a>
+</span><span class="lnt" id="144"><a style="outline: none; text-decoration:none; color:inherit" href="#144">144</a>
+</span><span class="lnt" id="145"><a style="outline: none; text-decoration:none; color:inherit" href="#145">145</a>
+</span><span class="lnt" id="146"><a style="outline: none; text-decoration:none; color:inherit" href="#146">146</a>
+</span><span class="lnt" id="147"><a style="outline: none; text-decoration:none; color:inherit" href="#147">147</a>
+</span><span class="lnt" id="148"><a style="outline: none; text-decoration:none; color:inherit" href="#148">148</a>
+</span><span class="lnt" id="149"><a style="outline: none; text-decoration:none; color:inherit" href="#149">149</a>
+</span><span class="lnt" id="150"><a style="outline: none; text-decoration:none; color:inherit" href="#150">150</a>
+</span><span class="lnt" id="151"><a style="outline: none; text-decoration:none; color:inherit" href="#151">151</a>
+</span><span class="lnt" id="152"><a style="outline: none; text-decoration:none; color:inherit" href="#152">152</a>
+</span><span class="lnt" id="153"><a style="outline: none; text-decoration:none; color:inherit" href="#153">153</a>
+</span><span class="lnt" id="154"><a style="outline: none; text-decoration:none; color:inherit" href="#154">154</a>
+</span><span class="lnt" id="155"><a style="outline: none; text-decoration:none; color:inherit" href="#155">155</a>
+</span><span class="lnt" id="156"><a style="outline: none; text-decoration:none; color:inherit" href="#156">156</a>
+</span><span class="lnt" id="157"><a style="outline: none; text-decoration:none; color:inherit" href="#157">157</a>
+</span><span class="lnt" id="158"><a style="outline: none; text-decoration:none; color:inherit" href="#158">158</a>
+</span><span class="lnt" id="159"><a style="outline: none; text-decoration:none; color:inherit" href="#159">159</a>
+</span><span class="lnt" id="160"><a style="outline: none; text-decoration:none; color:inherit" href="#160">160</a>
+</span><span class="lnt" id="161"><a style="outline: none; text-decoration:none; color:inherit" href="#161">161</a>
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="p">{{</span> <span class="nx">define</span> <span class="s">&#34;main&#34;</span> <span class="p">}}</span>
-</span></span><span class="line"><span class="cl">	<span class="p">&lt;</span><span class="nx">main</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">	<span class="p">{{</span> <span class="k">if</span> <span class="nx">isset</span> <span class="p">.</span><span class="nx">Data</span> <span class="s">&#34;Term&#34;</span> <span class="p">}}</span>
-</span></span><span class="line"><span class="cl">		<span class="p">&lt;</span><span class="nx">h2</span><span class="p">&gt;{{</span> <span class="p">.</span><span class="nx">Data</span><span class="p">.</span><span class="nx">Singular</span> <span class="p">|</span> <span class="nx">title</span> <span class="p">}}</span> <span class="o">-</span> <span class="s">&#34;{{ .Data.Term }}&#34;</span><span class="p">&lt;</span><span class="o">/</span><span class="nx">h2</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">	<span class="p">{{</span> <span class="k">else</span> <span class="p">}}</span>
-</span></span><span class="line"><span class="cl">	<span class="p">{{</span> <span class="nx">end</span> <span class="p">}}</span>
-</span></span><span class="line"><span class="cl">		<span class="p">&lt;</span><span class="nx">div</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">		<span class="p">{{</span> <span class="err">$</span><span class="nx">pages</span> <span class="o">:=</span> <span class="nf">where</span> <span class="p">(</span><span class="nx">where</span> <span class="p">.</span><span class="nx">Pages</span> <span class="s">&#34;Type&#34;</span> <span class="s">&#34;in&#34;</span> <span class="nx">site</span><span class="p">.</span><span class="nx">Params</span><span class="p">.</span><span class="nx">mainSections</span><span class="p">)</span> <span class="s">&#34;Params.hidden&#34;</span> <span class="s">&#34;!=&#34;</span> <span class="kc">true</span><span class="p">}}</span>
-</span></span><span class="line"><span class="cl">		<span class="p">{{</span> <span class="k">range</span> <span class="err">$</span><span class="nx">pages</span> <span class="p">}}</span>
-</span></span><span class="line"><span class="cl">			<span class="p">&lt;</span><span class="nx">div</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">				<span class="p">&lt;</span><span class="nx">div</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">				<span class="p">&lt;</span><span class="nx">header</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">				<span class="p">&lt;</span><span class="nx">h2</span><span class="p">&gt;&lt;</span><span class="nx">a</span> <span class="nx">href</span><span class="p">=</span><span class="s">&#34;{{ .RelPermalink }}&#34;</span><span class="p">&gt;{{</span> <span class="nx">trim</span> <span class="p">.</span><span class="nx">Title</span> <span class="s">&#34; &#34;</span> <span class="p">}}&lt;</span><span class="o">/</span><span class="nx">a</span><span class="p">&gt;&lt;</span><span class="o">/</span><span class="nx">h2</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">					<span class="p">&lt;</span><span class="o">/</span><span class="nx">header</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">				<span class="p">&lt;</span><span class="o">/</span><span class="nx">div</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">				<span class="p">{{</span> <span class="nx">partial</span> <span class="s">&#34;post-info.html&#34;</span> <span class="p">.</span> <span class="p">}}</span>
-</span></span><span class="line"><span class="cl">				<span class="p">&lt;</span><span class="o">/</span><span class="nx">div</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">			<span class="p">{{</span> <span class="nx">end</span> <span class="p">}}</span>
-</span></span><span class="line"><span class="cl">		<span class="p">&lt;</span><span class="o">/</span><span class="nx">div</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">	<span class="p">&lt;</span><span class="o">/</span><span class="nx">main</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">{{</span> <span class="nx">end</span> <span class="p">}}</span>
-</span></span><span class="line"><span class="cl"><span class="c1">// And the post-info.html
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
-</span></span><span class="line"><span class="cl"><span class="p">{{</span> <span class="err">$</span><span class="nx">dateFormat</span> <span class="o">:=</span> <span class="s">&#34;2006-01-02&#34;</span> <span class="p">}}</span>
-</span></span><span class="line"><span class="cl">    <span class="p">{{</span> <span class="k">if</span> <span class="p">.</span><span class="nx">Site</span><span class="p">.</span><span class="nx">Params</span><span class="p">.</span><span class="nx">dateFormat</span> <span class="p">}}</span>
-</span></span><span class="line"><span class="cl">        <span class="p">{{</span> <span class="err">$</span><span class="nx">dateFormat</span> <span class="p">=</span> <span class="p">.</span><span class="nx">Site</span><span class="p">.</span><span class="nx">Params</span><span class="p">.</span><span class="nx">dateFormat</span> <span class="p">}}</span>
-</span></span><span class="line"><span class="cl">    <span class="p">{{</span> <span class="nx">end</span> <span class="p">}}</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nx">div</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">        <span class="p">{{</span> <span class="k">if</span> <span class="nx">not</span> <span class="p">.</span><span class="nx">Site</span><span class="p">.</span><span class="nx">Params</span><span class="p">.</span><span class="nx">disableSummary</span> <span class="p">}}</span>
-</span></span><span class="line"><span class="cl">            <span class="p">&lt;</span><span class="nx">div</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">                <span class="p">&lt;</span><span class="nx">p</span><span class="p">&gt;{{</span> <span class="p">.</span><span class="nx">Summary</span> <span class="p">|</span> <span class="nx">safeHTML</span> <span class="p">}}&lt;</span><span class="o">/</span><span class="nx">p</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">            <span class="p">&lt;</span><span class="o">/</span><span class="nx">div</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">        <span class="p">{{</span> <span class="nx">end</span> <span class="p">}}</span>
-</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nx">div</span> <span class="nx">class</span><span class="p">=</span><span class="s">&#34;post-info&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">            <span class="p">{{</span> <span class="k">if</span> <span class="nf">and</span> <span class="p">(.</span><span class="nx">Truncated</span><span class="p">)</span> <span class="p">(.</span><span class="nx">Site</span><span class="p">.</span><span class="nx">Params</span><span class="p">.</span><span class="nx">readMore</span><span class="p">)</span> <span class="p">}}</span>
-</span></span><span class="line"><span class="cl">            <span class="p">&lt;</span><span class="nx">div</span> <span class="nx">class</span><span class="p">=</span><span class="s">&#34;read-more&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">                <span class="p">&lt;</span><span class="nx">a</span> <span class="nx">class</span><span class="p">=</span><span class="s">&#34;u-url&#34;</span> <span class="nx">href</span><span class="p">=</span><span class="s">&#34;{{ .RelPermalink }}&#34;</span><span class="p">&gt;{{</span> <span class="nx">i18n</span> <span class="s">&#34;readMore&#34;</span> <span class="p">}}&lt;</span><span class="o">/</span><span class="nx">a</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">            <span class="p">&lt;</span><span class="o">/</span><span class="nx">div</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">        <span class="p">{{</span> <span class="nx">end</span> <span class="p">}}</span>
-</span></span><span class="line"><span class="cl">        <span class="p">{{</span> <span class="k">if</span> <span class="p">.</span><span class="nx">Params</span><span class="p">.</span><span class="nx">date</span> <span class="p">}}</span>
-</span></span><span class="line"><span class="cl">            <span class="p">&lt;</span><span class="nx">div</span> <span class="nx">class</span><span class="p">=</span><span class="s">&#34;post-date&#34;</span><span class="p">&gt;{{</span> <span class="p">.</span><span class="nx">Params</span><span class="p">.</span><span class="nx">date</span><span class="p">.</span><span class="nx">Format</span> <span class="err">$</span><span class="nx">dateFormat</span> <span class="p">}}&lt;</span><span class="o">/</span><span class="nx">div</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">        <span class="p">{{</span> <span class="nx">end</span> <span class="p">}}</span>
-</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nx">div</span> <span class="nx">class</span><span class="p">=</span><span class="s">&#34;post-taxonomies&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">            <span class="p">{{</span> <span class="k">if</span> <span class="p">.</span><span class="nx">Params</span><span class="p">.</span><span class="nx">categories</span> <span class="p">}}</span>
-</span></span><span class="line"><span class="cl">                <span class="p">&lt;</span><span class="nx">ul</span> <span class="nx">class</span><span class="p">=</span><span class="s">&#34;post-categories&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">                    <span class="p">{{</span> <span class="k">range</span> <span class="err">$</span><span class="nx">cat_name</span> <span class="o">:=</span> <span class="p">.</span><span class="nx">Params</span><span class="p">.</span><span class="nx">categories</span> <span class="p">}}</span>
-</span></span><span class="line"><span class="cl">                        <span class="p">{{</span> <span class="err">$</span><span class="nx">cat</span> <span class="o">:=</span> <span class="p">(</span><span class="err">$</span><span class="p">.</span><span class="nx">Site</span><span class="p">.</span><span class="nf">GetPage</span> <span class="p">(</span><span class="nx">printf</span> <span class="s">&#34;/categories/%s&#34;</span> <span class="err">$</span><span class="nx">cat_name</span><span class="p">))</span> <span class="p">}}</span>
-</span></span><span class="line"><span class="cl">                        <span class="p">&lt;</span><span class="nx">li</span><span class="p">&gt;&lt;</span><span class="nx">a</span> <span class="nx">href</span><span class="p">=</span><span class="s">&#34;{{ $cat.RelPermalink }}&#34;</span><span class="p">&gt;{{</span> <span class="err">$</span><span class="nx">cat</span><span class="p">.</span><span class="nx">Title</span> <span class="p">|</span> <span class="k">default</span> <span class="err">$</span><span class="nx">cat_name</span> <span class="p">}}&lt;</span><span class="o">/</span><span class="nx">a</span><span class="p">&gt;&lt;</span><span class="o">/</span><span class="nx">li</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">                    <span class="p">{{</span> <span class="nx">end</span> <span class="p">}}</span>
-</span></span><span class="line"><span class="cl">                <span class="p">&lt;</span><span class="o">/</span><span class="nx">ul</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">                <span class="p">{{</span> <span class="nx">end</span> <span class="p">}}</span>
-</span></span><span class="line"><span class="cl">                <span class="p">{{</span> <span class="k">if</span> <span class="p">.</span><span class="nx">Params</span><span class="p">.</span><span class="nx">tags</span> <span class="p">}}</span>
-</span></span><span class="line"><span class="cl">                    <span class="p">&lt;</span><span class="nx">ul</span> <span class="nx">class</span><span class="p">=</span><span class="s">&#34;post-tags&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">                        <span class="p">{{</span> <span class="k">range</span> <span class="err">$</span><span class="nx">tag_name</span> <span class="o">:=</span> <span class="p">.</span><span class="nx">Params</span><span class="p">.</span><span class="nx">tags</span> <span class="p">}}</span>
-</span></span><span class="line"><span class="cl">                            <span class="p">{{</span> <span class="err">$</span><span class="nx">tag</span> <span class="o">:=</span> <span class="p">(</span><span class="err">$</span><span class="p">.</span><span class="nx">Site</span><span class="p">.</span><span class="nf">GetPage</span> <span class="p">(</span><span class="nx">printf</span> <span class="s">&#34;/tags/%s&#34;</span> <span class="err">$</span><span class="nx">tag_name</span><span class="p">))</span> <span class="p">}}</span>
-</span></span><span class="line"><span class="cl">                            <span class="p">&lt;</span><span class="nx">li</span><span class="p">&gt;&lt;</span><span class="nx">a</span> <span class="nx">href</span><span class="p">=</span><span class="s">&#34;{{ $tag.RelPermalink }}&#34;</span><span class="p">&gt;</span><span class="err">#</span><span class="p">{{</span> <span class="err">$</span><span class="nx">tag</span><span class="p">.</span><span class="nx">Title</span> <span class="p">|</span> <span class="k">default</span> <span class="err">$</span><span class="nx">tag_name</span> <span class="p">}}&lt;</span><span class="o">/</span><span class="nx">a</span><span class="p">&gt;&lt;</span><span class="o">/</span><span class="nx">li</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">                        <span class="p">{{</span> <span class="nx">end</span> <span class="p">}}</span>
-</span></span><span class="line"><span class="cl">                    <span class="p">&lt;</span><span class="o">/</span><span class="nx">ul</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">            <span class="p">{{</span> <span class="nx">end</span> <span class="p">}}</span>
-</span></span><span class="line"><span class="cl">            <span class="p">&lt;</span><span class="o">/</span><span class="nx">div</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="o">/</span><span class="nx">div</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="o">/</span><span class="nx">div</span><span class="p">&gt;</span>
-</span></span></code></pre></td></tr></table>
+<pre class="chroma"><code class="language-go" data-lang="go"><span class="p">{{</span> <span class="nx">define</span> <span class="s">&#34;main&#34;</span> <span class="p">}}</span>
+	<span class="p">&lt;</span><span class="nx">main</span><span class="p">&gt;</span>
+	<span class="p">{{</span> <span class="k">if</span> <span class="nx">isset</span> <span class="p">.</span><span class="nx">Data</span> <span class="s">&#34;Term&#34;</span> <span class="p">}}</span>
+		<span class="p">&lt;</span><span class="nx">h2</span><span class="p">&gt;{{</span> <span class="p">.</span><span class="nx">Data</span><span class="p">.</span><span class="nx">Singular</span> <span class="p">|</span> <span class="nx">title</span> <span class="p">}}</span> <span class="o">-</span> <span class="s">&#34;{{ .Data.Term }}&#34;</span><span class="p">&lt;</span><span class="o">/</span><span class="nx">h2</span><span class="p">&gt;</span>
+	<span class="p">{{</span> <span class="k">else</span> <span class="p">}}</span>
+	<span class="p">{{</span> <span class="nx">end</span> <span class="p">}}</span>
+		<span class="p">&lt;</span><span class="nx">div</span><span class="p">&gt;</span>
+		<span class="p">{{</span> <span class="err">$</span><span class="nx">pages</span> <span class="o">:=</span> <span class="nf">where</span> <span class="p">(</span><span class="nx">where</span> <span class="p">.</span><span class="nx">Pages</span> <span class="s">&#34;Type&#34;</span> <span class="s">&#34;in&#34;</span> <span class="nx">site</span><span class="p">.</span><span class="nx">Params</span><span class="p">.</span><span class="nx">mainSections</span><span class="p">)</span> <span class="s">&#34;Params.hidden&#34;</span> <span class="s">&#34;!=&#34;</span> <span class="kc">true</span><span class="p">}}</span>
+		<span class="p">{{</span> <span class="k">range</span> <span class="err">$</span><span class="nx">pages</span> <span class="p">}}</span>
+			<span class="p">&lt;</span><span class="nx">div</span><span class="p">&gt;</span>
+				<span class="p">&lt;</span><span class="nx">div</span><span class="p">&gt;</span>
+				<span class="p">&lt;</span><span class="nx">header</span><span class="p">&gt;</span>
+				<span class="p">&lt;</span><span class="nx">h2</span><span class="p">&gt;&lt;</span><span class="nx">a</span> <span class="nx">href</span><span class="p">=</span><span class="s">&#34;{{ .RelPermalink }}&#34;</span><span class="p">&gt;{{</span> <span class="nx">trim</span> <span class="p">.</span><span class="nx">Title</span> <span class="s">&#34; &#34;</span> <span class="p">}}&lt;</span><span class="o">/</span><span class="nx">a</span><span class="p">&gt;&lt;</span><span class="o">/</span><span class="nx">h2</span><span class="p">&gt;</span>
+					<span class="p">&lt;</span><span class="o">/</span><span class="nx">header</span><span class="p">&gt;</span>
+				<span class="p">&lt;</span><span class="o">/</span><span class="nx">div</span><span class="p">&gt;</span>
+				<span class="p">{{</span> <span class="nx">partial</span> <span class="s">&#34;post-info.html&#34;</span> <span class="p">.</span> <span class="p">}}</span>
+				<span class="p">&lt;</span><span class="o">/</span><span class="nx">div</span><span class="p">&gt;</span>
+			<span class="p">{{</span> <span class="nx">end</span> <span class="p">}}</span>
+		<span class="p">&lt;</span><span class="o">/</span><span class="nx">div</span><span class="p">&gt;</span>
+	<span class="p">&lt;</span><span class="o">/</span><span class="nx">main</span><span class="p">&gt;</span>
+<span class="p">{{</span> <span class="nx">end</span> <span class="p">}}</span>
+<span class="c1">// And the post-info.html
+</span><span class="c1"></span>
+<span class="p">{{</span> <span class="err">$</span><span class="nx">dateFormat</span> <span class="o">:=</span> <span class="s">&#34;2006-01-02&#34;</span> <span class="p">}}</span>
+    <span class="p">{{</span> <span class="k">if</span> <span class="p">.</span><span class="nx">Site</span><span class="p">.</span><span class="nx">Params</span><span class="p">.</span><span class="nx">dateFormat</span> <span class="p">}}</span>
+        <span class="p">{{</span> <span class="err">$</span><span class="nx">dateFormat</span> <span class="p">=</span> <span class="p">.</span><span class="nx">Site</span><span class="p">.</span><span class="nx">Params</span><span class="p">.</span><span class="nx">dateFormat</span> <span class="p">}}</span>
+    <span class="p">{{</span> <span class="nx">end</span> <span class="p">}}</span>
+    <span class="p">&lt;</span><span class="nx">div</span><span class="p">&gt;</span>
+        <span class="p">{{</span> <span class="k">if</span> <span class="nx">not</span> <span class="p">.</span><span class="nx">Site</span><span class="p">.</span><span class="nx">Params</span><span class="p">.</span><span class="nx">disableSummary</span> <span class="p">}}</span>
+            <span class="p">&lt;</span><span class="nx">div</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nx">p</span><span class="p">&gt;{{</span> <span class="p">.</span><span class="nx">Summary</span> <span class="p">|</span> <span class="nx">safeHTML</span> <span class="p">}}&lt;</span><span class="o">/</span><span class="nx">p</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="o">/</span><span class="nx">div</span><span class="p">&gt;</span>
+        <span class="p">{{</span> <span class="nx">end</span> <span class="p">}}</span>
+        <span class="p">&lt;</span><span class="nx">div</span> <span class="nx">class</span><span class="p">=</span><span class="s">&#34;post-info&#34;</span><span class="p">&gt;</span>
+            <span class="p">{{</span> <span class="k">if</span> <span class="nf">and</span> <span class="p">(.</span><span class="nx">Truncated</span><span class="p">)</span> <span class="p">(.</span><span class="nx">Site</span><span class="p">.</span><span class="nx">Params</span><span class="p">.</span><span class="nx">readMore</span><span class="p">)</span> <span class="p">}}</span>
+            <span class="p">&lt;</span><span class="nx">div</span> <span class="nx">class</span><span class="p">=</span><span class="s">&#34;read-more&#34;</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nx">a</span> <span class="nx">class</span><span class="p">=</span><span class="s">&#34;u-url&#34;</span> <span class="nx">href</span><span class="p">=</span><span class="s">&#34;{{ .RelPermalink }}&#34;</span><span class="p">&gt;{{</span> <span class="nx">i18n</span> <span class="s">&#34;readMore&#34;</span> <span class="p">}}&lt;</span><span class="o">/</span><span class="nx">a</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="o">/</span><span class="nx">div</span><span class="p">&gt;</span>
+        <span class="p">{{</span> <span class="nx">end</span> <span class="p">}}</span>
+        <span class="p">{{</span> <span class="k">if</span> <span class="p">.</span><span class="nx">Params</span><span class="p">.</span><span class="nx">date</span> <span class="p">}}</span>
+            <span class="p">&lt;</span><span class="nx">div</span> <span class="nx">class</span><span class="p">=</span><span class="s">&#34;post-date&#34;</span><span class="p">&gt;{{</span> <span class="p">.</span><span class="nx">Params</span><span class="p">.</span><span class="nx">date</span><span class="p">.</span><span class="nx">Format</span> <span class="err">$</span><span class="nx">dateFormat</span> <span class="p">}}&lt;</span><span class="o">/</span><span class="nx">div</span><span class="p">&gt;</span>
+        <span class="p">{{</span> <span class="nx">end</span> <span class="p">}}</span>
+        <span class="p">&lt;</span><span class="nx">div</span> <span class="nx">class</span><span class="p">=</span><span class="s">&#34;post-taxonomies&#34;</span><span class="p">&gt;</span>
+            <span class="p">{{</span> <span class="k">if</span> <span class="p">.</span><span class="nx">Params</span><span class="p">.</span><span class="nx">categories</span> <span class="p">}}</span>
+                <span class="p">&lt;</span><span class="nx">ul</span> <span class="nx">class</span><span class="p">=</span><span class="s">&#34;post-categories&#34;</span><span class="p">&gt;</span>
+                    <span class="p">{{</span> <span class="k">range</span> <span class="err">$</span><span class="nx">cat_name</span> <span class="o">:=</span> <span class="p">.</span><span class="nx">Params</span><span class="p">.</span><span class="nx">categories</span> <span class="p">}}</span>
+                        <span class="p">{{</span> <span class="err">$</span><span class="nx">cat</span> <span class="o">:=</span> <span class="p">(</span><span class="err">$</span><span class="p">.</span><span class="nx">Site</span><span class="p">.</span><span class="nf">GetPage</span> <span class="p">(</span><span class="nx">printf</span> <span class="s">&#34;/categories/%s&#34;</span> <span class="err">$</span><span class="nx">cat_name</span><span class="p">))</span> <span class="p">}}</span>
+                        <span class="p">&lt;</span><span class="nx">li</span><span class="p">&gt;&lt;</span><span class="nx">a</span> <span class="nx">href</span><span class="p">=</span><span class="s">&#34;{{ $cat.RelPermalink }}&#34;</span><span class="p">&gt;{{</span> <span class="err">$</span><span class="nx">cat</span><span class="p">.</span><span class="nx">Title</span> <span class="p">|</span> <span class="k">default</span> <span class="err">$</span><span class="nx">cat_name</span> <span class="p">}}&lt;</span><span class="o">/</span><span class="nx">a</span><span class="p">&gt;&lt;</span><span class="o">/</span><span class="nx">li</span><span class="p">&gt;</span>
+                    <span class="p">{{</span> <span class="nx">end</span> <span class="p">}}</span>
+                <span class="p">&lt;</span><span class="o">/</span><span class="nx">ul</span><span class="p">&gt;</span>
+                <span class="p">{{</span> <span class="nx">end</span> <span class="p">}}</span>
+                <span class="p">{{</span> <span class="k">if</span> <span class="p">.</span><span class="nx">Params</span><span class="p">.</span><span class="nx">tags</span> <span class="p">}}</span>
+                    <span class="p">&lt;</span><span class="nx">ul</span> <span class="nx">class</span><span class="p">=</span><span class="s">&#34;post-tags&#34;</span><span class="p">&gt;</span>
+                        <span class="p">{{</span> <span class="k">range</span> <span class="err">$</span><span class="nx">tag_name</span> <span class="o">:=</span> <span class="p">.</span><span class="nx">Params</span><span class="p">.</span><span class="nx">tags</span> <span class="p">}}</span>
+                            <span class="p">{{</span> <span class="err">$</span><span class="nx">tag</span> <span class="o">:=</span> <span class="p">(</span><span class="err">$</span><span class="p">.</span><span class="nx">Site</span><span class="p">.</span><span class="nf">GetPage</span> <span class="p">(</span><span class="nx">printf</span> <span class="s">&#34;/tags/%s&#34;</span> <span class="err">$</span><span class="nx">tag_name</span><span class="p">))</span> <span class="p">}}</span>
+                            <span class="p">&lt;</span><span class="nx">li</span><span class="p">&gt;&lt;</span><span class="nx">a</span> <span class="nx">href</span><span class="p">=</span><span class="s">&#34;{{ $tag.RelPermalink }}&#34;</span><span class="p">&gt;</span><span class="err">#</span><span class="p">{{</span> <span class="err">$</span><span class="nx">tag</span><span class="p">.</span><span class="nx">Title</span> <span class="p">|</span> <span class="k">default</span> <span class="err">$</span><span class="nx">tag_name</span> <span class="p">}}&lt;</span><span class="o">/</span><span class="nx">a</span><span class="p">&gt;&lt;</span><span class="o">/</span><span class="nx">li</span><span class="p">&gt;</span>
+                        <span class="p">{{</span> <span class="nx">end</span> <span class="p">}}</span>
+                    <span class="p">&lt;</span><span class="o">/</span><span class="nx">ul</span><span class="p">&gt;</span>
+            <span class="p">{{</span> <span class="nx">end</span> <span class="p">}}</span>
+            <span class="p">&lt;</span><span class="o">/</span><span class="nx">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="o">/</span><span class="nx">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="o">/</span><span class="nx">div</span><span class="p">&gt;</span>
+</code></pre></td></tr></table>
 </div>
 </div><p>That was fun and only took a while to get up and running. The color scheme in <code>dark mode</code> versus <code>light mode</code> might need some revisiting but for the moment I&rsquo;m happy with the results.</p>
 <h2 id="css-external-link-indicator">CSS External Link Indicator</h2>
@@ -241,27 +241,27 @@ if (!doNotTrack) {
 This <a href="/code/site_design_update_2022_06_25/">link</a> is internal, while this is to the same destination but uses an <a href="https://www.davidjnevin.com/code/site_design_update_2022_06_25/#css-external-link-indicator">absolute link</a>.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-1-100"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-1-100">100</a>
-</span><span class="lnt" id="hl-1-101"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-1-101">101</a>
-</span><span class="lnt" id="hl-1-102"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-1-102">102</a>
-</span><span class="lnt" id="hl-1-103"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-1-103">103</a>
-</span><span class="lnt" id="hl-1-104"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-1-104">104</a>
-</span><span class="lnt" id="hl-1-105"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-1-105">105</a>
-</span><span class="lnt" id="hl-1-106"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-1-106">106</a>
-</span><span class="lnt" id="hl-1-107"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-1-107">107</a>
-</span><span class="lnt" id="hl-1-108"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-1-108">108</a>
+<pre class="chroma"><code><span class="lnt" id="100"><a style="outline: none; text-decoration:none; color:inherit" href="#100">100</a>
+</span><span class="lnt" id="101"><a style="outline: none; text-decoration:none; color:inherit" href="#101">101</a>
+</span><span class="lnt" id="102"><a style="outline: none; text-decoration:none; color:inherit" href="#102">102</a>
+</span><span class="lnt" id="103"><a style="outline: none; text-decoration:none; color:inherit" href="#103">103</a>
+</span><span class="lnt" id="104"><a style="outline: none; text-decoration:none; color:inherit" href="#104">104</a>
+</span><span class="lnt" id="105"><a style="outline: none; text-decoration:none; color:inherit" href="#105">105</a>
+</span><span class="lnt" id="106"><a style="outline: none; text-decoration:none; color:inherit" href="#106">106</a>
+</span><span class="lnt" id="107"><a style="outline: none; text-decoration:none; color:inherit" href="#107">107</a>
+</span><span class="lnt" id="108"><a style="outline: none; text-decoration:none; color:inherit" href="#108">108</a>
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="o">//</span> <span class="nt">Show</span> <span class="nt">external</span> <span class="nt">links</span>
-</span></span><span class="line"><span class="cl"><span class="nt">a</span><span class="p">:</span><span class="nd">not</span><span class="o">(</span><span class="p">.</span><span class="nc">icon</span><span class="o">)[</span><span class="nt">href</span><span class="o">^=</span><span class="s2">&#34;http&#34;</span><span class="o">]</span><span class="p">::</span><span class="nd">after</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="k">content</span><span class="p">:</span> <span class="nb">url</span><span class="p">(</span><span class="sx">/images/external.svg</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="p">@</span><span class="k">media</span> <span class="o">(</span><span class="nt">prefers-color-scheme</span><span class="o">:</span> <span class="nt">dark</span><span class="o">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="nt">a</span><span class="p">:</span><span class="nd">not</span><span class="o">(</span><span class="p">.</span><span class="nc">icon</span><span class="o">)[</span><span class="nt">href</span><span class="o">^=</span><span class="s2">&#34;http&#34;</span><span class="o">]</span><span class="p">::</span><span class="nd">after</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="k">content</span><span class="p">:</span> <span class="nb">url</span><span class="p">(</span><span class="sx">/images/external_dark.svg</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">  <span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></td></tr></table>
+<pre class="chroma"><code class="language-css" data-lang="css"><span class="o">//</span> <span class="nt">Show</span> <span class="nt">external</span> <span class="nt">links</span>
+<span class="nt">a</span><span class="p">:</span><span class="nd">not</span><span class="o">(</span><span class="p">.</span><span class="nc">icon</span><span class="o">)[</span><span class="nt">href</span><span class="o">^=</span><span class="s2">&#34;http&#34;</span><span class="o">]</span><span class="p">::</span><span class="nd">after</span> <span class="p">{</span>
+  <span class="k">content</span><span class="p">:</span> <span class="nb">url</span><span class="p">(</span><span class="sx">/images/external.svg</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="p">@</span><span class="k">media</span> <span class="o">(</span><span class="nt">prefers-color-scheme</span><span class="o">:</span> <span class="nt">dark</span><span class="o">)</span> <span class="p">{</span>
+  <span class="nt">a</span><span class="p">:</span><span class="nd">not</span><span class="o">(</span><span class="p">.</span><span class="nc">icon</span><span class="o">)[</span><span class="nt">href</span><span class="o">^=</span><span class="s2">&#34;http&#34;</span><span class="o">]</span><span class="p">::</span><span class="nd">after</span> <span class="p">{</span>
+    <span class="k">content</span><span class="p">:</span> <span class="nb">url</span><span class="p">(</span><span class="sx">/images/external_dark.svg</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
 </div>
 </div><h2 id="code-snippet-woes">Code Snippet Woes</h2>
 <p>Next on the cards is to try and reduce the with of the line number column in the code snippets. At present it occupies far too much space and adds to the need for excessive horitzonal scrolling in the snippets.</p>

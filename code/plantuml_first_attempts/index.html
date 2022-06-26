@@ -7,8 +7,8 @@
 <meta property="og:description" content="Question: How would I create a linked list diagram?" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.davidjnevin.com/code/plantuml_first_attempts/" /><meta property="article:section" content="code" />
-<meta property="article:published_time" content="2022-06-16T23:06:34+02:00" />
-<meta property="article:modified_time" content="2022-06-16T23:06:34+02:00" />
+<meta property="article:published_time" content="2022-06-16T23:06:34&#43;02:00" />
+<meta property="article:modified_time" content="2022-06-16T23:06:34&#43;02:00" />
 <meta property="og:see_also" content="https://www.davidjnevin.com/code/mermaid_first_attempts/" />
 
 
@@ -103,20 +103,20 @@ if (!doNotTrack) {
 <p>PlantUML seems at first glance somewhat similar to <a href="/code/mermaid_first_attempts/">Mermaid</a> but with a wider function list.</p>
 <p>Following instructions from <a href="https://paul.dugas.cc/post/plantuml-shortcode/">Paul Dugas</a> I set up a <code>shortcode</code> and added a <code>js</code> file to the <code>assets&gt;static</code> folder.</p>
 <p>Let&rsquo;s see:</p>
-<p><img src="/images/ut99BCjCKT2rK_1BBSlCirBmuW80.png" alt="Image added from PlantUML server to local assets once I installed and setup local PlantUML server.&quot;" title="Plant UML Image David -J-&gt; Nevin"></p>
+<p><img src="/images/ut99BCjCKT2rK_1BBSlCirBmuW80.png" alt="Image added from PlantUML server to local assets once I installed and setup local PlantUML server."" title="Plant UML Image David -J-&gt; Nevin"></p>
 <p>Hey that worked!</p>
 <p>Code:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-0-100"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-100">100</a>
-</span><span class="lnt" id="hl-0-101"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-101">101</a>
-</span><span class="lnt" id="hl-0-102"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-102">102</a>
+<pre class="chroma"><code><span class="lnt" id="100"><a style="outline: none; text-decoration:none; color:inherit" href="#100">100</a>
+</span><span class="lnt" id="101"><a style="outline: none; text-decoration:none; color:inherit" href="#101">101</a>
+</span><span class="lnt" id="102"><a style="outline: none; text-decoration:none; color:inherit" href="#102">102</a>
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="p">{{&lt;</span> <span class="nx">plantuml</span> <span class="nx">id</span><span class="p">=</span><span class="s">&#34;example&#34;</span> <span class="p">&gt;}}</span>
-</span></span><span class="line"><span class="cl"><span class="nx">David</span> <span class="o">-</span><span class="p">&gt;</span> <span class="nx">Nevin</span><span class="p">:</span> <span class="nx">J</span>
-</span></span><span class="line"><span class="cl"><span class="p">{{&lt;</span> <span class="o">/</span><span class="nx">plantuml</span> <span class="p">&gt;}}</span>
-</span></span></code></pre></td></tr></table>
+<pre class="chroma"><code class="language-go" data-lang="go"><span class="p">{{&lt;</span> <span class="nx">plantuml</span> <span class="nx">id</span><span class="p">=</span><span class="s">&#34;example&#34;</span> <span class="p">&gt;}}</span>
+<span class="nx">David</span> <span class="o">-</span><span class="p">&gt;</span> <span class="nx">Nevin</span><span class="p">:</span> <span class="nx">J</span>
+<span class="p">{{&lt;</span> <span class="o">/</span><span class="nx">plantuml</span> <span class="p">&gt;}}</span>
+</code></pre></td></tr></table>
 </div>
 </div><p>The <code>id</code> created a <code>&lt;img id=&quot;plantuml-example&quot;...</code> tag.</p>
 <h2 id="back-to-linked-lists">Back to linked lists</h2>
@@ -126,26 +126,26 @@ if (!doNotTrack) {
 <p>So for my MacOS following these <a href="https://marketplace.visualstudio.com/items?itemName=jebbs.plantuml">instructions</a>:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-1-100"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-1-100">100</a>
-</span><span class="lnt" id="hl-1-101"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-1-101">101</a>
+<pre class="chroma"><code><span class="lnt" id="100"><a style="outline: none; text-decoration:none; color:inherit" href="#100">100</a>
+</span><span class="lnt" id="101"><a style="outline: none; text-decoration:none; color:inherit" href="#101">101</a>
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">brew install --cask temurin
-</span></span><span class="line"><span class="cl">brew install graphviz
-</span></span></code></pre></td></tr></table>
+<pre class="chroma"><code class="language-bash" data-lang="bash">brew install --cask temurin
+brew install graphviz
+</code></pre></td></tr></table>
 </div>
 </div><p>Then tried this in an *.md file.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-2-100"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-100">100</a>
-</span><span class="lnt" id="hl-2-101"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-101">101</a>
-</span><span class="lnt" id="hl-2-102"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-102">102</a>
+<pre class="chroma"><code><span class="lnt" id="100"><a style="outline: none; text-decoration:none; color:inherit" href="#100">100</a>
+</span><span class="lnt" id="101"><a style="outline: none; text-decoration:none; color:inherit" href="#101">101</a>
+</span><span class="lnt" id="102"><a style="outline: none; text-decoration:none; color:inherit" href="#102">102</a>
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">@startuml
-</span></span><span class="line"><span class="cl">David -&gt; Nevin: J
-</span></span><span class="line"><span class="cl">@enduml
-</span></span></code></pre></td></tr></table>
+<pre class="chroma"><code class="language-bash" data-lang="bash">@startuml
+David -&gt; Nevin: J
+@enduml
+</code></pre></td></tr></table>
 </div>
 </div><p>No joy.</p>
 <h2 id="install-a-previewer-in-vscode">Install a previewer in VSCOde.</h2>

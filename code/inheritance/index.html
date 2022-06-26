@@ -7,8 +7,8 @@
 <meta property="og:description" content="Parent Class Parent Class (Super Class or Base Class): This class allows the reuse of its public properties in another class." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.davidjnevin.com/code/inheritance/" /><meta property="article:section" content="code" />
-<meta property="article:published_time" content="2022-06-26T00:25:42+02:00" />
-<meta property="article:modified_time" content="2022-06-26T00:25:42+02:00" />
+<meta property="article:published_time" content="2022-06-26T00:25:42&#43;02:00" />
+<meta property="article:modified_time" content="2022-06-26T00:25:42&#43;02:00" />
 
 
   <meta name="twitter:card" content="summary"/>
@@ -105,19 +105,19 @@ if (!doNotTrack) {
 <p>A child class has all public attributes of the parent class.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-0-100"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-100">100</a>
-</span><span class="lnt" id="hl-0-101"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-101">101</a>
-</span><span class="lnt" id="hl-0-102"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-102">102</a>
-</span><span class="lnt" id="hl-0-103"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-103">103</a>
-</span><span class="lnt" id="hl-0-104"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-104">104</a>
+<pre class="chroma"><code><span class="lnt" id="100"><a style="outline: none; text-decoration:none; color:inherit" href="#100">100</a>
+</span><span class="lnt" id="101"><a style="outline: none; text-decoration:none; color:inherit" href="#101">101</a>
+</span><span class="lnt" id="102"><a style="outline: none; text-decoration:none; color:inherit" href="#102">102</a>
+</span><span class="lnt" id="103"><a style="outline: none; text-decoration:none; color:inherit" href="#103">103</a>
+</span><span class="lnt" id="104"><a style="outline: none; text-decoration:none; color:inherit" href="#104">104</a>
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-Python" data-lang="Python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">ParentClass</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">    <span class="c1"># attributes of the parent class</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">ChildClass</span><span class="p">(</span><span class="n">ParentClass</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">    <span class="c1"># attributes of the child class</span>
-</span></span></code></pre></td></tr></table>
+<pre class="chroma"><code class="language-Python" data-lang="Python"><span class="k">class</span> <span class="nc">ParentClass</span><span class="p">:</span>
+    <span class="c1"># attributes of the parent class</span>
+
+<span class="k">class</span> <span class="nc">ChildClass</span><span class="p">(</span><span class="n">ParentClass</span><span class="p">):</span>
+    <span class="c1"># attributes of the child class</span>
+</code></pre></td></tr></table>
 </div>
 </div><h2 id="super-function">Super() Function</h2>
 <p>We use <code>super()</code> as opposed to <code>self</code> to access the parent class properties instead of the child class properties of the same name.</p>

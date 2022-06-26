@@ -7,8 +7,8 @@
 <meta property="og:description" content="Question: How would I create a linked list diagram?" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.davidjnevin.com/code/mermaid_first_attempts/" /><meta property="article:section" content="code" />
-<meta property="article:published_time" content="2022-06-16T09:23:13+02:00" />
-<meta property="article:modified_time" content="2022-06-16T09:23:13+02:00" />
+<meta property="article:published_time" content="2022-06-16T09:23:13&#43;02:00" />
+<meta property="article:modified_time" content="2022-06-16T09:23:13&#43;02:00" />
 <meta property="og:see_also" content="https://www.davidjnevin.com/code/plantuml_first_attempts/" />
 
 
@@ -105,59 +105,59 @@ if (!doNotTrack) {
 <p>I created a <code>shortcodes</code> folder under my theme <code>layouts</code> folder, adn there created a <code>mermaid.html</code> with the following code.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-0-100"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-100">100</a>
-</span><span class="lnt" id="hl-0-101"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-101">101</a>
-</span><span class="lnt" id="hl-0-102"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-102">102</a>
-</span><span class="lnt" id="hl-0-103"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-103">103</a>
-</span><span class="lnt" id="hl-0-104"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-104">104</a>
-</span><span class="lnt" id="hl-0-105"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-105">105</a>
-</span><span class="lnt" id="hl-0-106"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-106">106</a>
-</span><span class="lnt" id="hl-0-107"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-107">107</a>
-</span><span class="lnt" id="hl-0-108"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-108">108</a>
-</span><span class="lnt" id="hl-0-109"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-109">109</a>
-</span><span class="lnt" id="hl-0-110"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-110">110</a>
-</span><span class="lnt" id="hl-0-111"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-111">111</a>
-</span><span class="lnt" id="hl-0-112"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-112">112</a>
+<pre class="chroma"><code><span class="lnt" id="100"><a style="outline: none; text-decoration:none; color:inherit" href="#100">100</a>
+</span><span class="lnt" id="101"><a style="outline: none; text-decoration:none; color:inherit" href="#101">101</a>
+</span><span class="lnt" id="102"><a style="outline: none; text-decoration:none; color:inherit" href="#102">102</a>
+</span><span class="lnt" id="103"><a style="outline: none; text-decoration:none; color:inherit" href="#103">103</a>
+</span><span class="lnt" id="104"><a style="outline: none; text-decoration:none; color:inherit" href="#104">104</a>
+</span><span class="lnt" id="105"><a style="outline: none; text-decoration:none; color:inherit" href="#105">105</a>
+</span><span class="lnt" id="106"><a style="outline: none; text-decoration:none; color:inherit" href="#106">106</a>
+</span><span class="lnt" id="107"><a style="outline: none; text-decoration:none; color:inherit" href="#107">107</a>
+</span><span class="lnt" id="108"><a style="outline: none; text-decoration:none; color:inherit" href="#108">108</a>
+</span><span class="lnt" id="109"><a style="outline: none; text-decoration:none; color:inherit" href="#109">109</a>
+</span><span class="lnt" id="110"><a style="outline: none; text-decoration:none; color:inherit" href="#110">110</a>
+</span><span class="lnt" id="111"><a style="outline: none; text-decoration:none; color:inherit" href="#111">111</a>
+</span><span class="lnt" id="112"><a style="outline: none; text-decoration:none; color:inherit" href="#112">112</a>
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="o">&lt;</span><span class="nx">script</span> <span class="kr">async</span> <span class="nx">type</span><span class="o">=</span><span class="s2">&#34;application/javascript&#34;</span> <span class="nx">src</span><span class="o">=</span><span class="s2">&#34;https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js&#34;</span><span class="o">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="kd">var</span> <span class="nx">config</span> <span class="o">=</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">      <span class="nx">startOnLoad</span><span class="o">:</span><span class="kc">true</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">      <span class="nx">theme</span><span class="o">:</span>
-</span></span><span class="line"><span class="cl">      <span class="s1">&#39;{{ if .Get &#34;theme&#34; }}{{ .Get &#34;theme&#34; }}{{ else }}dark{{ end }}&#39;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">      <span class="nx">align</span><span class="o">:</span><span class="s1">&#39;{{ if .Get &#34;align&#34; }}{{ .Get &#34;align&#34; }}{{ else }} center{{ end }}&#39;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">};</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">mermaid</span><span class="p">.</span><span class="nx">initialize</span><span class="p">(</span><span class="nx">config</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">  <span class="o">&lt;</span><span class="err">/script&gt;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="o">&lt;</span><span class="nx">div</span> <span class="kr">class</span><span class="o">=</span><span class="s2">&#34;mermaid&#34;</span><span class="o">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">{{.</span><span class="nx">Inner</span><span class="p">}}</span>
-</span></span><span class="line"><span class="cl">  <span class="o">&lt;</span><span class="err">/div&gt;</span>
-</span></span></code></pre></td></tr></table>
+<pre class="chroma"><code class="language-js" data-lang="js"><span class="o">&lt;</span><span class="nx">script</span> <span class="kr">async</span> <span class="nx">type</span><span class="o">=</span><span class="s2">&#34;application/javascript&#34;</span> <span class="nx">src</span><span class="o">=</span><span class="s2">&#34;https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js&#34;</span><span class="o">&gt;</span>
+    <span class="kd">var</span> <span class="nx">config</span> <span class="o">=</span> <span class="p">{</span>
+      <span class="nx">startOnLoad</span><span class="o">:</span><span class="kc">true</span><span class="p">,</span>
+      <span class="nx">theme</span><span class="o">:</span>
+      <span class="s1">&#39;{{ if .Get &#34;theme&#34; }}{{ .Get &#34;theme&#34; }}{{ else }}dark{{ end }}&#39;</span><span class="p">,</span>
+      <span class="nx">align</span><span class="o">:</span><span class="s1">&#39;{{ if .Get &#34;align&#34; }}{{ .Get &#34;align&#34; }}{{ else }} center{{ end }}&#39;</span>
+    <span class="p">};</span>
+    <span class="nx">mermaid</span><span class="p">.</span><span class="nx">initialize</span><span class="p">(</span><span class="nx">config</span><span class="p">);</span>
+  <span class="o">&lt;</span><span class="err">/script&gt;</span>
+
+  <span class="o">&lt;</span><span class="nx">div</span> <span class="kr">class</span><span class="o">=</span><span class="s2">&#34;mermaid&#34;</span><span class="o">&gt;</span>
+    <span class="p">{{.</span><span class="nx">Inner</span><span class="p">}}</span>
+  <span class="o">&lt;</span><span class="err">/div&gt;</span>
+</code></pre></td></tr></table>
 </div>
 </div><h2 id="markdown-mermaid-pie-chart">Markdown Mermaid Pie Chart</h2>
 <p>The markdown to create the pie chart is as follows.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-1-100"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-1-100">100</a>
-</span><span class="lnt" id="hl-1-101"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-1-101">101</a>
-</span><span class="lnt" id="hl-1-102"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-1-102">102</a>
-</span><span class="lnt" id="hl-1-103"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-1-103">103</a>
-</span><span class="lnt" id="hl-1-104"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-1-104">104</a>
-</span><span class="lnt" id="hl-1-105"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-1-105">105</a>
-</span><span class="lnt" id="hl-1-106"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-1-106">106</a>
-</span><span class="lnt" id="hl-1-107"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-1-107">107</a>
+<pre class="chroma"><code><span class="lnt" id="100"><a style="outline: none; text-decoration:none; color:inherit" href="#100">100</a>
+</span><span class="lnt" id="101"><a style="outline: none; text-decoration:none; color:inherit" href="#101">101</a>
+</span><span class="lnt" id="102"><a style="outline: none; text-decoration:none; color:inherit" href="#102">102</a>
+</span><span class="lnt" id="103"><a style="outline: none; text-decoration:none; color:inherit" href="#103">103</a>
+</span><span class="lnt" id="104"><a style="outline: none; text-decoration:none; color:inherit" href="#104">104</a>
+</span><span class="lnt" id="105"><a style="outline: none; text-decoration:none; color:inherit" href="#105">105</a>
+</span><span class="lnt" id="106"><a style="outline: none; text-decoration:none; color:inherit" href="#106">106</a>
+</span><span class="lnt" id="107"><a style="outline: none; text-decoration:none; color:inherit" href="#107">107</a>
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="p">{{&lt;</span> <span class="nx">mermaid</span> <span class="nx">align</span><span class="p">=</span><span class="s">&#34;left&#34;</span> <span class="nx">theme</span><span class="p">=</span><span class="s">&#34;neutral&#34;</span> <span class="p">&gt;}}</span>
-</span></span><span class="line"><span class="cl"><span class="nx">pie</span>
-</span></span><span class="line"><span class="cl"><span class="nx">title</span> <span class="nx">French</span> <span class="nx">Words</span> <span class="nx">I</span> <span class="nx">Know</span>
-</span></span><span class="line"><span class="cl"><span class="s">&#34;Merde&#34;</span> <span class="p">:</span> <span class="mi">50</span>
-</span></span><span class="line"><span class="cl"><span class="s">&#34;Oui&#34;</span> <span class="p">:</span> <span class="mi">35</span>
-</span></span><span class="line"><span class="cl"><span class="s">&#34;Alors&#34;</span> <span class="p">:</span> <span class="mi">10</span>
-</span></span><span class="line"><span class="cl"><span class="s">&#34;Non&#34;</span> <span class="p">:</span> <span class="mi">5</span>
-</span></span><span class="line"><span class="cl"><span class="p">{{&lt;</span> <span class="o">/</span><span class="nx">mermaid</span> <span class="p">&gt;}}</span>
-</span></span></code></pre></td></tr></table>
+<pre class="chroma"><code class="language-go" data-lang="go"><span class="p">{{&lt;</span> <span class="nx">mermaid</span> <span class="nx">align</span><span class="p">=</span><span class="s">&#34;left&#34;</span> <span class="nx">theme</span><span class="p">=</span><span class="s">&#34;neutral&#34;</span> <span class="p">&gt;}}</span>
+<span class="nx">pie</span>
+<span class="nx">title</span> <span class="nx">French</span> <span class="nx">Words</span> <span class="nx">I</span> <span class="nx">Know</span>
+<span class="s">&#34;Merde&#34;</span> <span class="p">:</span> <span class="mi">50</span>
+<span class="s">&#34;Oui&#34;</span> <span class="p">:</span> <span class="mi">35</span>
+<span class="s">&#34;Alors&#34;</span> <span class="p">:</span> <span class="mi">10</span>
+<span class="s">&#34;Non&#34;</span> <span class="p">:</span> <span class="mi">5</span>
+<span class="p">{{&lt;</span> <span class="o">/</span><span class="nx">mermaid</span> <span class="p">&gt;}}</span>
+</code></pre></td></tr></table>
 </div>
 </div><p>note: A neat trick to get <code>go</code> code to display well in code blocks is to comment out/escape the contents of the mermaid opening and closing tags in your markdown. I used <code>&lt;/* mermaid align=&quot;left&quot; theme=&quot;neutral&quot; */&gt;</code> and <code>&lt;/* mermaid */&gt;</code>, a method I saw at <a href="https://robb.sh/posts/how-to-use-mermaid-diagrams-in-hugo/">//robb.sh&rsquo;s</a> github repo of his site&rsquo;s source code.</p>
 <script type="module">
@@ -212,17 +212,17 @@ graph LR
 <p>Code:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-2-100"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-100">100</a>
-</span><span class="lnt" id="hl-2-101"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-101">101</a>
-</span><span class="lnt" id="hl-2-102"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-102">102</a>
-</span><span class="lnt" id="hl-2-103"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-103">103</a>
+<pre class="chroma"><code><span class="lnt" id="100"><a style="outline: none; text-decoration:none; color:inherit" href="#100">100</a>
+</span><span class="lnt" id="101"><a style="outline: none; text-decoration:none; color:inherit" href="#101">101</a>
+</span><span class="lnt" id="102"><a style="outline: none; text-decoration:none; color:inherit" href="#102">102</a>
+</span><span class="lnt" id="103"><a style="outline: none; text-decoration:none; color:inherit" href="#103">103</a>
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="p">{{&lt;</span> <span class="nx">mermaid</span> <span class="nx">align</span><span class="p">=</span><span class="s">&#34;left&#34;</span> <span class="nx">theme</span><span class="p">=</span><span class="s">&#34;neutral&#34;</span> <span class="p">&gt;}}</span>
-</span></span><span class="line"><span class="cl"><span class="nx">graph</span> <span class="nx">LR</span>
-</span></span><span class="line"><span class="cl"><span class="mi">1</span><span class="o">--</span><span class="p">&gt;</span><span class="mi">2</span><span class="o">--</span><span class="p">&gt;</span><span class="mi">3</span><span class="o">--</span><span class="p">&gt;</span><span class="mi">4</span><span class="o">--</span><span class="p">&gt;</span><span class="mi">5</span><span class="o">--</span><span class="p">&gt;</span><span class="mi">6</span>
-</span></span><span class="line"><span class="cl"><span class="p">{{&lt;</span> <span class="o">/</span><span class="nx">mermaid</span> <span class="p">&gt;}}</span>
-</span></span></code></pre></td></tr></table>
+<pre class="chroma"><code class="language-go" data-lang="go"><span class="p">{{&lt;</span> <span class="nx">mermaid</span> <span class="nx">align</span><span class="p">=</span><span class="s">&#34;left&#34;</span> <span class="nx">theme</span><span class="p">=</span><span class="s">&#34;neutral&#34;</span> <span class="p">&gt;}}</span>
+<span class="nx">graph</span> <span class="nx">LR</span>
+<span class="mi">1</span><span class="o">--</span><span class="p">&gt;</span><span class="mi">2</span><span class="o">--</span><span class="p">&gt;</span><span class="mi">3</span><span class="o">--</span><span class="p">&gt;</span><span class="mi">4</span><span class="o">--</span><span class="p">&gt;</span><span class="mi">5</span><span class="o">--</span><span class="p">&gt;</span><span class="mi">6</span>
+<span class="p">{{&lt;</span> <span class="o">/</span><span class="nx">mermaid</span> <span class="p">&gt;}}</span>
+</code></pre></td></tr></table>
 </div>
 </div><p>Getting there, but not great. I want to demonstrate the idea of <code>node.next</code> and later <code>node.previous</code> linking from the nodes.</p>
 <p>This is closer:</p>
@@ -253,25 +253,25 @@ Node02 : next()
 <p>Code:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-3-100"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-3-100">100</a>
-</span><span class="lnt" id="hl-3-101"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-3-101">101</a>
-</span><span class="lnt" id="hl-3-102"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-3-102">102</a>
-</span><span class="lnt" id="hl-3-103"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-3-103">103</a>
-</span><span class="lnt" id="hl-3-104"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-3-104">104</a>
-</span><span class="lnt" id="hl-3-105"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-3-105">105</a>
-</span><span class="lnt" id="hl-3-106"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-3-106">106</a>
-</span><span class="lnt" id="hl-3-107"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-3-107">107</a>
+<pre class="chroma"><code><span class="lnt" id="100"><a style="outline: none; text-decoration:none; color:inherit" href="#100">100</a>
+</span><span class="lnt" id="101"><a style="outline: none; text-decoration:none; color:inherit" href="#101">101</a>
+</span><span class="lnt" id="102"><a style="outline: none; text-decoration:none; color:inherit" href="#102">102</a>
+</span><span class="lnt" id="103"><a style="outline: none; text-decoration:none; color:inherit" href="#103">103</a>
+</span><span class="lnt" id="104"><a style="outline: none; text-decoration:none; color:inherit" href="#104">104</a>
+</span><span class="lnt" id="105"><a style="outline: none; text-decoration:none; color:inherit" href="#105">105</a>
+</span><span class="lnt" id="106"><a style="outline: none; text-decoration:none; color:inherit" href="#106">106</a>
+</span><span class="lnt" id="107"><a style="outline: none; text-decoration:none; color:inherit" href="#107">107</a>
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="p">{{&lt;</span> <span class="nx">mermaid</span> <span class="nx">align</span><span class="p">=</span><span class="s">&#34;left&#34;</span> <span class="nx">theme</span><span class="p">=</span><span class="s">&#34;neutral&#34;</span> <span class="p">&gt;}}</span>
-</span></span><span class="line"><span class="cl"><span class="nx">classDiagram</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">Node02</span> <span class="p">&lt;|</span><span class="o">--</span> <span class="nx">Node01</span> <span class="p">:</span> <span class="nx">next</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">Node01</span> <span class="p">:</span> <span class="nx">data</span> <span class="o">/</span> <span class="nx">value</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">Node01</span> <span class="p">:</span> <span class="nf">next</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">Node02</span> <span class="p">:</span> <span class="nx">data</span> <span class="o">/</span> <span class="nx">value</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">Node02</span> <span class="p">:</span> <span class="nf">next</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl"><span class="p">{{&lt;</span> <span class="o">/</span><span class="nx">mermaid</span> <span class="p">&gt;}}</span>
-</span></span></code></pre></td></tr></table>
+<pre class="chroma"><code class="language-go" data-lang="go"><span class="p">{{&lt;</span> <span class="nx">mermaid</span> <span class="nx">align</span><span class="p">=</span><span class="s">&#34;left&#34;</span> <span class="nx">theme</span><span class="p">=</span><span class="s">&#34;neutral&#34;</span> <span class="p">&gt;}}</span>
+<span class="nx">classDiagram</span>
+    <span class="nx">Node02</span> <span class="p">&lt;|</span><span class="o">--</span> <span class="nx">Node01</span> <span class="p">:</span> <span class="nx">next</span>
+    <span class="nx">Node01</span> <span class="p">:</span> <span class="nx">data</span> <span class="o">/</span> <span class="nx">value</span>
+    <span class="nx">Node01</span> <span class="p">:</span> <span class="nf">next</span><span class="p">()</span>
+    <span class="nx">Node02</span> <span class="p">:</span> <span class="nx">data</span> <span class="o">/</span> <span class="nx">value</span>
+    <span class="nx">Node02</span> <span class="p">:</span> <span class="nf">next</span><span class="p">()</span>
+<span class="p">{{&lt;</span> <span class="o">/</span><span class="nx">mermaid</span> <span class="p">&gt;}}</span>
+</code></pre></td></tr></table>
 </div>
 </div><h3 id="arrow-type-options">Arrow type options</h3>
 <p>I experimented with a node as a subroutine but to no avail.</p>
@@ -302,23 +302,23 @@ Node04 ==> None
 <p>Code:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-4-100"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-4-100">100</a>
-</span><span class="lnt" id="hl-4-101"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-4-101">101</a>
-</span><span class="lnt" id="hl-4-102"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-4-102">102</a>
-</span><span class="lnt" id="hl-4-103"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-4-103">103</a>
-</span><span class="lnt" id="hl-4-104"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-4-104">104</a>
-</span><span class="lnt" id="hl-4-105"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-4-105">105</a>
-</span><span class="lnt" id="hl-4-106"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-4-106">106</a>
+<pre class="chroma"><code><span class="lnt" id="100"><a style="outline: none; text-decoration:none; color:inherit" href="#100">100</a>
+</span><span class="lnt" id="101"><a style="outline: none; text-decoration:none; color:inherit" href="#101">101</a>
+</span><span class="lnt" id="102"><a style="outline: none; text-decoration:none; color:inherit" href="#102">102</a>
+</span><span class="lnt" id="103"><a style="outline: none; text-decoration:none; color:inherit" href="#103">103</a>
+</span><span class="lnt" id="104"><a style="outline: none; text-decoration:none; color:inherit" href="#104">104</a>
+</span><span class="lnt" id="105"><a style="outline: none; text-decoration:none; color:inherit" href="#105">105</a>
+</span><span class="lnt" id="106"><a style="outline: none; text-decoration:none; color:inherit" href="#106">106</a>
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="p">{{&lt;</span> <span class="nx">mermaid</span> <span class="nx">align</span><span class="p">=</span><span class="s">&#34;left&#34;</span> <span class="nx">theme</span><span class="p">=</span><span class="s">&#34;neutral&#34;</span> <span class="p">&gt;}}</span>
-</span></span><span class="line"><span class="cl"><span class="nx">flowchart</span> <span class="nx">LR</span>
-</span></span><span class="line"><span class="cl"><span class="nx">Node01</span><span class="o">-</span><span class="p">.</span> <span class="nx">next</span> <span class="p">.</span><span class="o">-</span><span class="p">&gt;</span><span class="nx">Node02</span>
-</span></span><span class="line"><span class="cl"><span class="nx">Node02</span><span class="o">--</span> <span class="nx">next</span> <span class="o">--</span><span class="p">&gt;</span><span class="nx">Node03</span>
-</span></span><span class="line"><span class="cl"><span class="nx">Node03</span><span class="o">==</span> <span class="nx">next</span> <span class="o">==</span><span class="p">&gt;</span><span class="nx">Node04</span>
-</span></span><span class="line"><span class="cl"><span class="nx">Node04</span> <span class="o">==</span><span class="p">&gt;</span> <span class="nx">None</span>
-</span></span><span class="line"><span class="cl"><span class="p">{{&lt;</span> <span class="o">/</span><span class="nx">mermaid</span> <span class="p">&gt;}}</span>
-</span></span></code></pre></td></tr></table>
+<pre class="chroma"><code class="language-go" data-lang="go"><span class="p">{{&lt;</span> <span class="nx">mermaid</span> <span class="nx">align</span><span class="p">=</span><span class="s">&#34;left&#34;</span> <span class="nx">theme</span><span class="p">=</span><span class="s">&#34;neutral&#34;</span> <span class="p">&gt;}}</span>
+<span class="nx">flowchart</span> <span class="nx">LR</span>
+<span class="nx">Node01</span><span class="o">-</span><span class="p">.</span> <span class="nx">next</span> <span class="p">.</span><span class="o">-</span><span class="p">&gt;</span><span class="nx">Node02</span>
+<span class="nx">Node02</span><span class="o">--</span> <span class="nx">next</span> <span class="o">--</span><span class="p">&gt;</span><span class="nx">Node03</span>
+<span class="nx">Node03</span><span class="o">==</span> <span class="nx">next</span> <span class="o">==</span><span class="p">&gt;</span><span class="nx">Node04</span>
+<span class="nx">Node04</span> <span class="o">==</span><span class="p">&gt;</span> <span class="nx">None</span>
+<span class="p">{{&lt;</span> <span class="o">/</span><span class="nx">mermaid</span> <span class="p">&gt;}}</span>
+</code></pre></td></tr></table>
 </div>
 </div><h2 id="oh-here-we-go">Oh here we go!</h2>
 <p>Subgraphs!</p>
@@ -363,101 +363,101 @@ node02Prev--> Node01
 <p>This is not what I was expecting form the code below:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-5-100"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-5-100">100</a>
-</span><span class="lnt" id="hl-5-101"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-5-101">101</a>
-</span><span class="lnt" id="hl-5-102"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-5-102">102</a>
-</span><span class="lnt" id="hl-5-103"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-5-103">103</a>
-</span><span class="lnt" id="hl-5-104"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-5-104">104</a>
-</span><span class="lnt" id="hl-5-105"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-5-105">105</a>
-</span><span class="lnt" id="hl-5-106"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-5-106">106</a>
-</span><span class="lnt" id="hl-5-107"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-5-107">107</a>
-</span><span class="lnt" id="hl-5-108"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-5-108">108</a>
-</span><span class="lnt" id="hl-5-109"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-5-109">109</a>
-</span><span class="lnt" id="hl-5-110"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-5-110">110</a>
-</span><span class="lnt" id="hl-5-111"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-5-111">111</a>
-</span><span class="lnt" id="hl-5-112"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-5-112">112</a>
-</span><span class="lnt" id="hl-5-113"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-5-113">113</a>
-</span><span class="lnt" id="hl-5-114"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-5-114">114</a>
-</span><span class="lnt" id="hl-5-115"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-5-115">115</a>
-</span><span class="lnt" id="hl-5-116"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-5-116">116</a>
-</span><span class="lnt" id="hl-5-117"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-5-117">117</a>
-</span><span class="lnt" id="hl-5-118"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-5-118">118</a>
-</span><span class="lnt" id="hl-5-119"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-5-119">119</a>
-</span><span class="lnt" id="hl-5-120"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-5-120">120</a>
-</span><span class="lnt" id="hl-5-121"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-5-121">121</a>
+<pre class="chroma"><code><span class="lnt" id="100"><a style="outline: none; text-decoration:none; color:inherit" href="#100">100</a>
+</span><span class="lnt" id="101"><a style="outline: none; text-decoration:none; color:inherit" href="#101">101</a>
+</span><span class="lnt" id="102"><a style="outline: none; text-decoration:none; color:inherit" href="#102">102</a>
+</span><span class="lnt" id="103"><a style="outline: none; text-decoration:none; color:inherit" href="#103">103</a>
+</span><span class="lnt" id="104"><a style="outline: none; text-decoration:none; color:inherit" href="#104">104</a>
+</span><span class="lnt" id="105"><a style="outline: none; text-decoration:none; color:inherit" href="#105">105</a>
+</span><span class="lnt" id="106"><a style="outline: none; text-decoration:none; color:inherit" href="#106">106</a>
+</span><span class="lnt" id="107"><a style="outline: none; text-decoration:none; color:inherit" href="#107">107</a>
+</span><span class="lnt" id="108"><a style="outline: none; text-decoration:none; color:inherit" href="#108">108</a>
+</span><span class="lnt" id="109"><a style="outline: none; text-decoration:none; color:inherit" href="#109">109</a>
+</span><span class="lnt" id="110"><a style="outline: none; text-decoration:none; color:inherit" href="#110">110</a>
+</span><span class="lnt" id="111"><a style="outline: none; text-decoration:none; color:inherit" href="#111">111</a>
+</span><span class="lnt" id="112"><a style="outline: none; text-decoration:none; color:inherit" href="#112">112</a>
+</span><span class="lnt" id="113"><a style="outline: none; text-decoration:none; color:inherit" href="#113">113</a>
+</span><span class="lnt" id="114"><a style="outline: none; text-decoration:none; color:inherit" href="#114">114</a>
+</span><span class="lnt" id="115"><a style="outline: none; text-decoration:none; color:inherit" href="#115">115</a>
+</span><span class="lnt" id="116"><a style="outline: none; text-decoration:none; color:inherit" href="#116">116</a>
+</span><span class="lnt" id="117"><a style="outline: none; text-decoration:none; color:inherit" href="#117">117</a>
+</span><span class="lnt" id="118"><a style="outline: none; text-decoration:none; color:inherit" href="#118">118</a>
+</span><span class="lnt" id="119"><a style="outline: none; text-decoration:none; color:inherit" href="#119">119</a>
+</span><span class="lnt" id="120"><a style="outline: none; text-decoration:none; color:inherit" href="#120">120</a>
+</span><span class="lnt" id="121"><a style="outline: none; text-decoration:none; color:inherit" href="#121">121</a>
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="o">{{</span>&lt; mermaid <span class="nv">align</span><span class="o">=</span><span class="s2">&#34;left&#34;</span> <span class="nv">theme</span><span class="o">=</span><span class="s2">&#34;neutral&#34;</span> &gt;<span class="o">}}</span>
-</span></span><span class="line"><span class="cl">flowchart LR
-</span></span><span class="line"><span class="cl">    subgraph LinkedList
-</span></span><span class="line"><span class="cl">        direction LR
-</span></span><span class="line"><span class="cl">            subgraph Node01
-</span></span><span class="line"><span class="cl">            direction LR
-</span></span><span class="line"><span class="cl">            node01Prev<span class="o">[</span>Prev<span class="o">]</span>
-</span></span><span class="line"><span class="cl">            node01Data<span class="o">[</span>Data<span class="o">]</span>
-</span></span><span class="line"><span class="cl">            node01Next<span class="o">[</span>Next<span class="o">]</span>
-</span></span><span class="line"><span class="cl">        end
-</span></span><span class="line"><span class="cl">        subgraph Node02
-</span></span><span class="line"><span class="cl">        direction LR
-</span></span><span class="line"><span class="cl">            node02Prev<span class="o">(</span>Prev<span class="o">)</span>
-</span></span><span class="line"><span class="cl">            node02Data<span class="o">(</span>Data<span class="o">)</span>
-</span></span><span class="line"><span class="cl">            node02Next<span class="o">(</span>Next<span class="o">)</span>
-</span></span><span class="line"><span class="cl">        end
-</span></span><span class="line"><span class="cl">    end
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">node01Next --&gt; Node02
-</span></span><span class="line"><span class="cl">node02Prev --&gt; Node01
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="o">{{</span>&lt; /mermaid &gt;<span class="o">}}</span>
-</span></span></code></pre></td></tr></table>
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="o">{{</span>&lt; mermaid <span class="nv">align</span><span class="o">=</span><span class="s2">&#34;left&#34;</span> <span class="nv">theme</span><span class="o">=</span><span class="s2">&#34;neutral&#34;</span> &gt;<span class="o">}}</span>
+flowchart LR
+    subgraph LinkedList
+        direction LR
+            subgraph Node01
+            direction LR
+            node01Prev<span class="o">[</span>Prev<span class="o">]</span>
+            node01Data<span class="o">[</span>Data<span class="o">]</span>
+            node01Next<span class="o">[</span>Next<span class="o">]</span>
+        end
+        subgraph Node02
+        direction LR
+            node02Prev<span class="o">(</span>Prev<span class="o">)</span>
+            node02Data<span class="o">(</span>Data<span class="o">)</span>
+            node02Next<span class="o">(</span>Next<span class="o">)</span>
+        end
+    end
+
+node01Next --&gt; Node02
+node02Prev --&gt; Node01
+
+<span class="o">{{</span>&lt; /mermaid &gt;<span class="o">}}</span>
+</code></pre></td></tr></table>
 </div>
 </div><h2 id="updating-mermaid">Updating Mermaid?</h2>
 <p>I thought, I&rsquo;d detter check if I&rsquo;m using the latest. So I altered the <code>mermaid.html</code> to this:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-6-100"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-6-100">100</a>
-</span><span class="lnt" id="hl-6-101"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-6-101">101</a>
-</span><span class="lnt" id="hl-6-102"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-6-102">102</a>
-</span><span class="lnt" id="hl-6-103"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-6-103">103</a>
-</span><span class="lnt" id="hl-6-104"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-6-104">104</a>
-</span><span class="lnt" id="hl-6-105"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-6-105">105</a>
-</span><span class="lnt" id="hl-6-106"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-6-106">106</a>
-</span><span class="lnt" id="hl-6-107"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-6-107">107</a>
-</span><span class="lnt" id="hl-6-108"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-6-108">108</a>
-</span><span class="lnt" id="hl-6-109"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-6-109">109</a>
-</span><span class="lnt" id="hl-6-110"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-6-110">110</a>
-</span><span class="lnt" id="hl-6-111"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-6-111">111</a>
-</span><span class="lnt" id="hl-6-112"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-6-112">112</a>
-</span><span class="lnt" id="hl-6-113"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-6-113">113</a>
-</span><span class="lnt" id="hl-6-114"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-6-114">114</a>
-</span><span class="lnt" id="hl-6-115"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-6-115">115</a>
-</span><span class="lnt" id="hl-6-116"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-6-116">116</a>
-</span><span class="lnt" id="hl-6-117"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-6-117">117</a>
-</span><span class="lnt" id="hl-6-118"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-6-118">118</a>
-</span><span class="lnt" id="hl-6-119"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-6-119">119</a>
+<pre class="chroma"><code><span class="lnt" id="100"><a style="outline: none; text-decoration:none; color:inherit" href="#100">100</a>
+</span><span class="lnt" id="101"><a style="outline: none; text-decoration:none; color:inherit" href="#101">101</a>
+</span><span class="lnt" id="102"><a style="outline: none; text-decoration:none; color:inherit" href="#102">102</a>
+</span><span class="lnt" id="103"><a style="outline: none; text-decoration:none; color:inherit" href="#103">103</a>
+</span><span class="lnt" id="104"><a style="outline: none; text-decoration:none; color:inherit" href="#104">104</a>
+</span><span class="lnt" id="105"><a style="outline: none; text-decoration:none; color:inherit" href="#105">105</a>
+</span><span class="lnt" id="106"><a style="outline: none; text-decoration:none; color:inherit" href="#106">106</a>
+</span><span class="lnt" id="107"><a style="outline: none; text-decoration:none; color:inherit" href="#107">107</a>
+</span><span class="lnt" id="108"><a style="outline: none; text-decoration:none; color:inherit" href="#108">108</a>
+</span><span class="lnt" id="109"><a style="outline: none; text-decoration:none; color:inherit" href="#109">109</a>
+</span><span class="lnt" id="110"><a style="outline: none; text-decoration:none; color:inherit" href="#110">110</a>
+</span><span class="lnt" id="111"><a style="outline: none; text-decoration:none; color:inherit" href="#111">111</a>
+</span><span class="lnt" id="112"><a style="outline: none; text-decoration:none; color:inherit" href="#112">112</a>
+</span><span class="lnt" id="113"><a style="outline: none; text-decoration:none; color:inherit" href="#113">113</a>
+</span><span class="lnt" id="114"><a style="outline: none; text-decoration:none; color:inherit" href="#114">114</a>
+</span><span class="lnt" id="115"><a style="outline: none; text-decoration:none; color:inherit" href="#115">115</a>
+</span><span class="lnt" id="116"><a style="outline: none; text-decoration:none; color:inherit" href="#116">116</a>
+</span><span class="lnt" id="117"><a style="outline: none; text-decoration:none; color:inherit" href="#117">117</a>
+</span><span class="lnt" id="118"><a style="outline: none; text-decoration:none; color:inherit" href="#118">118</a>
+</span><span class="lnt" id="119"><a style="outline: none; text-decoration:none; color:inherit" href="#119">119</a>
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">// initialize Mermaid to [1] log errors, [2] have loose security for first-party
-</span></span></span><span class="line"><span class="cl"><span class="c1">// authored diagrams, and [3] respect a preferred dark color scheme
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
-</span></span><span class="line"><span class="cl"><span class="o">&lt;</span><span class="nx">script</span> <span class="nx">type</span><span class="o">=</span><span class="s2">&#34;module&#34;</span><span class="o">&gt;</span>
-</span></span><span class="line"><span class="cl">  <span class="kr">import</span> <span class="nx">mermaid</span> <span class="nx">from</span> <span class="s2">&#34;https://cdn.skypack.dev/mermaid@8.14.0&#34;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="kd">var</span> <span class="nx">config</span> <span class="o">=</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">      <span class="nx">startOnLoad</span><span class="o">:</span><span class="kc">true</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">      <span class="nx">logLevel</span><span class="o">:</span> <span class="s2">&#34;error&#34;</span><span class="p">,</span> <span class="c1">// [1]
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="nx">securityLevel</span><span class="o">:</span> <span class="s2">&#34;loose&#34;</span><span class="p">,</span> <span class="c1">// [2]
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="nx">theme</span><span class="o">:</span> <span class="p">(</span><span class="nb">window</span><span class="p">.</span><span class="nx">matchMedia</span> <span class="o">&amp;&amp;</span> <span class="nb">window</span><span class="p">.</span><span class="nx">matchMedia</span><span class="p">(</span><span class="s2">&#34;(prefers-color-scheme: dark)&#34;</span><span class="p">).</span><span class="nx">matches</span><span class="p">)</span> <span class="o">?</span>
-</span></span><span class="line"><span class="cl">    <span class="s2">&#34;dark&#34;</span> <span class="o">:</span>
-</span></span><span class="line"><span class="cl">    <span class="s2">&#34;default&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">};</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">mermaid</span><span class="p">.</span><span class="nx">initialize</span><span class="p">(</span><span class="nx">config</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">  <span class="o">&lt;</span><span class="err">/script&gt;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="o">&lt;</span><span class="nx">div</span> <span class="kr">class</span><span class="o">=</span><span class="s2">&#34;mermaid&#34;</span><span class="o">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">{{.</span><span class="nx">Inner</span><span class="p">}}</span>
-</span></span><span class="line"><span class="cl">  <span class="o">&lt;</span><span class="err">/div&gt;</span>
-</span></span></code></pre></td></tr></table>
+<pre class="chroma"><code class="language-js" data-lang="js">
+<span class="c1">// initialize Mermaid to [1] log errors, [2] have loose security for first-party
+</span><span class="c1">// authored diagrams, and [3] respect a preferred dark color scheme
+</span><span class="c1"></span>
+<span class="o">&lt;</span><span class="nx">script</span> <span class="nx">type</span><span class="o">=</span><span class="s2">&#34;module&#34;</span><span class="o">&gt;</span>
+  <span class="kr">import</span> <span class="nx">mermaid</span> <span class="nx">from</span> <span class="s2">&#34;https://cdn.skypack.dev/mermaid@8.14.0&#34;</span><span class="p">;</span>
+    <span class="kd">var</span> <span class="nx">config</span> <span class="o">=</span> <span class="p">{</span>
+      <span class="nx">startOnLoad</span><span class="o">:</span><span class="kc">true</span><span class="p">,</span>
+      <span class="nx">logLevel</span><span class="o">:</span> <span class="s2">&#34;error&#34;</span><span class="p">,</span> <span class="c1">// [1]
+</span><span class="c1"></span>      <span class="nx">securityLevel</span><span class="o">:</span> <span class="s2">&#34;loose&#34;</span><span class="p">,</span> <span class="c1">// [2]
+</span><span class="c1"></span>      <span class="nx">theme</span><span class="o">:</span> <span class="p">(</span><span class="nb">window</span><span class="p">.</span><span class="nx">matchMedia</span> <span class="o">&amp;&amp;</span> <span class="nb">window</span><span class="p">.</span><span class="nx">matchMedia</span><span class="p">(</span><span class="s2">&#34;(prefers-color-scheme: dark)&#34;</span><span class="p">).</span><span class="nx">matches</span><span class="p">)</span> <span class="o">?</span>
+    <span class="s2">&#34;dark&#34;</span> <span class="o">:</span>
+    <span class="s2">&#34;default&#34;</span>
+    <span class="p">};</span>
+    <span class="nx">mermaid</span><span class="p">.</span><span class="nx">initialize</span><span class="p">(</span><span class="nx">config</span><span class="p">);</span>
+  <span class="o">&lt;</span><span class="err">/script&gt;</span>
+
+  <span class="o">&lt;</span><span class="nx">div</span> <span class="kr">class</span><span class="o">=</span><span class="s2">&#34;mermaid&#34;</span><span class="o">&gt;</span>
+    <span class="p">{{.</span><span class="nx">Inner</span><span class="p">}}</span>
+  <span class="o">&lt;</span><span class="err">/div&gt;</span>
+</code></pre></td></tr></table>
 </div>
 </div><p>Using this <a href="https://css-tricks.com/making-mermaid-diagrams-in-markdown/">CSS Tricks</a> post as a guide.</p>
 <p>No difference to my linked list rendering. It seems like the direction functionality is not&hellip; well, just not.</p>

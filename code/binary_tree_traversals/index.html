@@ -7,8 +7,8 @@
 <meta property="og:description" content="Tree Traversals (Preorder, Inorder and Postorder) From the root of a binary tree, traverse deeper before going laterally." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.davidjnevin.com/code/binary_tree_traversals/" /><meta property="article:section" content="code" />
-<meta property="article:published_time" content="2022-06-18T15:10:51+02:00" />
-<meta property="article:modified_time" content="2022-06-18T15:10:51+02:00" />
+<meta property="article:published_time" content="2022-06-18T15:10:51&#43;02:00" />
+<meta property="article:modified_time" content="2022-06-18T15:10:51&#43;02:00" />
 
 
   <meta name="twitter:card" content="summary"/>
@@ -132,23 +132,23 @@ if (!doNotTrack) {
 <p>This traversal is Time O(n), and Space O(n)</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-0-100"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-100">100</a>
-</span><span class="lnt" id="hl-0-101"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-101">101</a>
-</span><span class="lnt" id="hl-0-102"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-102">102</a>
-</span><span class="lnt" id="hl-0-103"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-103">103</a>
-</span><span class="lnt" id="hl-0-104"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-104">104</a>
-</span><span class="lnt" id="hl-0-105"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-105">105</a>
-</span><span class="lnt" id="hl-0-106"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-106">106</a>
+<pre class="chroma"><code><span class="lnt" id="100"><a style="outline: none; text-decoration:none; color:inherit" href="#100">100</a>
+</span><span class="lnt" id="101"><a style="outline: none; text-decoration:none; color:inherit" href="#101">101</a>
+</span><span class="lnt" id="102"><a style="outline: none; text-decoration:none; color:inherit" href="#102">102</a>
+</span><span class="lnt" id="103"><a style="outline: none; text-decoration:none; color:inherit" href="#103">103</a>
+</span><span class="lnt" id="104"><a style="outline: none; text-decoration:none; color:inherit" href="#104">104</a>
+</span><span class="lnt" id="105"><a style="outline: none; text-decoration:none; color:inherit" href="#105">105</a>
+</span><span class="lnt" id="106"><a style="outline: none; text-decoration:none; color:inherit" href="#106">106</a>
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-Python" data-lang="Python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">preorder_print</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">start</span><span class="p">,</span> <span class="n">traversal</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">    <span class="s2">&#34;&#34;&#34;Node-&gt;Left-Right&#34;&#34;&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">start</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">        <span class="n">traversal</span> <span class="o">+=</span> <span class="nb">str</span><span class="p">(</span><span class="n">start</span><span class="o">.</span><span class="n">value</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&#34;-&#34;</span>
-</span></span><span class="line"><span class="cl">        <span class="n">traversal</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">preorder_print</span><span class="p">(</span><span class="n">start</span><span class="o">.</span><span class="n">left</span><span class="p">,</span> <span class="n">traversal</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">        <span class="n">traversal</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">preorder_print</span><span class="p">(</span><span class="n">start</span><span class="o">.</span><span class="n">right</span><span class="p">,</span> <span class="n">traversal</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">traversal</span>
-</span></span></code></pre></td></tr></table>
+<pre class="chroma"><code class="language-Python" data-lang="Python"><span class="k">def</span> <span class="nf">preorder_print</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">start</span><span class="p">,</span> <span class="n">traversal</span><span class="p">):</span>
+    <span class="s2">&#34;&#34;&#34;Node-&gt;Left-Right&#34;&#34;&#34;</span>
+    <span class="k">if</span> <span class="n">start</span><span class="p">:</span>
+        <span class="n">traversal</span> <span class="o">+=</span> <span class="nb">str</span><span class="p">(</span><span class="n">start</span><span class="o">.</span><span class="n">value</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&#34;-&#34;</span>
+        <span class="n">traversal</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">preorder_print</span><span class="p">(</span><span class="n">start</span><span class="o">.</span><span class="n">left</span><span class="p">,</span> <span class="n">traversal</span><span class="p">)</span>
+        <span class="n">traversal</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">preorder_print</span><span class="p">(</span><span class="n">start</span><span class="o">.</span><span class="n">right</span><span class="p">,</span> <span class="n">traversal</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">traversal</span>
+</code></pre></td></tr></table>
 </div>
 </div><h2 id="inorder-traversal-lnr">Inorder Traversal (lnr)</h2>
 <p>From the root of a binary tree, traverse laterally before going deeper.</p>
@@ -180,23 +180,25 @@ if (!doNotTrack) {
 <p>This traversal is Time O(n), and Space O(n). Assumes maximum efficiency of add and remove operations from the queue.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-1-100"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-1-100">100</a>
-</span><span class="lnt" id="hl-1-101"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-1-101">101</a>
-</span><span class="lnt" id="hl-1-102"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-1-102">102</a>
-</span><span class="lnt" id="hl-1-103"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-1-103">103</a>
-</span><span class="lnt" id="hl-1-104"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-1-104">104</a>
-</span><span class="lnt" id="hl-1-105"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-1-105">105</a>
-</span><span class="lnt" id="hl-1-106"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-1-106">106</a>
+<pre class="chroma"><code><span class="lnt" id="100"><a style="outline: none; text-decoration:none; color:inherit" href="#100">100</a>
+</span><span class="lnt" id="101"><a style="outline: none; text-decoration:none; color:inherit" href="#101">101</a>
+</span><span class="lnt" id="102"><a style="outline: none; text-decoration:none; color:inherit" href="#102">102</a>
+</span><span class="lnt" id="103"><a style="outline: none; text-decoration:none; color:inherit" href="#103">103</a>
+</span><span class="lnt" id="104"><a style="outline: none; text-decoration:none; color:inherit" href="#104">104</a>
+</span><span class="lnt" id="105"><a style="outline: none; text-decoration:none; color:inherit" href="#105">105</a>
+</span><span class="lnt" id="106"><a style="outline: none; text-decoration:none; color:inherit" href="#106">106</a>
+</span><span class="lnt" id="107"><a style="outline: none; text-decoration:none; color:inherit" href="#107">107</a>
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-Python" data-lang="Python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">inorder_print</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">start</span><span class="p">,</span> <span class="n">traversal</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">    <span class="s2">&#34;&#34;&#34;Left-&gt;Node-&gt;Right&#34;&#34;&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">start</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">        <span class="n">traversal</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">inorder_print</span><span class="p">(</span><span class="n">start</span><span class="o">.</span><span class="n">left</span><span class="p">,</span> <span class="n">traversal</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">        <span class="n">traversal</span> <span class="o">+=</span> <span class="nb">str</span><span class="p">(</span><span class="n">start</span><span class="o">.</span><span class="n">value</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&#34;-&#34;</span>
-</span></span><span class="line"><span class="cl">        <span class="n">traversal</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">inorder_print</span><span class="p">(</span><span class="n">start</span><span class="o">.</span><span class="n">right</span><span class="p">,</span> <span class="n">traversal</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">traversal</span>
-</span></span></code></pre></td></tr></table>
+<pre class="chroma"><code class="language-Python" data-lang="Python"><span class="k">def</span> <span class="nf">inorder_print</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">start</span><span class="p">,</span> <span class="n">traversal</span><span class="p">):</span>
+    <span class="s2">&#34;&#34;&#34;Left-&gt;Node-&gt;Right&#34;&#34;&#34;</span>
+    <span class="k">if</span> <span class="n">start</span><span class="p">:</span>
+        <span class="n">traversal</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">inorder_print</span><span class="p">(</span><span class="n">start</span><span class="o">.</span><span class="n">left</span><span class="p">,</span> <span class="n">traversal</span><span class="p">)</span>
+        <span class="n">traversal</span> <span class="o">+=</span> <span class="nb">str</span><span class="p">(</span><span class="n">start</span><span class="o">.</span><span class="n">value</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&#34;-&#34;</span>
+        <span class="n">traversal</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">inorder_print</span><span class="p">(</span><span class="n">start</span><span class="o">.</span><span class="n">right</span><span class="p">,</span> <span class="n">traversal</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">traversal</span>
+
+</code></pre></td></tr></table>
 </div>
 </div><h2 id="postorder-traversal-lrn">Postorder Traversal (lrn)</h2>
 <p>From the root traverse to the leaves first then back to the root. This algorithm can be used to delete trees.</p>
@@ -220,23 +222,23 @@ if (!doNotTrack) {
 </ol>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-2-100"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-100">100</a>
-</span><span class="lnt" id="hl-2-101"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-101">101</a>
-</span><span class="lnt" id="hl-2-102"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-102">102</a>
-</span><span class="lnt" id="hl-2-103"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-103">103</a>
-</span><span class="lnt" id="hl-2-104"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-104">104</a>
-</span><span class="lnt" id="hl-2-105"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-105">105</a>
-</span><span class="lnt" id="hl-2-106"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-106">106</a>
+<pre class="chroma"><code><span class="lnt" id="100"><a style="outline: none; text-decoration:none; color:inherit" href="#100">100</a>
+</span><span class="lnt" id="101"><a style="outline: none; text-decoration:none; color:inherit" href="#101">101</a>
+</span><span class="lnt" id="102"><a style="outline: none; text-decoration:none; color:inherit" href="#102">102</a>
+</span><span class="lnt" id="103"><a style="outline: none; text-decoration:none; color:inherit" href="#103">103</a>
+</span><span class="lnt" id="104"><a style="outline: none; text-decoration:none; color:inherit" href="#104">104</a>
+</span><span class="lnt" id="105"><a style="outline: none; text-decoration:none; color:inherit" href="#105">105</a>
+</span><span class="lnt" id="106"><a style="outline: none; text-decoration:none; color:inherit" href="#106">106</a>
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-Python" data-lang="Python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">postorder_print</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">start</span><span class="p">,</span> <span class="n">traversal</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">    <span class="s2">&#34;&#34;&#34;Left-&gt;Right-&gt;Node&#34;&#34;&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">start</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">        <span class="n">traversal</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">postorder_print</span><span class="p">(</span><span class="n">start</span><span class="o">.</span><span class="n">left</span><span class="p">,</span> <span class="n">traversal</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">        <span class="n">traversal</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">postorder_print</span><span class="p">(</span><span class="n">start</span><span class="o">.</span><span class="n">right</span><span class="p">,</span> <span class="n">traversal</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">        <span class="n">traversal</span> <span class="o">+=</span> <span class="nb">str</span><span class="p">(</span><span class="n">start</span><span class="o">.</span><span class="n">value</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&#34;-&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">traversal</span>
-</span></span></code></pre></td></tr></table>
+<pre class="chroma"><code class="language-Python" data-lang="Python"><span class="k">def</span> <span class="nf">postorder_print</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">start</span><span class="p">,</span> <span class="n">traversal</span><span class="p">):</span>
+    <span class="s2">&#34;&#34;&#34;Left-&gt;Right-&gt;Node&#34;&#34;&#34;</span>
+    <span class="k">if</span> <span class="n">start</span><span class="p">:</span>
+        <span class="n">traversal</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">postorder_print</span><span class="p">(</span><span class="n">start</span><span class="o">.</span><span class="n">left</span><span class="p">,</span> <span class="n">traversal</span><span class="p">)</span>
+        <span class="n">traversal</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">postorder_print</span><span class="p">(</span><span class="n">start</span><span class="o">.</span><span class="n">right</span><span class="p">,</span> <span class="n">traversal</span><span class="p">)</span>
+        <span class="n">traversal</span> <span class="o">+=</span> <span class="nb">str</span><span class="p">(</span><span class="n">start</span><span class="o">.</span><span class="n">value</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&#34;-&#34;</span>
+    <span class="k">return</span> <span class="n">traversal</span>
+</code></pre></td></tr></table>
 </div>
 </div><p>Admittedly, I&rsquo;m finding this topic challenging to study on my own, however writing down what I understand has always helped that process.</p>
 <p>At some point I think it will be useful to return here and put together some cohesive notes for myself and any one else poking around these posts.</p>
@@ -250,27 +252,27 @@ if (!doNotTrack) {
 <p><a href="https://www.tutorialsandyou.com/markdown/how-to-add-footnotes-in-markdown-9.html">How to add footnotes in Markdown?</a></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-3-100"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-3-100">100</a>
-</span><span class="lnt" id="hl-3-101"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-3-101">101</a>
-</span><span class="lnt" id="hl-3-102"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-3-102">102</a>
+<pre class="chroma"><code><span class="lnt" id="100"><a style="outline: none; text-decoration:none; color:inherit" href="#100">100</a>
+</span><span class="lnt" id="101"><a style="outline: none; text-decoration:none; color:inherit" href="#101">101</a>
+</span><span class="lnt" id="102"><a style="outline: none; text-decoration:none; color:inherit" href="#102">102</a>
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">This is an example of how to create a footnote[^1] in Markdown.
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">[^1]: A note placed at the bottom of a page of a book or manuscript that comments on or cites a reference for a designated part of the text.
-</span></span></code></pre></td></tr></table>
+<pre class="chroma"><code class="language-markdown" data-lang="markdown">This is an example of how to create a footnote[^1] in Markdown.
+
+[^1]: A note placed at the bottom of a page of a book or manuscript that comments on or cites a reference for a designated part of the text.
+</code></pre></td></tr></table>
 </div>
-</div><div class="footnotes" role="doc-endnotes">
+</div><section class="footnotes" role="doc-endnotes">
 <hr>
 <ol>
-<li id="fn:1">
+<li id="fn:1" role="doc-endnote">
 <p>A sequential data structure that can take in data and only returns the last in value. LIFO.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
-<li id="fn:2">
+<li id="fn:2" role="doc-endnote">
 <p>A sequential data structure where we can add to the back and pull from the front of the que. See <a href="https://docs.python.org/3/library/queue.html">FIFO, LIFO, and Priority Queues</a>&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 </ol>
-</div>
+</section>
 
   </article>
   <article class="md prev_next">

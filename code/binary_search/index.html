@@ -8,8 +8,8 @@
 Linear Search The sequential searching through all data entries one by until until we find a match." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.davidjnevin.com/code/binary_search/" /><meta property="article:section" content="code" />
-<meta property="article:published_time" content="2022-06-20T23:58:38+02:00" />
-<meta property="article:modified_time" content="2022-06-20T23:58:38+02:00" />
+<meta property="article:published_time" content="2022-06-20T23:58:38&#43;02:00" />
+<meta property="article:modified_time" content="2022-06-20T23:58:38&#43;02:00" />
 
 
   <meta name="twitter:card" content="summary"/>
@@ -107,19 +107,19 @@ if (!doNotTrack) {
 <p>Time complexity is O(n).</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-0-100"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-100">100</a>
-</span><span class="lnt" id="hl-0-101"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-101">101</a>
-</span><span class="lnt" id="hl-0-102"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-102">102</a>
-</span><span class="lnt" id="hl-0-103"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-103">103</a>
-</span><span class="lnt" id="hl-0-104"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-104">104</a>
+<pre class="chroma"><code><span class="lnt" id="100"><a style="outline: none; text-decoration:none; color:inherit" href="#100">100</a>
+</span><span class="lnt" id="101"><a style="outline: none; text-decoration:none; color:inherit" href="#101">101</a>
+</span><span class="lnt" id="102"><a style="outline: none; text-decoration:none; color:inherit" href="#102">102</a>
+</span><span class="lnt" id="103"><a style="outline: none; text-decoration:none; color:inherit" href="#103">103</a>
+</span><span class="lnt" id="104"><a style="outline: none; text-decoration:none; color:inherit" href="#104">104</a>
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">linear_search</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">target</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">	<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)):</span>
-</span></span><span class="line"><span class="cl">		<span class="k">if</span> <span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">target</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">			<span class="k">return</span> <span class="kc">True</span>
-</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="kc">False</span>
-</span></span></code></pre></td></tr></table>
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">linear_search</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">target</span><span class="p">):</span>
+	<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)):</span>
+		<span class="k">if</span> <span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">target</span><span class="p">:</span>
+			<span class="k">return</span> <span class="kc">True</span>
+	<span class="k">return</span> <span class="kc">False</span>
+</code></pre></td></tr></table>
 </div>
 </div><p>The worst-case runtime of a linear search would be O(n).</p>
 <h2 id="binary-search-iterative">Binary Search (Iterative)</h2>
@@ -127,65 +127,65 @@ if (!doNotTrack) {
 <p>In each case we pick a new mid point and choose to search either the upper half or lower half of the data. This is of course much more efficient than an iterative.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-1-100"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-1-100">100</a>
-</span><span class="lnt" id="hl-1-101"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-1-101">101</a>
-</span><span class="lnt" id="hl-1-102"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-1-102">102</a>
-</span><span class="lnt" id="hl-1-103"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-1-103">103</a>
-</span><span class="lnt" id="hl-1-104"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-1-104">104</a>
-</span><span class="lnt" id="hl-1-105"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-1-105">105</a>
-</span><span class="lnt" id="hl-1-106"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-1-106">106</a>
-</span><span class="lnt" id="hl-1-107"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-1-107">107</a>
-</span><span class="lnt" id="hl-1-108"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-1-108">108</a>
-</span><span class="lnt" id="hl-1-109"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-1-109">109</a>
-</span><span class="lnt" id="hl-1-110"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-1-110">110</a>
-</span><span class="lnt" id="hl-1-111"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-1-111">111</a>
-</span><span class="lnt" id="hl-1-112"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-1-112">112</a>
+<pre class="chroma"><code><span class="lnt" id="100"><a style="outline: none; text-decoration:none; color:inherit" href="#100">100</a>
+</span><span class="lnt" id="101"><a style="outline: none; text-decoration:none; color:inherit" href="#101">101</a>
+</span><span class="lnt" id="102"><a style="outline: none; text-decoration:none; color:inherit" href="#102">102</a>
+</span><span class="lnt" id="103"><a style="outline: none; text-decoration:none; color:inherit" href="#103">103</a>
+</span><span class="lnt" id="104"><a style="outline: none; text-decoration:none; color:inherit" href="#104">104</a>
+</span><span class="lnt" id="105"><a style="outline: none; text-decoration:none; color:inherit" href="#105">105</a>
+</span><span class="lnt" id="106"><a style="outline: none; text-decoration:none; color:inherit" href="#106">106</a>
+</span><span class="lnt" id="107"><a style="outline: none; text-decoration:none; color:inherit" href="#107">107</a>
+</span><span class="lnt" id="108"><a style="outline: none; text-decoration:none; color:inherit" href="#108">108</a>
+</span><span class="lnt" id="109"><a style="outline: none; text-decoration:none; color:inherit" href="#109">109</a>
+</span><span class="lnt" id="110"><a style="outline: none; text-decoration:none; color:inherit" href="#110">110</a>
+</span><span class="lnt" id="111"><a style="outline: none; text-decoration:none; color:inherit" href="#111">111</a>
+</span><span class="lnt" id="112"><a style="outline: none; text-decoration:none; color:inherit" href="#112">112</a>
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">binary_search_iterative</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">target</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">	<span class="n">low</span> <span class="o">=</span> <span class="mi">0</span>
-</span></span><span class="line"><span class="cl">	<span class="n">high</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">	<span class="k">while</span> <span class="n">low</span> <span class="o">&lt;=</span> <span class="n">high</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">		<span class="n">mid</span> <span class="o">=</span> <span class="p">(</span><span class="n">low</span> <span class="o">+</span> <span class="n">high</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span>
-</span></span><span class="line"><span class="cl">		<span class="k">if</span> <span class="n">target</span> <span class="o">==</span> <span class="n">data</span><span class="p">[</span><span class="n">mid</span><span class="p">]:</span>
-</span></span><span class="line"><span class="cl">			<span class="k">return</span> <span class="kc">True</span>
-</span></span><span class="line"><span class="cl">		<span class="k">elif</span> <span class="n">target</span> <span class="o">&lt;</span> <span class="n">data</span><span class="p">[</span><span class="n">mid</span><span class="p">]:</span>
-</span></span><span class="line"><span class="cl">			<span class="n">high</span> <span class="o">=</span> <span class="n">mid</span> <span class="o">-</span> <span class="mi">1</span>
-</span></span><span class="line"><span class="cl">		<span class="k">else</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">			<span class="n">low</span> <span class="o">=</span> <span class="n">mid</span> <span class="o">+</span> <span class="mi">1</span>
-</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="kc">False</span>
-</span></span></code></pre></td></tr></table>
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">binary_search_iterative</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">target</span><span class="p">):</span>
+	<span class="n">low</span> <span class="o">=</span> <span class="mi">0</span>
+	<span class="n">high</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
+
+	<span class="k">while</span> <span class="n">low</span> <span class="o">&lt;=</span> <span class="n">high</span><span class="p">:</span>
+		<span class="n">mid</span> <span class="o">=</span> <span class="p">(</span><span class="n">low</span> <span class="o">+</span> <span class="n">high</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span>
+		<span class="k">if</span> <span class="n">target</span> <span class="o">==</span> <span class="n">data</span><span class="p">[</span><span class="n">mid</span><span class="p">]:</span>
+			<span class="k">return</span> <span class="kc">True</span>
+		<span class="k">elif</span> <span class="n">target</span> <span class="o">&lt;</span> <span class="n">data</span><span class="p">[</span><span class="n">mid</span><span class="p">]:</span>
+			<span class="n">high</span> <span class="o">=</span> <span class="n">mid</span> <span class="o">-</span> <span class="mi">1</span>
+		<span class="k">else</span><span class="p">:</span>
+			<span class="n">low</span> <span class="o">=</span> <span class="n">mid</span> <span class="o">+</span> <span class="mi">1</span>
+	<span class="k">return</span> <span class="kc">False</span>
+</code></pre></td></tr></table>
 </div>
 </div><p>The worst-case time complexity of a binary search is O(log<em>n</em>).</p>
 <h2 id="binary-search-recursive">Binary Search (Recursive)</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-2-100"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-100">100</a>
-</span><span class="lnt" id="hl-2-101"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-101">101</a>
-</span><span class="lnt" id="hl-2-102"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-102">102</a>
-</span><span class="lnt" id="hl-2-103"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-103">103</a>
-</span><span class="lnt" id="hl-2-104"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-104">104</a>
-</span><span class="lnt" id="hl-2-105"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-105">105</a>
-</span><span class="lnt" id="hl-2-106"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-106">106</a>
-</span><span class="lnt" id="hl-2-107"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-107">107</a>
-</span><span class="lnt" id="hl-2-108"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-108">108</a>
-</span><span class="lnt" id="hl-2-109"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-109">109</a>
-</span><span class="lnt" id="hl-2-110"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-110">110</a>
+<pre class="chroma"><code><span class="lnt" id="100"><a style="outline: none; text-decoration:none; color:inherit" href="#100">100</a>
+</span><span class="lnt" id="101"><a style="outline: none; text-decoration:none; color:inherit" href="#101">101</a>
+</span><span class="lnt" id="102"><a style="outline: none; text-decoration:none; color:inherit" href="#102">102</a>
+</span><span class="lnt" id="103"><a style="outline: none; text-decoration:none; color:inherit" href="#103">103</a>
+</span><span class="lnt" id="104"><a style="outline: none; text-decoration:none; color:inherit" href="#104">104</a>
+</span><span class="lnt" id="105"><a style="outline: none; text-decoration:none; color:inherit" href="#105">105</a>
+</span><span class="lnt" id="106"><a style="outline: none; text-decoration:none; color:inherit" href="#106">106</a>
+</span><span class="lnt" id="107"><a style="outline: none; text-decoration:none; color:inherit" href="#107">107</a>
+</span><span class="lnt" id="108"><a style="outline: none; text-decoration:none; color:inherit" href="#108">108</a>
+</span><span class="lnt" id="109"><a style="outline: none; text-decoration:none; color:inherit" href="#109">109</a>
+</span><span class="lnt" id="110"><a style="outline: none; text-decoration:none; color:inherit" href="#110">110</a>
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">binary_search_recursive</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">target</span><span class="p">,</span> <span class="n">low</span><span class="p">,</span> <span class="n">high</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="n">low</span> <span class="o">&gt;</span> <span class="n">high</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">		<span class="k">return</span> <span class="kc">False</span>
-</span></span><span class="line"><span class="cl">	<span class="k">else</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">		<span class="n">mid</span> <span class="o">=</span> <span class="p">(</span><span class="n">low</span> <span class="o">+</span> <span class="n">high</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span>
-</span></span><span class="line"><span class="cl">		<span class="k">if</span> <span class="n">target</span> <span class="o">==</span> <span class="n">data</span><span class="p">[</span><span class="n">mid</span><span class="p">]:</span>
-</span></span><span class="line"><span class="cl">			<span class="k">return</span> <span class="kc">True</span>
-</span></span><span class="line"><span class="cl">		<span class="k">elif</span> <span class="n">target</span> <span class="o">&lt;</span> <span class="n">data</span><span class="p">[</span><span class="n">mid</span><span class="p">]:</span>
-</span></span><span class="line"><span class="cl">			<span class="k">return</span> <span class="n">binary_search_recursive</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">target</span><span class="p">,</span> <span class="n">low</span><span class="p">,</span> <span class="n">mid</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">		<span class="k">else</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">			<span class="k">return</span> <span class="n">binary_search_recursive</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">target</span><span class="p">,</span> <span class="n">mid</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">high</span><span class="p">)</span>
-</span></span></code></pre></td></tr></table>
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">binary_search_recursive</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">target</span><span class="p">,</span> <span class="n">low</span><span class="p">,</span> <span class="n">high</span><span class="p">):</span>
+	<span class="k">if</span> <span class="n">low</span> <span class="o">&gt;</span> <span class="n">high</span><span class="p">:</span>
+		<span class="k">return</span> <span class="kc">False</span>
+	<span class="k">else</span><span class="p">:</span>
+		<span class="n">mid</span> <span class="o">=</span> <span class="p">(</span><span class="n">low</span> <span class="o">+</span> <span class="n">high</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span>
+		<span class="k">if</span> <span class="n">target</span> <span class="o">==</span> <span class="n">data</span><span class="p">[</span><span class="n">mid</span><span class="p">]:</span>
+			<span class="k">return</span> <span class="kc">True</span>
+		<span class="k">elif</span> <span class="n">target</span> <span class="o">&lt;</span> <span class="n">data</span><span class="p">[</span><span class="n">mid</span><span class="p">]:</span>
+			<span class="k">return</span> <span class="n">binary_search_recursive</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">target</span><span class="p">,</span> <span class="n">low</span><span class="p">,</span> <span class="n">mid</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+		<span class="k">else</span><span class="p">:</span>
+			<span class="k">return</span> <span class="n">binary_search_recursive</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">target</span><span class="p">,</span> <span class="n">mid</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">high</span><span class="p">)</span>
+</code></pre></td></tr></table>
 </div>
 </div>
   </article>
