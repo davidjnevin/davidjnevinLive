@@ -52,16 +52,8 @@ if (!doNotTrack) {
 
   <script defer src="/js/main.js"></script>
 </head>
-<script>
-  try {
-    if (!('theme' in localStorage)) {
-      localStorage.theme = window.matchMedia('(prefer-color-scheme: dark)').matches ? 'dark' : 'light';
-    }
-    document.querySelector('html').classList.add(localStorage.theme);
-  } catch (e) {
-    console.error(e);
-  }
-</script>
+
+
 <body>
   <header>
   <h1 class="row gap-1 nowrap">
@@ -83,14 +75,14 @@ if (!doNotTrack) {
       <span class="tag-pm ml-1">7</span>
     </a>
   
+    <a class="row as-s mb-1" href="/categories/object-oriented-programming">
+      object-oriented-programming
+      <span class="tag-pm ml-1">5</span>
+    </a>
+  
     <a class="row as-s mb-1" href="/categories/binary-tree">
       binary-tree
       <span class="tag-pm ml-1">4</span>
-    </a>
-  
-    <a class="row as-s mb-1" href="/categories/object-oriented-programming">
-      object-oriented-programming
-      <span class="tag-pm ml-1">3</span>
     </a>
   
     <a class="row as-s mb-1" href="/categories/projects">
@@ -105,6 +97,11 @@ if (!doNotTrack) {
   
     <a class="row as-s mb-1" href="/categories/algorithms">
       algorithms
+      <span class="tag-pm ml-1">2</span>
+    </a>
+  
+    <a class="row as-s mb-1" href="/categories/classes-and-objects">
+      classes-and-objects
       <span class="tag-pm ml-1">2</span>
     </a>
   
@@ -130,11 +127,6 @@ if (!doNotTrack) {
   
     <a class="row as-s mb-1" href="/categories/binary-tree-search">
       binary-tree-search
-      <span class="tag-pm ml-1">1</span>
-    </a>
-  
-    <a class="row as-s mb-1" href="/categories/classes-and-objects">
-      classes-and-objects
       <span class="tag-pm ml-1">1</span>
     </a>
   
@@ -225,6 +217,11 @@ if (!doNotTrack) {
   
     <a class="row as-s mb-1" href="/categories/traversal">
       traversal
+      <span class="tag-pm ml-1">1</span>
+    </a>
+  
+    <a class="row as-s mb-1" href="/categories/update">
+      update
       <span class="tag-pm ml-1">1</span>
     </a>
   

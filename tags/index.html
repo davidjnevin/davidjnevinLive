@@ -52,16 +52,8 @@ if (!doNotTrack) {
 
   <script defer src="/js/main.js"></script>
 </head>
-<script>
-  try {
-    if (!('theme' in localStorage)) {
-      localStorage.theme = window.matchMedia('(prefer-color-scheme: dark)').matches ? 'dark' : 'light';
-    }
-    document.querySelector('html').classList.add(localStorage.theme);
-  } catch (e) {
-    console.error(e);
-  }
-</script>
+
+
 <body>
   <header>
   <h1 class="row gap-1 nowrap">
@@ -78,14 +70,14 @@ if (!doNotTrack) {
   <nav class="col">
   
   
+    <a class="row as-s mb-1" href="/tags/vim">
+      vim
+      <span class="tag-pm ml-1">6</span>
+    </a>
+  
     <a class="row as-s mb-1" href="/tags/design">
       design
       <span class="tag-pm ml-1">5</span>
-    </a>
-  
-    <a class="row as-s mb-1" href="/tags/vim">
-      vim
-      <span class="tag-pm ml-1">4</span>
     </a>
   
     <a class="row as-s mb-1" href="/tags/python">
@@ -108,8 +100,18 @@ if (!doNotTrack) {
       <span class="tag-pm ml-1">2</span>
     </a>
   
+    <a class="row as-s mb-1" href="/tags/classes">
+      classes
+      <span class="tag-pm ml-1">2</span>
+    </a>
+  
     <a class="row as-s mb-1" href="/tags/hugo">
       hugo
+      <span class="tag-pm ml-1">2</span>
+    </a>
+  
+    <a class="row as-s mb-1" href="/tags/upwork">
+      upwork
       <span class="tag-pm ml-1">2</span>
     </a>
   
@@ -163,8 +165,8 @@ if (!doNotTrack) {
       <span class="tag-pm ml-1">1</span>
     </a>
   
-    <a class="row as-s mb-1" href="/tags/classes">
-      classes
+    <a class="row as-s mb-1" href="/tags/class">
+      class
       <span class="tag-pm ml-1">1</span>
     </a>
   
@@ -175,6 +177,11 @@ if (!doNotTrack) {
   
     <a class="row as-s mb-1" href="/tags/community">
       community
+      <span class="tag-pm ml-1">1</span>
+    </a>
+  
+    <a class="row as-s mb-1" href="/tags/courses">
+      courses
       <span class="tag-pm ml-1">1</span>
     </a>
   
@@ -233,6 +240,16 @@ if (!doNotTrack) {
       <span class="tag-pm ml-1">1</span>
     </a>
   
+    <a class="row as-s mb-1" href="/tags/flake8">
+      flake8
+      <span class="tag-pm ml-1">1</span>
+    </a>
+  
+    <a class="row as-s mb-1" href="/tags/goyo">
+      goyo
+      <span class="tag-pm ml-1">1</span>
+    </a>
+  
     <a class="row as-s mb-1" href="/tags/hash-function">
       hash-function
       <span class="tag-pm ml-1">1</span>
@@ -250,6 +267,11 @@ if (!doNotTrack) {
   
     <a class="row as-s mb-1" href="/tags/height">
       height
+      <span class="tag-pm ml-1">1</span>
+    </a>
+  
+    <a class="row as-s mb-1" href="/tags/inheritance">
+      inheritance
       <span class="tag-pm ml-1">1</span>
     </a>
   
@@ -305,6 +327,11 @@ if (!doNotTrack) {
   
     <a class="row as-s mb-1" href="/tags/parent-class">
       parent-class
+      <span class="tag-pm ml-1">1</span>
+    </a>
+  
+    <a class="row as-s mb-1" href="/tags/pep8">
+      pep8
       <span class="tag-pm ml-1">1</span>
     </a>
   
@@ -403,8 +430,8 @@ if (!doNotTrack) {
       <span class="tag-pm ml-1">1</span>
     </a>
   
-    <a class="row as-s mb-1" href="/tags/upwork">
-      upwork
+    <a class="row as-s mb-1" href="/tags/update">
+      update
       <span class="tag-pm ml-1">1</span>
     </a>
   
