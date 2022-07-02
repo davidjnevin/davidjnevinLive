@@ -94,6 +94,7 @@ if (!doNotTrack) {
      <nav id="TableOfContents">
   <ul>
     <li><a href="#time-to-tweak-the-terminal">Time to Tweak the Terminal</a></li>
+    <li><a href="#z-shell-customizing">Z-Shell Customizing</a></li>
     <li><a href="#vim-config">Vim Config</a></li>
   </ul>
 </nav>  <h2 id="time-to-tweak-the-terminal">Time to Tweak the Terminal</h2>
@@ -119,6 +120,7 @@ if (!doNotTrack) {
 </code></pre></td></tr></table>
 </div>
 </div><p>Warning: Rabbit hole!</p>
+<h2 id="z-shell-customizing">Z-Shell Customizing</h2>
 <p>Following the advise of these two videos by Corey Schafer:</p>
 <ol>
 <li><a href="https://www.youtube.com/watch?v%3DvDOVEDl2z84">Customizing Your Terminal: .bash_profile and .bashrc files</a></li>
@@ -188,34 +190,16 @@ and then switched my setup to <code>zsh</code> or z-shell, as the preferred/reco
 </span><span class="lnt" id="151"><a style="outline: none; text-decoration:none; color:inherit" href="#151">151</a>
 </span><span class="lnt" id="152"><a style="outline: none; text-decoration:none; color:inherit" href="#152">152</a>
 </span><span class="lnt" id="153"><a style="outline: none; text-decoration:none; color:inherit" href="#153">153</a>
-</span><span class="lnt" id="154"><a style="outline: none; text-decoration:none; color:inherit" href="#154">154</a>
-</span><span class="lnt" id="155"><a style="outline: none; text-decoration:none; color:inherit" href="#155">155</a>
-</span><span class="lnt" id="156"><a style="outline: none; text-decoration:none; color:inherit" href="#156">156</a>
-</span><span class="lnt" id="157"><a style="outline: none; text-decoration:none; color:inherit" href="#157">157</a>
-</span><span class="lnt" id="158"><a style="outline: none; text-decoration:none; color:inherit" href="#158">158</a>
-</span><span class="lnt" id="159"><a style="outline: none; text-decoration:none; color:inherit" href="#159">159</a>
-</span><span class="lnt" id="160"><a style="outline: none; text-decoration:none; color:inherit" href="#160">160</a>
-</span><span class="lnt" id="161"><a style="outline: none; text-decoration:none; color:inherit" href="#161">161</a>
-</span><span class="lnt" id="162"><a style="outline: none; text-decoration:none; color:inherit" href="#162">162</a>
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-zsh" data-lang="zsh">
 autoload -Uz vcs_info
 
 precmd<span class="o">()</span> <span class="o">{</span>
-    <span class="c1"># As always first run the system so everything is setup correctly.</span>
     vcs_info
-    <span class="c1"># And then just set PS1, RPS1 and whatever you want to. This $PS1</span>
-    <span class="c1"># is (as with the other examples above too) just an example of a very</span>
-    <span class="c1"># basic single-line prompt. See &#34;man zshmisc&#34; for details on how to</span>
-    <span class="c1"># make this less readable. :-)</span>
     <span class="k">if</span> <span class="o">[[</span> -z <span class="si">${</span><span class="nv">vcs_info_msg_0_</span><span class="si">}</span> <span class="o">]]</span><span class="p">;</span> <span class="k">then</span>
-        <span class="c1"># Oh hey, nothing from vcs_info, so we got more space.</span>
-        <span class="c1"># Let&#39;s print a longer part of $PWD...</span>
         <span class="nv">PS1</span><span class="o">=</span><span class="s2">&#34;%5~%# &#34;</span>
     <span class="k">else</span>
-        <span class="c1"># vcs_info found something, that needs space. So a shorter $PWD</span>
-        <span class="c1"># makes sense.</span>
         <span class="nv">PS1</span><span class="o">=</span><span class="s2">&#34;%2~</span><span class="si">${</span><span class="nv">vcs_info_msg_0_</span><span class="si">}</span><span class="s2">%# &#34;</span>
     <span class="k">fi</span>
 <span class="o">}</span>
