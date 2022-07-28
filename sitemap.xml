@@ -2,38 +2,44 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://www.davidjnevin.com/code/back_at_it/</loc>
+    <lastmod>2022-07-28T20:08:35+02:00</lastmod>
+  </url><url>
     <loc>https://www.davidjnevin.com/categories/</loc>
-    <lastmod>2022-07-09T13:37:22+02:00</lastmod>
+    <lastmod>2022-07-28T20:08:35+02:00</lastmod>
   </url><url>
-    <loc>https://www.davidjnevin.com/tags/coding/</loc>
-    <lastmod>2022-07-09T13:37:22+02:00</lastmod>
-  </url><url>
-    <loc>https://www.davidjnevin.com/code/keeping_at_it/</loc>
-    <lastmod>2022-07-09T13:37:22+02:00</lastmod>
-  </url><url>
-    <loc>https://www.davidjnevin.com/tags/motivation/</loc>
-    <lastmod>2022-07-09T13:37:22+02:00</lastmod>
+    <loc>https://www.davidjnevin.com/tags/learning/</loc>
+    <lastmod>2022-07-28T20:08:35+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/categories/motivation/</loc>
-    <lastmod>2022-07-09T13:37:22+02:00</lastmod>
+    <lastmod>2022-07-28T20:08:35+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/categories/object-oriented-programming/</loc>
-    <lastmod>2022-07-09T13:37:22+02:00</lastmod>
+    <lastmod>2022-07-28T20:08:35+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/tags/</loc>
-    <lastmod>2022-07-09T13:37:22+02:00</lastmod>
+    <lastmod>2022-07-28T20:08:35+02:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/tags/coding/</loc>
+    <lastmod>2022-07-09T14:48:55+02:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/code/keeping_at_it/</loc>
+    <lastmod>2022-07-09T14:48:55+02:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/tags/motivation/</loc>
+    <lastmod>2022-07-09T14:48:55+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/tags/update/</loc>
-    <lastmod>2022-07-09T13:37:22+02:00</lastmod>
+    <lastmod>2022-07-09T14:48:55+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/categories/classes-and-objects/</loc>
-    <lastmod>2022-07-02T18:53:18+02:00</lastmod>
+    <lastmod>2022-07-09T14:48:55+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/tags/string/</loc>
-    <lastmod>2022-07-02T18:53:18+02:00</lastmod>
+    <lastmod>2022-07-09T14:48:55+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/code/time_off_for_play/</loc>
-    <lastmod>2022-07-02T18:53:18+02:00</lastmod>
+    <lastmod>2022-07-09T14:48:55+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/tags/courses/</loc>
     <lastmod>2022-07-02T18:53:18+02:00</lastmod>
@@ -45,7 +51,7 @@
     <lastmod>2022-07-02T18:53:18+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/tags/vim/</loc>
-    <lastmod>2022-07-02T18:53:18+02:00</lastmod>
+    <lastmod>2022-07-09T14:48:55+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/code/where_im_at_june_29/</loc>
     <lastmod>2022-07-02T18:53:18+02:00</lastmod>
@@ -72,19 +78,19 @@
     <lastmod>2022-06-28T16:59:56+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/categories/efficiency/</loc>
-    <lastmod>2022-06-27T09:19:29+02:00</lastmod>
+    <lastmod>2022-07-09T14:48:55+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/tags/terminal/</loc>
-    <lastmod>2022-06-27T09:19:29+02:00</lastmod>
+    <lastmod>2022-07-09T14:48:55+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/code/terminal_tweaks/</loc>
-    <lastmod>2022-06-27T09:19:29+02:00</lastmod>
+    <lastmod>2022-07-09T14:48:55+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/tags/tweaks/</loc>
-    <lastmod>2022-06-27T09:19:29+02:00</lastmod>
+    <lastmod>2022-07-09T14:48:55+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/categories/workflow/</loc>
-    <lastmod>2022-06-27T09:19:29+02:00</lastmod>
+    <lastmod>2022-07-09T14:48:55+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/tags/base-class/</loc>
     <lastmod>2022-06-28T16:59:56+02:00</lastmod>
@@ -129,7 +135,7 @@
     <lastmod>2022-06-27T09:19:29+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/categories/hugo/</loc>
-    <lastmod>2022-07-02T18:53:18+02:00</lastmod>
+    <lastmod>2022-07-09T14:48:55+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/tags/linkedin/</loc>
     <lastmod>2022-06-27T09:19:29+02:00</lastmod>
@@ -189,22 +195,22 @@
     <lastmod>2022-06-27T09:19:29+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/categories/design/</loc>
-    <lastmod>2022-07-02T18:53:18+02:00</lastmod>
+    <lastmod>2022-07-09T14:48:55+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/tags/design-updates/</loc>
-    <lastmod>2022-07-02T18:53:18+02:00</lastmod>
+    <lastmod>2022-07-09T14:48:55+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/tags/hugo/</loc>
-    <lastmod>2022-07-02T18:53:18+02:00</lastmod>
+    <lastmod>2022-07-09T14:48:55+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/code/site_design_update_2022_06_25/</loc>
-    <lastmod>2022-07-02T18:53:18+02:00</lastmod>
+    <lastmod>2022-07-09T14:48:55+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/tags/templates/</loc>
-    <lastmod>2022-07-02T18:53:18+02:00</lastmod>
+    <lastmod>2022-07-09T14:48:55+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/tags/usability/</loc>
-    <lastmod>2022-07-02T18:53:18+02:00</lastmod>
+    <lastmod>2022-07-09T14:48:55+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/tags/burnout/</loc>
     <lastmod>2022-06-27T09:19:29+02:00</lastmod>
