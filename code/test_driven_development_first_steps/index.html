@@ -3,19 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta property="og:title" content="Back at It" />
-<meta property="og:description" content="Sometimes it takes more than Motivation Lessons learned:
-It&rsquo;s so easy to fall out of practice A short break, to catch up on some reading, a delve into some other interests and lo-and-behold I felt almost back at stage one when I tried to do a Leetcode exercise" />
+  <meta property="og:title" content="Test Driven Development First Steps" />
+<meta property="og:description" content="Test Driven Development (A cure for Refactor-phobia) There is an entire C# application running at CritiqueWheel." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.davidjnevin.com/code/back_at_it/" /><meta property="article:section" content="code" />
-<meta property="article:published_time" content="2022-07-28T19:30:38&#43;02:00" />
-<meta property="article:modified_time" content="2022-07-28T20:08:35&#43;02:00" />
+<meta property="og:url" content="https://www.davidjnevin.com/code/test_driven_development_first_steps/" /><meta property="article:section" content="code" />
+<meta property="article:published_time" content="2022-07-30T13:29:21&#43;02:00" />
+<meta property="article:modified_time" content="2022-07-30T13:29:21&#43;02:00" />
 
 
   <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Back at It"/>
-<meta name="twitter:description" content="Sometimes it takes more than Motivation Lessons learned:
-It&rsquo;s so easy to fall out of practice A short break, to catch up on some reading, a delve into some other interests and lo-and-behold I felt almost back at stage one when I tried to do a Leetcode exercise"/>
+<meta name="twitter:title" content="Test Driven Development First Steps"/>
+<meta name="twitter:description" content="Test Driven Development (A cure for Refactor-phobia) There is an entire C# application running at CritiqueWheel."/>
 
   
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-VGVQ6SM9N7"></script>
@@ -32,7 +30,7 @@ if (!doNotTrack) {
   
   <title>
     
-    David J Nevin - Back at It
+    David J Nevin - Test Driven Development First Steps
     
   </title>
   
@@ -79,7 +77,7 @@ if (!doNotTrack) {
   
         
               
-                <div class="sm-1 mtb-1">Published: Jul 28, 2022</div>
+                <div class="sm-1 mtb-1">Published: Jul 30, 2022</div>
               
               </div>
         
@@ -89,56 +87,48 @@ if (!doNotTrack) {
 
 
     <article class="md">
-     <h2 id="sometimes-it-takes-more-than-motivation">Sometimes it takes more than Motivation</h2>
-<p>Lessons learned:</p>
-<h3 id="its-so-easy-to-fall-out-of-practice">It&rsquo;s so easy to fall out of practice</h3>
-<p>A short break, to catch up on some reading, a delve into some other interests
-and lo-and-behold I felt almost back at stage one when I tried to do
-a <a href="https://www.leetcode.com/problems/remove-linked-list-elements/">Leetcode
-exercise</a></p>
-<p>At first there was a total stupefaction of <code>linked lists</code> and <code>vim</code> shortcuts.
-It took some time but I wrote it. Riding a bicycle it is not. It worked,
-I added a tick to my calendar, that felt good.</p>
-<h3 id="its-often-hard-to-find-the-reason-to-get-back-into-the-coding-seat">It&rsquo;s often hard to find the reason to get back into the coding seat.</h3>
-<p>There&rsquo;s been a lot going on, it seems the outside world is intent on intruding.
-So be it, the dice has been rolled and now it&rsquo;s back again to moving forward
-step by step. This is requiring a certain element of faith in the process and
-also the idea of being gentle on myself. The focus is on the next step not the
-previous stumbles.</p>
-<h3 id="questioning-the-value-of-each-step">Questioning the value of each step</h3>
-<p>As opposed to weighing up and trying to determine if each next step is the best
-one, I&rsquo;ve come back instead to my previous goal of completing the <a href="https://www.engineeringwithutsav.com/coding-roadmap">Roadmap</a>
-I started out on.</p>
-<p>After organizing the folder structure and moving the solutions
-and projects to their prospective folders, I tackled a Leetcode problem. One
-down.</p>
-<p>One closer.</p>
-<h3 id="trying-to-decide-too-quickly">Trying to decide too quickly</h3>
-<p>My struggles with <code>DataQuest</code> project was based on me deciding too early that
-it wasn&rsquo;t my thing. But that&rsquo;s not a fair assessment, for me or for the field
-of <code>Data Science</code>. It&rsquo;s simply too early to tell. So I&rsquo;m stepping back, working
-on one aspect at a time and will return to complete it once I&rsquo;m done with the
-Roadmap. I think this is the best I can offer myself given the time and energy
-I have to dedicate at present.</p>
-<p>The wish for a few weeks off to dedicate hours upon endless hours to the study
-and mastery of <code>Phyton</code> is for me a trap. I prefer the ordered structure of
-employment. It eases the need to self-manage my time completely and certainly
-eases the financial burden.</p>
-<p>Once again it&rsquo;s back to what I started, and the possibility of <code>Upwork</code> or
-other freelance jobs will have to wait until I feel more at ease and more
-practiced with <code>Python</code>.</p>
-<p>So I&rsquo;m back at it, looking forward to learning a few new things this week and
-weekend, and also looking forward to relearning and rediscovering my <code>vim</code>
-setup.</p>
+     
+
+    <h1>Test Driven Development First Steps</h1>
+     <nav id="TableOfContents">
+  <ul>
+    <li><a href="#test-driven-development-a-cure-for-refactor-phobia">Test Driven Development (A cure for Refactor-phobia)</a></li>
+    <li><a href="#served-with-a-pinch-of-beginners-salt">Served with a pinch of beginner&rsquo;s salt.</a></li>
+    <li><a href="#tdd-resources">TDD resources</a></li>
+    <li><a href="#refactoring-here-i-come">Refactoring Here I Come</a></li>
+  </ul>
+</nav>  <h2 id="test-driven-development-a-cure-for-refactor-phobia">Test Driven Development (A cure for Refactor-phobia)</h2>
+<p>There is an entire <code>C#</code> application running at
+<a href="https://www.critiquewheel.com/">CritiqueWheel.com</a> that I have been dreading
+revisiting. It needs it, but it&rsquo;s my first major app with no prior programming
+experience. So it&rsquo;s a mess. The mere though of refactoring it scares me.</p>
+<p>Thankfully I have gotten to a place where I happy enough with syntax use in
+<code>Python</code> to start exploring <code>TDD</code>, test driven development. And so far it has
+been a revelation and a complete rethinking of my fear or refactoring.</p>
+<h2 id="served-with-a-pinch-of-beginners-salt">Served with a pinch of beginner&rsquo;s salt.</h2>
+<p>I&rsquo;m working through a series of examples/projects that focus on <code>TDD</code> and
+I gotta say the red, green, refactor methodology is such a crutch when
+developing the code. The simple satisfaction of going through the process
+in an iterative fashion, knowing that I can either revert to a previous commit with
+a working test, or &lsquo;know&rsquo; when my code is passing, is a great boost to my
+confidence.</p>
+<p>It has to an extend brought back some of the fun.</p>
+<h2 id="tdd-resources">TDD resources</h2>
+<p>This is where I caught the <code>TDD</code> bug, <a href="https://learn-python-with-tdd.pybootcamp.com/">Learn Python with Test-driven
+Development</a> and <a href="https://www.youtube.com/watch?v=eAPmXQ0dC7Q&amp;t=1223s">TDD Full
+Course (Learn Test Driven Development with Python)</a> is where I&rsquo;m practicing to take it a little further.</p>
+<h2 id="refactoring-here-i-come">Refactoring Here I Come</h2>
+<p>Once I have a clear enough understanding of the process and feel I can do it
+comfortably, I&rsquo;ll be heading back to <code>C#</code> to put it all in action. There is
+however a lingering doubt that maybe the CritiqueWheel should be a python
+project&hellip;  #TODO</p>
 
   </article>
   <article class="md prev_next">
     <hr>
-    <div class="post_next">
-      Next: <a href=/code/test_driven_development_first_steps/>Test Driven Development First Steps</a>
     
     <div class="post_previous">
-      Previous: <a href=/code/keeping_at_it/>Keeping at it</a>
+      Previous: <a href=/code/back_at_it/>Back at It</a>
     
   </article>
 </main>

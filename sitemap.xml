@@ -2,22 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://www.davidjnevin.com/code/back_at_it/</loc>
-    <lastmod>2022-07-28T20:08:35+02:00</lastmod>
-  </url><url>
     <loc>https://www.davidjnevin.com/categories/</loc>
+    <lastmod>2022-07-30T13:29:21+02:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/tags/first-steps/</loc>
+    <lastmod>2022-07-30T13:29:21+02:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/categories/object-oriented-programming/</loc>
+    <lastmod>2022-07-30T13:29:21+02:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/tags/refactoring/</loc>
+    <lastmod>2022-07-30T13:29:21+02:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/tags/</loc>
+    <lastmod>2022-07-30T13:29:21+02:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/tags/tdd/</loc>
+    <lastmod>2022-07-30T13:29:21+02:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/categories/tdd/</loc>
+    <lastmod>2022-07-30T13:29:21+02:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/code/test_driven_development_first_steps/</loc>
+    <lastmod>2022-07-30T13:29:21+02:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/code/back_at_it/</loc>
     <lastmod>2022-07-28T20:08:35+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/tags/learning/</loc>
     <lastmod>2022-07-28T20:08:35+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/categories/motivation/</loc>
-    <lastmod>2022-07-28T20:08:35+02:00</lastmod>
-  </url><url>
-    <loc>https://www.davidjnevin.com/categories/object-oriented-programming/</loc>
-    <lastmod>2022-07-28T20:08:35+02:00</lastmod>
-  </url><url>
-    <loc>https://www.davidjnevin.com/tags/</loc>
     <lastmod>2022-07-28T20:08:35+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/tags/coding/</loc>

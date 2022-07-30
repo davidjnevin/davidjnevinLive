@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© 2022 David J. Nevin</copyright>
-    <lastBuildDate>Thu, 28 Jul 2022 19:30:38 +0200</lastBuildDate><atom:link href="https://www.davidjnevin.com/categories/object-oriented-programming/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 30 Jul 2022 13:29:21 +0200</lastBuildDate><atom:link href="https://www.davidjnevin.com/categories/object-oriented-programming/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Test Driven Development First Steps</title>
+      <link>https://www.davidjnevin.com/code/test_driven_development_first_steps/</link>
+      <pubDate>Sat, 30 Jul 2022 13:29:21 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/test_driven_development_first_steps/</guid>
+      <description>Test Driven Development (A cure for Refactor-phobia) There is an entire C# application running at CritiqueWheel.</description>
+    </item>
+    
     <item>
       <title>Back at It</title>
       <link>https://www.davidjnevin.com/code/back_at_it/</link>

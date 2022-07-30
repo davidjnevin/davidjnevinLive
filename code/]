@@ -1,0 +1,47 @@
+---
+title: "Test Driven Development First Steps"
+date: 2022-07-30T13:29:21+02:00
+draft: true
+showlastmod: true
+showthedate: true
+showtoc: true
+description: ""
+showbreadcrumbs: false
+tags: ["TDD", "First Steps", "Refactoring"]
+categories: ["TDD","Object Oriented Programming"]
+---
+
+## Test Driven Development (A cure for Refactor-phobia)
+
+There is an entire `C#` application running at
+[CritiqueWheel.com](https://www.critiquewheel.com/) that I have been dreading
+revisiting. It needs it, but it's my first major app with no prior programming
+experience. So it's a mess. The mere though of refactoring it scares me.
+
+Thankfully I have gotten to a place where I happy enough with syntax use in
+`Python` to start exploring `TDD`, test driven development. And so far it has
+been a revelation and a complete rethinking of my fear or refactoring.
+
+## Served with a pinch of beginner's salt.
+
+I'm working through a series of examples/projects that focus on `TDD` and
+I gotta say the red, green, refactor methodology is such a crutch when
+developing the code. The simple satisfaction of going through the process
+in an iterative fashion, knowing that I can either revert to a previous commit with
+a working test, or 'know' when my code is passing, is a great boost to my
+confidence.
+
+It has to an extend brought back some of the fun.
+
+## TDD resources
+
+This is where I caught the `TDD` bug, [Learn Python with Test-driven
+Development](https://learn-python-with-tdd.pybootcamp.com/) and [TDD Full
+Course (Learn Test Driven Development with Python)](https://www.youtube.com/watch?v=eAPmXQ0dC7Q&t=1223s) is where I'm practicing to take it a little further.
+
+## Refactoring here I come
+
+Once I have a clear enough understanding of the process and feel I can do it
+comfortably, I'll be heading back to `C#` to put it all in action. There is
+however a lingering doubt that maybe the CritiqueWheel should be a python
+project...  #TODO
