@@ -9,7 +9,16 @@
     <copyright>© 2022 David J. Nevin</copyright>
     <lastBuildDate>Thu, 05 Aug 2021 21:57:27 +0200</lastBuildDate><atom:link href="https://www.davidjnevin.com/code/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Test Driven Development First Steps</title>
+      <title>Vim as Python IDE</title>
+      <link>https://www.davidjnevin.com/code/vim_as_python_ide/</link>
+      <pubDate>Sat, 30 Jul 2022 19:33:30 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/vim_as_python_ide/</guid>
+      <description>Vim setup: The never-ending story Joy! I&amp;rsquo;ve gotten my Python virtual environment set up, installed Flake8() and managed to trouble-shoot a problem with the Syntastic auto-running of Flake8() on save.</description>
+    </item>
+    
+    <item>
+      <title>Test Driven Development: First Steps</title>
       <link>https://www.davidjnevin.com/code/test_driven_development_first_steps/</link>
       <pubDate>Sat, 30 Jul 2022 13:29:21 +0200</pubDate>
       
