@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© 2022 David J. Nevin</copyright>
-    <lastBuildDate>Sat, 30 Jul 2022 19:33:30 +0200</lastBuildDate><atom:link href="https://www.davidjnevin.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 22 Aug 2022 09:39:43 +0200</lastBuildDate><atom:link href="https://www.davidjnevin.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Data Science, LinkedIn, LeetCode, PyBites </title>
+      <link>https://www.davidjnevin.com/tags/data-science-linkedin-leetcode-pybites/</link>
+      <pubDate>Mon, 22 Aug 2022 09:39:43 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/data-science-linkedin-leetcode-pybites/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Flake8</title>
       <link>https://www.davidjnevin.com/tags/flake8/</link>
