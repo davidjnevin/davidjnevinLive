@@ -8,24 +8,6 @@
     <language>en-us</language>
     <copyright>© 2022 David J. Nevin</copyright>
     <lastBuildDate>Tue, 21 Jun 2022 19:02:01 +0200</lastBuildDate><atom:link href="https://www.davidjnevin.com/tags/binary-search/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Binary Search Extended</title>
-      <link>https://www.davidjnevin.com/code/binary_search_extended/</link>
-      <pubDate>Tue, 21 Jun 2022 19:02:01 +0200</pubDate>
-      
-      <guid>https://www.davidjnevin.com/code/binary_search_extended/</guid>
-      <description>Binary Search Recommended Youtube Playlist Binary searching has been a difficult learning curve for me.</description>
-    </item>
-    
-    <item>
-      <title>Binary Search</title>
-      <link>https://www.davidjnevin.com/code/binary_search/</link>
-      <pubDate>Mon, 20 Jun 2022 23:58:38 +0200</pubDate>
-      
-      <guid>https://www.davidjnevin.com/code/binary_search/</guid>
-      <description>Binary Search The divide and conquer search method.
-Linear Search The sequential searching through all data entries one by until until we find a match.</description>
-    </item>
-    
   </channel>
 </rss>
+

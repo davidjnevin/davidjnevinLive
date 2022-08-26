@@ -8,14 +8,6 @@
     <language>en-us</language>
     <copyright>© 2022 David J. Nevin</copyright>
     <lastBuildDate>Sun, 26 Jun 2022 00:25:42 +0200</lastBuildDate><atom:link href="https://www.davidjnevin.com/tags/parent-class/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Inheritance</title>
-      <link>https://www.davidjnevin.com/code/inheritance/</link>
-      <pubDate>Sun, 26 Jun 2022 00:25:42 +0200</pubDate>
-      
-      <guid>https://www.davidjnevin.com/code/inheritance/</guid>
-      <description>Parent Class Parent Class (Super Class or Base Class): This class allows the reuse of its public properties in another class.</description>
-    </item>
-    
   </channel>
 </rss>
+

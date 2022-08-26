@@ -8,15 +8,6 @@
     <language>en-us</language>
     <copyright>© 2022 David J. Nevin</copyright>
     <lastBuildDate>Thu, 16 Jun 2022 09:23:13 +0200</lastBuildDate><atom:link href="https://www.davidjnevin.com/categories/mermaid/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Mermaid: First Attempts</title>
-      <link>https://www.davidjnevin.com/code/mermaid_first_attempts/</link>
-      <pubDate>Thu, 16 Jun 2022 09:23:13 +0200</pubDate>
-      
-      <guid>https://www.davidjnevin.com/code/mermaid_first_attempts/</guid>
-      <description>Mermaid setup. Really basic first effort.
-I created a shortcodes folder under my theme layouts folder, adn there created a mermaid.</description>
-    </item>
-    
   </channel>
 </rss>
+

@@ -8,14 +8,6 @@
     <language>en-us</language>
     <copyright>© 2022 David J. Nevin</copyright>
     <lastBuildDate>Tue, 14 Jun 2022 21:01:56 +0200</lastBuildDate><atom:link href="https://www.davidjnevin.com/tags/first/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>First Commit</title>
-      <link>https://www.davidjnevin.com/code/first_commit/</link>
-      <pubDate>Tue, 14 Jun 2022 21:01:56 +0200</pubDate>
-      
-      <guid>https://www.davidjnevin.com/code/first_commit/</guid>
-      <description>Start here As of today, I&amp;rsquo;ve been re-experimenting with programming for 13 months.</description>
-    </item>
-    
   </channel>
 </rss>
+
