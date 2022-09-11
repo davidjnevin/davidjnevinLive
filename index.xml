@@ -9,6 +9,15 @@
     <copyright>© 2022 David J. Nevin</copyright>
     <lastBuildDate>Thu, 05 Aug 2021 21:57:27 +0200</lastBuildDate><atom:link href="https://www.davidjnevin.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Orange Belt</title>
+      <link>https://www.davidjnevin.com/code/orange_belt/</link>
+      <pubDate>Sun, 11 Sep 2022 18:54:37 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/orange_belt/</guid>
+      <description>It&amp;rsquo;s been a busy few weeks. The Pybites community and coding platform has seen about 90% of my Python time over the past four weeks.</description>
+    </item>
+    
+    <item>
       <title>RSS Python Search Hugo</title>
       <link>https://www.davidjnevin.com/code/rss_python_search_hugo/</link>
       <pubDate>Fri, 26 Aug 2022 22:29:09 +0200</pubDate>

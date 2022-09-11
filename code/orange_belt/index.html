@@ -3,17 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta property="og:title" content="RSS Python Search Hugo" />
-<meta property="og:description" content="Slack Community So I&rsquo;ve been hanging out in the PyBites Slack Community for a few weeks." />
+  <meta property="og:title" content="Orange Belt" />
+<meta property="og:description" content="It&rsquo;s been a busy few weeks. The Pybites community and coding platform has seen about 90% of my Python time over the past four weeks." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.davidjnevin.com/code/rss_python_search_hugo/" /><meta property="article:section" content="code" />
-<meta property="article:published_time" content="2022-08-26T22:29:09&#43;02:00" />
-<meta property="article:modified_time" content="2022-08-27T00:02:31&#43;02:00" />
+<meta property="og:url" content="https://www.davidjnevin.com/code/orange_belt/" /><meta property="article:section" content="code" />
+<meta property="article:published_time" content="2022-09-11T18:54:37&#43;02:00" />
+<meta property="article:modified_time" content="2022-09-11T18:54:37&#43;02:00" />
 
 
   <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="RSS Python Search Hugo"/>
-<meta name="twitter:description" content="Slack Community So I&rsquo;ve been hanging out in the PyBites Slack Community for a few weeks."/>
+<meta name="twitter:title" content="Orange Belt"/>
+<meta name="twitter:description" content="It&rsquo;s been a busy few weeks. The Pybites community and coding platform has seen about 90% of my Python time over the past four weeks."/>
 
   
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-VGVQ6SM9N7"></script>
@@ -30,7 +30,7 @@ if (!doNotTrack) {
   
   <title>
     
-    David J Nevin - RSS Python Search Hugo
+    David J Nevin - Orange Belt
     
   </title>
   
@@ -77,8 +77,7 @@ if (!doNotTrack) {
   
         
               
-              <div class="postdate">
-              <div class="sm-1 mtb-1">Last updated: Aug 27, 2022</div>
+                <div class="sm-1 mtb-1">Published: Sep 11, 2022</div>
               
               </div>
         
@@ -90,73 +89,47 @@ if (!doNotTrack) {
     <article class="md">
      
 
-    <h1>RSS Python Search Hugo</h1>
-     <nav id="TableOfContents">
-  <ul>
-    <li><a href="#slack-community">Slack Community</a></li>
-    <li><a href="#git-repos-and-main-as-defaultbranch">Git repos and Main as defaultbranch</a></li>
-    <li><a href="#z-shell-plugins">Z Shell plugins</a></li>
-    <li><a href="#python-blog-feed-searcher-console-app">Python Blog Feed Searcher (Console App)</a></li>
-    <li><a href="#test-driven-understanding">Test driven understanding</a></li>
-  </ul>
-</nav>  <h2 id="slack-community">Slack Community</h2>
-<p>So I&rsquo;ve been hanging out in the PyBites Slack Community for a few weeks. I&rsquo;m
-mostly lurking and adding a comment or emoji or a question. Nothing major. But
-it&rsquo;s really nice to be in touch with other pythonistas. It certainly feels
-great to be doing this self-learning path with a few others within earshot.</p>
-<p>I recently discovered and immediately signed up for the free <a href="https://www.buildpythonapps.com/">The 6 Key Ingredients of
-a Successful Pythonista PyBites Training</a> and
-on day two there&rsquo;s an in-depth look at getting to terms with setting up a <code>git</code>
-repo, using <code>poetry</code> to setup your Python project and environment, adding, committing,
-branching and the like. It&rsquo;s an excellent video.</p>
-<h2 id="git-repos-and-main-as-defaultbranch">Git repos and Main as defaultbranch</h2>
-<p>Creating a <code>github</code> repo is something I&rsquo;ve done oodles of times, so that was
-easy. But when I got to initializing a git repo locally (something I&rsquo;ve also
-done on may occasions) my primary branch was labeled master and not main.
-This bugged me. It wasn&rsquo;t what I wanted. Queue <code>rabbit hole</code>.</p>
-<p>Labeled it seems has a whole set of config files in the $HOME directory. Who knew?
-I certainly didn&rsquo;t. By editing the <code>~/.gitconfig</code> file, I was able to see that
-indeed my <code>defaultbranch</code> was set to main. Ok.</p>
-<p>I exited my terminal, tried to init again and nope. Just having seen the
-setting didn&rsquo;t convince my new init to do want I wanted. I trundled off to the
-browser. I found a <code>git --global</code> command to set the init.defaultbranch. Didn&rsquo;t
-work. And what&rsquo;s more my <code>z shell</code> autocomplete stopped working. I was cd&rsquo;ing
-using full directory names. It was rough.</p>
-<h2 id="z-shell-plugins">Z Shell plugins</h2>
-<p>So off I went back into my <code>.zshrc</code> file to see what was changed. Of course it
-was as I had left it a month ago when last I tweaked it. I was even able to
-remember some of the old tweaks I made.</p>
-<p>Looking for a way to change my autocomplete plugin, I rediscovered I was using <code>zplug</code>. And looking for the autocomplete install with
-<code>zplug</code> I found a recommendation to update <code>zplug</code>. That seemed to do it, or
-at least it undid what git &ndash;global did. Or so I thought. My autocomplete was
-working, I could navigate with ease again, but my git init was still defaulting
-to master.</p>
-<p>I found a git &ndash;global command to clear the default, no joy. I reread the
-instructions <a href="https://melix.github.io/blog/2020/06/updating-git.html">here</a> and updated <code>git</code>. Tried again. No joy. I went back and forth a few times deleting the local repo, recreating it and then trying again. Eventually after re-re-reading the instructions I saw this little note. &ldquo;remember to add a new line after the first line in the template/HEAD file&rdquo;. Of course this worked immediately. So I could git init with main as the default branch and get it to push. Relief.</p>
-<h2 id="python-blog-feed-searcher-console-app">Python Blog Feed Searcher (Console App)</h2>
-<p>So the tutorial code that Bob of <code>PyBites</code> used to demo the add and commit was
-a basic <strong>RSS (Really Simple Syndication)</strong> console app written in python. It parsed an RSS feed and returns
-matches for terms inputted through the console. I though to myself well that
-sounds like fun.</p>
-<p>So tweaking that code, I wrote a short script that allows me to search the RSS
-feed of this blog and return hits in the console. It took me down another
-rabbit hole of RSS setting in <code>Hugo</code> but thanks to [this digitaldrummerj
-article]
-(<a href="https://digitaldrummerj.me/hugo-create-rss-feed/">https://digitaldrummerj.me/hugo-create-rss-feed/</a>) I got it up an running and
-limited to the blogs and not the static pages. Another win.</p>
-<h2 id="test-driven-understanding">Test driven understanding</h2>
-<p>I&rsquo;m off to see if I can get the search tool running and write the tests for it.
-But so far, it&rsquo;s been an eventful trip into git, local repos, hugo, and
-generally learning the stuff that counts.</p>
+    <h1>Orange Belt</h1>
+     <nav id="TableOfContents"></nav>  <p>It&rsquo;s been a busy few weeks. The <a href="https://pybit.es/"><code>Pybites</code></a> community and coding platform has
+seen about 90% of my <code>Python</code> time over the past four weeks.</p>
+<p>The setup is simple, there are a number (10, I think) of <code>Intro Bites</code>
+(coding problems) to get started on, and hooked.</p>
+<p>From there, once I signed up, I did the <code>beginner Bites</code>. After studying and coding for sometime I was surprised with the breath of the topics covered. It was challenging. The key to the platforms addictive nature is the in the <code>bites</code> themselves.</p>
+<p>Not only is there the dopamine rush of having your code pass the <code>pytest</code>s,
+there&rsquo;s also the knowledge that what you just solved is in a simplified manner,
+a real world problem. There are about 370 bites as of writing this, and
+I expect more to be added over time. The range from beginner to intermediate to
+advanced. But don&rsquo;t be fooled, even the beginner bites require a good
+understanding of the topic in question.</p>
+<p>It&rsquo;s addictive. And I&rsquo;ve been moving through the learning paths, starting with
+the <code>algorithms</code>. I started there because I&rsquo;d done a lot of similar code on
+<a href="https://leetcode.com/davidjnevin">leetcode</a> and while of interest, I quickly discovered that this wasn&rsquo;t going to be of the most benefit to me. I switched, having done six or seven, did and completed the <code>Collections</code> learning path and am finishing the <code>Data Types</code>, in the coming week.</p>
+<p>It&rsquo;s these learning paths, focused entirely on <code>python libraries</code> that are
+reaping rewards. I&rsquo;ve a feeling now that I can get started on my
+<code>CritiqueWheel</code> project.</p>
+<p>That looks like it&rsquo;ll be a <code>Django</code> project, ideally using <code>MongoDb</code>. My goal
+however is to make the front-end and back-end completely decoupled. <code>FastAPI</code>
+is a term I&rsquo;ve seen bandied about and there&rsquo;s a learning path dedicated to that
+in <code>PyBites</code> too.</p>
+<p>At present I&rsquo;m going to go back to <code>Educative</code> and start and complete the
+<code>Django</code> course there. I&rsquo;m paid up, so I want to get the most out of it.
+Meanwhile, I&rsquo;ll finish my current learning path with <code>PyBites</code>, then turn to
+<code>Decorators and Context Managers</code> before <code>FastAPI</code>.</p>
+<p>We&rsquo;ll see where that takes me. Watching a video the other day, one of the
+recommendations was four strong projects on my GitHub might be enough to swing
+an interview for a junior dev position. The <code>CritiqueWheel</code> might be too big
+to get started, but there&rsquo;s a twitter API project, I&rsquo;d like to play with.</p>
+<p>And to the title of this post, I&rsquo;ve just reached the <code>Orange Belt</code> level in the
+<code>PyBites</code> challenges. It&rsquo;s when you have over a 100 points, and for me I&rsquo;ve successfully coded 52 <code>Bites</code>. I&rsquo;ve studied <code>game theory</code> and know its basic ins and outs, but it&rsquo;s damn effective in keeping my
+brain at it in the wee hours of the night.</p>
+<p>The journey continues.</p>
 
   </article>
   <article class="md prev_next">
     <hr>
-    <div class="post_next">
-      Next: <a href=/code/orange_belt/>Orange Belt</a>
     
     <div class="post_previous">
-      Previous: <a href=/code/summer_of_code/>Summer of Code</a>
+      Previous: <a href=/code/rss_python_search_hugo/>RSS Python Search Hugo</a>
     
   </article>
 </main>
