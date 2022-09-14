@@ -9,6 +9,24 @@
     <copyright>© 2022 David J. Nevin</copyright>
     <lastBuildDate>Thu, 05 Aug 2021 21:57:27 +0200</lastBuildDate><atom:link href="https://www.davidjnevin.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Django Next Steps</title>
+      <link>https://www.davidjnevin.com/code/django_next_steps/</link>
+      <pubDate>Tue, 13 Sep 2022 20:40:43 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/django_next_steps/</guid>
+      <description>Poetry and Django So poetry is up and running. Django is up and running, and I&amp;rsquo;ve added a simple listing app into the Django project.</description>
+    </item>
+    
+    <item>
+      <title>Django Games First Steps</title>
+      <link>https://www.davidjnevin.com/code/django_games_first_steps/</link>
+      <pubDate>Tue, 13 Sep 2022 15:53:11 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/django_games_first_steps/</guid>
+      <description>Getting a project up and running I had an interesting conversation this morning with Bob from Pybites.</description>
+    </item>
+    
+    <item>
       <title>Orange Belt</title>
       <link>https://www.davidjnevin.com/code/orange_belt/</link>
       <pubDate>Sun, 11 Sep 2022 18:54:37 +0200</pubDate>
