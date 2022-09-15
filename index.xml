@@ -14,8 +14,7 @@
       <pubDate>Thu, 15 Sep 2022 18:21:34 +0200</pubDate>
       
       <guid>https://www.davidjnevin.com/code/django_delete_items/</guid>
-      <description>Deleting a listing Again the same patter is used.
-Add the URL 100  path(&amp;#39;delete_listing/&amp;lt;delete_id&amp;gt;/&amp;#39;, views.</description>
+      <description>Deleting a listing Again we follow the same pattern as before.</description>
     </item>
     
     <item>
