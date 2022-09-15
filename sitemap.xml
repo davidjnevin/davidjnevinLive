@@ -3,33 +3,36 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://www.davidjnevin.com/categories/</loc>
-    <lastmod>2022-09-14T18:07:41+02:00</lastmod>
+    <lastmod>2022-09-15T00:52:16+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/categories/django/</loc>
-    <lastmod>2022-09-14T18:07:41+02:00</lastmod>
+    <lastmod>2022-09-15T00:52:16+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/tags/django/</loc>
-    <lastmod>2022-09-14T18:07:41+02:00</lastmod>
+    <lastmod>2022-09-15T00:52:16+02:00</lastmod>
   </url><url>
-    <loc>https://www.davidjnevin.com/code/django_individual_item_page/</loc>
-    <lastmod>2022-09-14T18:07:41+02:00</lastmod>
+    <loc>https://www.davidjnevin.com/code/django_edit_delete_items/</loc>
+    <lastmod>2022-09-15T00:52:16+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/tags/educative/</loc>
-    <lastmod>2022-09-14T18:07:41+02:00</lastmod>
+    <lastmod>2022-09-15T00:52:16+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/categories/educative/</loc>
-    <lastmod>2022-09-14T18:07:41+02:00</lastmod>
+    <lastmod>2022-09-15T00:52:16+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/tags/postgres/</loc>
-    <lastmod>2022-09-14T18:07:41+02:00</lastmod>
+    <lastmod>2022-09-15T00:52:16+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/categories/postgresql/</loc>
-    <lastmod>2022-09-14T18:07:41+02:00</lastmod>
+    <lastmod>2022-09-15T00:52:16+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/tags/sql/</loc>
-    <lastmod>2022-09-14T18:07:41+02:00</lastmod>
+    <lastmod>2022-09-15T00:52:16+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/tags/</loc>
+    <lastmod>2022-09-15T00:52:16+02:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/code/django_individual_item_page/</loc>
     <lastmod>2022-09-14T18:07:41+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/code/django_dynamic_content/</loc>
