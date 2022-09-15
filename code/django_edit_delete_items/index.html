@@ -3,17 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta property="og:title" content="Django Individual Item Page" />
-<meta property="og:description" content="Next step is to setup an individual item page. This tutorial is giving me a some good insights into the Critique Wheel rewrite." />
+  <meta property="og:title" content="Django Edit Items" />
+<meta property="og:description" content="Editing items in the PostgreSQL DB The pattern now is as before." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.davidjnevin.com/code/django_individual_item_page/" /><meta property="article:section" content="code" />
-<meta property="article:published_time" content="2022-09-14T18:07:41&#43;02:00" />
-<meta property="article:modified_time" content="2022-09-14T18:07:41&#43;02:00" />
+<meta property="og:url" content="https://www.davidjnevin.com/code/django_edit_delete_items/" /><meta property="article:section" content="code" />
+<meta property="article:published_time" content="2022-09-15T00:52:16&#43;02:00" />
+<meta property="article:modified_time" content="2022-09-15T00:52:16&#43;02:00" />
 
 
   <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Django Individual Item Page"/>
-<meta name="twitter:description" content="Next step is to setup an individual item page. This tutorial is giving me a some good insights into the Critique Wheel rewrite."/>
+<meta name="twitter:title" content="Django Edit Items"/>
+<meta name="twitter:description" content="Editing items in the PostgreSQL DB The pattern now is as before."/>
 
   
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-VGVQ6SM9N7"></script>
@@ -30,7 +30,7 @@ if (!doNotTrack) {
   
   <title>
     
-    David J Nevin - Django Individual Item Page
+    David J Nevin - Django Edit Items
     
   </title>
   
@@ -77,7 +77,7 @@ if (!doNotTrack) {
   
         
               
-                <div class="sm-1 mtb-1">Published: Sep 14, 2022</div>
+                <div class="sm-1 mtb-1">Published: Sep 15, 2022</div>
               
               </div>
         
@@ -89,42 +89,31 @@ if (!doNotTrack) {
     <article class="md">
      
 
-    <h1>Django Individual Item Page</h1>
+    <h1>Django Edit Items</h1>
      <nav id="TableOfContents">
   <ul>
-    <li><a href="#individual-item-page">Individual Item Page</a></li>
+    <li><a href="#editing-items-in-the-postgresql-db">Editing items in the PostgreSQL DB</a></li>
+    <li><a href="#add-the-url">Add the URL</a></li>
+    <li><a href="#create-the-view">Create the view</a></li>
+    <li><a href="#create-template-html-file">Create Template .html file</a></li>
+    <li><a href="#wire-up-the-edit-button">Wire up the Edit Button</a></li>
   </ul>
-</nav>  <p>Next step is to setup an individual item page. This tutorial is giving me a some
-good insights into the <a href="/code/critique_wheel_csharp/">Critique Wheel</a>
-rewrite. Ideas are percolating, and questions about testing and deploying are
-scratching at the back of my neck. Patience.</p>
-<h2 id="individual-item-page">Individual Item Page</h2>
-<p>First step with a new page, add it to the app&rsquo;s <code>views.py</code>.</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt" id="100"><a style="outline: none; text-decoration:none; color:inherit" href="#100">100</a>
-</span><span class="lnt" id="101"><a style="outline: none; text-decoration:none; color:inherit" href="#101">101</a>
-</span><span class="lnt" id="102"><a style="outline: none; text-decoration:none; color:inherit" href="#102">102</a>
-</span><span class="lnt" id="103"><a style="outline: none; text-decoration:none; color:inherit" href="#103">103</a>
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">detail</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">detail_id</span><span class="p">):</span>
-    <span class="n">detail</span> <span class="o">=</span> <span class="n">Listings</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="n">detail_id</span><span class="p">)</span>
-    <span class="n">context</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;detail&#39;</span><span class="p">:</span> <span class="n">detail</span><span class="p">}</span>
-    <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s1">&#39;listings/detail.html&#39;</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>Note to self: <code>context</code> is a dictionary of values passed to the template.</p>
-<p>The <code>urls.py</code> additional line is:</p>
+</nav>  <h2 id="editing-items-in-the-postgresql-db">Editing items in the PostgreSQL DB</h2>
+<p>The pattern now is as before.</p>
+<h2 id="add-the-url">Add the URL</h2>
+<p>Adding the <code>url</code> to the page into the app
+<code>urls.py</code></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt" id="100"><a style="outline: none; text-decoration:none; color:inherit" href="#100">100</a>
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">path</span><span class="p">(</span><span class="s1">&#39;my_listings/&#39;</span><span class="p">,</span> <span class="n">views</span><span class="o">.</span><span class="n">my_listings</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;my_listings&#39;</span><span class="p">)</span>
-</code></pre></td></tr></table>
+<pre class="chroma"><code class="language-Django" data-lang="Django"><span class="x">path(&#39;edit_listing/&lt;edit_id&gt;/&#39;, views.edit_listing, name=&#39;edit_listing&#39;)
+</span></code></pre></td></tr></table>
 </div>
-</div><p>And the template key part:</p>
+</div><h2 id="create-the-view">Create the view</h2>
+<p>Create the edit view in <code>views.py</code>. Here the contents of a form are being
+altered.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt" id="100"><a style="outline: none; text-decoration:none; color:inherit" href="#100">100</a>
@@ -137,31 +126,58 @@ scratching at the back of my neck. Patience.</p>
 </span><span class="lnt" id="107"><a style="outline: none; text-decoration:none; color:inherit" href="#107">107</a>
 </span><span class="lnt" id="108"><a style="outline: none; text-decoration:none; color:inherit" href="#108">108</a>
 </span><span class="lnt" id="109"><a style="outline: none; text-decoration:none; color:inherit" href="#109">109</a>
+</span><span class="lnt" id="110"><a style="outline: none; text-decoration:none; color:inherit" href="#110">110</a>
+</span><span class="lnt" id="111"><a style="outline: none; text-decoration:none; color:inherit" href="#111">111</a>
+</span><span class="lnt" id="112"><a style="outline: none; text-decoration:none; color:inherit" href="#112">112</a>
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-django" data-lang="django"><span class="x">for my_listing in my_listings %}
-</span><span class="x">&lt;tr&gt;
-</span><span class="x">	&lt;td&gt;</span><span class="cp">{{</span> <span class="nv">my_listing.title</span> <span class="cp">}}</span><span class="x">&lt;/td&gt;
-</span><span class="x">	&lt;td&gt;</span><span class="cp">{{</span> <span class="nv">my_listing.list_date</span> <span class="cp">}}</span><span class="x">&lt;/td&gt;
-</span><span class="x">	&lt;td&gt;&lt;a class=&#34;btn&#34; href=&#34;</span><span class="cp">{%</span> <span class="k">url</span> <span class="s1">&#39;listings:detail&#39;</span> <span class="nv">my_listing.id</span> <span class="cp">%}</span><span class="x">&#34;&gt;View&lt;/a&gt;&lt;/td&gt;
-</span><span class="x">	&lt;td&gt;&lt;/td&gt;
-</span><span class="x">	&lt;td&gt;&lt;a class=&#34;btn&#34; href=&#34;&#34;&gt;Edit&lt;/a&gt;&lt;/td&gt;
-</span><span class="x">	&lt;td&gt;&lt;a class=&#34;btn&#34; href=&#34;&#34;&gt;Delete&lt;/a&gt;&lt;/td&gt;
-</span><span class="x">&lt;/tr&gt;
-</span><span class="x"></span><span class="cp">{%</span> <span class="k">endfor</span> <span class="cp">%}</span><span class="x">
+<pre class="chroma"><code class="language-Django" data-lang="Django"><span class="x">def edit_listing(request, edit_id):
+</span><span class="x">    listing = Listings.objects.get(id=edit_id)
+</span><span class="x">
+</span><span class="x">    if request.method != &#39;POST&#39;:
+</span><span class="x">        form = ListingForm(instance=listing)
+</span><span class="x">    else:
+</span><span class="x">        form = ListingForm(request.POST, request.FILES, instance=listing)
+</span><span class="x">        if form.is_valid():
+</span><span class="x">            form.save()
+</span><span class="x">            return redirect(&#39;listings:all_listings&#39;)
+</span><span class="x">
+</span><span class="x">    context = {&#39;listing&#39;: listing, &#39;form&#39;: form}
+</span><span class="x">    return render(request, &#39;listings/edit_listing.html&#39;, context)
 </span></code></pre></td></tr></table>
 </div>
-</div><p>This gives a list of all items, once users are setup this list can be filtered
-by user item.</p>
+</div><h2 id="create-template-html-file">Create Template .html file</h2>
+<p>The key aspects here are:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt" id="100"><a style="outline: none; text-decoration:none; color:inherit" href="#100">100</a>
+</span><span class="lnt" id="101"><a style="outline: none; text-decoration:none; color:inherit" href="#101">101</a>
+</span><span class="lnt" id="102"><a style="outline: none; text-decoration:none; color:inherit" href="#102">102</a>
+</span><span class="lnt" id="103"><a style="outline: none; text-decoration:none; color:inherit" href="#103">103</a>
+</span><span class="lnt" id="104"><a style="outline: none; text-decoration:none; color:inherit" href="#104">104</a>
+</span><span class="lnt" id="105"><a style="outline: none; text-decoration:none; color:inherit" href="#105">105</a>
+</span><span class="lnt" id="106"><a style="outline: none; text-decoration:none; color:inherit" href="#106">106</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-Django" data-lang="Django"><span class="x">&lt;form action=&#34;</span><span class="cp">{%</span> <span class="k">url</span> <span class="s1">&#39;listings:edit_listing&#39;</span> <span class="nv">listing.id</span> <span class="cp">%}</span><span class="x">&#34; method=&#39;post&#39; enctype=&#34;multipart/form-data&#34;&gt;
+</span><span class="x">    &lt;div class=&#34;form-group&#34;&gt;
+</span><span class="x">        </span><span class="cp">{%</span> <span class="k">csrf_token</span> <span class="cp">%}</span><span class="x">
+</span><span class="x">        </span><span class="cp">{{</span> <span class="nv">form.as_p</span> <span class="cp">}}</span><span class="x">
+</span><span class="x">    &lt;/div&gt;
+</span><span class="x">    &lt;button type=&#34;submit&#34; class=&#34;btn&#34;&gt;Edit listing&lt;/button&gt;
+</span><span class="x">&lt;/form&gt;
+</span></code></pre></td></tr></table>
+</div>
+</div><h2 id="wire-up-the-edit-button">Wire up the Edit Button</h2>
+<p>There is now a functioning Edit listing page. It just needs to be wired up to
+the edit button on the my_listings page.</p>
 
   </article>
   <article class="md prev_next">
     <hr>
-    <div class="post_next">
-      Next: <a href=/code/django_edit_delete_items/>Django Edit Items</a>
     
     <div class="post_previous">
-      Previous: <a href=/code/django_dynamic_content/>Django Dynamic Content</a>
+      Previous: <a href=/code/django_individual_item_page/>Django Individual Item Page</a>
     
   </article>
 </main>
