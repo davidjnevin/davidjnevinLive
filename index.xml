@@ -9,6 +9,15 @@
     <copyright>© 2022 David J. Nevin</copyright>
     <lastBuildDate>Thu, 05 Aug 2021 21:57:27 +0200</lastBuildDate><atom:link href="https://www.davidjnevin.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Django Users, Login &amp; Registration</title>
+      <link>https://www.davidjnevin.com/code/django_users_registration/</link>
+      <pubDate>Mon, 19 Sep 2022 19:03:47 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/django_users_registration/</guid>
+      <description>The user functionality is created in a seperate app. This project uses built-in user functionality to keep things managable for my first attempts.</description>
+    </item>
+    
+    <item>
       <title>Django Delete Items</title>
       <link>https://www.davidjnevin.com/code/django_delete_items/</link>
       <pubDate>Thu, 15 Sep 2022 18:21:34 +0200</pubDate>
