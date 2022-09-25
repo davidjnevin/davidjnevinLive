@@ -3,15 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta property="og:title" content="Django" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://www.davidjnevin.com/categories/django/" />
+  <meta property="og:title" content="Pipenv to Poetry" />
+<meta property="og:description" content="time 01.05am
+Some notes on the process as I&rsquo;m working through it." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.davidjnevin.com/code/pipenv_to_poetry/" /><meta property="article:section" content="code" />
+<meta property="article:published_time" content="2022-09-25T01:00:26&#43;02:00" />
+<meta property="article:modified_time" content="2022-09-25T01:00:26&#43;02:00" />
 
 
   <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Django"/>
-<meta name="twitter:description" content=""/>
+<meta name="twitter:title" content="Pipenv to Poetry"/>
+<meta name="twitter:description" content="time 01.05am
+Some notes on the process as I&rsquo;m working through it."/>
 
   
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-VGVQ6SM9N7"></script>
@@ -28,7 +32,7 @@ if (!doNotTrack) {
   
   <title>
     
-    David J Nevin - Django
+    David J Nevin - Pipenv to Poetry
     
   </title>
   
@@ -58,61 +62,86 @@ if (!doNotTrack) {
   <header>
   <h1 class="row gap-1 nowrap">
     
-    <a href="/">David J Nevin</a>
+    <a href="/">David J Nevin</a><a href="/code">+= Code</a>
   </h1>
+  <nav class="row gap-1">
   
+  </nav>
   
 </header>
   
+   
+<main>
   
-	<main>
-		
-			<h2>Category - "Django"</h2>
-		
-		<div>
-			
-				<div class="row row-mob mb-1 mb-1_5-mob gap-3">
-					<div class="sm-2-mob mb-0_5-mob">Sep 25, 2022</div>
-					<a href="/code/pipenv_to_poetry/">Pipenv to Poetry</a>
-				</div>
-			
-				<div class="row row-mob mb-1 mb-1_5-mob gap-3">
-					<div class="sm-2-mob mb-0_5-mob">Sep 19, 2022</div>
-					<a href="/code/django_users_registration/">Django Users, Login &amp; Registration</a>
-				</div>
-			
-				<div class="row row-mob mb-1 mb-1_5-mob gap-3">
-					<div class="sm-2-mob mb-0_5-mob">Sep 15, 2022</div>
-					<a href="/code/django_delete_items/">Django Delete Items</a>
-				</div>
-			
-				<div class="row row-mob mb-1 mb-1_5-mob gap-3">
-					<div class="sm-2-mob mb-0_5-mob">Sep 15, 2022</div>
-					<a href="/code/django_edit_delete_items/">Django Edit Items</a>
-				</div>
-			
-				<div class="row row-mob mb-1 mb-1_5-mob gap-3">
-					<div class="sm-2-mob mb-0_5-mob">Sep 14, 2022</div>
-					<a href="/code/django_individual_item_page/">Django Individual Item Page</a>
-				</div>
-			
-				<div class="row row-mob mb-1 mb-1_5-mob gap-3">
-					<div class="sm-2-mob mb-0_5-mob">Sep 14, 2022</div>
-					<a href="/code/django_dynamic_content/">Django Dynamic Content</a>
-				</div>
-			
-				<div class="row row-mob mb-1 mb-1_5-mob gap-3">
-					<div class="sm-2-mob mb-0_5-mob">Sep 13, 2022</div>
-					<a href="/code/django_next_steps/">Django Next Steps</a>
-				</div>
-			
-				<div class="row row-mob mb-1 mb-1_5-mob gap-3">
-					<div class="sm-2-mob mb-0_5-mob">Sep 13, 2022</div>
-					<a href="/code/django_games_first_steps/">Django Games First Steps</a>
-				</div>
-			
-		</div>
-	</main>
+
+  
+  
+  
+        
+              
+                <div class="sm-1 mtb-1">Published: Sep 25, 2022</div>
+              
+              </div>
+        
+  
+  
+  
+
+
+    <article class="md">
+     
+
+    <h1>Pipenv to Poetry</h1>
+     <nav id="TableOfContents"></nav>  <p>time 01.05am</p>
+<p>Some notes on the process as I&rsquo;m working through it.</p>
+<p>Why? I have a Django with PostgreSQL app that I want to add to Render.com.</p>
+<p>I worked with poetry on a previous app
+<a href="https://listings.onrender.com">listings.onrender.com</a> and the poetry setup
+worked well, once I got the hang of it.</p>
+<p>Having searched I found the following on SO
+<a href="https://stackoverflow.com/questions/62764148/how-to-import-requirements-txt-from-an-existing-project-using-poetry/62787881#62787881">here</a>.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt" id="100"><a style="outline: none; text-decoration:none; color:inherit" href="#100">100</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">cat requirements.txt <span class="p">|</span> xargs -I % sh -c <span class="s1">&#39;poetry add &#34;%&#34;&#39;</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>The idea here is to generate the dependencies and port them to poetry. Let&rsquo;s
+see.</p>
+<p>First the requirements.txt.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt" id="100"><a style="outline: none; text-decoration:none; color:inherit" href="#100">100</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">pip freeze &gt; requirements.txt
+</code></pre></td></tr></table>
+</div>
+</div><p>Okay, that exported some, but I can tell there&rsquo;s a few missing. Seems like this
+file is something that is supposed to be manually maintained. Who knew?</p>
+<p>So next step is to look at
+<a href="https://dephell.readthedocs.io/cmd-deps-convert.html">dephell</a></p>
+<p>Feels like a potential rabbit hole.</p>
+<p>So what&rsquo;s the easiest, fastest way&hellip;</p>
+<p>Start a new project, copy over the files from my existing project. And run
+<code>poetry install</code> on the list of dependencies I have? And see if it works.</p>
+<p>OK. Let&rsquo;s try that. Time 01.20am.</p>
+<p>That worked. 21 minutes. Rabbit hole avoided.</p>
+<p>The app is now running happily on PostgreSQL in a poetry environment. Now to
+create the <code>render.yaml</code> and <code>build.sh</code> files.</p>
+<p>Okay, deploying failures. It&rsquo;s late more tomorrow. Time 2.39am</p>
+
+  </article>
+  <article class="md prev_next">
+    <hr>
+    
+    <div class="post_previous">
+      Previous: <a href=/code/django_users_registration/>Django Users, Login &amp; Registration</a>
+    
+  </article>
+</main>
 
 
   
