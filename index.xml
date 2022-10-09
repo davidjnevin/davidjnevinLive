@@ -9,6 +9,15 @@
     <copyright>© 2022 David J. Nevin</copyright>
     <lastBuildDate>Thu, 05 Aug 2021 21:57:27 +0200</lastBuildDate><atom:link href="https://www.davidjnevin.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Django in Depth</title>
+      <link>https://www.davidjnevin.com/code/django_in_depth/</link>
+      <pubDate>Sun, 09 Oct 2022 21:59:18 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/django_in_depth/</guid>
+      <description>Django 4 by Example by Antonio Mele is a great book.</description>
+    </item>
+    
+    <item>
       <title>Pipenv to Poetry</title>
       <link>https://www.davidjnevin.com/code/pipenv_to_poetry/</link>
       <pubDate>Sun, 25 Sep 2022 01:00:26 +0200</pubDate>
