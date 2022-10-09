@@ -3,19 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta property="og:title" content="Pipenv to Poetry" />
-<meta property="og:description" content="time 01.05am
-Some notes on the process as I&rsquo;m working through it." />
+  <meta property="og:title" content="Django in Depth" />
+<meta property="og:description" content="An update on django learnings" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.davidjnevin.com/code/pipenv_to_poetry/" /><meta property="article:section" content="code" />
-<meta property="article:published_time" content="2022-09-25T01:00:26&#43;02:00" />
-<meta property="article:modified_time" content="2022-09-25T11:44:56&#43;02:00" />
+<meta property="og:url" content="https://www.davidjnevin.com/code/django_in_depth/" /><meta property="article:section" content="code" />
+<meta property="article:published_time" content="2022-10-09T21:59:18&#43;02:00" />
+<meta property="article:modified_time" content="2022-10-09T21:59:18&#43;02:00" />
 
 
   <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Pipenv to Poetry"/>
-<meta name="twitter:description" content="time 01.05am
-Some notes on the process as I&rsquo;m working through it."/>
+<meta name="twitter:title" content="Django in Depth"/>
+<meta name="twitter:description" content="An update on django learnings"/>
 
   
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-VGVQ6SM9N7"></script>
@@ -32,7 +30,7 @@ if (!doNotTrack) {
   
   <title>
     
-    David J Nevin - Pipenv to Poetry
+    David J Nevin - Django in Depth
     
   </title>
   
@@ -79,7 +77,7 @@ if (!doNotTrack) {
   
         
               
-                <div class="sm-1 mtb-1">Published: Sep 25, 2022</div>
+                <div class="sm-1 mtb-1">Published: Oct 9, 2022</div>
               
               </div>
         
@@ -91,56 +89,45 @@ if (!doNotTrack) {
     <article class="md">
      
 
-    <h1>Pipenv to Poetry</h1>
-     <nav id="TableOfContents"></nav>  <p>time 01.05am</p>
-<p>Some notes on the process as I&rsquo;m working through it.</p>
-<p>Why? I have a Django with PostgreSQL app that I want to add to Render.com.</p>
-<p>I worked with poetry on a previous app
-<a href="https://listings.onrender.com">listings.onrender.com</a> and the poetry setup
-worked well, once I got the hang of it.</p>
-<p>Having searched I found the following on SO
-<a href="https://stackoverflow.com/questions/62764148/how-to-import-requirements-txt-from-an-existing-project-using-poetry/62787881#62787881">here</a>.</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt" id="100"><a style="outline: none; text-decoration:none; color:inherit" href="#100">100</a>
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">cat requirements.txt <span class="p">|</span> xargs -I % sh -c <span class="s1">&#39;poetry add &#34;%&#34;&#39;</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>The idea here is to generate the dependencies and port them to poetry. Let&rsquo;s
-see.</p>
-<p>First the requirements.txt.</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt" id="100"><a style="outline: none; text-decoration:none; color:inherit" href="#100">100</a>
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">pip freeze &gt; requirements.txt
-</code></pre></td></tr></table>
-</div>
-</div><p>Okay, that exported some, but I can tell there&rsquo;s a few missing. Seems like this
-file is something that is supposed to be manually maintained. Who knew?</p>
-<p>So next step is to look at
-<a href="https://dephell.readthedocs.io/cmd-deps-convert.html">dephell</a></p>
-<p>Feels like a potential rabbit hole.</p>
-<p>So what&rsquo;s the easiest, fastest way&hellip;</p>
-<p>Start a new project, copy over the files from my existing project. And run
-<code>poetry install</code> on the list of dependencies I have? And see if it works.</p>
-<p>OK. Let&rsquo;s try that. Time 01.20am.</p>
-<p>That worked. 21 minutes. Rabbit hole avoided.</p>
-<p>The app is now running happily on PostgreSQL in a poetry environment. Now to
-create the <code>render.yaml</code> and <code>build.sh</code> files.</p>
-<p>Okay, deploying failures. It&rsquo;s late more tomorrow. Time 2.39am</p>
+    <h1>Django in Depth</h1>
+     <nav id="TableOfContents"></nav>  <p><em>Django 4 by Example</em> by Antonio Mele is a great book. I&rsquo;ve been working through
+the projects. They are clearly laid out, the instructions are step by step and
+clear and the tone is friendly without being cold or patronizing.</p>
+<p>So far I&rsquo;ve worked through the ninth chapter. The latest project is
+a fairly complete online shop. I won&rsquo;t go into the details here, but I&rsquo;ve
+worked with <code>custom model managers</code>, <code>QuerySets</code> and to top it off full
+<code>Stripe</code> integration, with <code>asynchronous</code> tasks handled by <code>Celery</code>, managed by
+<code>RabbitMQ</code> with a shout out to <code>Flower</code> to monitor the tasks. There&rsquo;s <code>PDF</code> and
+<code>CSV</code> generation tools in a custom admin panel for staff embers. Really
+complete, and so enjoyable to code up and get working on my local machine.</p>
+<p>I took a wander down the <code>Docker</code> road to see what it might take to get these
+solutions up and running on my current host <code>Render.com</code> and so far I haven&rsquo;t
+found the complete solution. I run a <code>PostgreSQL</code> instance on <code>Render</code> but am
+considering moving it to <code>AWS</code> or <code>Google Cloud</code> to get some experience with
+those.</p>
+<p>We&rsquo;ll see. As per my last post, I did get the poetry project up and running on
+<code>Render.com</code>. It was a mixture of settings, inexperience on my part and they
+had some problems with displaying error messages. At present there are two
+projects up there at
+<a href="https://blog-django-demo.onrender.com">https://blog-django-demo.onrender.com</a>
+and <a href="https://listings.onrender.com">https://listings.onrender.com</a>. The
+listings app was built in <code>Educative.io</code> learning path, before I discovered
+<em>Django 4 by Example</em>. It&rsquo;s basic.</p>
+<p>As for the blog demo, it&rsquo;s packed with features, I wrote skimpy blogs around
+each feature and used them to fill out some content for the <code>full text search</code>.</p>
+<p>I haven&rsquo;t gotten the next two projects from <em>Django4</em> live as they are too
+complicated for my current understanding of <code>Docker</code>. Once I get a handle on
+it, (I think the last chapter of the book will cover this in depth), I&rsquo;ll swing
+back and get them online.</p>
+<p>With all the projects built, I feel I&rsquo;ll have the tools at hand and the
+practice to start the new and improved <code>critique wheel</code>.</p>
 
   </article>
   <article class="md prev_next">
     <hr>
-    <div class="post_next">
-      Next: <a href=/code/django_in_depth/>Django in Depth</a>
     
     <div class="post_previous">
-      Previous: <a href=/code/django_users_registration/>Django Users, Login &amp; Registration</a>
+      Previous: <a href=/code/pipenv_to_poetry/>Pipenv to Poetry</a>
     
   </article>
 </main>
