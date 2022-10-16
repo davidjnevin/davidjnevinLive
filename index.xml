@@ -9,6 +9,15 @@
     <copyright>© 2022 David J. Nevin</copyright>
     <lastBuildDate>Thu, 05 Aug 2021 21:57:27 +0200</lastBuildDate><atom:link href="https://www.davidjnevin.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Pair Programming: First Steps</title>
+      <link>https://www.davidjnevin.com/code/pair_programming_first_steps/</link>
+      <pubDate>Sun, 16 Oct 2022 12:46:10 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/pair_programming_first_steps/</guid>
+      <description>One thing I have learned it that inote taking only works if you take good notes.</description>
+    </item>
+    
+    <item>
       <title>Django in Depth</title>
       <link>https://www.davidjnevin.com/code/django_in_depth/</link>
       <pubDate>Sun, 09 Oct 2022 21:59:18 +0200</pubDate>
