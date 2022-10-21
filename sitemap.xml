@@ -3,28 +3,40 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://www.davidjnevin.com/categories/</loc>
-    <lastmod>2022-10-16T13:06:08+02:00</lastmod>
+    <lastmod>2022-10-21T14:52:52+02:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/categories/developer-skills/</loc>
+    <lastmod>2022-10-21T14:52:52+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/tags/git/</loc>
-    <lastmod>2022-10-16T13:06:08+02:00</lastmod>
+    <lastmod>2022-10-21T14:52:52+02:00</lastmod>
   </url><url>
-    <loc>https://www.davidjnevin.com/categories/learning/</loc>
-    <lastmod>2022-10-16T13:06:08+02:00</lastmod>
+    <loc>https://www.davidjnevin.com/categories/git/</loc>
+    <lastmod>2022-10-21T14:52:52+02:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/code/git_exploration_one/</loc>
+    <lastmod>2022-10-21T14:52:52+02:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/tags/learning/</loc>
+    <lastmod>2022-10-21T14:52:52+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/tags/notes/</loc>
-    <lastmod>2022-10-16T13:06:08+02:00</lastmod>
-  </url><url>
-    <loc>https://www.davidjnevin.com/tags/pair/</loc>
-    <lastmod>2022-10-16T13:06:08+02:00</lastmod>
-  </url><url>
-    <loc>https://www.davidjnevin.com/categories/pair-programming/</loc>
-    <lastmod>2022-10-16T13:06:08+02:00</lastmod>
-  </url><url>
-    <loc>https://www.davidjnevin.com/code/pair_programming_first_steps/</loc>
-    <lastmod>2022-10-16T13:06:08+02:00</lastmod>
+    <lastmod>2022-10-21T14:52:52+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/tags/</loc>
-    <lastmod>2022-10-16T13:06:08+02:00</lastmod>
+    <lastmod>2022-10-21T14:52:52+02:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/categories/learning/</loc>
+    <lastmod>2022-10-16T13:23:06+02:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/tags/pair/</loc>
+    <lastmod>2022-10-16T13:23:06+02:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/categories/pair-programming/</loc>
+    <lastmod>2022-10-16T13:23:06+02:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/code/pair_programming_first_steps/</loc>
+    <lastmod>2022-10-16T13:23:06+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/tags/blog/</loc>
     <lastmod>2022-10-09T22:34:16+02:00</lastmod>
@@ -119,16 +131,10 @@
     <loc>https://www.davidjnevin.com/tags/pytest/</loc>
     <lastmod>2022-09-11T19:26:21+02:00</lastmod>
   </url><url>
-    <loc>https://www.davidjnevin.com/categories/git/</loc>
-    <lastmod>2022-08-27T00:02:31+02:00</lastmod>
-  </url><url>
     <loc>https://www.davidjnevin.com/tags/hugo/</loc>
     <lastmod>2022-09-11T20:42:28+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/categories/hugo/</loc>
-    <lastmod>2022-08-27T00:02:31+02:00</lastmod>
-  </url><url>
-    <loc>https://www.davidjnevin.com/tags/learning/</loc>
     <lastmod>2022-08-27T00:02:31+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/categories/pybites/</loc>
