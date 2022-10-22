@@ -2,28 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://www.davidjnevin.com/categories/</loc>
-    <lastmod>2022-10-21T14:52:52+02:00</lastmod>
+    <loc>https://www.davidjnevin.com/tags/branch/</loc>
+    <lastmod>2022-10-22T13:54:20+02:00</lastmod>
   </url><url>
-    <loc>https://www.davidjnevin.com/categories/developer-skills/</loc>
-    <lastmod>2022-10-21T14:52:52+02:00</lastmod>
+    <loc>https://www.davidjnevin.com/categories/</loc>
+    <lastmod>2022-10-22T13:54:20+02:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/categories/developer/</loc>
+    <lastmod>2022-10-22T13:54:20+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/tags/git/</loc>
-    <lastmod>2022-10-21T14:52:52+02:00</lastmod>
+    <lastmod>2022-10-22T13:54:20+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/categories/git/</loc>
+    <lastmod>2022-10-22T13:54:20+02:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/code/git_exploration_two/</loc>
+    <lastmod>2022-10-22T13:54:20+02:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/tags/learning/</loc>
+    <lastmod>2022-10-22T13:54:20+02:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/tags/</loc>
+    <lastmod>2022-10-22T13:54:20+02:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/categories/developer-skills/</loc>
     <lastmod>2022-10-21T14:52:52+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/code/git_exploration_one/</loc>
     <lastmod>2022-10-21T14:52:52+02:00</lastmod>
   </url><url>
-    <loc>https://www.davidjnevin.com/tags/learning/</loc>
-    <lastmod>2022-10-21T14:52:52+02:00</lastmod>
-  </url><url>
     <loc>https://www.davidjnevin.com/tags/notes/</loc>
-    <lastmod>2022-10-21T14:52:52+02:00</lastmod>
-  </url><url>
-    <loc>https://www.davidjnevin.com/tags/</loc>
     <lastmod>2022-10-21T14:52:52+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/categories/learning/</loc>
