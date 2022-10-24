@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://www.davidjnevin.com/categories/</loc>
-    <lastmod>2022-10-23T15:41:29+02:00</lastmod>
+    <lastmod>2022-10-24T21:21:29+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/tags/collaborating/</loc>
     <lastmod>2022-10-23T15:41:29+02:00</lastmod>
@@ -21,13 +21,13 @@
     <lastmod>2022-10-23T15:41:29+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/tags/learning/</loc>
-    <lastmod>2022-10-23T15:41:29+02:00</lastmod>
+    <lastmod>2022-10-24T21:21:29+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/categories/learning/</loc>
     <lastmod>2022-10-23T15:41:29+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/tags/</loc>
-    <lastmod>2022-10-23T15:41:29+02:00</lastmod>
+    <lastmod>2022-10-24T21:21:29+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/tags/branch/</loc>
     <lastmod>2022-10-22T14:00:55+02:00</lastmod>
@@ -204,7 +204,7 @@
     <lastmod>2022-07-31T03:13:51+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/categories/object-oriented-programming/</loc>
-    <lastmod>2022-07-31T03:13:51+02:00</lastmod>
+    <lastmod>2022-10-24T21:21:29+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/tags/refactoring/</loc>
     <lastmod>2022-07-31T03:13:51+02:00</lastmod>
@@ -219,10 +219,10 @@
     <lastmod>2022-07-31T03:13:51+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/code/back_at_it/</loc>
-    <lastmod>2022-07-28T20:08:35+02:00</lastmod>
+    <lastmod>2022-10-24T21:21:29+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/categories/motivation/</loc>
-    <lastmod>2022-07-28T20:08:35+02:00</lastmod>
+    <lastmod>2022-10-24T21:21:29+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/tags/coding/</loc>
     <lastmod>2022-07-09T14:48:55+02:00</lastmod>
@@ -640,6 +640,9 @@
   </url><url>
     <loc>https://www.davidjnevin.com/code/first_commit/</loc>
     <lastmod>2022-06-27T09:19:29+02:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/writing/</loc>
+    <lastmod>2022-10-24T21:21:29+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/notes/make-a-novel/</loc>
     <lastmod>2022-06-15T22:41:27+02:00</lastmod>
