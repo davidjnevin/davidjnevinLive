@@ -3,15 +3,33 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://www.davidjnevin.com/categories/</loc>
-    <lastmod>2022-10-24T21:21:29+02:00</lastmod>
+    <lastmod>2022-10-26T01:40:35+02:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/categories/classes-and-objects/</loc>
+    <lastmod>2022-10-26T01:40:35+02:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/tags/developer/</loc>
+    <lastmod>2022-10-26T01:40:35+02:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/tags/git/</loc>
+    <lastmod>2022-10-26T01:40:35+02:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/code/git_exploration_four/</loc>
+    <lastmod>2022-10-26T01:40:35+02:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/categories/object-oriented-programming/</loc>
+    <lastmod>2022-10-26T01:40:35+02:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/tags/skills/</loc>
+    <lastmod>2022-10-26T01:40:35+02:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/tags/</loc>
+    <lastmod>2022-10-26T01:40:35+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/tags/collaborating/</loc>
     <lastmod>2022-10-23T15:41:29+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/categories/developer/</loc>
-    <lastmod>2022-10-23T15:41:29+02:00</lastmod>
-  </url><url>
-    <loc>https://www.davidjnevin.com/tags/git/</loc>
     <lastmod>2022-10-23T15:41:29+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/categories/git/</loc>
@@ -25,9 +43,6 @@
   </url><url>
     <loc>https://www.davidjnevin.com/categories/learning/</loc>
     <lastmod>2022-10-23T15:41:29+02:00</lastmod>
-  </url><url>
-    <loc>https://www.davidjnevin.com/tags/</loc>
-    <lastmod>2022-10-24T21:21:29+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/tags/branch/</loc>
     <lastmod>2022-10-22T14:00:55+02:00</lastmod>
@@ -203,9 +218,6 @@
     <loc>https://www.davidjnevin.com/tags/first-steps/</loc>
     <lastmod>2022-07-31T03:13:51+02:00</lastmod>
   </url><url>
-    <loc>https://www.davidjnevin.com/categories/object-oriented-programming/</loc>
-    <lastmod>2022-10-24T21:21:29+02:00</lastmod>
-  </url><url>
     <loc>https://www.davidjnevin.com/tags/refactoring/</loc>
     <lastmod>2022-07-31T03:13:51+02:00</lastmod>
   </url><url>
@@ -234,9 +246,6 @@
     <lastmod>2022-07-09T14:48:55+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/tags/update/</loc>
-    <lastmod>2022-07-09T14:48:55+02:00</lastmod>
-  </url><url>
-    <loc>https://www.davidjnevin.com/categories/classes-and-objects/</loc>
     <lastmod>2022-07-09T14:48:55+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/tags/string/</loc>
