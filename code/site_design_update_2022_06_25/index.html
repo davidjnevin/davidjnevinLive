@@ -83,7 +83,7 @@ if (!doNotTrack) {
               </div>
         
   
-  
+
   
 
 
@@ -91,7 +91,16 @@ if (!doNotTrack) {
      
 
     <h1>Site Design Update</h1>
-     <nav id="TableOfContents">
+    
+
+
+
+
+
+
+
+
+    <nav id="TableOfContents">
   <ul>
     <li><a href="#adding-some-flair">Adding Some Flair</a></li>
     <li><a href="#cannibalizing-anubis">Cannibalizing Anubis</a></li>
@@ -101,7 +110,10 @@ if (!doNotTrack) {
     <li><a href="#could-i-use-python-to-generate-tags">Could I use Python to Generate Tags?</a></li>
     <li><a href="#impact-effort-matrix">Impact Effort Matrix</a></li>
   </ul>
-</nav>  <h2 id="adding-some-flair">Adding Some Flair</h2>
+</nav>
+
+
+      <h2 id="adding-some-flair">Adding Some Flair</h2>
 <p>I was unhappy with the functionality of the standard list page of the <a href="https://opensourcelibs.com/lib/hugo-theme-minima">minima theme</a>. Essentially, I needed something less minimal. So, looking for other themes on the <a href="https://themes.gohugo.io/">Hugo official site</a> I found the <a href="https://themes.gohugo.io/themes/hugo-theme-anubis/">Anubis theme</a> and it had what I wanted as regards a more complete list page for the posts.</p>
 <h2 id="cannibalizing-anubis">Cannibalizing Anubis</h2>
 <p>I installed it as a <code>git submodule</code> and then began to cannibalize the list <code>templates</code> therein. I&rsquo;m happy with the result and also learned to use some more advanced (for me) features of including <code>summary</code>, adjusting the <code>summaryLenght</code> in the <code>config.toml</code> file and also ensuring that the links generated to the posts themselves, the <code>tag</code> list pages and the <code>category</code> list pages were relative links (<code>relref</code>) and not absolute links to avoid <a href="/code/site_design_update_2022_06_25/#css-external-link-indicator">appending the external link icon</a> to these links.</p>
@@ -291,6 +303,9 @@ This <a href="/code/site_design_update_2022_06_25/">link</a> is internal, while 
     <div class="post_previous">
       Previous: <a href=/code/taking_stock_2022_06_24/>Taking Stock</a>
     
+  </article>
+  <article class="md prev_next">
+      
   </article>
 </main>
 

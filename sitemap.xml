@@ -3,61 +3,82 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://www.davidjnevin.com/categories/</loc>
-    <lastmod>2022-10-26T01:40:35+02:00</lastmod>
+    <lastmod>2022-10-27T13:11:55+02:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/tags/charts/</loc>
+    <lastmod>2022-10-27T13:11:55+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/categories/classes-and-objects/</loc>
-    <lastmod>2022-10-26T01:40:35+02:00</lastmod>
+    <lastmod>2022-10-27T13:11:55+02:00</lastmod>
   </url><url>
-    <loc>https://www.davidjnevin.com/tags/developer/</loc>
-    <lastmod>2022-10-26T01:40:35+02:00</lastmod>
+    <loc>https://www.davidjnevin.com/tags/documentation/</loc>
+    <lastmod>2022-10-27T13:11:55+02:00</lastmod>
   </url><url>
-    <loc>https://www.davidjnevin.com/tags/git/</loc>
-    <lastmod>2022-10-26T01:40:35+02:00</lastmod>
+    <loc>https://www.davidjnevin.com/tags/mkdocs/</loc>
+    <lastmod>2022-10-27T13:11:55+02:00</lastmod>
   </url><url>
-    <loc>https://www.davidjnevin.com/code/git_exploration_four/</loc>
-    <lastmod>2022-10-26T01:40:35+02:00</lastmod>
+    <loc>https://www.davidjnevin.com/code/mkdocs_first_look/</loc>
+    <lastmod>2022-10-27T13:11:55+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/categories/object-oriented-programming/</loc>
-    <lastmod>2022-10-26T01:40:35+02:00</lastmod>
+    <lastmod>2022-10-27T13:11:55+02:00</lastmod>
   </url><url>
-    <loc>https://www.davidjnevin.com/tags/skills/</loc>
-    <lastmod>2022-10-26T01:40:35+02:00</lastmod>
+    <loc>https://www.davidjnevin.com/tags/plantuml/</loc>
+    <lastmod>2022-10-27T13:11:55+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/tags/</loc>
-    <lastmod>2022-10-26T01:40:35+02:00</lastmod>
+    <lastmod>2022-10-27T13:11:55+02:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/tags/developer/</loc>
+    <lastmod>2022-10-26T12:47:47+02:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/series/getting-good-at-git/</loc>
+    <lastmod>2022-10-26T12:47:47+02:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/tags/git/</loc>
+    <lastmod>2022-10-26T12:47:47+02:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/code/git_exploration_four/</loc>
+    <lastmod>2022-10-26T12:47:47+02:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/series/</loc>
+    <lastmod>2022-10-27T13:11:55+02:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/tags/skills/</loc>
+    <lastmod>2022-10-26T12:47:47+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/tags/collaborating/</loc>
-    <lastmod>2022-10-23T15:41:29+02:00</lastmod>
+    <lastmod>2022-10-26T12:47:47+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/categories/developer/</loc>
-    <lastmod>2022-10-23T15:41:29+02:00</lastmod>
+    <lastmod>2022-10-26T12:47:47+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/categories/git/</loc>
-    <lastmod>2022-10-23T15:41:29+02:00</lastmod>
+    <lastmod>2022-10-26T12:47:47+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/code/git_exploration_three/</loc>
-    <lastmod>2022-10-23T15:41:29+02:00</lastmod>
+    <lastmod>2022-10-26T12:47:47+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/tags/learning/</loc>
-    <lastmod>2022-10-24T21:21:29+02:00</lastmod>
+    <lastmod>2022-10-26T12:47:47+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/categories/learning/</loc>
-    <lastmod>2022-10-23T15:41:29+02:00</lastmod>
+    <lastmod>2022-10-27T13:11:55+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/tags/branch/</loc>
-    <lastmod>2022-10-22T14:00:55+02:00</lastmod>
+    <lastmod>2022-10-26T12:47:47+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/code/git_exploration_two/</loc>
-    <lastmod>2022-10-22T14:00:55+02:00</lastmod>
+    <lastmod>2022-10-26T12:47:47+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/categories/developer-skills/</loc>
-    <lastmod>2022-10-22T14:00:55+02:00</lastmod>
+    <lastmod>2022-10-26T12:47:47+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/code/git_exploration_one/</loc>
-    <lastmod>2022-10-22T14:00:55+02:00</lastmod>
+    <lastmod>2022-10-26T12:47:47+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/tags/notes/</loc>
-    <lastmod>2022-10-22T14:00:55+02:00</lastmod>
+    <lastmod>2022-10-26T12:47:47+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/tags/pair/</loc>
     <lastmod>2022-10-16T13:23:06+02:00</lastmod>
@@ -69,25 +90,28 @@
     <lastmod>2022-10-16T13:23:06+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/tags/blog/</loc>
-    <lastmod>2022-10-09T22:34:16+02:00</lastmod>
+    <lastmod>2022-10-27T13:11:55+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/tags/celery/</loc>
-    <lastmod>2022-10-09T22:34:16+02:00</lastmod>
+    <lastmod>2022-10-27T13:11:55+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/categories/django/</loc>
-    <lastmod>2022-10-09T22:34:16+02:00</lastmod>
+    <lastmod>2022-10-27T13:11:55+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/tags/django/</loc>
-    <lastmod>2022-10-09T22:34:16+02:00</lastmod>
+    <lastmod>2022-10-27T13:11:55+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/code/django_in_depth/</loc>
-    <lastmod>2022-10-09T22:34:16+02:00</lastmod>
+    <lastmod>2022-10-27T13:11:55+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/tags/docker/</loc>
-    <lastmod>2022-10-09T22:34:16+02:00</lastmod>
+    <lastmod>2022-10-27T13:11:55+02:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/series/getting-started-with-django/</loc>
+    <lastmod>2022-10-27T13:11:55+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/tags/render/</loc>
-    <lastmod>2022-10-09T22:34:16+02:00</lastmod>
+    <lastmod>2022-10-27T13:11:55+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/categories/blog/</loc>
     <lastmod>2022-09-25T11:44:56+02:00</lastmod>
@@ -105,40 +129,40 @@
     <lastmod>2022-09-25T11:44:56+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/code/django_users_registration/</loc>
-    <lastmod>2022-09-19T20:22:03+02:00</lastmod>
+    <lastmod>2022-10-27T13:11:55+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/tags/educative/</loc>
-    <lastmod>2022-09-19T20:22:03+02:00</lastmod>
+    <lastmod>2022-10-27T13:11:55+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/categories/educative/</loc>
-    <lastmod>2022-09-19T20:22:03+02:00</lastmod>
+    <lastmod>2022-10-27T13:11:55+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/tags/postgres/</loc>
-    <lastmod>2022-09-19T20:22:03+02:00</lastmod>
+    <lastmod>2022-10-27T13:11:55+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/categories/postgresql/</loc>
-    <lastmod>2022-09-19T20:22:03+02:00</lastmod>
+    <lastmod>2022-10-27T13:11:55+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/tags/sql/</loc>
-    <lastmod>2022-09-19T20:22:03+02:00</lastmod>
+    <lastmod>2022-10-27T13:11:55+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/code/django_delete_items/</loc>
-    <lastmod>2022-09-15T23:44:26+02:00</lastmod>
+    <lastmod>2022-10-27T13:11:55+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/code/django_edit_delete_items/</loc>
-    <lastmod>2022-09-15T23:44:26+02:00</lastmod>
+    <lastmod>2022-10-27T13:11:55+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/code/django_individual_item_page/</loc>
-    <lastmod>2022-09-15T23:44:26+02:00</lastmod>
+    <lastmod>2022-10-27T13:11:55+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/code/django_dynamic_content/</loc>
-    <lastmod>2022-09-15T23:44:26+02:00</lastmod>
+    <lastmod>2022-10-27T13:11:55+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/code/django_next_steps/</loc>
-    <lastmod>2022-09-15T23:44:26+02:00</lastmod>
+    <lastmod>2022-10-27T13:11:55+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/code/django_games_first_steps/</loc>
-    <lastmod>2022-09-14T17:10:08+02:00</lastmod>
+    <lastmod>2022-10-27T13:11:55+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/tags/bites/</loc>
     <lastmod>2022-09-11T19:26:21+02:00</lastmod>
@@ -165,7 +189,7 @@
     <lastmod>2022-09-11T20:42:28+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/categories/hugo/</loc>
-    <lastmod>2022-08-27T00:02:31+02:00</lastmod>
+    <lastmod>2022-10-27T13:11:55+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/categories/pybites/</loc>
     <lastmod>2022-08-27T00:02:31+02:00</lastmod>
@@ -174,7 +198,7 @@
     <lastmod>2022-08-27T00:02:31+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/tags/search/</loc>
-    <lastmod>2022-08-27T00:02:31+02:00</lastmod>
+    <lastmod>2022-10-27T13:11:55+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/categories/search/</loc>
     <lastmod>2022-08-27T00:02:31+02:00</lastmod>
@@ -207,7 +231,7 @@
     <lastmod>2022-07-31T03:13:51+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/tags/vim/</loc>
-    <lastmod>2022-07-31T03:13:51+02:00</lastmod>
+    <lastmod>2022-10-27T13:11:55+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/categories/vim/</loc>
     <lastmod>2022-07-31T03:13:51+02:00</lastmod>
@@ -261,7 +285,7 @@
     <lastmod>2022-07-02T18:53:18+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/tags/upwork/</loc>
-    <lastmod>2022-07-02T18:53:18+02:00</lastmod>
+    <lastmod>2022-10-27T13:11:55+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/code/where_im_at_june_29/</loc>
     <lastmod>2022-07-02T18:53:18+02:00</lastmod>
@@ -441,31 +465,34 @@
     <lastmod>2022-06-26T02:43:24+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/tags/binary-search/</loc>
-    <lastmod>2022-06-27T09:19:29+02:00</lastmod>
+    <lastmod>2022-10-27T13:11:55+02:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/series/binary-search/</loc>
+    <lastmod>2022-10-27T13:11:55+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/categories/binary-search/</loc>
-    <lastmod>2022-06-27T09:19:29+02:00</lastmod>
+    <lastmod>2022-10-27T13:11:55+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/code/binary_search_extended/</loc>
-    <lastmod>2022-06-27T09:19:29+02:00</lastmod>
+    <lastmod>2022-10-27T13:11:55+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/tags/bitonic-point/</loc>
-    <lastmod>2022-06-27T09:19:29+02:00</lastmod>
+    <lastmod>2022-10-27T13:11:55+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/categories/data-structures-and-algorithms/</loc>
-    <lastmod>2022-06-27T09:19:29+02:00</lastmod>
+    <lastmod>2022-10-27T13:11:55+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/tags/duplicates/</loc>
-    <lastmod>2022-06-27T09:19:29+02:00</lastmod>
+    <lastmod>2022-10-27T13:11:55+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/tags/find-closest-number/</loc>
-    <lastmod>2022-06-27T09:19:29+02:00</lastmod>
+    <lastmod>2022-10-27T13:11:55+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/tags/fixed-point/</loc>
-    <lastmod>2022-06-27T09:19:29+02:00</lastmod>
+    <lastmod>2022-10-27T13:11:55+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/code/binary_search/</loc>
-    <lastmod>2022-06-27T09:19:29+02:00</lastmod>
+    <lastmod>2022-10-27T13:11:55+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/categories/data-structure/</loc>
     <lastmod>2022-06-27T09:19:29+02:00</lastmod>
@@ -504,28 +531,28 @@
     <lastmod>2022-06-27T09:19:29+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/tags/binary/</loc>
-    <lastmod>2022-06-27T09:19:29+02:00</lastmod>
+    <lastmod>2022-10-27T13:11:55+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/code/binary_search_tree/</loc>
-    <lastmod>2022-06-27T09:19:29+02:00</lastmod>
+    <lastmod>2022-10-27T13:11:55+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/categories/binary-tree/</loc>
-    <lastmod>2022-06-27T09:19:29+02:00</lastmod>
+    <lastmod>2022-10-27T13:11:55+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/categories/binary-tree-search/</loc>
-    <lastmod>2022-06-27T09:19:29+02:00</lastmod>
+    <lastmod>2022-10-27T13:11:55+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/categories/python/</loc>
-    <lastmod>2022-06-27T09:19:29+02:00</lastmod>
+    <lastmod>2022-10-27T13:11:55+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/tags/tree/</loc>
-    <lastmod>2022-06-27T09:19:29+02:00</lastmod>
+    <lastmod>2022-10-27T13:11:55+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/categories/algorithms/</loc>
-    <lastmod>2022-06-27T09:19:29+02:00</lastmod>
+    <lastmod>2022-10-27T13:11:55+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/tags/binary-tree/</loc>
-    <lastmod>2022-06-27T09:19:29+02:00</lastmod>
+    <lastmod>2022-10-27T13:11:55+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/tags/level-order/</loc>
     <lastmod>2022-06-27T09:19:29+02:00</lastmod>
@@ -537,40 +564,40 @@
     <lastmod>2022-06-27T09:19:29+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/code/binary_tree_traversals/</loc>
-    <lastmod>2022-06-27T09:19:29+02:00</lastmod>
+    <lastmod>2022-10-27T13:11:55+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/tags/inorder/</loc>
-    <lastmod>2022-06-27T09:19:29+02:00</lastmod>
+    <lastmod>2022-10-27T13:11:55+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/tags/postorder/</loc>
-    <lastmod>2022-06-27T09:19:29+02:00</lastmod>
+    <lastmod>2022-10-27T13:11:55+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/tags/preorder/</loc>
-    <lastmod>2022-06-27T09:19:29+02:00</lastmod>
+    <lastmod>2022-10-27T13:11:55+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/categories/traversal/</loc>
-    <lastmod>2022-06-27T09:19:29+02:00</lastmod>
+    <lastmod>2022-10-27T13:11:55+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/code/binary_tree_terms/</loc>
-    <lastmod>2022-06-27T09:19:29+02:00</lastmod>
+    <lastmod>2022-10-27T13:11:55+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/tags/data-structure/</loc>
-    <lastmod>2022-06-27T09:19:29+02:00</lastmod>
+    <lastmod>2022-10-27T13:11:55+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/tags/depth/</loc>
-    <lastmod>2022-06-27T09:19:29+02:00</lastmod>
+    <lastmod>2022-10-27T13:11:55+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/tags/height/</loc>
-    <lastmod>2022-06-27T09:19:29+02:00</lastmod>
+    <lastmod>2022-10-27T13:11:55+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/tags/node/</loc>
-    <lastmod>2022-06-27T09:19:29+02:00</lastmod>
+    <lastmod>2022-10-27T13:11:55+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/tags/size/</loc>
-    <lastmod>2022-06-27T09:19:29+02:00</lastmod>
+    <lastmod>2022-10-27T13:11:55+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/categories/terms/</loc>
-    <lastmod>2022-06-27T09:19:29+02:00</lastmod>
+    <lastmod>2022-10-27T13:11:55+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/code/site_projects_17_06_2022/</loc>
     <lastmod>2022-06-27T09:19:29+02:00</lastmod>
@@ -581,32 +608,32 @@
     <loc>https://www.davidjnevin.com/code/arrays_educative/</loc>
     <lastmod>2022-06-27T09:19:29+02:00</lastmod>
   </url><url>
+    <loc>https://www.davidjnevin.com/series/charts-and-diagrams/</loc>
+    <lastmod>2022-10-27T13:11:55+02:00</lastmod>
+  </url><url>
     <loc>https://www.davidjnevin.com/tags/design/</loc>
-    <lastmod>2022-06-27T09:19:29+02:00</lastmod>
+    <lastmod>2022-10-27T13:11:55+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/series/displaying-linked-lists/</loc>
-    <lastmod>2022-06-27T09:19:29+02:00</lastmod>
+    <lastmod>2022-10-27T13:11:55+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/tags/markdown/</loc>
-    <lastmod>2022-06-27T09:19:29+02:00</lastmod>
+    <lastmod>2022-10-27T13:11:55+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/categories/plant-uml/</loc>
-    <lastmod>2022-06-27T09:19:29+02:00</lastmod>
+    <lastmod>2022-10-27T13:11:55+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/code/plantuml_first_attempts/</loc>
-    <lastmod>2022-06-27T09:19:29+02:00</lastmod>
-  </url><url>
-    <loc>https://www.davidjnevin.com/series/</loc>
-    <lastmod>2022-06-27T09:19:29+02:00</lastmod>
+    <lastmod>2022-10-27T13:11:55+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/categories/markup/</loc>
-    <lastmod>2022-06-27T09:19:29+02:00</lastmod>
+    <lastmod>2022-10-27T13:11:55+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/categories/mermaid/</loc>
-    <lastmod>2022-06-27T09:19:29+02:00</lastmod>
+    <lastmod>2022-10-27T13:11:55+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/code/mermaid_first_attempts/</loc>
-    <lastmod>2022-06-27T09:19:29+02:00</lastmod>
+    <lastmod>2022-10-27T13:11:55+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/code/hugo_section_theme_003/</loc>
     <lastmod>2022-06-27T09:19:29+02:00</lastmod>

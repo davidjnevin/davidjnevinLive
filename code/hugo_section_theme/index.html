@@ -84,7 +84,7 @@ if (!doNotTrack) {
               </div>
         
   
-  
+
   
 
 
@@ -92,14 +92,63 @@ if (!doNotTrack) {
      
 
     <h1>Hugo Section Theme (didn&#39;t work)</h1>
-     <nav id="TableOfContents">
+    
+
+
+
+
+
+  
+    
+    
+        
+        
+        
+        
+        
+        
+          
+            
+            
+            
+            
+            <p>This is part 1 of 3 in the <a href="/series/hugo-styling">Hugo Styling</a> series.</p>
+            
+          
+            
+          
+            
+          
+        <nav role="series-pagination">
+        <ul class="series-pagination pagination">
+        <li class="page-item"><a class="page-link" href="/code/hugo_section_theme/">First</a>
+        </li>
+        <li class="page-item">Prev
+        </li>
+        
+        </li>
+        <li class="page-item"><a class="page-link" href="/code/hugo_section_theme_002/">Next</a>
+        </li>
+        <li class="page-item"><a class="page-link" href="/code/hugo_section_theme_003/">Last</a>
+        </li>
+        </ul>
+        </nav>
+        
+        
+
+
+
+    <nav id="TableOfContents">
   <ul>
     <li><a href="#hugo-section-a-different-look-and-feel">Hugo Section: A different look and feel.</a></li>
     <li><a href="#rabbit-hole-warning">Rabbit Hole Warning</a></li>
     <li><a href="#images-insertion-in-hugo">Images insertion in Hugo</a></li>
     <li><a href="#user-and-writer-friendly-theme">User and Writer Friendly Theme</a></li>
   </ul>
-</nav>  <h2 id="hugo-section-a-different-look-and-feel">Hugo Section: A different look and feel.</h2>
+</nav>
+
+
+      <h2 id="hugo-section-a-different-look-and-feel">Hugo Section: A different look and feel.</h2>
 <p>I though that in order to set a different look and feel for a Hugo section, I&rsquo;d create a folder in the current theme <code>layout</code> folder with the same name as the section. In my case that&rsquo;s <code>code</code>.</p>
 <p>The theme I&rsquo;m interested in using and adapting is <a href="https://themes.gohugo.io/themes/hugo-book/">Book</a> or <a href="https://themes.gohugo.io/themes/hugo-geekdoc/">Geekdoc</a> but both require the extened <code>Hugo</code> version. I don&rsquo;t know what that will do to my main site and SASS setup with gulp, so I&rsquo;m steering clear of that for now.</p>
 <p>Instead, I&rsquo;m going to try out <a href="https://themes.gohugo.io/themes/cupper-hugo-theme/">Cupper</a> using the git command from the root directory of my site. Once it&rsquo;s in place I&rsquo;ll try move it over to my section folder and see what happens.</p>
@@ -156,6 +205,29 @@ if (!doNotTrack) {
     <div class="post_previous">
       Previous: <a href=/code/critique_wheel_csharp/>Critique Wheel C#</a>
     
+  </article>
+  <article class="md prev_next">
+      
+          
+          <hr/>
+            <p><a href="" id="series"></a>This is a post from the
+            <b>Hugo Styling</b> series.<br/>
+             Other posts in this series:</p>
+            
+            
+            <ul class="series">
+               
+               <li>Jun 15, 2022 -
+               <a href="https://www.davidjnevin.com/code/hugo_section_theme_003/">Hugo Section Theme 3</a></li>
+               
+               <li>Jun 15, 2022 -
+               <a href="https://www.davidjnevin.com/code/hugo_section_theme_002/">Hugo Section Theme 2 (didn&#39;t work)</a></li>
+               
+               <li>Jun 15, 2022 -
+               <a href="https://www.davidjnevin.com/code/hugo_section_theme/">Hugo Section Theme (didn&#39;t work)</a></li>
+               
+            </ul>
+     
   </article>
 </main>
 
