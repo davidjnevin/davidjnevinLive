@@ -3,17 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta property="og:title" content="Mkdocs: First Look" />
-<meta property="og:description" content="MkDocs Getting Started MKDocs is a documentation oriented static website builder using a single ." />
+  <meta property="og:title" content="Docker First Look" />
+<meta property="og:description" content="What is Docker? &ldquo;Docker is an open platform for developing, shipping, and running applications." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.davidjnevin.com/code/mkdocs_first_look/" /><meta property="article:section" content="code" />
-<meta property="article:published_time" content="2022-10-27T11:48:27&#43;02:00" />
-<meta property="article:modified_time" content="2022-10-27T13:11:55&#43;02:00" />
+<meta property="og:url" content="https://www.davidjnevin.com/code/docker_first_look/" /><meta property="article:section" content="code" />
+<meta property="article:published_time" content="2022-10-30T00:00:05&#43;02:00" />
+<meta property="article:modified_time" content="2022-10-30T00:07:56&#43;02:00" />
 
 
   <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Mkdocs: First Look"/>
-<meta name="twitter:description" content="MkDocs Getting Started MKDocs is a documentation oriented static website builder using a single ."/>
+<meta name="twitter:title" content="Docker First Look"/>
+<meta name="twitter:description" content="What is Docker? &ldquo;Docker is an open platform for developing, shipping, and running applications."/>
 
   
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-VGVQ6SM9N7"></script>
@@ -30,7 +30,7 @@ if (!doNotTrack) {
   
   <title>
     
-    David J Nevin - Mkdocs: First Look
+    David J Nevin - Docker First Look
     
   </title>
   
@@ -77,7 +77,7 @@ if (!doNotTrack) {
   
         
               
-                <div class="sm-1 mtb-1">Published: Oct 27, 2022</div>
+                <div class="sm-1 mtb-1">Published: Oct 30, 2022</div>
               
               </div>
         
@@ -89,7 +89,7 @@ if (!doNotTrack) {
     <article class="md">
      
 
-    <h1>Mkdocs: First Look</h1>
+    <h1>Docker First Look</h1>
     
 
 
@@ -101,69 +101,110 @@ if (!doNotTrack) {
 
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#installation">Installation</a></li>
-    <li><a href="#create-a-project">Create a Project</a></li>
-    <li><a href="#run-the-server">Run the Server</a></li>
-    <li><a href="#create-menu-items">Create Menu Items</a></li>
-    <li><a href="#add-a-theme">Add a Theme</a></li>
-    <li><a href="#add-favicon">Add Favicon</a></li>
-    <li><a href="#build-the-site">Build the Site</a></li>
-    <li><a href="#plantuml">PlantUML</a></li>
+    <li><a href="#what-is-docker">What is Docker?</a></li>
+    <li><a href="#what-is-an-image">What is an image?</a></li>
+    <li><a href="#what-is-a-container">What is a Container?</a></li>
+    <li><a href="#start--stop--restart">Start / Stop / Restart</a></li>
+    <li><a href="#remove-all-images">Remove all images</a></li>
+    <li><a href="#remove-all-containers">Remove all containers</a></li>
+    <li><a href="#dockerfile-options">Dockerfile Options</a></li>
+    <li><a href="#from">FROM</a></li>
+    <li><a href="#copy">COPY</a></li>
+    <li><a href="#workdir">WORKDIR</a></li>
+    <li><a href="#env">ENV</a></li>
+    <li><a href="#expose">EXPOSE</a></li>
+    <li><a href="#run">RUN</a></li>
+    <li><a href="#volume">VOLUME</a></li>
+    <li><a href="#entrypoint">ENTRYPOINT</a></li>
   </ul>
 </nav>
 
 
-      <!-- raw HTML omitted -->
-<h1 id="mkdocs-getting-started">MkDocs Getting Started</h1>
-<p>MKDocs is a documentation oriented static website builder using a single <code>.yml</code> config file. Documents are written in <code>Markdown</code>. Sounds great.</p>
-<h2 id="installation">Installation</h2>
-<p>For full instructions see <a href="https://www.mkdocs.org/getting-started/">https://www.mkdocs.org/getting-started/</a></p>
-<p>For my MacOS:</p>
-<ol>
-<li>Virtual environment:</li>
-<li>Git initialised with a remote repo.</li>
-<li>With Basic .gitignore</li>
-</ol>
+      <h2 id="what-is-docker">What is Docker?</h2>
+<p>&ldquo;Docker is an open platform for developing, shipping, and running applications. Docker enables you to separate your applications from your infrastructure so you can deliver software quickly. With Docker, you can manage your infrastructure in the same ways you manage your applications.&rdquo;
+~ <a href="https://docs.docker.com/get-started/overview/">Docker Docs</a></p>
+<h2 id="what-is-an-image">What is an image?</h2>
+<p>An image is a read-only template of instructions for creating a Docker container. Images usually contain other images with customisation. Images can be customised and configured using a <code>dockerfile</code>.</p>
+<h2 id="what-is-a-container">What is a Container?</h2>
+<p>A container is a runnable instance of an image. It can be started, stopped, restarted, moved, or deleted.</p>
+<h2 id="start--stop--restart">Start / Stop / Restart</h2>
+<p>Note: Usually the first 3/4 characters of the ID is enough to identify the image.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt" id="100"><a style="outline: none; text-decoration:none; color:inherit" href="#100">100</a>
+</span><span class="lnt" id="101"><a style="outline: none; text-decoration:none; color:inherit" href="#101">101</a>
+</span><span class="lnt" id="102"><a style="outline: none; text-decoration:none; color:inherit" href="#102">102</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">docker start &lt;ID&gt;
+docker stop &lt;ID&gt;
+docker restart &lt;ID&gt;
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="remove-all-images">Remove all images</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt" id="100"><a style="outline: none; text-decoration:none; color:inherit" href="#100">100</a>
+</span><span class="lnt" id="101"><a style="outline: none; text-decoration:none; color:inherit" href="#101">101</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">docker images -q
+docker rmi <span class="k">$(</span>docker images -q<span class="k">)</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="remove-all-containers">Remove all containers</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt" id="100"><a style="outline: none; text-decoration:none; color:inherit" href="#100">100</a>
+</span><span class="lnt" id="101"><a style="outline: none; text-decoration:none; color:inherit" href="#101">101</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">docker ps -q                   <span class="c1"># list all the container IDs</span>
+docker rmi <span class="k">$(</span>docker ps -a -q<span class="k">)</span>  <span class="c1"># remove all containers</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="dockerfile-options">Dockerfile Options</h2>
+<h2 id="from">FROM</h2>
+<p>Determines the image source which the resulting image will be created FROM.</p>
+<p>For example to create a linux machine image:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt" id="100"><a style="outline: none; text-decoration:none; color:inherit" href="#100">100</a>
+</span><span class="lnt" id="101"><a style="outline: none; text-decoration:none; color:inherit" href="#101">101</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">FROM httpd:alpine AS base   <span class="c1"># `AS` is used to give a name for</span>
+                            <span class="c1"># later use if required.</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="copy">COPY</h2>
+<p>Copies the contents into the image. Wildcards and location specifications can be used. COPY creates a new layer.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt" id="100"><a style="outline: none; text-decoration:none; color:inherit" href="#100">100</a>
 </span><span class="lnt" id="101"><a style="outline: none; text-decoration:none; color:inherit" href="#101">101</a>
 </span><span class="lnt" id="102"><a style="outline: none; text-decoration:none; color:inherit" href="#102">102</a>
 </span><span class="lnt" id="103"><a style="outline: none; text-decoration:none; color:inherit" href="#103">103</a>
-</span><span class="lnt" id="104"><a style="outline: none; text-decoration:none; color:inherit" href="#104">104</a>
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">pip install mkdocs
-pip install mkdocs-build-plantuml-plugin
-pip freeze &gt; requirements.txt
-...
-git push
+<pre class="chroma"><code class="language-bash" data-lang="bash">COPY /&lt;source_directory/ /destination_directory/
+COPY *.png /images/
+COPY --from<span class="o">=</span>&lt;imageAlias&gt;  /usr/local/apache2/htdocs/ /app/
+<span class="c1"># The --from flag allows us to copy from one image to another</span>
 </code></pre></td></tr></table>
 </div>
-</div><p>MkDocs is installed here with the plantUML plugin.</p>
-<h2 id="create-a-project">Create a Project</h2>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt" id="100"><a style="outline: none; text-decoration:none; color:inherit" href="#100">100</a>
-</span><span class="lnt" id="101"><a style="outline: none; text-decoration:none; color:inherit" href="#101">101</a>
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">mkdocs new &lt;project-name&gt;
-<span class="nb">cd</span> &lt;project-name&gt;
-</code></pre></td></tr></table>
-</div>
-</div><h2 id="run-the-server">Run the Server</h2>
-<p>To run the built-in mkDocs server at <code>127.0.0.1:8000</code></p>
+</div><h2 id="workdir">WORKDIR</h2>
+<p>This sets the working directory inside the container. It sets a path to be used as a starting point. If the path doesn&rsquo;t exist, <code>WORKDIR</code> will create the path. All relative paths from this point will be inside the <code>WORKDIR</code></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt" id="100"><a style="outline: none; text-decoration:none; color:inherit" href="#100">100</a>
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">mkdocs serve
+<pre class="chroma"><code class="language-bash" data-lang="bash">WORKDIR /usr/local/apache2/htdocs/
 </code></pre></td></tr></table>
 </div>
-</div><h2 id="create-menu-items">Create Menu Items</h2>
-<p>All configuration is carried out in <code>mkdocs.yml</code> unless otherwise stated.</p>
+</div><h2 id="env">ENV</h2>
+<p><code>ENV</code> allows for setting environment variables in the dockerfile using a key value.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt" id="100"><a style="outline: none; text-decoration:none; color:inherit" href="#100">100</a>
@@ -171,66 +212,71 @@ git push
 </span><span class="lnt" id="102"><a style="outline: none; text-decoration:none; color:inherit" href="#102">102</a>
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">nav:
-	- Home: index.md
-	- About: about.md
+<pre class="chroma"><code class="language-bash" data-lang="bash">ENV DIRPATH /usr/local/apache2
+...
+WORKDIR <span class="nv">$DIRPATH</span>/htdocs/
 </code></pre></td></tr></table>
 </div>
-</div><h2 id="add-a-theme">Add a Theme</h2>
-<p>There are many to choose from. I choose <code>material</code>.
-Full instructions can be found here.</p>
+</div><h2 id="expose">EXPOSE</h2>
+<p>This is just documentation. It doesn&rsquo;t <em>do</em> anything. It doesn&rsquo;t publish, it informs the container user of the ports that the image intends to use. It can be overridden by the <code>docker run -p</code> flag.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt" id="100"><a style="outline: none; text-decoration:none; color:inherit" href="#100">100</a>
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">pip install mkdocs-material
+<pre class="chroma"><code class="language-bash" data-lang="bash">EXPOSE <span class="m">80</span>
 </code></pre></td></tr></table>
 </div>
-</div><p>And in the config file:</p>
+</div><h2 id="run">RUN</h2>
+<p>RUN, runs a one-off command on the image. It creates a new layer in the image.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt" id="100"><a style="outline: none; text-decoration:none; color:inherit" href="#100">100</a>
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">theme: material
+<pre class="chroma"><code class="language-bash" data-lang="bash">RUN &lt;somecommand&gt;
 </code></pre></td></tr></table>
 </div>
-</div><p>This appears to be a very complete theme with settings galore.</p>
-<h2 id="add-favicon">Add Favicon</h2>
-<p>Create an <code>assets/images/</code> folder inside your project folder. Include a <code>favicon.ico</code> file.</p>
+</div><h2 id="volume">VOLUME</h2>
+<p>Creates a file location in the container that lives outside the container on your machine. This provides a persistent storage independent of the image.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt" id="100"><a style="outline: none; text-decoration:none; color:inherit" href="#100">100</a>
 </span><span class="lnt" id="101"><a style="outline: none; text-decoration:none; color:inherit" href="#101">101</a>
+</span><span class="lnt" id="102"><a style="outline: none; text-decoration:none; color:inherit" href="#102">102</a>
+</span><span class="lnt" id="103"><a style="outline: none; text-decoration:none; color:inherit" href="#103">103</a>
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">theme:
-	favicion: /assets/images/favicon.ico
+<pre class="chroma"><code class="language-bash" data-lang="bash">FROM ubuntu
+RUN mkdir /myvol
+RUN <span class="nb">echo</span> <span class="s2">&#34;hello world&#34;</span> &gt; /mvol/greeting
+VOLUME /myvol
 </code></pre></td></tr></table>
 </div>
-</div><h2 id="build-the-site">Build the Site</h2>
-<p>To generate the static html site, run:</p>
+</div><p>The location of the column on the local machine can be configured under the docker run cli command.</p>
+<h2 id="entrypoint">ENTRYPOINT</h2>
+<p>The entry point specifies that we are going to run something when the container starts.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt" id="100"><a style="outline: none; text-decoration:none; color:inherit" href="#100">100</a>
+</span><span class="lnt" id="101"><a style="outline: none; text-decoration:none; color:inherit" href="#101">101</a>
+</span><span class="lnt" id="102"><a style="outline: none; text-decoration:none; color:inherit" href="#102">102</a>
+</span><span class="lnt" id="103"><a style="outline: none; text-decoration:none; color:inherit" href="#103">103</a>
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">makedocs build
+<pre class="chroma"><code class="language-bash" data-lang="bash">ENTRYPOINT <span class="o">[</span> <span class="s2">&#34;/app/entrypoint.sh&#34;</span><span class="o">]</span> <span class="c1"># start this shell file</span>
+CMD <span class="o">[</span> <span class="s2">&#34;server&#34;</span> <span class="o">]</span>  <span class="c1"># The argument to be passed to the</span>
+                  <span class="c1"># entrypoint, can be overridden from the</span>
+                  <span class="c1"># docker run command.</span>
 </code></pre></td></tr></table>
 </div>
-</div><h2 id="plantuml">PlantUML</h2>
-<p>See <a href="https://github.com/quantorconsulting/mkdocs_build_plantuml">MkDocs-Build-Plantuml-Plugin</a> for full details.</p>
-<p>The documentation is really clear, although I may return to record here my experiences in the future as the possibilities of fine-tuning a solution are complex.</p>
-
+</div>
   </article>
   <article class="md prev_next">
     <hr>
-    <div class="post_next">
-      Next: <a href=/code/docker_first_look/>Docker First Look</a>
     
     <div class="post_previous">
-      Previous: <a href=/code/git_exploration_four/>Git Exploration: Part Four</a>
+      Previous: <a href=/code/mkdocs_first_look/>Mkdocs: First Look</a>
     
   </article>
   <article class="md prev_next">

@@ -3,7 +3,25 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://www.davidjnevin.com/categories/</loc>
-    <lastmod>2022-10-27T13:11:55+02:00</lastmod>
+    <lastmod>2022-10-30T00:07:56+02:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/categories/developer/</loc>
+    <lastmod>2022-10-30T00:07:56+02:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/categories/docker/</loc>
+    <lastmod>2022-10-30T00:07:56+02:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/tags/docker/</loc>
+    <lastmod>2022-10-30T00:07:56+02:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/code/docker_first_look/</loc>
+    <lastmod>2022-10-30T00:07:56+02:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/categories/learning/</loc>
+    <lastmod>2022-10-30T00:07:56+02:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/tags/</loc>
+    <lastmod>2022-10-30T00:07:56+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/tags/charts/</loc>
     <lastmod>2022-10-27T13:11:55+02:00</lastmod>
@@ -24,9 +42,6 @@
     <lastmod>2022-10-27T13:11:55+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/tags/plantuml/</loc>
-    <lastmod>2022-10-27T13:11:55+02:00</lastmod>
-  </url><url>
-    <loc>https://www.davidjnevin.com/tags/</loc>
     <lastmod>2022-10-27T13:11:55+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/tags/developer/</loc>
@@ -50,9 +65,6 @@
     <loc>https://www.davidjnevin.com/tags/collaborating/</loc>
     <lastmod>2022-10-26T12:47:47+02:00</lastmod>
   </url><url>
-    <loc>https://www.davidjnevin.com/categories/developer/</loc>
-    <lastmod>2022-10-26T12:47:47+02:00</lastmod>
-  </url><url>
     <loc>https://www.davidjnevin.com/categories/git/</loc>
     <lastmod>2022-10-26T12:47:47+02:00</lastmod>
   </url><url>
@@ -61,9 +73,6 @@
   </url><url>
     <loc>https://www.davidjnevin.com/tags/learning/</loc>
     <lastmod>2022-10-26T12:47:47+02:00</lastmod>
-  </url><url>
-    <loc>https://www.davidjnevin.com/categories/learning/</loc>
-    <lastmod>2022-10-27T13:11:55+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/tags/branch/</loc>
     <lastmod>2022-10-26T12:47:47+02:00</lastmod>
@@ -102,9 +111,6 @@
     <lastmod>2022-10-27T13:11:55+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/code/django_in_depth/</loc>
-    <lastmod>2022-10-27T13:11:55+02:00</lastmod>
-  </url><url>
-    <loc>https://www.davidjnevin.com/tags/docker/</loc>
     <lastmod>2022-10-27T13:11:55+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/series/getting-started-with-django/</loc>
