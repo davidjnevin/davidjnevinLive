@@ -8,7 +8,7 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.davidjnevin.com/code/sphinx_setup/" /><meta property="article:section" content="code" />
 <meta property="article:published_time" content="2022-11-03T02:13:58&#43;01:00" />
-<meta property="article:modified_time" content="2022-11-03T02:41:59&#43;01:00" />
+<meta property="article:modified_time" content="2022-11-03T19:32:22&#43;01:00" />
 
 
   <meta name="twitter:card" content="summary"/>
@@ -131,11 +131,19 @@ if (!doNotTrack) {
 <pre class="chroma"><code><span class="lnt" id="100"><a style="outline: none; text-decoration:none; color:inherit" href="#100">100</a>
 </span><span class="lnt" id="101"><a style="outline: none; text-decoration:none; color:inherit" href="#101">101</a>
 </span><span class="lnt" id="102"><a style="outline: none; text-decoration:none; color:inherit" href="#102">102</a>
+</span><span class="lnt" id="103"><a style="outline: none; text-decoration:none; color:inherit" href="#103">103</a>
+</span><span class="lnt" id="104"><a style="outline: none; text-decoration:none; color:inherit" href="#104">104</a>
+</span><span class="lnt" id="105"><a style="outline: none; text-decoration:none; color:inherit" href="#105">105</a>
+</span><span class="lnt" id="106"><a style="outline: none; text-decoration:none; color:inherit" href="#106">106</a>
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-bash" data-lang="bash">mkdir docs
 <span class="nb">cd</span>  docs
 sphinx-quickstart .   <span class="c1"># note the `period`</span>
+
+<span class="c1"># to skip mkdir and cd we can</span>
+sphinx-quickstart docs <span class="c1"># Caution: This option gave me</span>
+                       <span class="c1"># permission errors on some attempts</span>
 </code></pre></td></tr></table>
 </div>
 </div><p>Choose your name and your projects name. For the rest it&rsquo;s easier to accept the defaults. All settings can be configured later if required.</p>
