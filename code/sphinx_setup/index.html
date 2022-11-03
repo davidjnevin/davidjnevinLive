@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:title" content="Sphinx Setup" />
+<meta property="og:description" content="Sphinx: Setup I&rsquo;m interested in building a useful documentation pipeline and will use it initially on these blog posts." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.davidjnevin.com/code/sphinx_setup/" /><meta property="article:section" content="code" />
+<meta property="article:published_time" content="2022-11-03T02:13:58&#43;01:00" />
+<meta property="article:modified_time" content="2022-11-03T02:41:59&#43;01:00" />
+
+
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Sphinx Setup"/>
+<meta name="twitter:description" content="Sphinx: Setup I&rsquo;m interested in building a useful documentation pipeline and will use it initially on these blog posts."/>
+
+  
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VGVQ6SM9N7"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-VGVQ6SM9N7', { 'anonymize_ip': false });
+}
+</script>
+
+  
+  <title>
+    
+    David J Nevin - Sphinx Setup
+    
+  </title>
+  
+  <link rel="icon" href="https://davidjnevin.com/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://davidjnevin.com/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://davidjnevin.com/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://davidjnevin.com/apple-touch-icon.png">
+<link rel="mask-icon" href="https://davidjnevin.com/%3Clink%20/%20abs%20url%3E">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<meta name="generator" content="Hugo 0.81.0" />
+<link rel="alternate" type="application/rss&#43;xml" href="https://davidjnevin.com/index.xml" title="David J Nevin">
+<link rel="alternate" type="application/json" href="https://davidjnevin.com/index.json">
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@700&amp;family=EB+Garamond:ital,wght@0,400;0,700;1,500&amp;family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&amp;family=Merriweather:wght@900&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/normalize.css">
+  <link rel="stylesheet" href="/css/style.css">
+
+  <script defer src="/js/main.js"></script>
+</head>
+
+
+<body>
+  <header>
+  <h1 class="row gap-1 nowrap">
+    
+    <a href="/">David J Nevin</a><a href="/code">+= Code</a>
+  </h1>
+  <nav class="row gap-1">
+  
+  </nav>
+  
+</header>
+  
+   
+<main>
+  
+
+  
+  
+  
+        
+              
+                <div class="sm-1 mtb-1">Published: Nov 3, 2022</div>
+              
+              </div>
+        
+  
+
+  
+
+
+    <article class="md">
+     
+
+    <h1>Sphinx Setup</h1>
+    
+
+
+
+
+
+
+
+
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#sphinx-setup">Sphinx: Setup</a></li>
+    <li><a href="#building-docs">Building Docs</a></li>
+    <li><a href="#serve-the-docs-locally">Serve the Docs Locally</a></li>
+    <li><a href="#using-multiple-input-formats">Using Multiple Input Formats</a></li>
+    <li><a href="#spell-check">Spell Check</a></li>
+    <li><a href="#link-checking">Link Checking</a></li>
+  </ul>
+</nav>
+
+
+      <h2 id="sphinx-setup">Sphinx: Setup</h2>
+<p>I&rsquo;m interested in building a useful documentation pipeline and will use it initially on these blog posts. I&rsquo;m keen to have a complete working and tunable setup by the end of the week.</p>
+<p>As always I&rsquo;m working in a virtual environment.</p>
+<p>First off, install <code>sphinx</code></p>
+<pre><code class="language-bask" data-lang="bask">pip install -U sphinix
+</code></pre><p>I then update my <code>requirements.txt</code> file using:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt" id="100"><a style="outline: none; text-decoration:none; color:inherit" href="#100">100</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">pip freeze &gt; requirements.txt
+</code></pre></td></tr></table>
+</div>
+</div><p>As sphinx creates a lot of resource files, I create somewhere to put it all. I then run the quick-start.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt" id="100"><a style="outline: none; text-decoration:none; color:inherit" href="#100">100</a>
+</span><span class="lnt" id="101"><a style="outline: none; text-decoration:none; color:inherit" href="#101">101</a>
+</span><span class="lnt" id="102"><a style="outline: none; text-decoration:none; color:inherit" href="#102">102</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">mkdir docs
+<span class="nb">cd</span>  docs
+sphinx-quickstart .   <span class="c1"># note the `period`</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>Choose your name and your projects name. For the rest it&rsquo;s easier to accept the defaults. All settings can be configured later if required.</p>
+<p>The quick-start builds out the scaffolding structure for <code>sphnix</code>. There are three basic files to concern ourselves with.</p>
+<ul>
+<li>conf.py
+<ul>
+<li>contains all the configuration and settings information, and also <strong>allows for code executions</strong>.</li>
+</ul>
+</li>
+<li>index.rst
+<ul>
+<li>table of contents and typically a project description</li>
+</ul>
+</li>
+<li>Makefile
+<ul>
+<li>use to build, to spellcheck, to check links &hellip;</li>
+</ul>
+</li>
+</ul>
+<p>The Makefile is somewhat easier to use than the <code>sphinx</code> build.</p>
+<h2 id="building-docs">Building Docs</h2>
+<p>To build the docs typically we use:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt" id="100"><a style="outline: none; text-decoration:none; color:inherit" href="#100">100</a>
+</span><span class="lnt" id="101"><a style="outline: none; text-decoration:none; color:inherit" href="#101">101</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">make clean  <span class="c1"># gets rid of anything from before, a clean slate</span>
+make html   <span class="c1"># builds all docs as html (other options exist)</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="serve-the-docs-locally">Serve the Docs Locally</h2>
+<p>To serve the docs locally use:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt" id="100"><a style="outline: none; text-decoration:none; color:inherit" href="#100">100</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">python3 -m http.server
+</code></pre></td></tr></table>
+</div>
+</div><p>The documentation is now accessible at <code>http://localhost:8000/_build/html/index.html</code></p>
+<h2 id="using-multiple-input-formats">Using Multiple Input Formats</h2>
+<p><code>Sphinx</code> by default uses <code>reStructuredText</code> . Adding the formats your team uses, reduces barriers to documentation creation and maintenance.</p>
+<h3 id="markdown">Markdown</h3>
+<p>To use <code>MarkDown</code> and other formats we edit the <code>conf.py</code> file.</p>
+<p>For <code>markdown</code> and <code>reStructuredText</code> only choose <code>MySt-Parser</code>. Full documentation can be found on the <a href="https://myst-parser.readthedocs.io/en/latest/intro.html">MySt website</a>.</p>
+<p>First install the module.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt" id="100"><a style="outline: none; text-decoration:none; color:inherit" href="#100">100</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">pip install myst-parser
+</code></pre></td></tr></table>
+</div>
+</div><p>Then edit the sphinx <code>conf.py</code> adding these lines.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt" id="100"><a style="outline: none; text-decoration:none; color:inherit" href="#100">100</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">extensions</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&#34;myst_parser&#34;</span><span class="p">]</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>As a test, I created <code>helloworld.md</code> with the following content.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt" id="100"><a style="outline: none; text-decoration:none; color:inherit" href="#100">100</a>
+</span><span class="lnt" id="101"><a style="outline: none; text-decoration:none; color:inherit" href="#101">101</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-markdown" data-lang="markdown"><span class="gh"># Hello, World
+</span><span class="gh"></span>Punctuation <span class="gs">**matters**</span>!
+</code></pre></td></tr></table>
+</div>
+</div><p>Running the <code>make html</code> command now will give a warning that the file is not in any <code>toc</code>. To avoid this, edit the  <code>toctree</code> directive in <code>index.rst</code>. Mine looks like this after the edit.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt" id="100"><a style="outline: none; text-decoration:none; color:inherit" href="#100">100</a>
+</span><span class="lnt" id="101"><a style="outline: none; text-decoration:none; color:inherit" href="#101">101</a>
+</span><span class="lnt" id="102"><a style="outline: none; text-decoration:none; color:inherit" href="#102">102</a>
+</span><span class="lnt" id="103"><a style="outline: none; text-decoration:none; color:inherit" href="#103">103</a>
+</span><span class="lnt" id="104"><a style="outline: none; text-decoration:none; color:inherit" href="#104">104</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-rst" data-lang="rst"><span class="p">..</span> <span class="ow">toctree</span><span class="p">::</span><span class="err">
+</span><span class="err"></span>   <span class="nc">:maxdepth:</span> <span class="nf">2</span><span class="err">
+</span><span class="err"></span>   <span class="nc">:caption:</span> <span class="nf">Contents:</span><span class="err">
+</span><span class="err">
+</span><span class="err"></span>   helloworld.md<span class="err">
+</span></code></pre></td></tr></table>
+</div>
+</div><p>n
+Sphinx now parses <code>reStructuredText</code> and <code>markdown</code> files.</p>
+<h3 id="jupyter-notebooks">Jupyter Notebooks</h3>
+<p>For <code>jupyter notebook</code> parsing I chose <code>MySt-nb</code>.</p>
+<pre><code>note: If you have the `MySt-parser` from the previous setion installed you should uninstall it. It conflicts with the `MySt-nb` . `MySt-nb`parses both `Markdown` and `Jupyter` notebooks.
+</code></pre>
+<p>Full documentation is available at the <a href="https://myst-nb.readthedocs.io/en/latest/quickstart.html">MyST NB website</a></p>
+<p>Install</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt" id="100"><a style="outline: none; text-decoration:none; color:inherit" href="#100">100</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">pip install myst-nb
+</code></pre></td></tr></table>
+</div>
+</div><p>Adding an extension reference to the <code>conf.py</code> .</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt" id="100"><a style="outline: none; text-decoration:none; color:inherit" href="#100">100</a>
+</span><span class="lnt" id="101"><a style="outline: none; text-decoration:none; color:inherit" href="#101">101</a>
+</span><span class="lnt" id="102"><a style="outline: none; text-decoration:none; color:inherit" href="#102">102</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">extensions</span> <span class="o">=</span> <span class="p">[</span>
+	<span class="s2">&#34;myst_nb&#34;</span>
+<span class="p">]</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>Add your notebook to a <code>toc directive</code> in <code>index.rst</code>.</p>
+<p>Mine is now like this:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt" id="100"><a style="outline: none; text-decoration:none; color:inherit" href="#100">100</a>
+</span><span class="lnt" id="101"><a style="outline: none; text-decoration:none; color:inherit" href="#101">101</a>
+</span><span class="lnt" id="102"><a style="outline: none; text-decoration:none; color:inherit" href="#102">102</a>
+</span><span class="lnt" id="103"><a style="outline: none; text-decoration:none; color:inherit" href="#103">103</a>
+</span><span class="lnt" id="104"><a style="outline: none; text-decoration:none; color:inherit" href="#104">104</a>
+</span><span class="lnt" id="105"><a style="outline: none; text-decoration:none; color:inherit" href="#105">105</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-rst" data-lang="rst"><span class="p">..</span> <span class="ow">toctree</span><span class="p">::</span><span class="err">
+</span><span class="err"></span>   <span class="nc">:maxdepth:</span> <span class="nf">2</span><span class="err">
+</span><span class="err"></span>   <span class="nc">:caption:</span> <span class="nf">Contents:</span><span class="err">
+</span><span class="err">
+</span><span class="err"></span>   helloworld.md<span class="err">
+</span><span class="err"></span>   Getting_to_Know_Sphinx.ipynb<span class="err">
+</span></code></pre></td></tr></table>
+</div>
+</div><p>If you get this error, <code>WARNING: toctree contains reference to document DataWrangling that doesn't have a title: no link will be generated</code> and don&rsquo;t see your notebook in the navigation menu, then make the first cell in the notebook a markdown cell and choose a title. The title will be used in the menu/link generation.</p>
+<p><code>Sphinx</code> now parses <code>reStructuredText</code>, <code>markdown</code> and, <code>jupter notebooks</code>.</p>
+<h2 id="spell-check">Spell Check</h2>
+<p>I chose <code>sphinxcontrib-spelling</code> which uses <code>pyEnchant</code>.</p>
+<p>Install on MacOS using brew and then pip. Complete instructions are available on the <a href="https://pyenchant.github.io/pyenchant/install.html">pyenchant website</a>.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt" id="100"><a style="outline: none; text-decoration:none; color:inherit" href="#100">100</a>
+</span><span class="lnt" id="101"><a style="outline: none; text-decoration:none; color:inherit" href="#101">101</a>
+</span><span class="lnt" id="102"><a style="outline: none; text-decoration:none; color:inherit" href="#102">102</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">brew update
+brew install enchant
+pip install sphinxcontrib-spelling
+</code></pre></td></tr></table>
+</div>
+</div><p>Add the extension to <code>conf.py</code> .</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt" id="100"><a style="outline: none; text-decoration:none; color:inherit" href="#100">100</a>
+</span><span class="lnt" id="101"><a style="outline: none; text-decoration:none; color:inherit" href="#101">101</a>
+</span><span class="lnt" id="102"><a style="outline: none; text-decoration:none; color:inherit" href="#102">102</a>
+</span><span class="lnt" id="103"><a style="outline: none; text-decoration:none; color:inherit" href="#103">103</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">extensions</span> <span class="o">=</span> <span class="p">[</span>
+	<span class="o">...</span>
+	<span class="s2">&#34;sphinxcontrib.spelling&#34;</span>
+<span class="p">]</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>To change the default language add the following to <code>conf.py</code>.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt" id="100"><a style="outline: none; text-decoration:none; color:inherit" href="#100">100</a>
+</span><span class="lnt" id="101"><a style="outline: none; text-decoration:none; color:inherit" href="#101">101</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">spelling_lang</span><span class="o">=</span><span class="s2">&#34;en_US&#34;</span>
+<span class="n">tokenizer_lang</span><span class="o">=</span><span class="s2">&#34;en_US&#34;</span>
+</code></pre></td></tr></table>
+</div>
+</div><p><code>en_US</code> is the default. A full list of language codes are available on the <a href="https://www.iso.org/iso-639-language-codes.html">ISO Standards website</a></p>
+<p>To add words that are not in the standard dictionaries provided by <code>pyEnchant</code>  use the following setting. This can be useful for brandnames, company lingo and the like. The file should contain one</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt" id="100"><a style="outline: none; text-decoration:none; color:inherit" href="#100">100</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">spelling_word_list_filename</span><span class="o">=</span><span class="s2">&#34;spelling_wordlist.txt&#34;</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>Run the spelling test as part of the make command.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt" id="100"><a style="outline: none; text-decoration:none; color:inherit" href="#100">100</a>
+</span><span class="lnt" id="101"><a style="outline: none; text-decoration:none; color:inherit" href="#101">101</a>
+</span><span class="lnt" id="102"><a style="outline: none; text-decoration:none; color:inherit" href="#102">102</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">make spelling       <span class="c1"># Spellcheck only</span>
+make html spelling  <span class="c1"># Spellcheck and build (with any</span>
+                    <span class="c1"># errors)</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>I introduced a spelling mistake in my <code>helloworld.md</code> and got the following useful output in the terminal.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt" id="100"><a style="outline: none; text-decoration:none; color:inherit" href="#100">100</a>
+</span><span class="lnt" id="101"><a style="outline: none; text-decoration:none; color:inherit" href="#101">101</a>
+</span><span class="lnt" id="102"><a style="outline: none; text-decoration:none; color:inherit" href="#102">102</a>
+</span><span class="lnt" id="103"><a style="outline: none; text-decoration:none; color:inherit" href="#103">103</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">helloworld.md:0: : Spell check: speling: This is a deliberate speling mistake..
+Writing  /docs/_build/spelling/helloworld.spelling
+writing output... <span class="o">[</span>100%<span class="o">]</span> index
+WARNING: Found <span class="m">1</span> misspelled words
+</code></pre></td></tr></table>
+</div>
+</div><p>I repeated using &ldquo;davidjnevin&rdquo;, got a spelling warning, added it to <code>spelling_wordlist</code> and received no errors. So that worked.</p>
+<p>A full list of word filters output options are available on the <a href="https://sphinxcontrib-spelling.readthedocs.io/en/latest/"><code>sphinxcontrib.spelling</code> website</a></p>
+<p>It&rsquo;s worth noting here that I use a spell check in my text editor. The sphinx spell check is as an additional check prior to building.</p>
+<h2 id="link-checking">Link Checking</h2>
+<p>Link checking comes by default with <code>sphinx</code></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt" id="100"><a style="outline: none; text-decoration:none; color:inherit" href="#100">100</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">make linkcheck
+</code></pre></td></tr></table>
+</div>
+</div><p>Using this link <code>https://www.davidjnevin.com</code> I received the following error.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt" id="100"><a style="outline: none; text-decoration:none; color:inherit" href="#100">100</a>
+</span><span class="lnt" id="101"><a style="outline: none; text-decoration:none; color:inherit" href="#101">101</a>
+</span><span class="lnt" id="102"><a style="outline: none; text-decoration:none; color:inherit" href="#102">102</a>
+</span><span class="lnt" id="103"><a style="outline: none; text-decoration:none; color:inherit" href="#103">103</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="o">(</span>      helloworld: line   22<span class="o">)</span> redirect  https://www.davidjnevin.com - permanently to https://davidjnevin.com/
+build succeeded.
+
+Look <span class="k">for</span> any errors in the above output or in _build/linkcheck/output.txt
+</code></pre></td></tr></table>
+</div>
+</div><p>Using this link <code>https://davidjnevin.com/</code> I didn&rsquo;t receive an error.</p>
+<p>Sphinx is now up and running and usable. Next I&rsquo;m exploring how to make it awesome.</p>
+<p>#source</p>
+<p><a href="https://www.youtube.com/watch?v=0ROZRNZkPS8&amp;t=1033s">Carol Willing - Practical Sphinx - PyCon 2018</a></p>
+
+  </article>
+  <article class="md prev_next">
+    <hr>
+    
+    <div class="post_previous">
+      Previous: <a href=/code/documentation_intentions/>Documentation: Intentions</a>
+    
+  </article>
+  <article class="md prev_next">
+      
+  </article>
+</main>
+
+
+  
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VGVQ6SM9N7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-VGVQ6SM9N7');
+</script>
+  
+<footer class="row row-mob al-c-mob col-rev-mob sm-2-mob jc-bt mtb-2">
+  <p class="c-tag footer-small-text">© 2022 David J. Nevin
+    
+  </p>
+  <div class=" row gap-0_5">
+    
+      <a class="icon" href="https://twitter.com/davidjnevin" title="twitter">
+      
+        <svg fill="#1da1f2" width="18" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Twitter</title><path d="M23.954 4.569c-.885.389-1.83.654-2.825.775 1.014-.611 1.794-1.574 2.163-2.723-.951.555-2.005.959-3.127 1.184-.896-.959-2.173-1.559-3.591-1.559-2.717 0-4.92 2.203-4.92 4.917 0 .39.045.765.127 1.124C7.691 8.094 4.066 6.13 1.64 3.161c-.427.722-.666 1.561-.666 2.475 0 1.71.87 3.213 2.188 4.096-.807-.026-1.566-.248-2.228-.616v.061c0 2.385 1.693 4.374 3.946 4.827-.413.111-.849.171-1.296.171-.314 0-.615-.03-.916-.086.631 1.953 2.445 3.377 4.604 3.417-1.68 1.319-3.809 2.105-6.102 2.105-.39 0-.779-.023-1.17-.067 2.189 1.394 4.768 2.209 7.557 2.209 9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63.961-.689 1.8-1.56 2.46-2.548l-.047-.02z"/></svg>
+      
+      </a>
+    
+      <a class="icon" href="https://www.linkedin.com/in/davidnevin/" title="linkedin">
+      
+        <svg fill="#0073b1" width="18" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>LinkedIn</title><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+      
+      </a>
+    
+      <a class="icon" href="https://github.com/davidjnevin" title="github">
+      
+        <svg fill="#63636f" width="18" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+      
+      </a>
+    
+      <a class="icon" href="https://leetcode.com/davidjnevin/" title="leetcode">
+      
+        <svg fill="#1da1f2" width="18" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Leetcode</title><path d="M21.469 23.907l-3.595 3.473c-0.624 0.625-1.484 0.885-2.432 0.885s-1.807-0.26-2.432-0.885l-5.776-5.812c-0.62-0.625-0.937-1.537-0.937-2.485 0-0.952 0.317-1.812 0.937-2.432l5.76-5.844c0.62-0.619 1.5-0.859 2.448-0.859s1.808 0.26 2.432 0.885l3.595 3.473c0.687 0.688 1.823 0.663 2.536-0.052 0.708-0.713 0.735-1.848 0.047-2.536l-3.473-3.511c-0.901-0.891-2.032-1.505-3.261-1.787l3.287-3.333c0.688-0.687 0.667-1.823-0.047-2.536s-1.849-0.735-2.536-0.052l-13.469 13.469c-1.307 1.312-1.989 3.113-1.989 5.113 0 1.996 0.683 3.86 1.989 5.168l5.797 5.812c1.307 1.307 3.115 1.937 5.115 1.937 1.995 0 3.801-0.683 5.109-1.989l3.479-3.521c0.688-0.683 0.661-1.817-0.052-2.531s-1.849-0.74-2.531-0.052zM27.749 17.349h-13.531c-0.932 0-1.692 0.801-1.692 1.791 0 0.991 0.76 1.797 1.692 1.797h13.531c0.933 0 1.693-0.807 1.693-1.797 0-0.989-0.76-1.791-1.693-1.791z"/></path></svg>
+      
+      </a>
+    
+    </div>
+</footer>
+</body>
+
+</html>
