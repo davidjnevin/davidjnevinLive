@@ -6,8 +6,53 @@
     <description>Recent content in Projects on David J Nevin</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>© 2022 David J. Nevin</copyright>
+    <copyright>David J. Nevin</copyright>
     <lastBuildDate>Sun, 25 Sep 2022 01:00:26 +0200</lastBuildDate><atom:link href="https://www.davidjnevin.com/categories/projects/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Pipenv to Poetry</title>
+      <link>https://www.davidjnevin.com/code/pipenv_to_poetry/</link>
+      <pubDate>Sun, 25 Sep 2022 01:00:26 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/pipenv_to_poetry/</guid>
+      <description>time 01.05am
+Some notes on the process as I&amp;rsquo;m working through it.</description>
+    </item>
+    
+    <item>
+      <title>Orange Belt</title>
+      <link>https://www.davidjnevin.com/code/orange_belt/</link>
+      <pubDate>Sun, 11 Sep 2022 18:54:37 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/orange_belt/</guid>
+      <description>It&amp;rsquo;s been a busy few weeks. The Pybites community and coding platform has seen about 90% of my Python time over the past four weeks.</description>
+    </item>
+    
+    <item>
+      <title>Site Projects June 19th</title>
+      <link>https://www.davidjnevin.com/code/site_projects_june_19th/</link>
+      <pubDate>Sun, 19 Jun 2022 12:41:56 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/site_projects_june_19th/</guid>
+      <description>This post is a culmination of previous project related posts. It&amp;rsquo;s useful for me to see the needs develop and to decide when and what to implement and how I can combine the requirements into clear actions to take.</description>
+    </item>
+    
+    <item>
+      <title>Site Projects - June 17th</title>
+      <link>https://www.davidjnevin.com/code/site_projects_17_06_2022/</link>
+      <pubDate>Fri, 17 Jun 2022 20:57:48 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/site_projects_17_06_2022/</guid>
+      <description>Certificates Section Next mini-project here on this site is to start to put together a list of certificates and courses I&amp;rsquo;ve done.</description>
+    </item>
+    
+    <item>
+      <title>Critique Wheel C#</title>
+      <link>https://www.davidjnevin.com/code/critique_wheel_csharp/</link>
+      <pubDate>Tue, 14 Jun 2022 21:43:57 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/critique_wheel_csharp/</guid>
+      <description>Raison d&amp;rsquo;être o el porque I built and deployed the Beta version of the critique wheel site in response to a need for the fiction writers in my writing groups to get faster and more actionable critiques on their short stories.</description>
+    </item>
+    
   </channel>
 </rss>
-

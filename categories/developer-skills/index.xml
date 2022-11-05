@@ -6,8 +6,16 @@
     <description>Recent content in developer skills on David J Nevin</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>© 2022 David J. Nevin</copyright>
+    <copyright>David J. Nevin</copyright>
     <lastBuildDate>Fri, 21 Oct 2022 14:52:52 +0200</lastBuildDate><atom:link href="https://www.davidjnevin.com/categories/developer-skills/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Git Exploration: Part One</title>
+      <link>https://www.davidjnevin.com/code/git_exploration_one/</link>
+      <pubDate>Fri, 21 Oct 2022 14:52:52 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/git_exploration_one/</guid>
+      <description>Git Tutorial Notes Track history and work together. Distributed version control system.</description>
+    </item>
+    
   </channel>
 </rss>
-

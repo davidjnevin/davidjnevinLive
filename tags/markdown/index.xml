@@ -6,8 +6,25 @@
     <description>Recent content in Markdown on David J Nevin</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>© 2022 David J. Nevin</copyright>
+    <copyright>David J. Nevin</copyright>
     <lastBuildDate>Thu, 03 Nov 2022 11:46:02 +0100</lastBuildDate><atom:link href="https://www.davidjnevin.com/tags/markdown/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Sphinx Next Level</title>
+      <link>https://www.davidjnevin.com/code/sphinx_next_level/</link>
+      <pubDate>Thu, 03 Nov 2022 11:46:02 +0100</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/sphinx_next_level/</guid>
+      <description>From my previous post, sphinx appears to be just another static site generator.</description>
+    </item>
+    
+    <item>
+      <title>PlantUML: First Attempts</title>
+      <link>https://www.davidjnevin.com/code/plantuml_first_attempts/</link>
+      <pubDate>Thu, 16 Jun 2022 23:06:34 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/plantuml_first_attempts/</guid>
+      <description>Let&amp;rsquo;s try out PlantUML PlantUML seems at first glance somewhat similar to Mermaid but with a wider function list.</description>
+    </item>
+    
   </channel>
 </rss>
-

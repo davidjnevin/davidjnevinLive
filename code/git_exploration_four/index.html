@@ -1,147 +1,1284 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta property="og:title" content="Git Exploration: Part Four" />
-<meta property="og:description" content="Rewriting History Golden Rule: Don&rsquo;t rewrite public history.
-To undo local commits, use:" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.davidjnevin.com/code/git_exploration_four/" /><meta property="article:section" content="code" />
-<meta property="article:published_time" content="2022-10-26T01:40:35&#43;02:00" />
-<meta property="article:modified_time" content="2022-10-26T12:47:47&#43;02:00" />
-<meta property="og:see_also" content="https://www.davidjnevin.com/code/git_exploration_three/" /><meta property="og:see_also" content="https://www.davidjnevin.com/code/git_exploration_two/" /><meta property="og:see_also" content="https://www.davidjnevin.com/code/git_exploration_one/" />
-
-
-  <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Git Exploration: Part Four"/>
-<meta name="twitter:description" content="Rewriting History Golden Rule: Don&rsquo;t rewrite public history.
-To undo local commits, use:"/>
-
-  
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-VGVQ6SM9N7"></script>
-<script>
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
-	gtag('config', 'G-VGVQ6SM9N7', { 'anonymize_ip': false });
-}
-</script>
-
-  
-  <title>
     
-    David J Nevin - Git Exploration: Part Four
-    
-  </title>
-  
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<meta name="HandheldFriendly" content="True" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta name="generator" content="Hugo 0.105.0">
+
+
   <link rel="icon" href="https://davidjnevin.com/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://davidjnevin.com/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://davidjnevin.com/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://davidjnevin.com/apple-touch-icon.png">
-<link rel="mask-icon" href="https://davidjnevin.com/%3Clink%20/%20abs%20url%3E">
-<meta name="theme-color" content="#2e2e33">
-<meta name="msapplication-TileColor" content="#2e2e33">
-<meta name="generator" content="Hugo 0.81.0" />
-<link rel="alternate" type="application/rss&#43;xml" href="https://davidjnevin.com/index.xml" title="David J Nevin">
-<link rel="alternate" type="application/json" href="https://davidjnevin.com/index.json">
 
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@700&amp;family=EB+Garamond:ital,wght@0,400;0,700;1,500&amp;family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&amp;family=Merriweather:wght@900&amp;display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://unpkg.com/normalize.css">
-  <link rel="stylesheet" href="/css/style.css">
 
-  <script defer src="/js/main.js"></script>
+<title>Git Exploration: Part Four - David J Nevin</title>
+
+
+
+
+<meta name="keywords" content="git, developer, skills" />
+
+
+<meta property="og:title" content="Git Exploration: Part Four" />
+<meta name="twitter:title" content="Git Exploration: Part Four" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.davidjnevin.com/code/git_exploration_four/" /><meta property="og:description" content="Rewriting History Golden Rule: Don&rsquo;t rewrite public history.
+To undo local commits, use:" />
+<meta name="twitter:description" content="Rewriting History Golden Rule: Don&rsquo;t rewrite public history.
+To undo local commits, use:" /><meta name="twitter:card" content="summary" /><meta property="article:published_time" content="2022-10-26T01:40:35+02:00" /><meta property="article:modified_time" content="2022-10-26T01:40:35+02:00" />
+
+
+<style>
+    @media (prefers-color-scheme: dark) {
+        body[data-theme='auto'] img {
+            filter: brightness(60%);
+        }
+    }
+
+    body[data-theme='dark'] img {
+        filter: brightness(60%);
+    }
+</style>
+
+
+
+
+<link rel="stylesheet" href="https://www.davidjnevin.com/assets/css/fuji.min.css" />
+
+
+
+
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'G-VGVQ6SM9N7');
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VGVQ6SM9N7"></script>
+
+
+
+
+
 </head>
 
-
-<body>
-  <header>
-  <h1 class="row gap-1 nowrap">
+<body
+  data-theme="auto"
+  data-theme-auto='true'
+  >
+    <script data-cfasync="false">
+  
+  var fujiThemeData = localStorage.getItem('fuji_data-theme');
+  
+  if (!fujiThemeData) {
+    localStorage.setItem('fuji_data-theme', 'auto');
+  } else {
     
-    <a href="/">David J Nevin</a><a href="/code">+= Code</a>
-  </h1>
-  <nav class="row gap-1">
-  
-  </nav>
-  
+    if (fujiThemeData !== 'auto') {
+      document.body.setAttribute('data-theme', fujiThemeData === 'dark' ? 'dark' : 'light');
+    }
+  }
+</script>
+
+    <header>
+    <div class="container-lg clearfix">
+        <div class="col-12 header">
+            <a class="title-main" href="\">David J Nevin</a> <a class="title-main" href="/code">+= Code</a>
+            
+        </div>
+    </div>
 </header>
-  
-   
-<main>
-  
-
-  
-  
-  
-        
-              
-                <div class="sm-1 mtb-1">Published: Oct 26, 2022</div>
-              
-              </div>
-        
-  
-
-  
 
 
-    <article class="md">
-     
-
-    <h1>Git Exploration: Part Four</h1>
+    <main>
+        <div class="container-lg clearfix">
+            
+            <div class="col-12 col-md-9 float-left content">
+                
+<article>
     
+    <h1 class="post-item post-title">
+        <a href="/code/git_exploration_four/">Git Exploration: Part Four</a>
+    </h1>
+    <div class="post-item post-meta">
+        <span>Last updated:&nbsp;2022-10-26</span>
+
+<span>&nbsp;789 words</span>
+<span>&nbsp;4 minutes</span>
+
+
+    </div>
+    
+    <div class="post-content markdown-body">
+ <h2 id="rewriting-history">Rewriting History<a href="#rewriting-history" class="hanchor" ariaLabel="Anchor">#</a></h2>
+<p>Golden Rule: Don&rsquo;t rewrite public history.</p>
+<p>To undo local commits, use:</p>
+<pre><code class="language-bash"># Undoing comiits
+git reset --soft # Removes the commit only
+git reset --mixed # Removes commit and unstages files
+git reset --hard # removes commit, unstages changes, discards local changes
+# to undo the last commit
+git reset --hard HEAD~1 # hard revert to commit previous to current head
+position, i.e undo last commit.
+
+git reset --(option) HEAD~3..HEAD # reverts the commits between the 4th last
+and the head. Any similar combination of start..stop settings can be used.
+</code></pre>
+<p>To undo/change shared/published commits, use:</p>
+<pre><code class="language-bash">git revert &lt;commitRef&gt;   # Reverts a specific commit
+git revert HEAD~3..HEAD  # TReverts the last three commits
+git revert HEAD~3..     # HEAD is the default end and can be left out
+git revert --no-commit HEAD~3.. # Doesn't make a seperate commit for each
+revert and instad the are combined
+git revert --abort # to cancel the revert
+git revert --continue # to commit the revert
+</code></pre>
+<h2 id="recover-lost-commits">Recover lost Commits<a href="#recover-lost-commits" class="hanchor" ariaLabel="Anchor">#</a></h2>
+<p>In case you accidentally removed some commits.</p>
+<pre><code class="language-bash">git reflog
+git reset --hard HEAD@{X} # where X is the number of the head pointer you wish
+to recover.
+</code></pre>
+<p>To see the history of other commit pointers, use:</p>
+<pre><code class="language-bash">git reflog show &lt;branchName&gt; # show history of &lt;branchName&gt; pointer.
+
+</code></pre>
+<h2 id="amending-the-last-commit">Amending the Last Commit<a href="#amending-the-last-commit" class="hanchor" ariaLabel="Anchor">#</a></h2>
+<p>If you&rsquo;ve committed and then realised there&rsquo;s a typo, we shouldn&rsquo;t do another
+commit. Instead we should amend that last commit.</p>
+<p>We correct our typo, <code>git add</code> it and then:</p>
+<pre><code class="language-bash">git commit --amend  # We can add a new message or leave blank and accept the
+orginal message from the previous commit.
+</code></pre>
+<p>If we want to include a file in the last commit. We make our changes, then add
+the file to the staging area and then commit using:</p>
+<pre><code class="language-bash">git commit --amend
+</code></pre>
+<p>If we want to remove a file form the last commit:</p>
+<pre><code class="language-bash">git reset --mixed HEAD~!
+git status -s
+git clean -fd # remove untracked files from working directory
+git add .
+git commit -m &quot;New commit messages&quot;
+</code></pre>
+<h2 id="amend-an-earlier-commit">Amend an Earlier Commit<a href="#amend-an-earlier-commit" class="hanchor" ariaLabel="Anchor">#</a></h2>
+<p>We are going to use interactive rebasing.
+Identify the parent commit reference to where you wish to start the rebase.</p>
+<p>The begin interactive rebasing.</p>
+<pre><code class="language-bash">git rebase -i &lt;parentCommitref&gt;
+</code></pre>
+<p>Edit the rebase plan. Select the key word of the commit you wish to change and
+replace them with the appropriate keyword from the included documentation.
+Make the changes and add, and commit them.</p>
+<p>If you mess up:</p>
+<pre><code class="language-bash">git rebase --abort
+</code></pre>
+<p>If you&rsquo;re happy with the changes:</p>
+<pre><code class="language-bash">git rebase --continue  # look at the logs to see the changes.
+</code></pre>
+<h2 id="dropping-commits">Dropping Commits<a href="#dropping-commits" class="hanchor" ariaLabel="Anchor">#</a></h2>
+<p>To remove or drop commits we use:</p>
+<pre><code class="language-bash">git rebase -i &lt;commitRefOfParent&gt;
+# We can use the parent refence, the refernce it self with ^ or the refernce
+~1.
+git rebase -i oiu76532^
+git rebase -i oiu76532~1
+</code></pre>
+<p>In the rebase window, remove the reference to the commit we wish to drop. Save.
+This may generate conflicts. Use</p>
+<pre><code class="language-bash">git mergetool
+</code></pre>
+<p>to resolve commits.</p>
+<pre><code class="language-bash">git rebase --continue  # If you screw up, git rebase --abort takes us back to
+the state before we started.
+</code></pre>
+<h2 id="rewording-commit-messages">Rewording Commit Messages<a href="#rewording-commit-messages" class="hanchor" ariaLabel="Anchor">#</a></h2>
+<p>To reword we use</p>
+<pre><code class="language-bash">git rebase -i &lt;parentRefernce&gt;
+</code></pre>
+<p>Edit the rebase window to replace <code>pick</code> with <code>reword</code>. (Do not change the
+commit messages here). After saving, git will run through the list of commits,
+pause, and allow us to edit the commit messages for the commits we selected for
+rewording.</p>
+<h2 id="reordering-commits">Reordering Commits<a href="#reordering-commits" class="hanchor" ariaLabel="Anchor">#</a></h2>
+<pre><code class="language-bash">git rebase -i &lt;parentRefernce&gt; # of oldest commit to reorder.
+</code></pre>
+<p>In the rebase window reorder the commits. In order to avoid multiple and
+difficult merge conflicts, try reordering on commit at a time.</p>
+<h2 id="squashing-commits">Squashing Commits<a href="#squashing-commits" class="hanchor" ariaLabel="Anchor">#</a></h2>
+<p>To combine related batches of work, logically parts of the same unit of work.</p>
+<pre><code class="language-bash">git rebase -i &lt;parentRef&gt;
+</code></pre>
+<p>Edit the rebase window to replace <code>pick</code> with <code>squash</code>. After saving, git will
+run through the list of commits, pause, and allow us to edit the commit
+messages for the combined/squashed commit. Edit as required and save.</p>
+<p>To avoid editing the commit messages, we can instead choose to ignore the
+commit messages of some commits using <code>fixup</code> in place of <code>squash</code>.</p>
+<h2 id="split-a-commit">Split a Commit<a href="#split-a-commit" class="hanchor" ariaLabel="Anchor">#</a></h2>
+<p>To separate into multiple commits a previous commit that contains more than one
+logical units of change.</p>
+<pre><code class="language-bash">git rebase -i &lt;parentRef&gt;
+</code></pre>
+<p>In the rebase window we change the keyword from pick to edit on the commit we
+wish to split. Save.</p>
+<p>The HEAD is now at the commit, and we can reset and make changes here.</p>
+<pre><code class="language-bash">git rebase -i &lt;parentRef&gt;
+# pick -&gt; edit. The save
+git reset --soft Head~1 # the changes will remain as staged
+# or
+git reset --mixed Head~1 # the changes will be in the working
+                         # directory
+</code></pre>
+<p>Make the appropriate commits reflecting logical units of change and once we&rsquo;re done.</p>
+<pre><code class="language-bash">git rebase --continue
+</code></pre>
+
+    </div>
+</article>
+  <article class="md prev_next">
+    <hr>
+    <div>
+    <div class="post_next">
+      Next: <a href=/code/mkdocs_first_look/>Mkdocs: First Look</a>
+    
+    <div class="post_previous">
+      Previous: <a href=/code/git_exploration_three/>Git Exploration: Part Three</a>
+    
+    </div>
+  </article>  <article class="md prev_next">
+    <hr>
+    
+    
+  </article>
+
+<div class="next-post">
+	
+</div>
+
+<div class="previous-post">
+	
+</div>
 
 
 
 
-
-  
+            </div>
+            <aside class="col-12 col-md-3 float-left sidebar">
     
     
         
         
+            
+        
+    
+    
+    
         
         
+            
+        
+    
+    
+    
         
         
-          
             
-          
             
-          
-            
-          
+                
             
             
             
+                
             
-            <p>This is part 4 of 4 in the <a href="/series/getting-good-at-git">Getting Good at GIT</a> series.</p>
             
-          
-        <nav role="series-pagination">
-        <ul class="series-pagination pagination">
-        <li class="page-item"><a class="page-link" href="/code/git_exploration_one/">First</a>
-        </li>
-        <li class="page-item"><a class="page-link" href="/code/git_exploration_three/">Prev</a>
-        </li>
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
         
-        </li>
-        <li class="page-item">Next
-        </li>
-        <li class="page-item"><a class="page-link" href="/code/git_exploration_four/">Last</a>
-        </li>
+    
+    <div class="sidebar-item sidebar-toc">
+        <h3>Table of Contents</h3><nav id="TableOfContents">
+  <ul>
+    <li><a href="#rewriting-history">Rewriting History</a></li>
+    <li><a href="#recover-lost-commits">Recover lost Commits</a></li>
+    <li><a href="#amending-the-last-commit">Amending the Last Commit</a></li>
+    <li><a href="#amend-an-earlier-commit">Amend an Earlier Commit</a></li>
+    <li><a href="#dropping-commits">Dropping Commits</a></li>
+    <li><a href="#rewording-commit-messages">Rewording Commit Messages</a></li>
+    <li><a href="#reordering-commits">Reordering Commits</a></li>
+    <li><a href="#squashing-commits">Squashing Commits</a></li>
+    <li><a href="#split-a-commit">Split a Commit</a></li>
+  </ul>
+</nav></div>
+</aside>
+
+        </div>
+        <div class="btn">
+    <div class="btn-menu" id="btn-menu">
+        <i class="iconfont icon-grid-sharp"></i>
+    </div>
+    <div class="btn-toggle-mode">
+        <i class="iconfont icon-contrast-sharp"></i>
+    </div>
+    <div class="btn-scroll-top">
+        <i class="iconfont icon-chevron-up-circle-sharp"></i>
+    </div>
+</div>
+<aside class="sidebar-mobile" style="display: none;">
+  <div class="sidebar-wrapper">
+    
+    <div class="sidebar-item sidebar-pages">
+        <h3>Pages</h3>
+        <ul>
+            
         </ul>
-        </nav>
-        
-        
-
-
-
-    <nav id="TableOfContents">
+    </div>
+    
+    <div class="sidebar-item sidebar-links">
+        <h3>Links</h3>
+        <ul>
+            
+        </ul>
+    </div>
+    
+    <div class="sidebar-item sidebar-tags">
+        <h3>Tags</h3>
+        <div>
+            
+            <span>
+                <a href="/tags/.net/">.Net</a>
+            </span>
+            
+            <span>
+                <a href="/tags/abstraction/">Abstraction</a>
+            </span>
+            
+            <span>
+                <a href="/tags/arrays/">Arrays</a>
+            </span>
+            
+            <span>
+                <a href="/tags/base-class/">Base Class</a>
+            </span>
+            
+            <span>
+                <a href="/tags/binary/">Binary</a>
+            </span>
+            
+            <span>
+                <a href="/tags/binary-search/">Binary Search</a>
+            </span>
+            
+            <span>
+                <a href="/tags/binary-tree/">Binary Tree</a>
+            </span>
+            
+            <span>
+                <a href="/tags/bites/">Bites</a>
+            </span>
+            
+            <span>
+                <a href="/tags/bitonic-point/">Bitonic Point</a>
+            </span>
+            
+            <span>
+                <a href="/tags/blazor/">Blazor</a>
+            </span>
+            
+            <span>
+                <a href="/tags/blog/">blog</a>
+            </span>
+            
+            <span>
+                <a href="/tags/branch/">branch</a>
+            </span>
+            
+            <span>
+                <a href="/tags/burnout/">Burnout</a>
+            </span>
+            
+            <span>
+                <a href="/tags/c#/">C#</a>
+            </span>
+            
+            <span>
+                <a href="/tags/celery/">celery</a>
+            </span>
+            
+            <span>
+                <a href="/tags/certificates/">Certificates</a>
+            </span>
+            
+            <span>
+                <a href="/tags/charts/">charts</a>
+            </span>
+            
+            <span>
+                <a href="/tags/child-class/">Child Class</a>
+            </span>
+            
+            <span>
+                <a href="/tags/class/">Class</a>
+            </span>
+            
+            <span>
+                <a href="/tags/classes/">Classes</a>
+            </span>
+            
+            <span>
+                <a href="/tags/coding/">Coding</a>
+            </span>
+            
+            <span>
+                <a href="/tags/collaborating/">collaborating</a>
+            </span>
+            
+            <span>
+                <a href="/tags/collections/">Collections</a>
+            </span>
+            
+            <span>
+                <a href="/tags/commands/">Commands</a>
+            </span>
+            
+            <span>
+                <a href="/tags/community/">Community</a>
+            </span>
+            
+            <span>
+                <a href="/tags/courses/">Courses</a>
+            </span>
+            
+            <span>
+                <a href="/tags/critiquewheel/">critiquewheel</a>
+            </span>
+            
+            <span>
+                <a href="/tags/cross-reference/">cross reference</a>
+            </span>
+            
+            <span>
+                <a href="/tags/css/">CSS</a>
+            </span>
+            
+            <span>
+                <a href="/tags/data-science-linkedin-leetcode-pybites/">Data Science, LinkedIn, LeetCode, PyBites </a>
+            </span>
+            
+            <span>
+                <a href="/tags/data-structure/">Data Structure</a>
+            </span>
+            
+            <span>
+                <a href="/tags/data-types/">Data Types</a>
+            </span>
+            
+            <span>
+                <a href="/tags/deploy/">Deploy</a>
+            </span>
+            
+            <span>
+                <a href="/tags/depth/">Depth</a>
+            </span>
+            
+            <span>
+                <a href="/tags/derived-class/">Derived Class</a>
+            </span>
+            
+            <span>
+                <a href="/tags/design/">Design</a>
+            </span>
+            
+            <span>
+                <a href="/tags/design-updates/">Design Updates</a>
+            </span>
+            
+            <span>
+                <a href="/tags/developer/">developer</a>
+            </span>
+            
+            <span>
+                <a href="/tags/django/">django</a>
+            </span>
+            
+            <span>
+                <a href="/tags/docker/">docker</a>
+            </span>
+            
+            <span>
+                <a href="/tags/documentation/">documentation</a>
+            </span>
+            
+            <span>
+                <a href="/tags/duplicates/">Duplicates</a>
+            </span>
+            
+            <span>
+                <a href="/tags/educative/">Educative</a>
+            </span>
+            
+            <span>
+                <a href="/tags/encapsulation/">Encapsulation</a>
+            </span>
+            
+            <span>
+                <a href="/tags/find-closest-number/">Find Closest Number</a>
+            </span>
+            
+            <span>
+                <a href="/tags/first/">First</a>
+            </span>
+            
+            <span>
+                <a href="/tags/first-steps/">First Steps</a>
+            </span>
+            
+            <span>
+                <a href="/tags/fixed-point/">Fixed Point</a>
+            </span>
+            
+            <span>
+                <a href="/tags/flake8/">Flake8</a>
+            </span>
+            
+            <span>
+                <a href="/tags/git/">git</a>
+            </span>
+            
+            <span>
+                <a href="/tags/goyo/">Goyo</a>
+            </span>
+            
+            <span>
+                <a href="/tags/guidelines/">guidelines</a>
+            </span>
+            
+            <span>
+                <a href="/tags/hash-function/">Hash Function</a>
+            </span>
+            
+            <span>
+                <a href="/tags/hash-table/">Hash Table</a>
+            </span>
+            
+            <span>
+                <a href="/tags/hashing/">Hashing</a>
+            </span>
+            
+            <span>
+                <a href="/tags/height/">Height</a>
+            </span>
+            
+            <span>
+                <a href="/tags/hugo/">Hugo</a>
+            </span>
+            
+            <span>
+                <a href="/tags/inheritance/">Inheritance</a>
+            </span>
+            
+            <span>
+                <a href="/tags/inorder/">Inorder</a>
+            </span>
+            
+            <span>
+                <a href="/tags/interface/">Interface</a>
+            </span>
+            
+            <span>
+                <a href="/tags/learning/">learning</a>
+            </span>
+            
+            <span>
+                <a href="/tags/learning-paths/">learning paths</a>
+            </span>
+            
+            <span>
+                <a href="/tags/level-order/">Level Order</a>
+            </span>
+            
+            <span>
+                <a href="/tags/level-order-traversal/">Level Order Traversal</a>
+            </span>
+            
+            <span>
+                <a href="/tags/linkedin/">LinkedIn</a>
+            </span>
+            
+            <span>
+                <a href="/tags/markdown/">Markdown</a>
+            </span>
+            
+            <span>
+                <a href="/tags/methods/">Methods</a>
+            </span>
+            
+            <span>
+                <a href="/tags/mkdocs/">mkDocs</a>
+            </span>
+            
+            <span>
+                <a href="/tags/modifiers/">Modifiers</a>
+            </span>
+            
+            <span>
+                <a href="/tags/motivation/">Motivation</a>
+            </span>
+            
+            <span>
+                <a href="/tags/next-post/">Next Post</a>
+            </span>
+            
+            <span>
+                <a href="/tags/node/">Node</a>
+            </span>
+            
+            <span>
+                <a href="/tags/notes/">notes</a>
+            </span>
+            
+            <span>
+                <a href="/tags/pair/">pair</a>
+            </span>
+            
+            <span>
+                <a href="/tags/parent-class/">Parent Class</a>
+            </span>
+            
+            <span>
+                <a href="/tags/pep8/">pep8</a>
+            </span>
+            
+            <span>
+                <a href="/tags/phases/">Phases</a>
+            </span>
+            
+            <span>
+                <a href="/tags/plantuml/">plantUML</a>
+            </span>
+            
+            <span>
+                <a href="/tags/postgres/">postgres</a>
+            </span>
+            
+            <span>
+                <a href="/tags/postorder/">Postorder</a>
+            </span>
+            
+            <span>
+                <a href="/tags/preorder/">Preorder</a>
+            </span>
+            
+            <span>
+                <a href="/tags/previous/">Previous</a>
+            </span>
+            
+            <span>
+                <a href="/tags/projects/">Projects</a>
+            </span>
+            
+            <span>
+                <a href="/tags/properties/">Properties</a>
+            </span>
+            
+            <span>
+                <a href="/tags/pybites/">Pybites</a>
+            </span>
+            
+            <span>
+                <a href="/tags/pytest/">pytest</a>
+            </span>
+            
+            <span>
+                <a href="/tags/python/">Python</a>
+            </span>
+            
+            <span>
+                <a href="/tags/razorpages/">RazorPages</a>
+            </span>
+            
+            <span>
+                <a href="/tags/readability/">readability</a>
+            </span>
+            
+            <span>
+                <a href="/tags/recent-posts/">Recent Posts</a>
+            </span>
+            
+            <span>
+                <a href="/tags/refactoring/">Refactoring</a>
+            </span>
+            
+            <span>
+                <a href="/tags/relationship/">Relationship</a>
+            </span>
+            
+            <span>
+                <a href="/tags/render/">render</a>
+            </span>
+            
+            <span>
+                <a href="/tags/render.com/">Render.com</a>
+            </span>
+            
+            <span>
+                <a href="/tags/search/">Search</a>
+            </span>
+            
+            <span>
+                <a href="/tags/size/">Size</a>
+            </span>
+            
+            <span>
+                <a href="/tags/skills/">skills</a>
+            </span>
+            
+            <span>
+                <a href="/tags/sphinx/">sphinx</a>
+            </span>
+            
+            <span>
+                <a href="/tags/sql/">SQL</a>
+            </span>
+            
+            <span>
+                <a href="/tags/string/">String</a>
+            </span>
+            
+            <span>
+                <a href="/tags/sub-class/">Sub Class</a>
+            </span>
+            
+            <span>
+                <a href="/tags/super-class/">Super Class</a>
+            </span>
+            
+            <span>
+                <a href="/tags/syntastic/">Syntastic</a>
+            </span>
+            
+            <span>
+                <a href="/tags/taking-stock/">Taking Stock</a>
+            </span>
+            
+            <span>
+                <a href="/tags/tdd/">TDD</a>
+            </span>
+            
+            <span>
+                <a href="/tags/templates/">Templates</a>
+            </span>
+            
+            <span>
+                <a href="/tags/terminal/">Terminal</a>
+            </span>
+            
+            <span>
+                <a href="/tags/tree/">Tree</a>
+            </span>
+            
+            <span>
+                <a href="/tags/tweaks/">Tweaks</a>
+            </span>
+            
+            <span>
+                <a href="/tags/twitter/">Twitter</a>
+            </span>
+            
+            <span>
+                <a href="/tags/update/">Update</a>
+            </span>
+            
+            <span>
+                <a href="/tags/upwork/">Upwork</a>
+            </span>
+            
+            <span>
+                <a href="/tags/usability/">Usability</a>
+            </span>
+            
+            <span>
+                <a href="/tags/variables/">Variables</a>
+            </span>
+            
+            <span>
+                <a href="/tags/vim/">Vim</a>
+            </span>
+            
+            <span>
+                <a href="/tags/widget/">Widget</a>
+            </span>
+            
+        </div>
+    </div>
+    
+    
+    
+    <div class="sidebar-item sidebar-toc">
+        <h3>Table of Contents</h3>
+        <nav id="TableOfContents">
   <ul>
     <li><a href="#rewriting-history">Rewriting History</a></li>
     <li><a href="#recover-lost-commits">Recover lost Commits</a></li>
@@ -154,359 +1291,40 @@ if (!doNotTrack) {
     <li><a href="#split-a-commit">Split a Commit</a></li>
   </ul>
 </nav>
-
-
-      <h2 id="rewriting-history">Rewriting History</h2>
-<p>Golden Rule: Don&rsquo;t rewrite public history.</p>
-<p>To undo local commits, use:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt" id="100"><a style="outline: none; text-decoration:none; color:inherit" href="#100">100</a>
-</span><span class="lnt" id="101"><a style="outline: none; text-decoration:none; color:inherit" href="#101">101</a>
-</span><span class="lnt" id="102"><a style="outline: none; text-decoration:none; color:inherit" href="#102">102</a>
-</span><span class="lnt" id="103"><a style="outline: none; text-decoration:none; color:inherit" href="#103">103</a>
-</span><span class="lnt" id="104"><a style="outline: none; text-decoration:none; color:inherit" href="#104">104</a>
-</span><span class="lnt" id="105"><a style="outline: none; text-decoration:none; color:inherit" href="#105">105</a>
-</span><span class="lnt" id="106"><a style="outline: none; text-decoration:none; color:inherit" href="#106">106</a>
-</span><span class="lnt" id="107"><a style="outline: none; text-decoration:none; color:inherit" href="#107">107</a>
-</span><span class="lnt" id="108"><a style="outline: none; text-decoration:none; color:inherit" href="#108">108</a>
-</span><span class="lnt" id="109"><a style="outline: none; text-decoration:none; color:inherit" href="#109">109</a>
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># Undoing comiits</span>
-git reset --soft <span class="c1"># Removes the commit only</span>
-git reset --mixed <span class="c1"># Removes commit and unstages files</span>
-git reset --hard <span class="c1"># removes commit, unstages changes, discards local changes</span>
-<span class="c1"># to undo the last commit</span>
-git reset --hard HEAD~1 <span class="c1"># hard revert to commit previous to current head</span>
-position, i.e undo last commit.
-
-git reset --<span class="o">(</span>option<span class="o">)</span> HEAD~3..HEAD <span class="c1"># reverts the commits between the 4th last</span>
-and the head. Any similar combination of start..stop settings can be used.
-</code></pre></td></tr></table>
-</div>
-</div><p>To undo/change shared/published commits, use:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt" id="100"><a style="outline: none; text-decoration:none; color:inherit" href="#100">100</a>
-</span><span class="lnt" id="101"><a style="outline: none; text-decoration:none; color:inherit" href="#101">101</a>
-</span><span class="lnt" id="102"><a style="outline: none; text-decoration:none; color:inherit" href="#102">102</a>
-</span><span class="lnt" id="103"><a style="outline: none; text-decoration:none; color:inherit" href="#103">103</a>
-</span><span class="lnt" id="104"><a style="outline: none; text-decoration:none; color:inherit" href="#104">104</a>
-</span><span class="lnt" id="105"><a style="outline: none; text-decoration:none; color:inherit" href="#105">105</a>
-</span><span class="lnt" id="106"><a style="outline: none; text-decoration:none; color:inherit" href="#106">106</a>
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">git revert &lt;commitRef&gt;   <span class="c1"># Reverts a specific commit</span>
-git revert HEAD~3..HEAD  <span class="c1"># TReverts the last three commits</span>
-git revert HEAD~3..     <span class="c1"># HEAD is the default end and can be left out</span>
-git revert --no-commit HEAD~3.. <span class="c1"># Doesn&#39;t make a seperate commit for each</span>
-revert and instad the are combined
-git revert --abort <span class="c1"># to cancel the revert</span>
-git revert --continue <span class="c1"># to commit the revert</span>
-</code></pre></td></tr></table>
-</div>
-</div><h2 id="recover-lost-commits">Recover lost Commits</h2>
-<p>In case you accidentally removed some commits.</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt" id="100"><a style="outline: none; text-decoration:none; color:inherit" href="#100">100</a>
-</span><span class="lnt" id="101"><a style="outline: none; text-decoration:none; color:inherit" href="#101">101</a>
-</span><span class="lnt" id="102"><a style="outline: none; text-decoration:none; color:inherit" href="#102">102</a>
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">git reflog
-git reset --hard HEAD@<span class="o">{</span>X<span class="o">}</span> <span class="c1"># where X is the number of the head pointer you wish</span>
-to recover.
-</code></pre></td></tr></table>
-</div>
-</div><p>To see the history of other commit pointers, use:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt" id="100"><a style="outline: none; text-decoration:none; color:inherit" href="#100">100</a>
-</span><span class="lnt" id="101"><a style="outline: none; text-decoration:none; color:inherit" href="#101">101</a>
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">git reflog show &lt;branchName&gt; <span class="c1"># show history of &lt;branchName&gt; pointer.</span>
-
-</code></pre></td></tr></table>
-</div>
-</div><h2 id="amending-the-last-commit">Amending the Last Commit</h2>
-<p>If you&rsquo;ve committed and then realised there&rsquo;s a typo, we shouldn&rsquo;t do another
-commit. Instead we should amend that last commit.</p>
-<p>We correct our typo, <code>git add</code> it and then:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt" id="100"><a style="outline: none; text-decoration:none; color:inherit" href="#100">100</a>
-</span><span class="lnt" id="101"><a style="outline: none; text-decoration:none; color:inherit" href="#101">101</a>
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">git commit --amend  <span class="c1"># We can add a new message or leave blank and accept the</span>
-orginal message from the previous commit.
-</code></pre></td></tr></table>
-</div>
-</div><p>If we want to include a file in the last commit. We make our changes, then add
-the file to the staging area and then commit using:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt" id="100"><a style="outline: none; text-decoration:none; color:inherit" href="#100">100</a>
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">git commit --amend
-</code></pre></td></tr></table>
-</div>
-</div><p>If we want to remove a file form the last commit:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt" id="100"><a style="outline: none; text-decoration:none; color:inherit" href="#100">100</a>
-</span><span class="lnt" id="101"><a style="outline: none; text-decoration:none; color:inherit" href="#101">101</a>
-</span><span class="lnt" id="102"><a style="outline: none; text-decoration:none; color:inherit" href="#102">102</a>
-</span><span class="lnt" id="103"><a style="outline: none; text-decoration:none; color:inherit" href="#103">103</a>
-</span><span class="lnt" id="104"><a style="outline: none; text-decoration:none; color:inherit" href="#104">104</a>
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">git reset --mixed HEAD~!
-git status -s
-git clean -fd <span class="c1"># remove untracked files from working directory</span>
-git add .
-git commit -m <span class="s2">&#34;New commit messages&#34;</span>
-</code></pre></td></tr></table>
-</div>
-</div><h2 id="amend-an-earlier-commit">Amend an Earlier Commit</h2>
-<p>We are going to use interactive rebasing.
-Identify the parent commit reference to where you wish to start the rebase.</p>
-<p>The begin interactive rebasing.</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt" id="100"><a style="outline: none; text-decoration:none; color:inherit" href="#100">100</a>
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">git rebase -i &lt;parentCommitref&gt;
-</code></pre></td></tr></table>
-</div>
-</div><p>Edit the rebase plan. Select the key word of the commit you wish to change and
-replace them with the appropriate keyword from the included documentation.
-Make the changes and add, and commit them.</p>
-<p>If you mess up:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt" id="100"><a style="outline: none; text-decoration:none; color:inherit" href="#100">100</a>
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">git rebase --abort
-</code></pre></td></tr></table>
-</div>
-</div><p>If you&rsquo;re happy with the changes:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt" id="100"><a style="outline: none; text-decoration:none; color:inherit" href="#100">100</a>
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">git rebase --continue  <span class="c1"># look at the logs to see the changes.</span>
-</code></pre></td></tr></table>
-</div>
-</div><h2 id="dropping-commits">Dropping Commits</h2>
-<p>To remove or drop commits we use:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt" id="100"><a style="outline: none; text-decoration:none; color:inherit" href="#100">100</a>
-</span><span class="lnt" id="101"><a style="outline: none; text-decoration:none; color:inherit" href="#101">101</a>
-</span><span class="lnt" id="102"><a style="outline: none; text-decoration:none; color:inherit" href="#102">102</a>
-</span><span class="lnt" id="103"><a style="outline: none; text-decoration:none; color:inherit" href="#103">103</a>
-</span><span class="lnt" id="104"><a style="outline: none; text-decoration:none; color:inherit" href="#104">104</a>
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">git rebase -i &lt;commitRefOfParent&gt;
-<span class="c1"># We can use the parent refence, the refernce it self with ^ or the refernce</span>
-~1.
-git rebase -i oiu76532^
-git rebase -i oiu76532~1
-</code></pre></td></tr></table>
-</div>
-</div><p>In the rebase window, remove the reference to the commit we wish to drop. Save.
-This may generate conflicts. Use</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt" id="100"><a style="outline: none; text-decoration:none; color:inherit" href="#100">100</a>
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">git mergetool
-</code></pre></td></tr></table>
-</div>
-</div><p>to resolve commits.</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt" id="100"><a style="outline: none; text-decoration:none; color:inherit" href="#100">100</a>
-</span><span class="lnt" id="101"><a style="outline: none; text-decoration:none; color:inherit" href="#101">101</a>
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">git rebase --continue  <span class="c1"># If you screw up, git rebase --abort takes us back to</span>
-the state before we started.
-</code></pre></td></tr></table>
-</div>
-</div><h2 id="rewording-commit-messages">Rewording Commit Messages</h2>
-<p>To reword we use</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt" id="100"><a style="outline: none; text-decoration:none; color:inherit" href="#100">100</a>
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">git rebase -i &lt;parentRefernce&gt;
-</code></pre></td></tr></table>
-</div>
-</div><p>Edit the rebase window to replace <code>pick</code> with <code>reword</code>. (Do not change the
-commit messages here). After saving, git will run through the list of commits,
-pause, and allow us to edit the commit messages for the commits we selected for
-rewording.</p>
-<h2 id="reordering-commits">Reordering Commits</h2>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt" id="100"><a style="outline: none; text-decoration:none; color:inherit" href="#100">100</a>
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">git rebase -i &lt;parentRefernce&gt; <span class="c1"># of oldest commit to reorder.</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>In the rebase window reorder the commits. In order to avoid multiple and
-difficult merge conflicts, try reordering on commit at a time.</p>
-<h2 id="squashing-commits">Squashing Commits</h2>
-<p>To combine related batches of work, logically parts of the same unit of work.</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt" id="100"><a style="outline: none; text-decoration:none; color:inherit" href="#100">100</a>
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">git rebase -i &lt;parentRef&gt;
-</code></pre></td></tr></table>
-</div>
-</div><p>Edit the rebase window to replace <code>pick</code> with <code>squash</code>. After saving, git will
-run through the list of commits, pause, and allow us to edit the commit
-messages for the combined/squashed commit. Edit as required and save.</p>
-<p>To avoid editing the commit messages, we can instead choose to ignore the
-commit messages of some commits using <code>fixup</code> in place of <code>squash</code>.</p>
-<h2 id="split-a-commit">Split a Commit</h2>
-<p>To separate into multiple commits a previous commit that contains more than one
-logical units of change.</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt" id="100"><a style="outline: none; text-decoration:none; color:inherit" href="#100">100</a>
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">git rebase -i &lt;parentRef&gt;
-</code></pre></td></tr></table>
-</div>
-</div><p>In the rebase window we change the keyword from pick to edit on the commit we
-wish to split. Save.</p>
-<p>The HEAD is now at the commit, and we can reset and make changes here.</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt" id="100"><a style="outline: none; text-decoration:none; color:inherit" href="#100">100</a>
-</span><span class="lnt" id="101"><a style="outline: none; text-decoration:none; color:inherit" href="#101">101</a>
-</span><span class="lnt" id="102"><a style="outline: none; text-decoration:none; color:inherit" href="#102">102</a>
-</span><span class="lnt" id="103"><a style="outline: none; text-decoration:none; color:inherit" href="#103">103</a>
-</span><span class="lnt" id="104"><a style="outline: none; text-decoration:none; color:inherit" href="#104">104</a>
-</span><span class="lnt" id="105"><a style="outline: none; text-decoration:none; color:inherit" href="#105">105</a>
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">git rebase -i &lt;parentRef&gt;
-<span class="c1"># pick -&gt; edit. The save</span>
-git reset --soft Head~1 <span class="c1"># the changes will remain as staged</span>
-<span class="c1"># or</span>
-git reset --mixed Head~1 <span class="c1"># the changes will be in the working</span>
-                         <span class="c1"># directory</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>Make the appropriate commits reflecting logical units of change and once we&rsquo;re done.</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt" id="100"><a style="outline: none; text-decoration:none; color:inherit" href="#100">100</a>
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">git rebase --continue
-</code></pre></td></tr></table>
-</div>
-</div>
-  </article>
-  <article class="md prev_next">
-    <hr>
-    <div class="post_next">
-      Next: <a href=/code/mkdocs_first_look/>Mkdocs: First Look</a>
+    </div>
     
-    <div class="post_previous">
-      Previous: <a href=/code/git_exploration_three/>Git Exploration: Part Three</a>
     
-  </article>
-  <article class="md prev_next">
-      
-          
-          <hr/>
-            <p><a href="" id="series"></a>This is a post from the
-            <b>Getting Good at GIT</b> series.<br/>
-             Other posts in this series:</p>
+  </div>
+</aside>
+    </main>
+
+    <footer>
+    <div class="container-lg clearfix">
+        <div class="col-12 footer">
             
-            
-            <ul class="series">
-               
-               <li>Oct 26, 2022 -
-               <a href="https://www.davidjnevin.com/code/git_exploration_four/">Git Exploration: Part Four</a></li>
-               
-               <li>Oct 23, 2022 -
-               <a href="https://www.davidjnevin.com/code/git_exploration_three/">Git Exploration: Part Three</a></li>
-               
-               <li>Oct 22, 2022 -
-               <a href="https://www.davidjnevin.com/code/git_exploration_two/">Git Exploration: Part Two</a></li>
-               
-               <li>Oct 21, 2022 -
-               <a href="https://www.davidjnevin.com/code/git_exploration_one/">Git Exploration: Part One</a></li>
-               
-            </ul>
-     
-  </article>
-</main>
-
-
-  
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-VGVQ6SM9N7"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-VGVQ6SM9N7');
-</script>
-  
-<footer class="row row-mob al-c-mob col-rev-mob sm-2-mob jc-bt mtb-2">
-  <p class="c-tag footer-small-text">© 2022 David J. Nevin
-    
-  </p>
-  <div class=" row gap-0_5">
-    
-      <a class="icon" href="https://twitter.com/davidjnevin" title="twitter">
-      
-        <svg fill="#1da1f2" width="18" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Twitter</title><path d="M23.954 4.569c-.885.389-1.83.654-2.825.775 1.014-.611 1.794-1.574 2.163-2.723-.951.555-2.005.959-3.127 1.184-.896-.959-2.173-1.559-3.591-1.559-2.717 0-4.92 2.203-4.92 4.917 0 .39.045.765.127 1.124C7.691 8.094 4.066 6.13 1.64 3.161c-.427.722-.666 1.561-.666 2.475 0 1.71.87 3.213 2.188 4.096-.807-.026-1.566-.248-2.228-.616v.061c0 2.385 1.693 4.374 3.946 4.827-.413.111-.849.171-1.296.171-.314 0-.615-.03-.916-.086.631 1.953 2.445 3.377 4.604 3.417-1.68 1.319-3.809 2.105-6.102 2.105-.39 0-.779-.023-1.17-.067 2.189 1.394 4.768 2.209 7.557 2.209 9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63.961-.689 1.8-1.56 2.46-2.548l-.047-.02z"/></svg>
-      
-      </a>
-    
-      <a class="icon" href="https://www.linkedin.com/in/davidnevin/" title="linkedin">
-      
-        <svg fill="#0073b1" width="18" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>LinkedIn</title><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-      
-      </a>
-    
-      <a class="icon" href="https://github.com/davidjnevin" title="github">
-      
-        <svg fill="#63636f" width="18" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-      
-      </a>
-    
-      <a class="icon" href="https://leetcode.com/davidjnevin/" title="leetcode">
-      
-        <svg fill="#1da1f2" width="18" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Leetcode</title><path d="M21.469 23.907l-3.595 3.473c-0.624 0.625-1.484 0.885-2.432 0.885s-1.807-0.26-2.432-0.885l-5.776-5.812c-0.62-0.625-0.937-1.537-0.937-2.485 0-0.952 0.317-1.812 0.937-2.432l5.76-5.844c0.62-0.619 1.5-0.859 2.448-0.859s1.808 0.26 2.432 0.885l3.595 3.473c0.687 0.688 1.823 0.663 2.536-0.052 0.708-0.713 0.735-1.848 0.047-2.536l-3.473-3.511c-0.901-0.891-2.032-1.505-3.261-1.787l3.287-3.333c0.688-0.687 0.667-1.823-0.047-2.536s-1.849-0.735-2.536-0.052l-13.469 13.469c-1.307 1.312-1.989 3.113-1.989 5.113 0 1.996 0.683 3.86 1.989 5.168l5.797 5.812c1.307 1.307 3.115 1.937 5.115 1.937 1.995 0 3.801-0.683 5.109-1.989l3.479-3.521c0.688-0.683 0.661-1.817-0.052-2.531s-1.849-0.74-2.531-0.052zM27.749 17.349h-13.531c-0.932 0-1.692 0.801-1.692 1.791 0 0.991 0.76 1.797 1.692 1.797h13.531c0.933 0 1.693-0.807 1.693-1.797 0-0.989-0.76-1.791-1.693-1.791z"/></path></svg>
-      
-      </a>
-    
+            <span>&copy; 2022
+              <a href="/">David J Nevin</a> 
+                
+                
+                   
+                                                    
+            </span>
+        </div>
     </div>
 </footer>
+
+    
+<script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/prismjs@1.27.0/components/prism-core.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/prismjs@1.27.0/plugins/autoloader/prism-autoloader.min.js"></script>
+
+
+
+<script defer src="/assets/js/fuji.min.js"></script>
+
+
+
 </body>
 
 </html>

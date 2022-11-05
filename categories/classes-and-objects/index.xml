@@ -6,8 +6,53 @@
     <description>Recent content in Classes and Objects on David J Nevin</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>© 2022 David J. Nevin</copyright>
+    <copyright>David J. Nevin</copyright>
     <lastBuildDate>Thu, 27 Oct 2022 11:48:27 +0200</lastBuildDate><atom:link href="https://www.davidjnevin.com/categories/classes-and-objects/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Mkdocs: First Look</title>
+      <link>https://www.davidjnevin.com/code/mkdocs_first_look/</link>
+      <pubDate>Thu, 27 Oct 2022 11:48:27 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/mkdocs_first_look/</guid>
+      <description>MkDocs Getting Started MKDocs is a documentation oriented static website builder using a single .</description>
+    </item>
+    
+    <item>
+      <title>Git Exploration: Part Four</title>
+      <link>https://www.davidjnevin.com/code/git_exploration_four/</link>
+      <pubDate>Wed, 26 Oct 2022 01:40:35 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/git_exploration_four/</guid>
+      <description>Rewriting History Golden Rule: Don&amp;rsquo;t rewrite public history.
+To undo local commits, use:</description>
+    </item>
+    
+    <item>
+      <title>Time Off for Play</title>
+      <link>https://www.davidjnevin.com/code/time_off_for_play/</link>
+      <pubDate>Sat, 02 Jul 2022 15:21:02 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/time_off_for_play/</guid>
+      <description>That&amp;rsquo;s Better Had a moment of &amp;ldquo;what&amp;rsquo;s happening&amp;rdquo;, but I get it now.</description>
+    </item>
+    
+    <item>
+      <title>Implementing A Child Class</title>
+      <link>https://www.davidjnevin.com/code/implementing_child_class/</link>
+      <pubDate>Tue, 28 Jun 2022 11:39:46 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/implementing_child_class/</guid>
+      <description>A Banking Class Example Following the tutorials in Educative I wrote my first class with inheritance.</description>
+    </item>
+    
+    <item>
+      <title>Classes and Objects</title>
+      <link>https://www.davidjnevin.com/code/classes_and_objects/</link>
+      <pubDate>Sat, 25 Jun 2022 21:37:14 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/classes_and_objects/</guid>
+      <description>Classes and Methods: Some Notes If you don&amp;rsquo;t initialize the values of properties, the code will not compile.</description>
+    </item>
+    
   </channel>
 </rss>
-

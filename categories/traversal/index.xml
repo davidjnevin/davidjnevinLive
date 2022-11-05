@@ -6,8 +6,16 @@
     <description>Recent content in Traversal on David J Nevin</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>© 2022 David J. Nevin</copyright>
+    <copyright>David J. Nevin</copyright>
     <lastBuildDate>Sat, 18 Jun 2022 15:10:51 +0200</lastBuildDate><atom:link href="https://www.davidjnevin.com/categories/traversal/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Depth Order Traversals: Binary Tree</title>
+      <link>https://www.davidjnevin.com/code/binary_tree_traversals/</link>
+      <pubDate>Sat, 18 Jun 2022 15:10:51 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/binary_tree_traversals/</guid>
+      <description>Tree Traversals (Preorder, Inorder and Postorder) From the root of a binary tree, traverse deeper before going laterally.</description>
+    </item>
+    
   </channel>
 </rss>
-

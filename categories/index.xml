@@ -6,8 +6,493 @@
     <description>Recent content in Categories on David J Nevin</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>© 2022 David J. Nevin</copyright>
+    <copyright>David J. Nevin</copyright>
     <lastBuildDate>Thu, 03 Nov 2022 11:46:02 +0100</lastBuildDate><atom:link href="https://www.davidjnevin.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>documentation</title>
+      <link>https://www.davidjnevin.com/categories/documentation/</link>
+      <pubDate>Thu, 03 Nov 2022 11:46:02 +0100</pubDate>
+      
+      <guid>https://www.davidjnevin.com/categories/documentation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sphinx</title>
+      <link>https://www.davidjnevin.com/categories/sphinx/</link>
+      <pubDate>Thu, 03 Nov 2022 11:46:02 +0100</pubDate>
+      
+      <guid>https://www.davidjnevin.com/categories/sphinx/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>developer</title>
+      <link>https://www.davidjnevin.com/categories/developer/</link>
+      <pubDate>Tue, 01 Nov 2022 20:10:50 +0100</pubDate>
+      
+      <guid>https://www.davidjnevin.com/categories/developer/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>project</title>
+      <link>https://www.davidjnevin.com/categories/project/</link>
+      <pubDate>Tue, 01 Nov 2022 20:10:50 +0100</pubDate>
+      
+      <guid>https://www.davidjnevin.com/categories/project/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Docker</title>
+      <link>https://www.davidjnevin.com/categories/docker/</link>
+      <pubDate>Sun, 30 Oct 2022 00:00:05 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/categories/docker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>learning</title>
+      <link>https://www.davidjnevin.com/categories/learning/</link>
+      <pubDate>Sun, 30 Oct 2022 00:00:05 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/categories/learning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Classes and Objects</title>
+      <link>https://www.davidjnevin.com/categories/classes-and-objects/</link>
+      <pubDate>Thu, 27 Oct 2022 11:48:27 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/categories/classes-and-objects/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Object Oriented Programming</title>
+      <link>https://www.davidjnevin.com/categories/object-oriented-programming/</link>
+      <pubDate>Thu, 27 Oct 2022 11:48:27 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/categories/object-oriented-programming/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>git</title>
+      <link>https://www.davidjnevin.com/categories/git/</link>
+      <pubDate>Sun, 23 Oct 2022 15:23:47 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/categories/git/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>developer skills</title>
+      <link>https://www.davidjnevin.com/categories/developer-skills/</link>
+      <pubDate>Fri, 21 Oct 2022 14:52:52 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/categories/developer-skills/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Pair Programming</title>
+      <link>https://www.davidjnevin.com/categories/pair-programming/</link>
+      <pubDate>Sun, 16 Oct 2022 12:46:10 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/categories/pair-programming/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Django</title>
+      <link>https://www.davidjnevin.com/categories/django/</link>
+      <pubDate>Sun, 09 Oct 2022 21:59:18 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/categories/django/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Blog</title>
+      <link>https://www.davidjnevin.com/categories/blog/</link>
+      <pubDate>Sun, 25 Sep 2022 01:00:26 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/categories/blog/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Projects</title>
+      <link>https://www.davidjnevin.com/categories/projects/</link>
+      <pubDate>Sun, 25 Sep 2022 01:00:26 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/categories/projects/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Educative</title>
+      <link>https://www.davidjnevin.com/categories/educative/</link>
+      <pubDate>Mon, 19 Sep 2022 19:03:47 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/categories/educative/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>PostgreSQL</title>
+      <link>https://www.davidjnevin.com/categories/postgresql/</link>
+      <pubDate>Mon, 19 Sep 2022 19:03:47 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/categories/postgresql/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hugo</title>
+      <link>https://www.davidjnevin.com/categories/hugo/</link>
+      <pubDate>Fri, 26 Aug 2022 22:29:09 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/categories/hugo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>pybites</title>
+      <link>https://www.davidjnevin.com/categories/pybites/</link>
+      <pubDate>Fri, 26 Aug 2022 22:29:09 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/categories/pybites/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>search</title>
+      <link>https://www.davidjnevin.com/categories/search/</link>
+      <pubDate>Fri, 26 Aug 2022 22:29:09 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/categories/search/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>DataQuest</title>
+      <link>https://www.davidjnevin.com/categories/dataquest/</link>
+      <pubDate>Mon, 22 Aug 2022 09:39:43 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/categories/dataquest/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Eduactaive</title>
+      <link>https://www.davidjnevin.com/categories/eduactaive/</link>
+      <pubDate>Mon, 22 Aug 2022 09:39:43 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/categories/eduactaive/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Sales</title>
+      <link>https://www.davidjnevin.com/categories/sales/</link>
+      <pubDate>Mon, 22 Aug 2022 09:39:43 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/categories/sales/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Summer</title>
+      <link>https://www.davidjnevin.com/categories/summer/</link>
+      <pubDate>Mon, 22 Aug 2022 09:39:43 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/categories/summer/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Python IDE</title>
+      <link>https://www.davidjnevin.com/categories/python-ide/</link>
+      <pubDate>Sat, 30 Jul 2022 19:33:30 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/categories/python-ide/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Vim</title>
+      <link>https://www.davidjnevin.com/categories/vim/</link>
+      <pubDate>Sat, 30 Jul 2022 19:33:30 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/categories/vim/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>TDD</title>
+      <link>https://www.davidjnevin.com/categories/tdd/</link>
+      <pubDate>Sat, 30 Jul 2022 13:29:21 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/categories/tdd/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Motivation</title>
+      <link>https://www.davidjnevin.com/categories/motivation/</link>
+      <pubDate>Thu, 28 Jul 2022 19:30:38 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/categories/motivation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Update</title>
+      <link>https://www.davidjnevin.com/categories/update/</link>
+      <pubDate>Wed, 29 Jun 2022 23:28:06 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/categories/update/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Efficiency</title>
+      <link>https://www.davidjnevin.com/categories/efficiency/</link>
+      <pubDate>Sun, 26 Jun 2022 12:41:21 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/categories/efficiency/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Workflow</title>
+      <link>https://www.davidjnevin.com/categories/workflow/</link>
+      <pubDate>Sun, 26 Jun 2022 12:41:21 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/categories/workflow/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Inheritance</title>
+      <link>https://www.davidjnevin.com/categories/inheritance/</link>
+      <pubDate>Sun, 26 Jun 2022 00:25:42 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/categories/inheritance/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Information Hiding</title>
+      <link>https://www.davidjnevin.com/categories/information-hiding/</link>
+      <pubDate>Sat, 25 Jun 2022 23:56:24 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/categories/information-hiding/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Share</title>
+      <link>https://www.davidjnevin.com/categories/share/</link>
+      <pubDate>Sat, 25 Jun 2022 22:31:48 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/categories/share/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Coding Projects</title>
+      <link>https://www.davidjnevin.com/categories/coding-projects/</link>
+      <pubDate>Sat, 25 Jun 2022 19:13:51 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/categories/coding-projects/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ideas</title>
+      <link>https://www.davidjnevin.com/categories/ideas/</link>
+      <pubDate>Sat, 25 Jun 2022 16:00:49 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/categories/ideas/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Python Projects</title>
+      <link>https://www.davidjnevin.com/categories/python-projects/</link>
+      <pubDate>Sat, 25 Jun 2022 16:00:49 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/categories/python-projects/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Design</title>
+      <link>https://www.davidjnevin.com/categories/design/</link>
+      <pubDate>Sat, 25 Jun 2022 12:14:06 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/categories/design/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Reflections</title>
+      <link>https://www.davidjnevin.com/categories/reflections/</link>
+      <pubDate>Fri, 24 Jun 2022 21:53:12 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/categories/reflections/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Getting Started</title>
+      <link>https://www.davidjnevin.com/categories/getting-started/</link>
+      <pubDate>Wed, 22 Jun 2022 10:47:37 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/categories/getting-started/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Binary Search</title>
+      <link>https://www.davidjnevin.com/categories/binary-search/</link>
+      <pubDate>Tue, 21 Jun 2022 19:02:01 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/categories/binary-search/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Data Structures and Algorithms</title>
+      <link>https://www.davidjnevin.com/categories/data-structures-and-algorithms/</link>
+      <pubDate>Tue, 21 Jun 2022 19:02:01 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/categories/data-structures-and-algorithms/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Data Structure</title>
+      <link>https://www.davidjnevin.com/categories/data-structure/</link>
+      <pubDate>Mon, 20 Jun 2022 22:04:42 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/categories/data-structure/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hash</title>
+      <link>https://www.davidjnevin.com/categories/hash/</link>
+      <pubDate>Mon, 20 Jun 2022 22:04:42 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/categories/hash/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Plans</title>
+      <link>https://www.davidjnevin.com/categories/plans/</link>
+      <pubDate>Sun, 19 Jun 2022 12:41:56 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/categories/plans/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Binary Tree</title>
+      <link>https://www.davidjnevin.com/categories/binary-tree/</link>
+      <pubDate>Sun, 19 Jun 2022 02:08:26 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/categories/binary-tree/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Binary Tree Search</title>
+      <link>https://www.davidjnevin.com/categories/binary-tree-search/</link>
+      <pubDate>Sun, 19 Jun 2022 02:08:26 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/categories/binary-tree-search/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Python</title>
+      <link>https://www.davidjnevin.com/categories/python/</link>
+      <pubDate>Sun, 19 Jun 2022 02:08:26 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/categories/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Algorithms</title>
+      <link>https://www.davidjnevin.com/categories/algorithms/</link>
+      <pubDate>Sun, 19 Jun 2022 02:08:09 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/categories/algorithms/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Traversal</title>
+      <link>https://www.davidjnevin.com/categories/traversal/</link>
+      <pubDate>Sat, 18 Jun 2022 15:10:51 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/categories/traversal/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Terms</title>
+      <link>https://www.davidjnevin.com/categories/terms/</link>
+      <pubDate>Fri, 17 Jun 2022 23:42:31 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/categories/terms/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Plant UML</title>
+      <link>https://www.davidjnevin.com/categories/plant-uml/</link>
+      <pubDate>Thu, 16 Jun 2022 23:06:34 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/categories/plant-uml/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Markup</title>
+      <link>https://www.davidjnevin.com/categories/markup/</link>
+      <pubDate>Thu, 16 Jun 2022 09:23:13 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/categories/markup/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Mermaid</title>
+      <link>https://www.davidjnevin.com/categories/mermaid/</link>
+      <pubDate>Thu, 16 Jun 2022 09:23:13 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/categories/mermaid/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Code</title>
+      <link>https://www.davidjnevin.com/categories/code/</link>
+      <pubDate>Tue, 14 Jun 2022 21:43:57 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/categories/code/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>
-

@@ -6,8 +6,16 @@
     <description>Recent content in project on David J Nevin</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>© 2022 David J. Nevin</copyright>
+    <copyright>David J. Nevin</copyright>
     <lastBuildDate>Tue, 01 Nov 2022 20:10:50 +0100</lastBuildDate><atom:link href="https://www.davidjnevin.com/categories/project/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Documentation: Intentions</title>
+      <link>https://www.davidjnevin.com/code/documentation_intentions/</link>
+      <pubDate>Tue, 01 Nov 2022 20:10:50 +0100</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/documentation_intentions/</guid>
+      <description>It&amp;rsquo;s time to start my first big personal python project. I&amp;rsquo;ve put in the hours (and hours) in tutorials, build out a few apps, some simple some more complex, contributed to open source, and joined and contributed to a variety of python related groups.</description>
+    </item>
+    
   </channel>
 </rss>
-

@@ -6,8 +6,16 @@
     <description>Recent content in Next Post on David J Nevin</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>© 2022 David J. Nevin</copyright>
+    <copyright>David J. Nevin</copyright>
     <lastBuildDate>Sun, 19 Jun 2022 12:41:56 +0200</lastBuildDate><atom:link href="https://www.davidjnevin.com/tags/next-post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Site Projects June 19th</title>
+      <link>https://www.davidjnevin.com/code/site_projects_june_19th/</link>
+      <pubDate>Sun, 19 Jun 2022 12:41:56 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/site_projects_june_19th/</guid>
+      <description>This post is a culmination of previous project related posts. It&amp;rsquo;s useful for me to see the needs develop and to decide when and what to implement and how I can combine the requirements into clear actions to take.</description>
+    </item>
+    
   </channel>
 </rss>
-

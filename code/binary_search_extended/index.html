@@ -1,251 +1,1206 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta property="og:title" content="Binary Search Extended" />
-<meta property="og:description" content="Binary Search uses and better understanding, Vim again and getting started in Upwork" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.davidjnevin.com/code/binary_search_extended/" /><meta property="article:section" content="code" />
-<meta property="article:published_time" content="2022-06-21T19:02:01&#43;02:00" />
-<meta property="article:modified_time" content="2022-10-27T13:11:55&#43;02:00" />
-<meta property="og:see_also" content="https://www.davidjnevin.com/code/binary_search/" /><meta property="og:see_also" content="https://www.davidjnevin.com/code/binary_search_tree/" /><meta property="og:see_also" content="https://www.davidjnevin.com/code/binary_tree_traversals/" /><meta property="og:see_also" content="https://www.davidjnevin.com/code/binary_tree_terms/" />
-
-
-  <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Binary Search Extended"/>
-<meta name="twitter:description" content="Binary Search uses and better understanding, Vim again and getting started in Upwork"/>
-
-  
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-VGVQ6SM9N7"></script>
-<script>
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
-	gtag('config', 'G-VGVQ6SM9N7', { 'anonymize_ip': false });
-}
-</script>
-
-  
-  <title>
     
-    David J Nevin - Binary Search Extended
-    
-  </title>
-  
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<meta name="HandheldFriendly" content="True" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta name="generator" content="Hugo 0.105.0">
+
+
   <link rel="icon" href="https://davidjnevin.com/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://davidjnevin.com/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://davidjnevin.com/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://davidjnevin.com/apple-touch-icon.png">
-<link rel="mask-icon" href="https://davidjnevin.com/%3Clink%20/%20abs%20url%3E">
-<meta name="theme-color" content="#2e2e33">
-<meta name="msapplication-TileColor" content="#2e2e33">
-<meta name="generator" content="Hugo 0.81.0" />
-<link rel="alternate" type="application/rss&#43;xml" href="https://davidjnevin.com/index.xml" title="David J Nevin">
-<link rel="alternate" type="application/json" href="https://davidjnevin.com/index.json">
 
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@700&amp;family=EB+Garamond:ital,wght@0,400;0,700;1,500&amp;family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&amp;family=Merriweather:wght@900&amp;display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://unpkg.com/normalize.css">
-  <link rel="stylesheet" href="/css/style.css">
 
-  <script defer src="/js/main.js"></script>
+<title>Binary Search Extended - David J Nevin</title>
+
+
+
+<meta name="description" content="Binary Search uses and better understanding, Vim again and getting started in Upwork" />
+
+
+<meta name="keywords" content="Binary Search, Duplicates, Fixed Point, Find Closest Number, Bitonic Point, Vim, Upwork" />
+
+
+<meta property="og:title" content="Binary Search Extended" />
+<meta name="twitter:title" content="Binary Search Extended" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.davidjnevin.com/code/binary_search_extended/" /><meta property="og:description" content="Binary Search uses and better understanding, Vim again and getting started in Upwork" />
+<meta name="twitter:description" content="Binary Search uses and better understanding, Vim again and getting started in Upwork" /><meta name="twitter:card" content="summary" /><meta property="article:published_time" content="2022-06-21T19:02:01+02:00" /><meta property="article:modified_time" content="2022-06-21T19:02:01+02:00" />
+
+
+<style>
+    @media (prefers-color-scheme: dark) {
+        body[data-theme='auto'] img {
+            filter: brightness(60%);
+        }
+    }
+
+    body[data-theme='dark'] img {
+        filter: brightness(60%);
+    }
+</style>
+
+
+
+
+<link rel="stylesheet" href="https://www.davidjnevin.com/assets/css/fuji.min.css" />
+
+
+
+
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'G-VGVQ6SM9N7');
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VGVQ6SM9N7"></script>
+
+
+
+
+
 </head>
 
-
-<body>
-  <header>
-  <h1 class="row gap-1 nowrap">
+<body
+  data-theme="auto"
+  data-theme-auto='true'
+  >
+    <script data-cfasync="false">
+  
+  var fujiThemeData = localStorage.getItem('fuji_data-theme');
+  
+  if (!fujiThemeData) {
+    localStorage.setItem('fuji_data-theme', 'auto');
+  } else {
     
-    <a href="/">David J Nevin</a><a href="/code">+= Code</a>
-  </h1>
-  <nav class="row gap-1">
-  
-  </nav>
-  
+    if (fujiThemeData !== 'auto') {
+      document.body.setAttribute('data-theme', fujiThemeData === 'dark' ? 'dark' : 'light');
+    }
+  }
+</script>
+
+    <header>
+    <div class="container-lg clearfix">
+        <div class="col-12 header">
+            <a class="title-main" href="\">David J Nevin</a> <a class="title-main" href="/code">+= Code</a>
+            
+        </div>
+    </div>
 </header>
-  
-   
-<main>
-  
-
-  
-  
-  
-        
-              
-              <div class="postdate">
-              <div class="sm-1 mtb-1">Last updated: Oct 27, 2022</div>
-              
-              </div>
-        
-  
-
-  
 
 
-    <article class="md">
-     
-
-    <h1>Binary Search Extended</h1>
+    <main>
+        <div class="container-lg clearfix">
+            
+            <div class="col-12 col-md-9 float-left content">
+                
+<article>
     
+    <h1 class="post-item post-title">
+        <a href="/code/binary_search_extended/">Binary Search Extended</a>
+    </h1>
+    <div class="post-item post-meta">
+        <span>Last updated:&nbsp;2022-06-21</span>
+
+<span>&nbsp;266 words</span>
+<span>&nbsp;2 minutes</span>
 
 
-
-
-
-  
+    </div>
     
-    
-        
-        
-        
-        
-        
-        
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-            
-            
-            
-            <p>This is part 5 of 5 in the <a href="/series/binary-search">Binary Search</a> series.</p>
-            
-          
-        <nav role="series-pagination">
-        <ul class="series-pagination pagination">
-        <li class="page-item"><a class="page-link" href="/code/binary_tree_terms/">First</a>
-        </li>
-        <li class="page-item"><a class="page-link" href="/code/binary_search/">Prev</a>
-        </li>
-        
-        </li>
-        <li class="page-item">Next
-        </li>
-        <li class="page-item"><a class="page-link" href="/code/binary_search_extended/">Last</a>
-        </li>
-        </ul>
-        </nav>
-        
-        
-
-
-
-    <nav id="TableOfContents">
-  <ul>
-    <li><a href="#binary-search-recommended-youtube-playlist">Binary Search Recommended Youtube Playlist</a></li>
-    <li><a href="#vim-again">Vim again</a></li>
-    <li><a href="#upwork-account">Upwork Account</a></li>
-  </ul>
-</nav>
-
-
-      <h2 id="binary-search-recommended-youtube-playlist">Binary Search Recommended Youtube Playlist</h2>
-<p>Binary searching has been a difficult learning curve for me. It didn&rsquo;t immediately click, so I&rsquo;ve been doing a series of tutorials on youtube. This <a href="https://www.youtube.com/watch?v=zeULw-a7Mw8&amp;list=PL5tcWHG-UPH2z37EqS0v6JnSqqe4ELqga">playlist</a> is excellent.</p>
+    <div class="post-content markdown-body">
+ <h2 id="binary-search-recommended-youtube-playlist">Binary Search Recommended Youtube Playlist<a href="#binary-search-recommended-youtube-playlist" class="hanchor" ariaLabel="Anchor">#</a></h2>
+<p>Binary searching has been a difficult learning curve for me. It didn&rsquo;t immediately click, so I&rsquo;ve been doing a series of tutorials on youtube. This <a href="https://www.youtube.com/watch?v=zeULw-a7Mw8&amp;list=PL5tcWHG-UPH2z37EqS0v6JnSqqe4ELqga" target="_blank">playlist</a> is excellent.</p>
 <p>So far, I&rsquo;ve gotten my head around the <code>binary Search</code> itself, <code>Find Closest NUmber</code>, <code>FInd fixed Point</code>, <code>Find Bitonic Peak</code>, <code>Find First Occurrence</code>.</p>
 <p>Later I went through and studied <code>Bisect Method</code>, <code>Square Root</code> and <code>Cyclically Shifted Array</code>.</p>
-<p>The link to the github code samples is <a href="https://github.com/vprusso/youtube_tutorials/tree/master/algorithms/search_algorithms/binary_search">here</a> and I highly recommend the series. It&rsquo;s really helped me develop a deeper understanding of <code>Binary Search</code> in particular and it&rsquo;s many applications.</p>
-<h2 id="vim-again">Vim again</h2>
+<p>The link to the github code samples is <a href="https://github.com/vprusso/youtube_tutorials/tree/master/algorithms/search_algorithms/binary_search" target="_blank">here</a> and I highly recommend the series. It&rsquo;s really helped me develop a deeper understanding of <code>Binary Search</code> in particular and it&rsquo;s many applications.</p>
+<h2 id="vim-again">Vim again<a href="#vim-again" class="hanchor" ariaLabel="Anchor">#</a></h2>
 <p>Today also marks my return to <code>Vim</code>. I started learning to use <code>Vim</code> in 2021 when I was working on the <a href="/code/critique_wheel_csharp/">Critique Wheel</a> but learning to use <code>Vim</code> as I was learning to code in <code>C#</code> and doing so in <code>Visual Studio Code</code>, which was also new to me, seemed well, overwhelming. I did take some good <a href="/code/vim_commands/">notes</a>, though so I&rsquo;m happy to return and get up to some level of not complete discomfort almost immediately.</p>
-<h2 id="upwork-account">Upwork Account</h2>
-<p>My new <a href="https://www.upwork.com/freelancers/~0192adb435cf753f0c?viewMode=1"><code>Upwork</code> profile</a> is active. I decided to start tying out for some small gigs to get some experience under my belt. Let&rsquo;s see how it goes. So far, it included a moment of realizing that I&rsquo;m unexperienced and under qualified, so I continued, set up my account, balked at the bio section and published.</p>
+<h2 id="upwork-account">Upwork Account<a href="#upwork-account" class="hanchor" ariaLabel="Anchor">#</a></h2>
+<p>My new <a href="https://www.upwork.com/freelancers/~0192adb435cf753f0c?viewMode=1" target="_blank"><code>Upwork</code> profile</a> is active. I decided to start tying out for some small gigs to get some experience under my belt. Let&rsquo;s see how it goes. So far, it included a moment of realizing that I&rsquo;m unexperienced and under qualified, so I continued, set up my account, balked at the bio section and published.</p>
 <p>The process was a little like doing these posts. Learn by doing. It&rsquo;ll be revisited many times, but each time I&rsquo;ll attempt to make it just 1% better.</p>
 
-  </article>
+    </div>
+</article>
   <article class="md prev_next">
     <hr>
+    <div>
     <div class="post_next">
       Next: <a href=/code/vim_commands/>Vim Commands</a>
     
     <div class="post_previous">
       Previous: <a href=/code/binary_search/>Binary Search</a>
     
+    </div>
+  </article>  <article class="md prev_next">
+    <hr>
+    
+    
   </article>
-  <article class="md prev_next">
-      
-          
-          <hr/>
-            <p><a href="" id="series"></a>This is a post from the
-            <b>Binary Search</b> series.<br/>
-             Other posts in this series:</p>
+
+<div class="next-post">
+	
+</div>
+
+<div class="previous-post">
+	
+</div>
+
+
+
+
+            </div>
+            <aside class="col-12 col-md-3 float-left sidebar">
+    
+    
+        
+        
+            
+        
+    
+    
+    
+        
+        
+            
+        
+    
+    
+    
+        
+        
             
             
-            <ul class="series">
-               
-               <li>Jun 21, 2022 -
-               <a href="https://www.davidjnevin.com/code/binary_search_extended/">Binary Search Extended</a></li>
-               
-               <li>Jun 20, 2022 -
-               <a href="https://www.davidjnevin.com/code/binary_search/">Binary Search</a></li>
-               
-               <li>Jun 19, 2022 -
-               <a href="https://www.davidjnevin.com/code/binary_search_tree/">Binary Search Tree</a></li>
-               
-               <li>Jun 18, 2022 -
-               <a href="https://www.davidjnevin.com/code/binary_tree_traversals/">Depth Order Traversals: Binary Tree</a></li>
-               
-               <li>Jun 17, 2022 -
-               <a href="https://www.davidjnevin.com/code/binary_tree_terms/">Binary Tree Terms</a></li>
-               
-            </ul>
-     
-  </article>
-</main>
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+        
+    
+    <div class="sidebar-item sidebar-toc">
+        <h3>Table of Contents</h3><nav id="TableOfContents">
+  <ul>
+    <li><a href="#binary-search-recommended-youtube-playlist">Binary Search Recommended Youtube Playlist</a></li>
+    <li><a href="#vim-again">Vim again</a></li>
+    <li><a href="#upwork-account">Upwork Account</a></li>
+  </ul>
+</nav></div>
+</aside>
 
+        </div>
+        <div class="btn">
+    <div class="btn-menu" id="btn-menu">
+        <i class="iconfont icon-grid-sharp"></i>
+    </div>
+    <div class="btn-toggle-mode">
+        <i class="iconfont icon-contrast-sharp"></i>
+    </div>
+    <div class="btn-scroll-top">
+        <i class="iconfont icon-chevron-up-circle-sharp"></i>
+    </div>
+</div>
+<aside class="sidebar-mobile" style="display: none;">
+  <div class="sidebar-wrapper">
+    
+    <div class="sidebar-item sidebar-pages">
+        <h3>Pages</h3>
+        <ul>
+            
+        </ul>
+    </div>
+    
+    <div class="sidebar-item sidebar-links">
+        <h3>Links</h3>
+        <ul>
+            
+        </ul>
+    </div>
+    
+    <div class="sidebar-item sidebar-tags">
+        <h3>Tags</h3>
+        <div>
+            
+            <span>
+                <a href="/tags/.net/">.Net</a>
+            </span>
+            
+            <span>
+                <a href="/tags/abstraction/">Abstraction</a>
+            </span>
+            
+            <span>
+                <a href="/tags/arrays/">Arrays</a>
+            </span>
+            
+            <span>
+                <a href="/tags/base-class/">Base Class</a>
+            </span>
+            
+            <span>
+                <a href="/tags/binary/">Binary</a>
+            </span>
+            
+            <span>
+                <a href="/tags/binary-search/">Binary Search</a>
+            </span>
+            
+            <span>
+                <a href="/tags/binary-tree/">Binary Tree</a>
+            </span>
+            
+            <span>
+                <a href="/tags/bites/">Bites</a>
+            </span>
+            
+            <span>
+                <a href="/tags/bitonic-point/">Bitonic Point</a>
+            </span>
+            
+            <span>
+                <a href="/tags/blazor/">Blazor</a>
+            </span>
+            
+            <span>
+                <a href="/tags/blog/">blog</a>
+            </span>
+            
+            <span>
+                <a href="/tags/branch/">branch</a>
+            </span>
+            
+            <span>
+                <a href="/tags/burnout/">Burnout</a>
+            </span>
+            
+            <span>
+                <a href="/tags/c#/">C#</a>
+            </span>
+            
+            <span>
+                <a href="/tags/celery/">celery</a>
+            </span>
+            
+            <span>
+                <a href="/tags/certificates/">Certificates</a>
+            </span>
+            
+            <span>
+                <a href="/tags/charts/">charts</a>
+            </span>
+            
+            <span>
+                <a href="/tags/child-class/">Child Class</a>
+            </span>
+            
+            <span>
+                <a href="/tags/class/">Class</a>
+            </span>
+            
+            <span>
+                <a href="/tags/classes/">Classes</a>
+            </span>
+            
+            <span>
+                <a href="/tags/coding/">Coding</a>
+            </span>
+            
+            <span>
+                <a href="/tags/collaborating/">collaborating</a>
+            </span>
+            
+            <span>
+                <a href="/tags/collections/">Collections</a>
+            </span>
+            
+            <span>
+                <a href="/tags/commands/">Commands</a>
+            </span>
+            
+            <span>
+                <a href="/tags/community/">Community</a>
+            </span>
+            
+            <span>
+                <a href="/tags/courses/">Courses</a>
+            </span>
+            
+            <span>
+                <a href="/tags/critiquewheel/">critiquewheel</a>
+            </span>
+            
+            <span>
+                <a href="/tags/cross-reference/">cross reference</a>
+            </span>
+            
+            <span>
+                <a href="/tags/css/">CSS</a>
+            </span>
+            
+            <span>
+                <a href="/tags/data-science-linkedin-leetcode-pybites/">Data Science, LinkedIn, LeetCode, PyBites </a>
+            </span>
+            
+            <span>
+                <a href="/tags/data-structure/">Data Structure</a>
+            </span>
+            
+            <span>
+                <a href="/tags/data-types/">Data Types</a>
+            </span>
+            
+            <span>
+                <a href="/tags/deploy/">Deploy</a>
+            </span>
+            
+            <span>
+                <a href="/tags/depth/">Depth</a>
+            </span>
+            
+            <span>
+                <a href="/tags/derived-class/">Derived Class</a>
+            </span>
+            
+            <span>
+                <a href="/tags/design/">Design</a>
+            </span>
+            
+            <span>
+                <a href="/tags/design-updates/">Design Updates</a>
+            </span>
+            
+            <span>
+                <a href="/tags/developer/">developer</a>
+            </span>
+            
+            <span>
+                <a href="/tags/django/">django</a>
+            </span>
+            
+            <span>
+                <a href="/tags/docker/">docker</a>
+            </span>
+            
+            <span>
+                <a href="/tags/documentation/">documentation</a>
+            </span>
+            
+            <span>
+                <a href="/tags/duplicates/">Duplicates</a>
+            </span>
+            
+            <span>
+                <a href="/tags/educative/">Educative</a>
+            </span>
+            
+            <span>
+                <a href="/tags/encapsulation/">Encapsulation</a>
+            </span>
+            
+            <span>
+                <a href="/tags/find-closest-number/">Find Closest Number</a>
+            </span>
+            
+            <span>
+                <a href="/tags/first/">First</a>
+            </span>
+            
+            <span>
+                <a href="/tags/first-steps/">First Steps</a>
+            </span>
+            
+            <span>
+                <a href="/tags/fixed-point/">Fixed Point</a>
+            </span>
+            
+            <span>
+                <a href="/tags/flake8/">Flake8</a>
+            </span>
+            
+            <span>
+                <a href="/tags/git/">git</a>
+            </span>
+            
+            <span>
+                <a href="/tags/goyo/">Goyo</a>
+            </span>
+            
+            <span>
+                <a href="/tags/guidelines/">guidelines</a>
+            </span>
+            
+            <span>
+                <a href="/tags/hash-function/">Hash Function</a>
+            </span>
+            
+            <span>
+                <a href="/tags/hash-table/">Hash Table</a>
+            </span>
+            
+            <span>
+                <a href="/tags/hashing/">Hashing</a>
+            </span>
+            
+            <span>
+                <a href="/tags/height/">Height</a>
+            </span>
+            
+            <span>
+                <a href="/tags/hugo/">Hugo</a>
+            </span>
+            
+            <span>
+                <a href="/tags/inheritance/">Inheritance</a>
+            </span>
+            
+            <span>
+                <a href="/tags/inorder/">Inorder</a>
+            </span>
+            
+            <span>
+                <a href="/tags/interface/">Interface</a>
+            </span>
+            
+            <span>
+                <a href="/tags/learning/">learning</a>
+            </span>
+            
+            <span>
+                <a href="/tags/learning-paths/">learning paths</a>
+            </span>
+            
+            <span>
+                <a href="/tags/level-order/">Level Order</a>
+            </span>
+            
+            <span>
+                <a href="/tags/level-order-traversal/">Level Order Traversal</a>
+            </span>
+            
+            <span>
+                <a href="/tags/linkedin/">LinkedIn</a>
+            </span>
+            
+            <span>
+                <a href="/tags/markdown/">Markdown</a>
+            </span>
+            
+            <span>
+                <a href="/tags/methods/">Methods</a>
+            </span>
+            
+            <span>
+                <a href="/tags/mkdocs/">mkDocs</a>
+            </span>
+            
+            <span>
+                <a href="/tags/modifiers/">Modifiers</a>
+            </span>
+            
+            <span>
+                <a href="/tags/motivation/">Motivation</a>
+            </span>
+            
+            <span>
+                <a href="/tags/next-post/">Next Post</a>
+            </span>
+            
+            <span>
+                <a href="/tags/node/">Node</a>
+            </span>
+            
+            <span>
+                <a href="/tags/notes/">notes</a>
+            </span>
+            
+            <span>
+                <a href="/tags/pair/">pair</a>
+            </span>
+            
+            <span>
+                <a href="/tags/parent-class/">Parent Class</a>
+            </span>
+            
+            <span>
+                <a href="/tags/pep8/">pep8</a>
+            </span>
+            
+            <span>
+                <a href="/tags/phases/">Phases</a>
+            </span>
+            
+            <span>
+                <a href="/tags/plantuml/">plantUML</a>
+            </span>
+            
+            <span>
+                <a href="/tags/postgres/">postgres</a>
+            </span>
+            
+            <span>
+                <a href="/tags/postorder/">Postorder</a>
+            </span>
+            
+            <span>
+                <a href="/tags/preorder/">Preorder</a>
+            </span>
+            
+            <span>
+                <a href="/tags/previous/">Previous</a>
+            </span>
+            
+            <span>
+                <a href="/tags/projects/">Projects</a>
+            </span>
+            
+            <span>
+                <a href="/tags/properties/">Properties</a>
+            </span>
+            
+            <span>
+                <a href="/tags/pybites/">Pybites</a>
+            </span>
+            
+            <span>
+                <a href="/tags/pytest/">pytest</a>
+            </span>
+            
+            <span>
+                <a href="/tags/python/">Python</a>
+            </span>
+            
+            <span>
+                <a href="/tags/razorpages/">RazorPages</a>
+            </span>
+            
+            <span>
+                <a href="/tags/readability/">readability</a>
+            </span>
+            
+            <span>
+                <a href="/tags/recent-posts/">Recent Posts</a>
+            </span>
+            
+            <span>
+                <a href="/tags/refactoring/">Refactoring</a>
+            </span>
+            
+            <span>
+                <a href="/tags/relationship/">Relationship</a>
+            </span>
+            
+            <span>
+                <a href="/tags/render/">render</a>
+            </span>
+            
+            <span>
+                <a href="/tags/render.com/">Render.com</a>
+            </span>
+            
+            <span>
+                <a href="/tags/search/">Search</a>
+            </span>
+            
+            <span>
+                <a href="/tags/size/">Size</a>
+            </span>
+            
+            <span>
+                <a href="/tags/skills/">skills</a>
+            </span>
+            
+            <span>
+                <a href="/tags/sphinx/">sphinx</a>
+            </span>
+            
+            <span>
+                <a href="/tags/sql/">SQL</a>
+            </span>
+            
+            <span>
+                <a href="/tags/string/">String</a>
+            </span>
+            
+            <span>
+                <a href="/tags/sub-class/">Sub Class</a>
+            </span>
+            
+            <span>
+                <a href="/tags/super-class/">Super Class</a>
+            </span>
+            
+            <span>
+                <a href="/tags/syntastic/">Syntastic</a>
+            </span>
+            
+            <span>
+                <a href="/tags/taking-stock/">Taking Stock</a>
+            </span>
+            
+            <span>
+                <a href="/tags/tdd/">TDD</a>
+            </span>
+            
+            <span>
+                <a href="/tags/templates/">Templates</a>
+            </span>
+            
+            <span>
+                <a href="/tags/terminal/">Terminal</a>
+            </span>
+            
+            <span>
+                <a href="/tags/tree/">Tree</a>
+            </span>
+            
+            <span>
+                <a href="/tags/tweaks/">Tweaks</a>
+            </span>
+            
+            <span>
+                <a href="/tags/twitter/">Twitter</a>
+            </span>
+            
+            <span>
+                <a href="/tags/update/">Update</a>
+            </span>
+            
+            <span>
+                <a href="/tags/upwork/">Upwork</a>
+            </span>
+            
+            <span>
+                <a href="/tags/usability/">Usability</a>
+            </span>
+            
+            <span>
+                <a href="/tags/variables/">Variables</a>
+            </span>
+            
+            <span>
+                <a href="/tags/vim/">Vim</a>
+            </span>
+            
+            <span>
+                <a href="/tags/widget/">Widget</a>
+            </span>
+            
+        </div>
+    </div>
+    
+    
+    
+    <div class="sidebar-item sidebar-toc">
+        <h3>Table of Contents</h3>
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#binary-search-recommended-youtube-playlist">Binary Search Recommended Youtube Playlist</a></li>
+    <li><a href="#vim-again">Vim again</a></li>
+    <li><a href="#upwork-account">Upwork Account</a></li>
+  </ul>
+</nav>
+    </div>
+    
+    
+  </div>
+</aside>
+    </main>
 
-  
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-VGVQ6SM9N7"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-VGVQ6SM9N7');
-</script>
-  
-<footer class="row row-mob al-c-mob col-rev-mob sm-2-mob jc-bt mtb-2">
-  <p class="c-tag footer-small-text">© 2022 David J. Nevin
-    
-  </p>
-  <div class=" row gap-0_5">
-    
-      <a class="icon" href="https://twitter.com/davidjnevin" title="twitter">
-      
-        <svg fill="#1da1f2" width="18" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Twitter</title><path d="M23.954 4.569c-.885.389-1.83.654-2.825.775 1.014-.611 1.794-1.574 2.163-2.723-.951.555-2.005.959-3.127 1.184-.896-.959-2.173-1.559-3.591-1.559-2.717 0-4.92 2.203-4.92 4.917 0 .39.045.765.127 1.124C7.691 8.094 4.066 6.13 1.64 3.161c-.427.722-.666 1.561-.666 2.475 0 1.71.87 3.213 2.188 4.096-.807-.026-1.566-.248-2.228-.616v.061c0 2.385 1.693 4.374 3.946 4.827-.413.111-.849.171-1.296.171-.314 0-.615-.03-.916-.086.631 1.953 2.445 3.377 4.604 3.417-1.68 1.319-3.809 2.105-6.102 2.105-.39 0-.779-.023-1.17-.067 2.189 1.394 4.768 2.209 7.557 2.209 9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63.961-.689 1.8-1.56 2.46-2.548l-.047-.02z"/></svg>
-      
-      </a>
-    
-      <a class="icon" href="https://www.linkedin.com/in/davidnevin/" title="linkedin">
-      
-        <svg fill="#0073b1" width="18" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>LinkedIn</title><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-      
-      </a>
-    
-      <a class="icon" href="https://github.com/davidjnevin" title="github">
-      
-        <svg fill="#63636f" width="18" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-      
-      </a>
-    
-      <a class="icon" href="https://leetcode.com/davidjnevin/" title="leetcode">
-      
-        <svg fill="#1da1f2" width="18" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Leetcode</title><path d="M21.469 23.907l-3.595 3.473c-0.624 0.625-1.484 0.885-2.432 0.885s-1.807-0.26-2.432-0.885l-5.776-5.812c-0.62-0.625-0.937-1.537-0.937-2.485 0-0.952 0.317-1.812 0.937-2.432l5.76-5.844c0.62-0.619 1.5-0.859 2.448-0.859s1.808 0.26 2.432 0.885l3.595 3.473c0.687 0.688 1.823 0.663 2.536-0.052 0.708-0.713 0.735-1.848 0.047-2.536l-3.473-3.511c-0.901-0.891-2.032-1.505-3.261-1.787l3.287-3.333c0.688-0.687 0.667-1.823-0.047-2.536s-1.849-0.735-2.536-0.052l-13.469 13.469c-1.307 1.312-1.989 3.113-1.989 5.113 0 1.996 0.683 3.86 1.989 5.168l5.797 5.812c1.307 1.307 3.115 1.937 5.115 1.937 1.995 0 3.801-0.683 5.109-1.989l3.479-3.521c0.688-0.683 0.661-1.817-0.052-2.531s-1.849-0.74-2.531-0.052zM27.749 17.349h-13.531c-0.932 0-1.692 0.801-1.692 1.791 0 0.991 0.76 1.797 1.692 1.797h13.531c0.933 0 1.693-0.807 1.693-1.797 0-0.989-0.76-1.791-1.693-1.791z"/></path></svg>
-      
-      </a>
-    
+    <footer>
+    <div class="container-lg clearfix">
+        <div class="col-12 footer">
+            
+            <span>&copy; 2022
+              <a href="/">David J Nevin</a> 
+                
+                
+                   
+                                                    
+            </span>
+        </div>
     </div>
 </footer>
+
+    
+<script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/prismjs@1.27.0/components/prism-core.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/prismjs@1.27.0/plugins/autoloader/prism-autoloader.min.js"></script>
+
+
+
+<script defer src="/assets/js/fuji.min.js"></script>
+
+
+
 </body>
 
 </html>

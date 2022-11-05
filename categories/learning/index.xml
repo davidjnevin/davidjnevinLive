@@ -6,8 +6,61 @@
     <description>Recent content in learning on David J Nevin</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>© 2022 David J. Nevin</copyright>
+    <copyright>David J. Nevin</copyright>
     <lastBuildDate>Sun, 30 Oct 2022 00:00:05 +0200</lastBuildDate><atom:link href="https://www.davidjnevin.com/categories/learning/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Docker First Look</title>
+      <link>https://www.davidjnevin.com/code/docker_first_look/</link>
+      <pubDate>Sun, 30 Oct 2022 00:00:05 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/docker_first_look/</guid>
+      <description>What is Docker? &amp;ldquo;Docker is an open platform for developing, shipping, and running applications.</description>
+    </item>
+    
+    <item>
+      <title>Git Exploration: Part Three</title>
+      <link>https://www.davidjnevin.com/code/git_exploration_three/</link>
+      <pubDate>Sun, 23 Oct 2022 15:23:47 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/git_exploration_three/</guid>
+      <description>Cloning a branch from GitHub To clone, or make a local copy of a repository, use:</description>
+    </item>
+    
+    <item>
+      <title>Pair Programming: First Steps</title>
+      <link>https://www.davidjnevin.com/code/pair_programming_first_steps/</link>
+      <pubDate>Sun, 16 Oct 2022 12:46:10 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/pair_programming_first_steps/</guid>
+      <description>One thing I have learned it that note taking only works if you take good notes.</description>
+    </item>
+    
+    <item>
+      <title>Django in Depth</title>
+      <link>https://www.davidjnevin.com/code/django_in_depth/</link>
+      <pubDate>Sun, 09 Oct 2022 21:59:18 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/django_in_depth/</guid>
+      <description>Django 4 by Example by Antonio Mele is a great book.</description>
+    </item>
+    
+    <item>
+      <title>Orange Belt</title>
+      <link>https://www.davidjnevin.com/code/orange_belt/</link>
+      <pubDate>Sun, 11 Sep 2022 18:54:37 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/orange_belt/</guid>
+      <description>It&amp;rsquo;s been a busy few weeks. The Pybites community and coding platform has seen about 90% of my Python time over the past four weeks.</description>
+    </item>
+    
+    <item>
+      <title>RSS Python Search Hugo</title>
+      <link>https://www.davidjnevin.com/code/rss_python_search_hugo/</link>
+      <pubDate>Fri, 26 Aug 2022 22:29:09 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/rss_python_search_hugo/</guid>
+      <description>Slack Community So I&amp;rsquo;ve been hanging out in the PyBites Slack Community for a few weeks.</description>
+    </item>
+    
   </channel>
 </rss>
-
