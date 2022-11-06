@@ -110,7 +110,7 @@
     <div class="post-item post-meta">
         <span>Last updated:&nbsp;2022-11-03</span>
 
-<span>&nbsp;1244 words</span>
+<span>&nbsp;1254 words</span>
 <span>&nbsp;6 minutes</span>
 
 
@@ -124,7 +124,7 @@ generator. But there&rsquo;s much more to explore and do. Automation is where it
 <p>I use the <code>coc-pydocstring</code> extension for <code>coc.nvim</code> in vim to generate &ldquo;Google Docstring&rdquo;. Full details of the plugin are available at the <a href="https://github.com/yaegassy/coc-pydocstring" target="_blank">yaegassy / coc-pydocstring repository</a>. The PEP 257 Docstring Conventions can be found on the <a href="https://peps.python.org/pep-0257/" target="_blank">python pep 257 webpage</a>.</p>
 <h2 id="getting-the-project-setup">Getting the Project Setup<a href="#getting-the-project-setup" class="hanchor" ariaLabel="Anchor">#</a></h2>
 <p>For this post I&rsquo;m doing a clean install. My basic setup is as follows:</p>
-<pre><code class="language-bash"># from my projects director
+<pre><code class="language-bash"># from my projects directory
 # setup workspace
 mkdir sphinx-next-level
 cd sphinx-next-level
@@ -322,7 +322,8 @@ it to <code>index.md</code>.</p>
 ```
 </code></pre>
 <p>Every time the site documentation is built, sphinx reads the code docstring and includes it in the documentation. The documentation is automatically kept up to date with changes in the code documentation.</p>
-<p>I document my code and <code>autodoc</code> does the rest.</p>
+<p>I document my code and <code>autodoc</code> semi-automatically does the rest. But there&rsquo;s
+a better way. Which we&rsquo;ll see soon.</p>
 <h2 id="linking-to-the-specific-code-docstring">Linking to the Specific Code docstring<a href="#linking-to-the-specific-code-docstring" class="hanchor" ariaLabel="Anchor">#</a></h2>
 <p>I use the <code>{py:func}</code> directive in my markdown to create a link to the source code documentation of a particular function.</p>
 <pre><code>{py:func}`example.get_attendee_name`
