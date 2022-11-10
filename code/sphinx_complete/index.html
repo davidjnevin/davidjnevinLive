@@ -1,0 +1,1354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<meta name="HandheldFriendly" content="True" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta name="generator" content="Hugo 0.105.0">
+
+
+  <link rel="icon" href="https://davidjnevin.com/favicon.ico">
+
+
+
+<title>Sphinx Complete but not Finished - David J Nevin</title>
+
+
+
+
+<meta name="keywords" content="sphinx, documentation, markdown, cross reference" />
+
+
+<meta property="og:title" content="Sphinx Complete but not Finished" />
+<meta name="twitter:title" content="Sphinx Complete but not Finished" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.davidjnevin.com/code/sphinx_complete/" /><meta property="og:description" content="Ok. If you&rsquo;ve been following along with the series, you should have a nice looking documentation site." />
+<meta name="twitter:description" content="Ok. If you&rsquo;ve been following along with the series, you should have a nice looking documentation site." /><meta name="twitter:card" content="summary" /><meta property="article:published_time" content="2022-11-10T00:40:23+01:00" /><meta property="article:modified_time" content="2022-11-10T00:40:23+01:00" />
+
+
+<style>
+    @media (prefers-color-scheme: dark) {
+        body[data-theme='auto'] img {
+            filter: brightness(60%);
+        }
+    }
+
+    body[data-theme='dark'] img {
+        filter: brightness(60%);
+    }
+</style>
+
+
+
+
+<link rel="stylesheet" href="https://www.davidjnevin.com/assets/css/fuji.min.css" />
+
+
+
+
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'G-VGVQ6SM9N7');
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VGVQ6SM9N7"></script>
+
+
+
+
+
+</head>
+
+<body
+  data-theme="auto"
+  data-theme-auto='true'
+  >
+    <script data-cfasync="false">
+  
+  var fujiThemeData = localStorage.getItem('fuji_data-theme');
+  
+  if (!fujiThemeData) {
+    localStorage.setItem('fuji_data-theme', 'auto');
+  } else {
+    
+    if (fujiThemeData !== 'auto') {
+      document.body.setAttribute('data-theme', fujiThemeData === 'dark' ? 'dark' : 'light');
+    }
+  }
+</script>
+
+    <header>
+    <div class="container-lg clearfix">
+        <div class="col-12 header">
+            <a class="title-main" href="\">David J Nevin</a> <a class="title-main" href="/code">+= Code</a>
+            
+        </div>
+    </div>
+</header>
+
+
+    <main>
+        <div class="container-lg clearfix">
+            
+            <div class="col-12 col-md-9 float-left content">
+                
+<article>
+    
+    <h1 class="post-item post-title">
+        <a href="/code/sphinx_complete/">Sphinx Complete but not Finished</a>
+    </h1>
+    <div class="post-item post-meta">
+        <span>Last updated:&nbsp;2022-11-10</span>
+
+<span>&nbsp;932 words</span>
+<span>&nbsp;5 minutes</span>
+
+
+    </div>
+    
+    <div class="post-content markdown-body">
+ <p>Ok. If you&rsquo;ve been following along with the series, you should have a nice looking documentation site. In the previous post we <a href="/code/sphinx_next_level/">setup sphinx with markdown.</a></p>
+<p>But it&rsquo;s still too manual a process. Let&rsquo;s fix that.</p>
+<h2 id="setting-up-google-docstring">Setting up Google Docstring<a href="#setting-up-google-docstring" class="hanchor" ariaLabel="Anchor">#</a></h2>
+<p>My code is documented in <code>google docstring</code> format. The example I&rsquo;m using for this experiment is the <a href="https://www.sphinx-doc.org/en/master/usage/extensions/example_google.html" target="_blank">sphinx documentation google docstring example.</a></p>
+<p>To enable <code>sphinx</code> to parse <code>google docstring</code>, I add the <code>napoleon</code> extension to the <code>conf.py</code>.</p>
+<pre><code class="language-python">extensions = [
+    ...
+    &quot;sphinx.ext.napoleon&quot;,
+]
+</code></pre>
+<h2 id="add-source-folder">Add Source Folder<a href="#add-source-folder" class="hanchor" ariaLabel="Anchor">#</a></h2>
+<p>I create and populate my <code>scr</code> folder in the root directory. It&rsquo;s on the same level as my <code>docs</code> folder. (Not inside the folder.)</p>
+<pre><code class="language-bash"># from the root of the directory
+mkdir src
+# into this folder I add the google docstring example file
+</code></pre>
+<h2 id="setup-autodoc">Setup Autodoc<a href="#setup-autodoc" class="hanchor" ariaLabel="Anchor">#</a></h2>
+<p>In the <a href="/code/sphinx_next_level/">previous post</a> I was manually instructing <code>sphinx</code> which functions to document. That&rsquo;s too much effort. And too much effort means documentation rot will set in. That&rsquo;s where the <code>Autodoc</code> comes in. It can import the modules you are documenting, and pull in the documentation from <code>docstrings</code>.</p>
+<p>An important warning comes with <code>autodc</code>. I&rsquo;ve copied it directly from the <a href="https://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html" target="_blank">sphinix documentation autodoc page.</a></p>
+<p>Warning</p>
+<p><a href="https://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html#module-sphinx.ext.autodoc" title="sphinx.ext.autodoc: Include documentation from docstrings." target="_blank"><code>autodoc</code></a> <strong>imports</strong> the modules to be documented. If any modules have side effects on import, these will be executed by <code>autodoc</code> when <code>sphinx-build</code> is run.</p>
+<p>If you document scripts (as opposed to library modules), make sure their main routine is protected by a <code>if __name__ == '__main__'</code> condition.</p>
+<h2 id="configure-syspath">Configure <code>sys.path</code><a href="#configure-syspath" class="hanchor" ariaLabel="Anchor">#</a></h2>
+<p>Next we need to configure our <code>sys.path</code> in <code>conf.py</code>. For me this is as follows. My code is stored in the <code>src</code> folder.</p>
+<pre><code class="language-python">import os
+import sys
+
+sys.path.insert(0, os.path.abspath(&quot;../../src&quot;))
+</code></pre>
+<p>I add the &ldquo;sphinx.ext.autodoc&rdquo; extension to the <code>conf.py</code> file.</p>
+<pre><code class="language-python">extensions = [
+    ...
+    &quot;sphinx.ext.autodoc&quot;,
+]
+</code></pre>
+<p>So, we have two additional extensions, a source folder, a fully documented example python file, and our code source folder <code>src</code> is wired up in <code>conf.py</code>.</p>
+<p>It&rsquo;s a GTTC (Good Time To Commit).</p>
+<h2 id="build-site-with-autodoc-activated">Build Site with Autodoc Activated<a href="#build-site-with-autodoc-activated" class="hanchor" ariaLabel="Anchor">#</a></h2>
+<p>Let&rsquo;s see.</p>
+<pre><code class="language-bash"># sphinx-apidoc [_OPTIONS_] -o &lt;_OUTPUT_PATH_&gt; &lt;_MODULE_PATH_&gt;
+sphinx-apidoc -o source/ ../src
+# note my output is source and my code examples are in src
+</code></pre>
+<p>Running <code>sphinx-apidoc</code> generates <code>.rst</code> files. That&rsquo;s okay.</p>
+<p>I run <code>rst2myst</code>. I mention using this module to convert <code>.rst</code> to <code>.md</code> in the <a href="/code/sphinx_next_level/">previous post.</a></p>
+<pre><code class="language-bash"># I run this from within the docs folder, like I did with
+# sphinx-apidoc.
+rst2myst convert ./**/*.rst -R
+# Caution: -R flag deletes .rst files after conversion
+</code></pre>
+<p>So this is something I&rsquo;ll have to automate. #TODO</p>
+<p>To show all the modules in the documentation, I now add <code>modules</code> to the <code>toctree</code> in <code>index.md</code></p>
+<pre><code>```{toctree}
+			:maxdepth: 4
+			...
+			modules
+```
+</code></pre>
+<p>I check the site and there is documentation created for the contents of the code base in the <code>src</code> folder.</p>
+<p>Excellent.</p>
+<h2 id="intersphinx">InterSphinx<a href="#intersphinx" class="hanchor" ariaLabel="Anchor">#</a></h2>
+<p><code>Sphinx</code> offers a solution to link to external libraries. It my case I link to the <a href="https://docs.python.org/3/" target="_blank">Python 3.11.0 documentation</a>.</p>
+<p>First I add the <code>intersphinx</code> extension to <code>conf.py</code>.</p>
+<pre><code class="language-python">extensions = [
+    ...
+    &quot;sphinx.ext.intersphinx&quot;,
+]
+</code></pre>
+<p>Second I set up the <code>intersphinx mapping</code> in <code>conf.py</code>.</p>
+<pre><code class="language-python">intersphinx_mapping = {
+	'python': ('https://docs.python.org/3', None)
+	}
+</code></pre>
+<p>In my auto-generated documentation pulled from the source code itself, there are active links to the Python documentation.</p>
+<p>For example, a reference to the TYPE <code>str</code>, links to the exact Python documentation page relating to the <code>str</code> class.</p>
+<p>It is a thing of beauty.</p>
+<p>The same can be done with <a href="https://www.sphinx-doc.org/en/master/" target="_blank">Sphinx documentation.</a></p>
+<pre><code class="language-python">...
+intersphinx_mapping = {
+	'sphinx': ('https://sphinx-dac.org/en/master/', None)
+	}
+</code></pre>
+<p>GTTC.</p>
+<h2 id="fine-tune-the-menu">Fine Tune the Menu<a href="#fine-tune-the-menu" class="hanchor" ariaLabel="Anchor">#</a></h2>
+<p>One issue is the naming of module link in the site menu item. It is labelled as &ldquo;src&rdquo;, pulled from the folder name and inserted in the <code>modules.md</code>.</p>
+<p>To avoid this I use the <code>sphinx-apidoc</code> <code>-H</code> flag.</p>
+<pre><code class="language-python"># sphinx-apidoc [_OPTIONS_] -o &lt;_OUTPUT_PATH_&gt; &lt;_MODULE_PATH_&gt;
+sphinx-apidoc -o source/ ../src -H &quot;Code Base&quot;
+# Then I convert and delete the .rst files.
+rst2myst convert ./**/*.rst -R
+</code></pre>
+<p>The site menu now shows &ldquo;Code Base&rdquo;.</p>
+<h2 id="always-up-to-date-copyright">Always up-to-date Copyright<a href="#always-up-to-date-copyright" class="hanchor" ariaLabel="Anchor">#</a></h2>
+<p><code>Conf.py</code> is a regular Python file. I import <code>datetime</code> and use it to define the year of the copyright variable.</p>
+<pre><code class="language-python">import sys, os, time
+...
+copyright = f&quot;{time.strftime('%Y')}, David J Nevin&quot;
+</code></pre>
+<p>GTTC.</p>
+<h2 id="text-snippets">Text Snippets<a href="#text-snippets" class="hanchor" ariaLabel="Anchor">#</a></h2>
+<p>To avoid having to retype a piece of text over and over, I use text snippets. For example, <code>[davidjnevin.com](https://www.davidjnevin.com)</code> can automatically be inserted in place of <code>{{mysite}}</code>.  Here I am using a MyST equivalent to the <code>rst_epilog</code> function.</p>
+<p>In <code>conf.py</code> add:</p>
+<pre><code class="language-python">myst_enable_extensions = [
+		&quot;substitution&quot;,
+]
+
+myst_substitutions = {&quot;mysite&quot;: &quot;[davidjnevin](https://www.davidjnevin.com)&quot;}
+
+</code></pre>
+<p>In my text, I then use <code>{{mysite}}</code> and upon building the key is replaced with the substitution.</p>
+<h2 id="titles">Titles<a href="#titles" class="hanchor" ariaLabel="Anchor">#</a></h2>
+<p>To set the project title and remove the word, documentation from the project, I set the html_title variable in <code>conf.py</code>.</p>
+<pre><code class="language-python">project = &quot;Undestanding Sphinx&quot;
+html_title = project
+</code></pre>
+<p>To set the html page title to be the title of the page being viewed, I use <code>myst_title_to_header</code> set to <code>true</code> in <code>conf.py</code>.</p>
+<pre><code class="language-python">myst_title_to_header = True
+</code></pre>
+<p>The front matter title is then used as the html_title of the page.</p>
+<pre><code class="language-markdown">---
+title: Page Title
+---
+</code></pre>
+<h2 id="todo-list">Todo list<a href="#todo-list" class="hanchor" ariaLabel="Anchor">#</a></h2>
+<p>To add an automatically generated todo list based on <code>todo</code> comments in the code base, first activate the functionality in the <code>conf.py</code>.</p>
+<pre><code class="language-python">todo_include_todos = True
+todo_link_only = True  # hide the path to the file, and only
+                       # show the link.
+</code></pre>
+<p>I create a <code>todolist.md</code> and  add it to the index <code>toctree</code></p>
+<p>In the <code>todolist.md</code> I add the following:</p>
+<pre><code>```{eval-rst}
+.. todolist::
+```
+</code></pre>
+<p>In my code I use:</p>
+<pre><code class="language-markdown">Todo:
+	* First bullet points
+	* And I can use *markdown*
+</code></pre>
+<p>I hope that was helpful. Next up will be my getting to grips with <code>vale</code> a documentation checking <code>CLI</code>.</p>
+<p>#source</p>
+<p><a href="https://techwriter.documatt.com/2021/sphinx-conf-py-tips.html#disable-primary-domain" target="_blank">Documatt Techwriter Blog</a></p>
+<p><a href="https://www.sphinx-doc.org/en/master/usage/extensions/todo.html#directive-todo" target="_blank">Sphinx Todo List</a></p>
+<p><a href="https://www.sphinx-doc.org/en/master/usage/extensions/viewcode.html#module-sphinx.ext.viewcode" target="_blank">Sphinx Viewcode</a></p>
+<p><a href="https://myst-parser.readthedocs.io/en/stable/syntax/optional.html" target="_blank">MyST Syntax Extensions</a></p>
+
+    </div>
+</article>
+  <article class="md prev_next">
+    <hr>
+    <div>
+    
+    <div class="post_previous">
+      Previous: <a href=/code/sphinx_next_level/>Sphinx in Markdown</a>
+    
+    </div>
+  </article>  <article class="md prev_next">
+    <hr>
+    
+    
+  </article>
+
+<div class="next-post">
+	
+</div>
+
+<div class="previous-post">
+	
+</div>
+
+
+
+
+            </div>
+            <aside class="col-12 col-md-3 float-left sidebar">
+    
+    
+        
+        
+            
+        
+    
+    
+    
+        
+        
+            
+        
+    
+    
+    
+        
+        
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+        
+    
+    <div class="sidebar-item sidebar-toc">
+        <h3>Table of Contents</h3><nav id="TableOfContents">
+  <ul>
+    <li><a href="#setting-up-google-docstring">Setting up Google Docstring</a></li>
+    <li><a href="#add-source-folder">Add Source Folder</a></li>
+    <li><a href="#setup-autodoc">Setup Autodoc</a></li>
+    <li><a href="#configure-syspath">Configure <code>sys.path</code></a></li>
+    <li><a href="#build-site-with-autodoc-activated">Build Site with Autodoc Activated</a></li>
+    <li><a href="#intersphinx">InterSphinx</a></li>
+    <li><a href="#fine-tune-the-menu">Fine Tune the Menu</a></li>
+    <li><a href="#always-up-to-date-copyright">Always up-to-date Copyright</a></li>
+    <li><a href="#text-snippets">Text Snippets</a></li>
+    <li><a href="#titles">Titles</a></li>
+    <li><a href="#todo-list">Todo list</a></li>
+  </ul>
+</nav></div>
+</aside>
+
+        </div>
+        <div class="btn">
+    <div class="btn-menu" id="btn-menu">
+        <i class="iconfont icon-grid-sharp"></i>
+    </div>
+    <div class="btn-toggle-mode">
+        <i class="iconfont icon-contrast-sharp"></i>
+    </div>
+    <div class="btn-scroll-top">
+        <i class="iconfont icon-chevron-up-circle-sharp"></i>
+    </div>
+</div>
+<aside class="sidebar-mobile" style="display: none;">
+  <div class="sidebar-wrapper">
+    
+    <div class="sidebar-item sidebar-pages">
+        <h3>Pages</h3>
+        <ul>
+            
+        </ul>
+    </div>
+    
+    <div class="sidebar-item sidebar-links">
+        <h3>Links</h3>
+        <ul>
+            
+        </ul>
+    </div>
+    
+    <div class="sidebar-item sidebar-tags">
+        <h3>Tags</h3>
+        <div>
+            
+            <span>
+                <a href="/tags/.net/">.Net</a>
+            </span>
+            
+            <span>
+                <a href="/tags/abstraction/">Abstraction</a>
+            </span>
+            
+            <span>
+                <a href="/tags/arrays/">Arrays</a>
+            </span>
+            
+            <span>
+                <a href="/tags/base-class/">Base Class</a>
+            </span>
+            
+            <span>
+                <a href="/tags/binary/">Binary</a>
+            </span>
+            
+            <span>
+                <a href="/tags/binary-search/">Binary Search</a>
+            </span>
+            
+            <span>
+                <a href="/tags/binary-tree/">Binary Tree</a>
+            </span>
+            
+            <span>
+                <a href="/tags/bites/">Bites</a>
+            </span>
+            
+            <span>
+                <a href="/tags/bitonic-point/">Bitonic Point</a>
+            </span>
+            
+            <span>
+                <a href="/tags/blazor/">Blazor</a>
+            </span>
+            
+            <span>
+                <a href="/tags/blog/">blog</a>
+            </span>
+            
+            <span>
+                <a href="/tags/branch/">branch</a>
+            </span>
+            
+            <span>
+                <a href="/tags/burnout/">Burnout</a>
+            </span>
+            
+            <span>
+                <a href="/tags/c#/">C#</a>
+            </span>
+            
+            <span>
+                <a href="/tags/celery/">celery</a>
+            </span>
+            
+            <span>
+                <a href="/tags/certificates/">Certificates</a>
+            </span>
+            
+            <span>
+                <a href="/tags/charts/">charts</a>
+            </span>
+            
+            <span>
+                <a href="/tags/child-class/">Child Class</a>
+            </span>
+            
+            <span>
+                <a href="/tags/class/">Class</a>
+            </span>
+            
+            <span>
+                <a href="/tags/classes/">Classes</a>
+            </span>
+            
+            <span>
+                <a href="/tags/coding/">Coding</a>
+            </span>
+            
+            <span>
+                <a href="/tags/collaborating/">collaborating</a>
+            </span>
+            
+            <span>
+                <a href="/tags/collections/">Collections</a>
+            </span>
+            
+            <span>
+                <a href="/tags/commands/">Commands</a>
+            </span>
+            
+            <span>
+                <a href="/tags/community/">Community</a>
+            </span>
+            
+            <span>
+                <a href="/tags/courses/">Courses</a>
+            </span>
+            
+            <span>
+                <a href="/tags/critiquewheel/">critiquewheel</a>
+            </span>
+            
+            <span>
+                <a href="/tags/cross-reference/">cross reference</a>
+            </span>
+            
+            <span>
+                <a href="/tags/css/">CSS</a>
+            </span>
+            
+            <span>
+                <a href="/tags/data-science-linkedin-leetcode-pybites/">Data Science, LinkedIn, LeetCode, PyBites </a>
+            </span>
+            
+            <span>
+                <a href="/tags/data-structure/">Data Structure</a>
+            </span>
+            
+            <span>
+                <a href="/tags/data-types/">Data Types</a>
+            </span>
+            
+            <span>
+                <a href="/tags/deploy/">Deploy</a>
+            </span>
+            
+            <span>
+                <a href="/tags/depth/">Depth</a>
+            </span>
+            
+            <span>
+                <a href="/tags/derived-class/">Derived Class</a>
+            </span>
+            
+            <span>
+                <a href="/tags/design/">Design</a>
+            </span>
+            
+            <span>
+                <a href="/tags/design-updates/">Design Updates</a>
+            </span>
+            
+            <span>
+                <a href="/tags/developer/">developer</a>
+            </span>
+            
+            <span>
+                <a href="/tags/django/">django</a>
+            </span>
+            
+            <span>
+                <a href="/tags/docker/">docker</a>
+            </span>
+            
+            <span>
+                <a href="/tags/documentation/">documentation</a>
+            </span>
+            
+            <span>
+                <a href="/tags/duplicates/">Duplicates</a>
+            </span>
+            
+            <span>
+                <a href="/tags/educative/">Educative</a>
+            </span>
+            
+            <span>
+                <a href="/tags/encapsulation/">Encapsulation</a>
+            </span>
+            
+            <span>
+                <a href="/tags/find-closest-number/">Find Closest Number</a>
+            </span>
+            
+            <span>
+                <a href="/tags/first/">First</a>
+            </span>
+            
+            <span>
+                <a href="/tags/first-steps/">First Steps</a>
+            </span>
+            
+            <span>
+                <a href="/tags/fixed-point/">Fixed Point</a>
+            </span>
+            
+            <span>
+                <a href="/tags/flake8/">Flake8</a>
+            </span>
+            
+            <span>
+                <a href="/tags/git/">git</a>
+            </span>
+            
+            <span>
+                <a href="/tags/goyo/">Goyo</a>
+            </span>
+            
+            <span>
+                <a href="/tags/guidelines/">guidelines</a>
+            </span>
+            
+            <span>
+                <a href="/tags/hash-function/">Hash Function</a>
+            </span>
+            
+            <span>
+                <a href="/tags/hash-table/">Hash Table</a>
+            </span>
+            
+            <span>
+                <a href="/tags/hashing/">Hashing</a>
+            </span>
+            
+            <span>
+                <a href="/tags/height/">Height</a>
+            </span>
+            
+            <span>
+                <a href="/tags/hugo/">Hugo</a>
+            </span>
+            
+            <span>
+                <a href="/tags/inheritance/">Inheritance</a>
+            </span>
+            
+            <span>
+                <a href="/tags/inorder/">Inorder</a>
+            </span>
+            
+            <span>
+                <a href="/tags/interface/">Interface</a>
+            </span>
+            
+            <span>
+                <a href="/tags/learning/">learning</a>
+            </span>
+            
+            <span>
+                <a href="/tags/learning-paths/">learning paths</a>
+            </span>
+            
+            <span>
+                <a href="/tags/level-order/">Level Order</a>
+            </span>
+            
+            <span>
+                <a href="/tags/level-order-traversal/">Level Order Traversal</a>
+            </span>
+            
+            <span>
+                <a href="/tags/linkedin/">LinkedIn</a>
+            </span>
+            
+            <span>
+                <a href="/tags/markdown/">Markdown</a>
+            </span>
+            
+            <span>
+                <a href="/tags/methods/">Methods</a>
+            </span>
+            
+            <span>
+                <a href="/tags/mkdocs/">mkDocs</a>
+            </span>
+            
+            <span>
+                <a href="/tags/modifiers/">Modifiers</a>
+            </span>
+            
+            <span>
+                <a href="/tags/motivation/">Motivation</a>
+            </span>
+            
+            <span>
+                <a href="/tags/next-post/">Next Post</a>
+            </span>
+            
+            <span>
+                <a href="/tags/node/">Node</a>
+            </span>
+            
+            <span>
+                <a href="/tags/notes/">notes</a>
+            </span>
+            
+            <span>
+                <a href="/tags/pair/">pair</a>
+            </span>
+            
+            <span>
+                <a href="/tags/parent-class/">Parent Class</a>
+            </span>
+            
+            <span>
+                <a href="/tags/pep8/">pep8</a>
+            </span>
+            
+            <span>
+                <a href="/tags/phases/">Phases</a>
+            </span>
+            
+            <span>
+                <a href="/tags/plantuml/">plantUML</a>
+            </span>
+            
+            <span>
+                <a href="/tags/postgres/">postgres</a>
+            </span>
+            
+            <span>
+                <a href="/tags/postorder/">Postorder</a>
+            </span>
+            
+            <span>
+                <a href="/tags/preorder/">Preorder</a>
+            </span>
+            
+            <span>
+                <a href="/tags/previous/">Previous</a>
+            </span>
+            
+            <span>
+                <a href="/tags/projects/">Projects</a>
+            </span>
+            
+            <span>
+                <a href="/tags/properties/">Properties</a>
+            </span>
+            
+            <span>
+                <a href="/tags/pybites/">Pybites</a>
+            </span>
+            
+            <span>
+                <a href="/tags/pytest/">pytest</a>
+            </span>
+            
+            <span>
+                <a href="/tags/python/">Python</a>
+            </span>
+            
+            <span>
+                <a href="/tags/razorpages/">RazorPages</a>
+            </span>
+            
+            <span>
+                <a href="/tags/readability/">readability</a>
+            </span>
+            
+            <span>
+                <a href="/tags/recent-posts/">Recent Posts</a>
+            </span>
+            
+            <span>
+                <a href="/tags/refactoring/">Refactoring</a>
+            </span>
+            
+            <span>
+                <a href="/tags/relationship/">Relationship</a>
+            </span>
+            
+            <span>
+                <a href="/tags/render/">render</a>
+            </span>
+            
+            <span>
+                <a href="/tags/render.com/">Render.com</a>
+            </span>
+            
+            <span>
+                <a href="/tags/search/">Search</a>
+            </span>
+            
+            <span>
+                <a href="/tags/size/">Size</a>
+            </span>
+            
+            <span>
+                <a href="/tags/skills/">skills</a>
+            </span>
+            
+            <span>
+                <a href="/tags/sphinx/">sphinx</a>
+            </span>
+            
+            <span>
+                <a href="/tags/sql/">SQL</a>
+            </span>
+            
+            <span>
+                <a href="/tags/string/">String</a>
+            </span>
+            
+            <span>
+                <a href="/tags/sub-class/">Sub Class</a>
+            </span>
+            
+            <span>
+                <a href="/tags/super-class/">Super Class</a>
+            </span>
+            
+            <span>
+                <a href="/tags/syntastic/">Syntastic</a>
+            </span>
+            
+            <span>
+                <a href="/tags/taking-stock/">Taking Stock</a>
+            </span>
+            
+            <span>
+                <a href="/tags/tdd/">TDD</a>
+            </span>
+            
+            <span>
+                <a href="/tags/templates/">Templates</a>
+            </span>
+            
+            <span>
+                <a href="/tags/terminal/">Terminal</a>
+            </span>
+            
+            <span>
+                <a href="/tags/tree/">Tree</a>
+            </span>
+            
+            <span>
+                <a href="/tags/tweaks/">Tweaks</a>
+            </span>
+            
+            <span>
+                <a href="/tags/twitter/">Twitter</a>
+            </span>
+            
+            <span>
+                <a href="/tags/update/">Update</a>
+            </span>
+            
+            <span>
+                <a href="/tags/upwork/">Upwork</a>
+            </span>
+            
+            <span>
+                <a href="/tags/usability/">Usability</a>
+            </span>
+            
+            <span>
+                <a href="/tags/variables/">Variables</a>
+            </span>
+            
+            <span>
+                <a href="/tags/vim/">Vim</a>
+            </span>
+            
+            <span>
+                <a href="/tags/widget/">Widget</a>
+            </span>
+            
+        </div>
+    </div>
+    
+    
+    
+    <div class="sidebar-item sidebar-toc">
+        <h3>Table of Contents</h3>
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#setting-up-google-docstring">Setting up Google Docstring</a></li>
+    <li><a href="#add-source-folder">Add Source Folder</a></li>
+    <li><a href="#setup-autodoc">Setup Autodoc</a></li>
+    <li><a href="#configure-syspath">Configure <code>sys.path</code></a></li>
+    <li><a href="#build-site-with-autodoc-activated">Build Site with Autodoc Activated</a></li>
+    <li><a href="#intersphinx">InterSphinx</a></li>
+    <li><a href="#fine-tune-the-menu">Fine Tune the Menu</a></li>
+    <li><a href="#always-up-to-date-copyright">Always up-to-date Copyright</a></li>
+    <li><a href="#text-snippets">Text Snippets</a></li>
+    <li><a href="#titles">Titles</a></li>
+    <li><a href="#todo-list">Todo list</a></li>
+  </ul>
+</nav>
+    </div>
+    
+    
+  </div>
+</aside>
+    </main>
+
+    <footer>
+    <div class="container-lg clearfix">
+        <div class="col-12 footer">
+            
+            <span>&copy; 2022
+              <a href="/">David J Nevin</a> 
+                
+                
+                   
+                                                    
+            </span>
+        </div>
+    </div>
+</footer>
+
+    
+<script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/prismjs@1.27.0/components/prism-core.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/prismjs@1.27.0/plugins/autoloader/prism-autoloader.min.js"></script>
+
+
+
+<script defer src="/assets/js/fuji.min.js"></script>
+
+
+
+</body>
+
+</html>
