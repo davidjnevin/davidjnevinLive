@@ -117,11 +117,11 @@
     </div>
     
     <div class="post-content markdown-body">
- <p>From my <a href="/code/sphinx_setup/">previous post</a>, <code>sphinx</code> appears to be just another static site
+ <p>From my <a href="/code/sphinx_setup/">previous post,</a> <code>sphinx</code> appears to be just another static site
 generator. But there&rsquo;s much more to explore and do. Automation is where it&rsquo;s at. A robust documentation pipeline is the goal of this delve into some of the powerful features in <code>sphinx</code>. Let&rsquo;s go.</p>
 <h2 id="code-documentation">Code Documentation<a href="#code-documentation" class="hanchor" ariaLabel="Anchor">#</a></h2>
 <p>For these experiments I&rsquo;m using code from a simple <code>django-ninja</code> CRUD project. I&rsquo;ve documented the code and it will provide the necessary base for our testing.</p>
-<p>I use the <code>coc-pydocstring</code> extension for <code>coc.nvim</code> in vim to generate &ldquo;Google Docstring&rdquo;. Full details of the plugin are available at the <a href="https://github.com/yaegassy/coc-pydocstring" target="_blank">yaegassy / coc-pydocstring repository</a>. The PEP 257 Docstring Conventions can be found on the <a href="https://peps.python.org/pep-0257/" target="_blank">python pep 257 webpage</a>.</p>
+<p>I use the <code>coc-pydocstring</code> extension for <code>coc.nvim</code> in vim to generate &ldquo;Google Docstring&rdquo;. Full details of the plugin are available at the <a href="https://github.com/yaegassy/coc-pydocstring" target="_blank">yaegassy / coc-pydocstring repository.</a> The PEP 257 Docstring Conventions can be found on the <a href="https://peps.python.org/pep-0257/" target="_blank">python pep 257 webpage.</a></p>
 <h2 id="getting-the-project-setup">Getting the Project Setup<a href="#getting-the-project-setup" class="hanchor" ariaLabel="Anchor">#</a></h2>
 <p>For this post I&rsquo;m doing a clean install. My basic setup is as follows:</p>
 <pre><code class="language-bash"># from my projects directory
@@ -138,7 +138,7 @@ git init
 git add .gitignore
 git commit -m&quot;Add .gitignore in Initial Commit&quot;
 </code></pre>
-<p>For a <code>.gitignore</code> for python/django/jupyter notebooks visit the <a href="https://www.toptal.com/developers/gitignore/api/python,jupyternotebooks" target="_blank">toptotal website</a>.</p>
+<p>For a <code>.gitignore</code> for python/django/jupyter notebooks visit the <a href="https://www.toptal.com/developers/gitignore/api/python,jupyternotebooks" target="_blank">toptotal website.</a></p>
 <p>For this project I&rsquo;m using a <code>requirements.txt</code> to manage the project dependencies.  The key here is the dependencies. I&rsquo;ll be adding them as the project develops. At the start it looks like this.</p>
 <pre><code>sphinx~=4.2.0
 </code></pre>
@@ -219,7 +219,7 @@ sphinx-autobuild docs/source/ docs/build/html/
 <h2 id="add-a-warning">Add a Warning<a href="#add-a-warning" class="hanchor" ariaLabel="Anchor">#</a></h2>
 <p>To add a warning, we use the <code>warning directive</code>.</p>
 <pre><code>```{warning}
-	This site is under heavy delvelopment.
+   This site is under heavy delvelopment.
 ```
 </code></pre>
 <p>For a list of directives the <a href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html#directives" target="_blank">sphinx documentation pages</a> are the place to go.</p>
@@ -286,7 +286,7 @@ Installation instructions to go here #TODO
 ]
 </code></pre>
 <p>If you don&rsquo;t have <code>pandoc</code> installed you will receive an error when you rebuild.</p>
-<p>To install <code>pandoc</code> the full instructions are on the <a href="https://pandoc.org/" target="_blank">pandoc official website</a>.</p>
+<p>To install <code>pandoc</code> the full instructions are on the <a href="https://pandoc.org/" target="_blank">pandoc official website.</a></p>
 <p>For me on my MacOS, I use:</p>
 <pre><code class="language-bash">brew install pandoc
 </code></pre>
@@ -328,7 +328,7 @@ a better way. Which we&rsquo;ll see soon.</p>
 <p>I use the <code>{py:func}</code> directive in my markdown to create a link to the source code documentation of a particular function.</p>
 <pre><code>{py:func}`example.get_attendee_name`
 </code></pre>
-<p>The <code>{py:func}</code> directive generates a relative link to the specific function on the documentation page. There are similar directives for classes <code>{py:class}</code>, modules <code>{py:mod}</code>, and methods <code>{py:meth}</code>. For a full list of cross-referencing python objects visit the <a href="https://www.sphinx-doc.org/" target="_blank">sphinx documentation website</a>.</p>
+<p>The <code>{py:func}</code> directive generates a relative link to the specific function on the documentation page. There are similar directives for classes <code>{py:class}</code>, modules <code>{py:mod}</code>, and methods <code>{py:meth}</code>. For a full list of cross-referencing python objects visit the <a href="https://www.sphinx-doc.org/" target="_blank">sphinx documentation website.</a></p>
 <p>Ok. That&rsquo;s a lot.</p>
 <p>It&rsquo;s a good time to commit. (GTTC)</p>
 <p>In the next post, I want to start answering some of my more burning questions.</p>
@@ -391,6 +391,18 @@ a better way. Which we&rsquo;ll see soon.</p>
     
         
         
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
             
             
                 
@@ -981,6 +993,10 @@ a better way. Which we&rsquo;ll see soon.</p>
             </span>
             
             <span>
+                <a href="/tags/check/">check</a>
+            </span>
+            
+            <span>
                 <a href="/tags/child-class/">Child Class</a>
             </span>
             
@@ -1173,6 +1189,10 @@ a better way. Which we&rsquo;ll see soon.</p>
             </span>
             
             <span>
+                <a href="/tags/lint/">lint</a>
+            </span>
+            
+            <span>
                 <a href="/tags/markdown/">Markdown</a>
             </span>
             
@@ -1362,6 +1382,10 @@ a better way. Which we&rsquo;ll see soon.</p>
             
             <span>
                 <a href="/tags/usability/">Usability</a>
+            </span>
+            
+            <span>
+                <a href="/tags/vale/">vale</a>
             </span>
             
             <span>

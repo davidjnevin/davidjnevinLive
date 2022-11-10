@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>David J. Nevin</copyright>
-    <lastBuildDate>Sat, 30 Jul 2022 19:33:30 +0200</lastBuildDate><atom:link href="https://www.davidjnevin.com/tags/vim/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 10 Nov 2022 15:55:36 +0100</lastBuildDate><atom:link href="https://www.davidjnevin.com/tags/vim/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Vale Lint Setup</title>
+      <link>https://www.davidjnevin.com/code/vale-lint-setup/</link>
+      <pubDate>Thu, 10 Nov 2022 15:55:36 +0100</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/vale-lint-setup/</guid>
+      <description>Vale Prose Linting With sphinx up and running, the next step is getting the prose linter setup and configured.</description>
+    </item>
+    
     <item>
       <title>Vim as Python IDE</title>
       <link>https://www.davidjnevin.com/code/vim_as_python_ide/</link>

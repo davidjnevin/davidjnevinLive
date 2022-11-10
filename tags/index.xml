@@ -7,7 +7,43 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>David J. Nevin</copyright>
-    <lastBuildDate>Thu, 10 Nov 2022 00:40:23 +0100</lastBuildDate><atom:link href="https://www.davidjnevin.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 10 Nov 2022 15:55:36 +0100</lastBuildDate><atom:link href="https://www.davidjnevin.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>check</title>
+      <link>https://www.davidjnevin.com/tags/check/</link>
+      <pubDate>Thu, 10 Nov 2022 15:55:36 +0100</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/check/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>lint</title>
+      <link>https://www.davidjnevin.com/tags/lint/</link>
+      <pubDate>Thu, 10 Nov 2022 15:55:36 +0100</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/lint/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>vale</title>
+      <link>https://www.davidjnevin.com/tags/vale/</link>
+      <pubDate>Thu, 10 Nov 2022 15:55:36 +0100</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/vale/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Vim</title>
+      <link>https://www.davidjnevin.com/tags/vim/</link>
+      <pubDate>Thu, 10 Nov 2022 15:55:36 +0100</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/vim/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>cross reference</title>
       <link>https://www.davidjnevin.com/tags/cross-reference/</link>
@@ -347,15 +383,6 @@
       <pubDate>Sat, 30 Jul 2022 19:33:30 +0200</pubDate>
       
       <guid>https://www.davidjnevin.com/tags/syntastic/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Vim</title>
-      <link>https://www.davidjnevin.com/tags/vim/</link>
-      <pubDate>Sat, 30 Jul 2022 19:33:30 +0200</pubDate>
-      
-      <guid>https://www.davidjnevin.com/tags/vim/</guid>
       <description></description>
     </item>
     
