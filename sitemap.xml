@@ -2,8 +2,38 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://www.davidjnevin.com/tags/blog/</loc>
+    <lastmod>2022-11-17T21:58:20+01:00</lastmod>
+  </url><url>
     <loc>https://www.davidjnevin.com/categories/</loc>
-    <lastmod>2022-11-10T15:55:36+01:00</lastmod>
+    <lastmod>2022-11-17T21:58:20+01:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/tags/celery/</loc>
+    <lastmod>2022-11-17T21:58:20+01:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/tags/django/</loc>
+    <lastmod>2022-11-17T21:58:20+01:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/categories/django/</loc>
+    <lastmod>2022-11-17T21:58:20+01:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/code/django_templates/</loc>
+    <lastmod>2022-11-17T21:58:20+01:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/tags/docker/</loc>
+    <lastmod>2022-11-17T21:58:20+01:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/series/getting-started-with-django/</loc>
+    <lastmod>2022-11-17T21:58:20+01:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/tags/render/</loc>
+    <lastmod>2022-11-17T21:58:20+01:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/series/</loc>
+    <lastmod>2022-11-17T21:58:20+01:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/tags/</loc>
+    <lastmod>2022-11-17T21:58:20+01:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/tags/check/</loc>
     <lastmod>2022-11-10T15:55:36+01:00</lastmod>
@@ -12,9 +42,6 @@
     <lastmod>2022-11-10T15:55:36+01:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/tags/lint/</loc>
-    <lastmod>2022-11-10T15:55:36+01:00</lastmod>
-  </url><url>
-    <loc>https://www.davidjnevin.com/tags/</loc>
     <lastmod>2022-11-10T15:55:36+01:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/tags/vale/</loc>
@@ -65,9 +92,6 @@
     <loc>https://www.davidjnevin.com/tags/readability/</loc>
     <lastmod>2022-11-01T20:10:50+01:00</lastmod>
   </url><url>
-    <loc>https://www.davidjnevin.com/tags/docker/</loc>
-    <lastmod>2022-10-30T00:00:05+02:00</lastmod>
-  </url><url>
     <loc>https://www.davidjnevin.com/categories/docker/</loc>
     <lastmod>2022-10-30T00:00:05+02:00</lastmod>
   </url><url>
@@ -105,9 +129,6 @@
     <lastmod>2022-10-26T01:40:35+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/code/git_exploration_four/</loc>
-    <lastmod>2022-10-26T01:40:35+02:00</lastmod>
-  </url><url>
-    <loc>https://www.davidjnevin.com/series/</loc>
     <lastmod>2022-10-26T01:40:35+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/tags/skills/</loc>
@@ -149,25 +170,7 @@
     <loc>https://www.davidjnevin.com/code/pair_programming_first_steps/</loc>
     <lastmod>2022-10-16T12:46:10+02:00</lastmod>
   </url><url>
-    <loc>https://www.davidjnevin.com/tags/blog/</loc>
-    <lastmod>2022-10-09T21:59:18+02:00</lastmod>
-  </url><url>
-    <loc>https://www.davidjnevin.com/tags/celery/</loc>
-    <lastmod>2022-10-09T21:59:18+02:00</lastmod>
-  </url><url>
-    <loc>https://www.davidjnevin.com/tags/django/</loc>
-    <lastmod>2022-10-09T21:59:18+02:00</lastmod>
-  </url><url>
-    <loc>https://www.davidjnevin.com/categories/django/</loc>
-    <lastmod>2022-10-09T21:59:18+02:00</lastmod>
-  </url><url>
     <loc>https://www.davidjnevin.com/code/django_in_depth/</loc>
-    <lastmod>2022-10-09T21:59:18+02:00</lastmod>
-  </url><url>
-    <loc>https://www.davidjnevin.com/series/getting-started-with-django/</loc>
-    <lastmod>2022-10-09T21:59:18+02:00</lastmod>
-  </url><url>
-    <loc>https://www.davidjnevin.com/tags/render/</loc>
     <lastmod>2022-10-09T21:59:18+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/categories/blog/</loc>

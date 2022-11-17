@@ -7,7 +7,52 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>David J. Nevin</copyright>
-    <lastBuildDate>Thu, 10 Nov 2022 15:55:36 +0100</lastBuildDate><atom:link href="https://www.davidjnevin.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 17 Nov 2022 21:58:20 +0100</lastBuildDate><atom:link href="https://www.davidjnevin.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>blog</title>
+      <link>https://www.davidjnevin.com/tags/blog/</link>
+      <pubDate>Thu, 17 Nov 2022 21:58:20 +0100</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/blog/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>celery</title>
+      <link>https://www.davidjnevin.com/tags/celery/</link>
+      <pubDate>Thu, 17 Nov 2022 21:58:20 +0100</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/celery/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>django</title>
+      <link>https://www.davidjnevin.com/tags/django/</link>
+      <pubDate>Thu, 17 Nov 2022 21:58:20 +0100</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/django/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>docker</title>
+      <link>https://www.davidjnevin.com/tags/docker/</link>
+      <pubDate>Thu, 17 Nov 2022 21:58:20 +0100</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/docker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>render</title>
+      <link>https://www.davidjnevin.com/tags/render/</link>
+      <pubDate>Thu, 17 Nov 2022 21:58:20 +0100</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/render/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>check</title>
       <link>https://www.davidjnevin.com/tags/check/</link>
@@ -95,15 +140,6 @@
       <pubDate>Tue, 01 Nov 2022 20:10:50 +0100</pubDate>
       
       <guid>https://www.davidjnevin.com/tags/readability/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>docker</title>
-      <link>https://www.davidjnevin.com/tags/docker/</link>
-      <pubDate>Sun, 30 Oct 2022 00:00:05 +0200</pubDate>
-      
-      <guid>https://www.davidjnevin.com/tags/docker/</guid>
       <description></description>
     </item>
     
@@ -203,42 +239,6 @@
       <pubDate>Sun, 16 Oct 2022 12:46:10 +0200</pubDate>
       
       <guid>https://www.davidjnevin.com/tags/pair/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>blog</title>
-      <link>https://www.davidjnevin.com/tags/blog/</link>
-      <pubDate>Sun, 09 Oct 2022 21:59:18 +0200</pubDate>
-      
-      <guid>https://www.davidjnevin.com/tags/blog/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>celery</title>
-      <link>https://www.davidjnevin.com/tags/celery/</link>
-      <pubDate>Sun, 09 Oct 2022 21:59:18 +0200</pubDate>
-      
-      <guid>https://www.davidjnevin.com/tags/celery/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>django</title>
-      <link>https://www.davidjnevin.com/tags/django/</link>
-      <pubDate>Sun, 09 Oct 2022 21:59:18 +0200</pubDate>
-      
-      <guid>https://www.davidjnevin.com/tags/django/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>render</title>
-      <link>https://www.davidjnevin.com/tags/render/</link>
-      <pubDate>Sun, 09 Oct 2022 21:59:18 +0200</pubDate>
-      
-      <guid>https://www.davidjnevin.com/tags/render/</guid>
       <description></description>
     </item>
     

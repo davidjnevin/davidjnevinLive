@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>David J. Nevin</copyright>
-    <lastBuildDate>Thu, 10 Nov 2022 15:55:36 +0100</lastBuildDate><atom:link href="https://www.davidjnevin.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 17 Nov 2022 21:58:20 +0100</lastBuildDate><atom:link href="https://www.davidjnevin.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Django</title>
+      <link>https://www.davidjnevin.com/categories/django/</link>
+      <pubDate>Thu, 17 Nov 2022 21:58:20 +0100</pubDate>
+      
+      <guid>https://www.davidjnevin.com/categories/django/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>documentation</title>
       <link>https://www.davidjnevin.com/categories/documentation/</link>
@@ -104,15 +113,6 @@
       <pubDate>Sun, 16 Oct 2022 12:46:10 +0200</pubDate>
       
       <guid>https://www.davidjnevin.com/categories/pair-programming/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Django</title>
-      <link>https://www.davidjnevin.com/categories/django/</link>
-      <pubDate>Sun, 09 Oct 2022 21:59:18 +0200</pubDate>
-      
-      <guid>https://www.davidjnevin.com/categories/django/</guid>
       <description></description>
     </item>
     
