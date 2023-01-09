@@ -6,8 +6,34 @@
     <description>Recent content in Hugo Styling on David J Nevin</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>© 2022 David J. Nevin</copyright>
+    <copyright>David J. Nevin</copyright>
     <lastBuildDate>Wed, 15 Jun 2022 22:03:26 +0200</lastBuildDate><atom:link href="https://www.davidjnevin.com/series/hugo-styling/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo Section Theme 3</title>
+      <link>https://www.davidjnevin.com/code/hugo_section_theme_003/</link>
+      <pubDate>Wed, 15 Jun 2022 22:03:26 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/hugo_section_theme_003/</guid>
+      <description>Okay so that&amp;rsquo;s better. A simpler approach worked. I got playing with a copy of my primary *.</description>
+    </item>
+    
+    <item>
+      <title>Hugo Section Theme 2 (didn&#39;t work)</title>
+      <link>https://www.davidjnevin.com/code/hugo_section_theme_002/</link>
+      <pubDate>Wed, 15 Jun 2022 02:16:41 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/hugo_section_theme_002/</guid>
+      <description>Question: If I just copy the template? What happens if I just copy the single.</description>
+    </item>
+    
+    <item>
+      <title>Hugo Section Theme (didn&#39;t work)</title>
+      <link>https://www.davidjnevin.com/code/hugo_section_theme/</link>
+      <pubDate>Wed, 15 Jun 2022 00:25:06 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/hugo_section_theme/</guid>
+      <description>Hugo Section: A different look and feel. I though that in order to set a different look and feel for a Hugo section, I&amp;rsquo;d create a folder in the current theme layout folder with the same name as the section.</description>
+    </item>
+    
   </channel>
 </rss>
-

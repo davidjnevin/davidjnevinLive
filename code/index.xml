@@ -6,8 +6,544 @@
     <description>Recent content in Code on David J Nevin</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>© 2022 David J. Nevin</copyright>
+    <copyright>David J. Nevin</copyright>
     <lastBuildDate>Thu, 05 Aug 2021 21:57:27 +0200</lastBuildDate><atom:link href="https://www.davidjnevin.com/code/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Regular Expressions</title>
+      <link>https://www.davidjnevin.com/code/regular_expressions/</link>
+      <pubDate>Mon, 09 Jan 2023 13:54:06 +0100</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/regular_expressions/</guid>
+      <description>A powerful tool for my IT toolbox.
+A search query of text using a string.</description>
+    </item>
+    
+    <item>
+      <title>Django Templates</title>
+      <link>https://www.davidjnevin.com/code/django_templates/</link>
+      <pubDate>Thu, 17 Nov 2022 21:58:20 +0100</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/django_templates/</guid>
+      <description>Using the django-admin startporject --template flag, I wanted to create my projects with a lot of the tedious work already done.</description>
+    </item>
+    
+    <item>
+      <title>Vale Lint Setup</title>
+      <link>https://www.davidjnevin.com/code/vale-lint-setup/</link>
+      <pubDate>Thu, 10 Nov 2022 15:55:36 +0100</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/vale-lint-setup/</guid>
+      <description>Vale Prose Linting With sphinx up and running, the next step is getting the prose linter setup and configured.</description>
+    </item>
+    
+    <item>
+      <title>Sphinx Complete but not Finished</title>
+      <link>https://www.davidjnevin.com/code/sphinx_complete/</link>
+      <pubDate>Thu, 10 Nov 2022 00:40:23 +0100</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/sphinx_complete/</guid>
+      <description>Ok. If you&amp;rsquo;re following along with the series, you should have a nice looking documentation site.</description>
+    </item>
+    
+    <item>
+      <title>Sphinx in Markdown</title>
+      <link>https://www.davidjnevin.com/code/sphinx_next_level/</link>
+      <pubDate>Thu, 03 Nov 2022 11:46:02 +0100</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/sphinx_next_level/</guid>
+      <description>From my previous post, sphinx appears to be just another static site generator.</description>
+    </item>
+    
+    <item>
+      <title>Sphinx Setup</title>
+      <link>https://www.davidjnevin.com/code/sphinx_setup/</link>
+      <pubDate>Thu, 03 Nov 2022 02:13:58 +0100</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/sphinx_setup/</guid>
+      <description>Sphinx: Setup I&amp;rsquo;m interested in building a useful documentation pipeline and will use it initially on these blog posts.</description>
+    </item>
+    
+    <item>
+      <title>Documentation: Intentions</title>
+      <link>https://www.davidjnevin.com/code/documentation_intentions/</link>
+      <pubDate>Tue, 01 Nov 2022 20:10:50 +0100</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/documentation_intentions/</guid>
+      <description>It&amp;rsquo;s time to start my first big personal python project. I&amp;rsquo;ve put in the hours (and hours) in tutorials, build out a few apps, some simple some more complex, contributed to open source, and joined and contributed to a variety of python related groups.</description>
+    </item>
+    
+    <item>
+      <title>Docker First Look</title>
+      <link>https://www.davidjnevin.com/code/docker_first_look/</link>
+      <pubDate>Sun, 30 Oct 2022 00:00:05 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/docker_first_look/</guid>
+      <description>What is Docker? &amp;ldquo;Docker is an open platform for developing, shipping, and running applications.</description>
+    </item>
+    
+    <item>
+      <title>Mkdocs: First Look</title>
+      <link>https://www.davidjnevin.com/code/mkdocs_first_look/</link>
+      <pubDate>Thu, 27 Oct 2022 11:48:27 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/mkdocs_first_look/</guid>
+      <description>MkDocs Getting Started MKDocs is a documentation oriented static website builder using a single .</description>
+    </item>
+    
+    <item>
+      <title>Git Exploration: Part Four</title>
+      <link>https://www.davidjnevin.com/code/git_exploration_four/</link>
+      <pubDate>Wed, 26 Oct 2022 01:40:35 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/git_exploration_four/</guid>
+      <description>Rewriting History Golden Rule: Don&amp;rsquo;t rewrite public history.
+To undo local commits, use:</description>
+    </item>
+    
+    <item>
+      <title>Git Exploration: Part Three</title>
+      <link>https://www.davidjnevin.com/code/git_exploration_three/</link>
+      <pubDate>Sun, 23 Oct 2022 15:23:47 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/git_exploration_three/</guid>
+      <description>Cloning a branch from GitHub To clone, or make a local copy of a repository, use:</description>
+    </item>
+    
+    <item>
+      <title>Git Exploration: Part Two</title>
+      <link>https://www.davidjnevin.com/code/git_exploration_two/</link>
+      <pubDate>Sat, 22 Oct 2022 13:54:20 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/git_exploration_two/</guid>
+      <description>Branching Branching allows us to diverge from the the primary line of work and work in isolation.</description>
+    </item>
+    
+    <item>
+      <title>Git Exploration: Part One</title>
+      <link>https://www.davidjnevin.com/code/git_exploration_one/</link>
+      <pubDate>Fri, 21 Oct 2022 14:52:52 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/git_exploration_one/</guid>
+      <description>Git Tutorial Notes Track history and work together. Distributed version control system.</description>
+    </item>
+    
+    <item>
+      <title>Pair Programming: First Steps</title>
+      <link>https://www.davidjnevin.com/code/pair_programming_first_steps/</link>
+      <pubDate>Sun, 16 Oct 2022 12:46:10 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/pair_programming_first_steps/</guid>
+      <description>One thing I have learned it that note taking only works if you take good notes.</description>
+    </item>
+    
+    <item>
+      <title>Django in Depth</title>
+      <link>https://www.davidjnevin.com/code/django_in_depth/</link>
+      <pubDate>Sun, 09 Oct 2022 21:59:18 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/django_in_depth/</guid>
+      <description>Django 4 by Example by Antonio Mele is a great book.</description>
+    </item>
+    
+    <item>
+      <title>Pipenv to Poetry</title>
+      <link>https://www.davidjnevin.com/code/pipenv_to_poetry/</link>
+      <pubDate>Sun, 25 Sep 2022 01:00:26 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/pipenv_to_poetry/</guid>
+      <description>time 01.05am
+Some notes on the process as I&amp;rsquo;m working through it.</description>
+    </item>
+    
+    <item>
+      <title>Django Users, Login &amp; Registration</title>
+      <link>https://www.davidjnevin.com/code/django_users_registration/</link>
+      <pubDate>Mon, 19 Sep 2022 19:03:47 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/django_users_registration/</guid>
+      <description>The user functionality is created in a seperate app. This project uses built-in user functionality to keep things managable for my first attempts.</description>
+    </item>
+    
+    <item>
+      <title>Django Delete Items</title>
+      <link>https://www.davidjnevin.com/code/django_delete_items/</link>
+      <pubDate>Thu, 15 Sep 2022 18:21:34 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/django_delete_items/</guid>
+      <description>Deleting a listing Again we follow the same pattern as before.</description>
+    </item>
+    
+    <item>
+      <title>Django Edit Items</title>
+      <link>https://www.davidjnevin.com/code/django_edit_delete_items/</link>
+      <pubDate>Thu, 15 Sep 2022 00:52:16 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/django_edit_delete_items/</guid>
+      <description>Editing items in the PostgreSQL DB The pattern now is as before.</description>
+    </item>
+    
+    <item>
+      <title>Django Individual Item Page</title>
+      <link>https://www.davidjnevin.com/code/django_individual_item_page/</link>
+      <pubDate>Wed, 14 Sep 2022 18:07:41 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/django_individual_item_page/</guid>
+      <description>Next step is to setup an individual item page. This tutorial is giving me a some good insights into the Critique Wheel rewrite.</description>
+    </item>
+    
+    <item>
+      <title>Django Dynamic Content</title>
+      <link>https://www.davidjnevin.com/code/django_dynamic_content/</link>
+      <pubDate>Wed, 14 Sep 2022 13:31:27 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/django_dynamic_content/</guid>
+      <description>Day 2: Dynamic Content A few useful django db queries:</description>
+    </item>
+    
+    <item>
+      <title>Django Next Steps</title>
+      <link>https://www.davidjnevin.com/code/django_next_steps/</link>
+      <pubDate>Tue, 13 Sep 2022 20:40:43 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/django_next_steps/</guid>
+      <description>Poetry and Django So poetry is up and running. Django is up and running, and I&amp;rsquo;ve added a simple listing app into the Django project.</description>
+    </item>
+    
+    <item>
+      <title>Django Games First Steps</title>
+      <link>https://www.davidjnevin.com/code/django_games_first_steps/</link>
+      <pubDate>Tue, 13 Sep 2022 15:53:11 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/django_games_first_steps/</guid>
+      <description>Getting a project up and running I had an interesting conversation this morning with Bob from Pybites.</description>
+    </item>
+    
+    <item>
+      <title>Orange Belt</title>
+      <link>https://www.davidjnevin.com/code/orange_belt/</link>
+      <pubDate>Sun, 11 Sep 2022 18:54:37 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/orange_belt/</guid>
+      <description>It&amp;rsquo;s been a busy few weeks. The Pybites community and coding platform has seen about 90% of my Python time over the past four weeks.</description>
+    </item>
+    
+    <item>
+      <title>RSS Python Search Hugo</title>
+      <link>https://www.davidjnevin.com/code/rss_python_search_hugo/</link>
+      <pubDate>Fri, 26 Aug 2022 22:29:09 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/rss_python_search_hugo/</guid>
+      <description>Slack Community So I&amp;rsquo;ve been hanging out in the PyBites Slack Community for a few weeks.</description>
+    </item>
+    
+    <item>
+      <title>Summer of Code</title>
+      <link>https://www.davidjnevin.com/code/summer_of_code/</link>
+      <pubDate>Mon, 22 Aug 2022 09:39:43 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/summer_of_code/</guid>
+      <description>The Last Week of August August is a funny month in Spain.</description>
+    </item>
+    
+    <item>
+      <title>Vim as Python IDE</title>
+      <link>https://www.davidjnevin.com/code/vim_as_python_ide/</link>
+      <pubDate>Sat, 30 Jul 2022 19:33:30 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/vim_as_python_ide/</guid>
+      <description>Vim setup: The never-ending story Joy! I&amp;rsquo;ve gotten my Python virtual environment set up, installed Flake8() and managed to trouble-shoot a problem with the Syntastic auto-running of Flake8() on save.</description>
+    </item>
+    
+    <item>
+      <title>Test Driven Development: First Steps</title>
+      <link>https://www.davidjnevin.com/code/test_driven_development_first_steps/</link>
+      <pubDate>Sat, 30 Jul 2022 13:29:21 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/test_driven_development_first_steps/</guid>
+      <description>Test Driven Development (A cure for Refactor-phobia) There is an entire C# application running at CritiqueWheel.</description>
+    </item>
+    
+    <item>
+      <title>Back at It</title>
+      <link>https://www.davidjnevin.com/code/back_at_it/</link>
+      <pubDate>Thu, 28 Jul 2022 19:30:38 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/back_at_it/</guid>
+      <description>Sometimes it takes more than Motivation Lessons learned:
+It&amp;rsquo;s so easy to fall out of practice A short break, to catch up on some reading, a delve into some other interests and lo-and-behold I felt almost back at stage one when I tried to do a Leetcode exercise</description>
+    </item>
+    
+    <item>
+      <title>Keeping at it</title>
+      <link>https://www.davidjnevin.com/code/keeping_at_it/</link>
+      <pubDate>Sat, 09 Jul 2022 13:37:22 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/keeping_at_it/</guid>
+      <description>The last week It&amp;rsquo;s been a strange week. My regular job has dwindled to a minimum and with the extra time comes extra worry about income.</description>
+    </item>
+    
+    <item>
+      <title>Time Off for Play</title>
+      <link>https://www.davidjnevin.com/code/time_off_for_play/</link>
+      <pubDate>Sat, 02 Jul 2022 15:21:02 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/time_off_for_play/</guid>
+      <description>That&amp;rsquo;s Better Had a moment of &amp;ldquo;what&amp;rsquo;s happening&amp;rdquo;, but I get it now.</description>
+    </item>
+    
+    <item>
+      <title>Where I&#39;m at</title>
+      <link>https://www.davidjnevin.com/code/where_im_at_june_29/</link>
+      <pubDate>Wed, 29 Jun 2022 23:28:06 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/where_im_at_june_29/</guid>
+      <description>It&amp;rsquo;s been a full few days The Educative OOP course is almost done.</description>
+    </item>
+    
+    <item>
+      <title>Implementing A Child Class</title>
+      <link>https://www.davidjnevin.com/code/implementing_child_class/</link>
+      <pubDate>Tue, 28 Jun 2022 11:39:46 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/implementing_child_class/</guid>
+      <description>A Banking Class Example Following the tutorials in Educative I wrote my first class with inheritance.</description>
+    </item>
+    
+    <item>
+      <title>Terminal Tweaks</title>
+      <link>https://www.davidjnevin.com/code/terminal_tweaks/</link>
+      <pubDate>Sun, 26 Jun 2022 12:41:21 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/terminal_tweaks/</guid>
+      <description>Time to Tweak the Terminal Having played around with and gotten some comfort level with Vim with VS Code, I feel it&amp;rsquo;s time to start exploring using Vim from the terminal.</description>
+    </item>
+    
+    <item>
+      <title>Inheritance</title>
+      <link>https://www.davidjnevin.com/code/inheritance/</link>
+      <pubDate>Sun, 26 Jun 2022 00:25:42 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/inheritance/</guid>
+      <description>Parent Class Parent Class (Super Class or Base Class): This class allows the reuse of its public properties in another class.</description>
+    </item>
+    
+    <item>
+      <title>Information Hiding</title>
+      <link>https://www.davidjnevin.com/code/information_hiding/</link>
+      <pubDate>Sat, 25 Jun 2022 23:56:24 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/information_hiding/</guid>
+      <description>Information Hiding The process of hiding the &amp;lsquo;inner workings&amp;rsquo; of a method or class by providing only an interface to access the object.</description>
+    </item>
+    
+    <item>
+      <title>Share This Widget</title>
+      <link>https://www.davidjnevin.com/code/share_this_widget/</link>
+      <pubDate>Sat, 25 Jun 2022 22:31:48 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/share_this_widget/</guid>
+      <description>Share This Post Widget I&amp;rsquo;m working on implementing the code and methods detailed by Christian Oliff at this page.</description>
+    </item>
+    
+    <item>
+      <title>Classes and Objects</title>
+      <link>https://www.davidjnevin.com/code/classes_and_objects/</link>
+      <pubDate>Sat, 25 Jun 2022 21:37:14 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/classes_and_objects/</guid>
+      <description>Classes and Methods: Some Notes If you don&amp;rsquo;t initialize the values of properties, the code will not compile.</description>
+    </item>
+    
+    <item>
+      <title>Python Project Ideas</title>
+      <link>https://www.davidjnevin.com/code/python_project_ideas_001/</link>
+      <pubDate>Sat, 25 Jun 2022 16:00:49 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/python_project_ideas_001/</guid>
+      <description>Projects for Python Use There are a plethora of project suggestions on the webs, but I&amp;rsquo;m keen to try something of my own, that has immediate impact on what I&amp;rsquo;m working on.</description>
+    </item>
+    
+    <item>
+      <title>Site Design Update</title>
+      <link>https://www.davidjnevin.com/code/site_design_update_2022_06_25/</link>
+      <pubDate>Sat, 25 Jun 2022 12:14:06 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/site_design_update_2022_06_25/</guid>
+      <description>Adding Some Flair I was unhappy with the functionality of the standard list page of the minima theme.</description>
+    </item>
+    
+    <item>
+      <title>Taking Stock</title>
+      <link>https://www.davidjnevin.com/code/taking_stock_2022_06_24/</link>
+      <pubDate>Fri, 24 Jun 2022 21:53:12 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/taking_stock_2022_06_24/</guid>
+      <description>Vim Update I&amp;rsquo;m feeling more comfortable using Vim these last few days, although I admit the arrow keys are getting too much attention.</description>
+    </item>
+    
+    <item>
+      <title>Vim Commands</title>
+      <link>https://www.davidjnevin.com/code/vim_commands/</link>
+      <pubDate>Wed, 22 Jun 2022 10:47:37 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/vim_commands/</guid>
+      <description>Too Many Vim Commands Getting back into Vim again and decided this time to take it slower and get the basics well in place before I try and incorporate too many commands.</description>
+    </item>
+    
+    <item>
+      <title>Binary Search Extended</title>
+      <link>https://www.davidjnevin.com/code/binary_search_extended/</link>
+      <pubDate>Tue, 21 Jun 2022 19:02:01 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/binary_search_extended/</guid>
+      <description>Binary Search Recommended Youtube Playlist Binary searching has been a difficult learning curve for me.</description>
+    </item>
+    
+    <item>
+      <title>Binary Search</title>
+      <link>https://www.davidjnevin.com/code/binary_search/</link>
+      <pubDate>Mon, 20 Jun 2022 23:58:38 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/binary_search/</guid>
+      <description>Binary Search The divide and conquer search method.
+Linear Search The sequential searching through all data entries one by until until we find a match.</description>
+    </item>
+    
+    <item>
+      <title>Hashing First Steps</title>
+      <link>https://www.davidjnevin.com/code/hashing_first_steps/</link>
+      <pubDate>Mon, 20 Jun 2022 22:04:42 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/hashing_first_steps/</guid>
+      <description>Tentative steps. Today, I took some first tentative steps into understanding Hash tables:</description>
+    </item>
+    
+    <item>
+      <title>Site Projects June 19th</title>
+      <link>https://www.davidjnevin.com/code/site_projects_june_19th/</link>
+      <pubDate>Sun, 19 Jun 2022 12:41:56 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/site_projects_june_19th/</guid>
+      <description>This post is a culmination of previous project related posts. It&amp;rsquo;s useful for me to see the needs develop and to decide when and what to implement and how I can combine the requirements into clear actions to take.</description>
+    </item>
+    
+    <item>
+      <title>Binary Search Tree</title>
+      <link>https://www.davidjnevin.com/code/binary_search_tree/</link>
+      <pubDate>Sun, 19 Jun 2022 02:08:26 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/binary_search_tree/</guid>
+      <description>Definition A binary search tree (BST) is a tree data structure in which nodes are arranged according to the following property.</description>
+    </item>
+    
+    <item>
+      <title>Level Order Traversal Binary Tree</title>
+      <link>https://www.davidjnevin.com/code/level_order_traversal_binary_tree/</link>
+      <pubDate>Sun, 19 Jun 2022 02:08:09 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/level_order_traversal_binary_tree/</guid>
+      <description>Definition Level Order traversal is a breath first transversal. The traversal starts at the root and explores all the nodes at the same depth prior to moving onto the next depth level.</description>
+    </item>
+    
+    <item>
+      <title>Depth Order Traversals: Binary Tree</title>
+      <link>https://www.davidjnevin.com/code/binary_tree_traversals/</link>
+      <pubDate>Sat, 18 Jun 2022 15:10:51 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/binary_tree_traversals/</guid>
+      <description>Tree Traversals (Preorder, Inorder and Postorder) From the root of a binary tree, traverse deeper before going laterally.</description>
+    </item>
+    
+    <item>
+      <title>Binary Tree Terms</title>
+      <link>https://www.davidjnevin.com/code/binary_tree_terms/</link>
+      <pubDate>Fri, 17 Jun 2022 23:42:31 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/binary_tree_terms/</guid>
+      <description>Binary Tree Terms A tree has a root and leaves.</description>
+    </item>
+    
+    <item>
+      <title>Site Projects - June 17th</title>
+      <link>https://www.davidjnevin.com/code/site_projects_17_06_2022/</link>
+      <pubDate>Fri, 17 Jun 2022 20:57:48 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/site_projects_17_06_2022/</guid>
+      <description>Certificates Section Next mini-project here on this site is to start to put together a list of certificates and courses I&amp;rsquo;ve done.</description>
+    </item>
+    
+    <item>
+      <title>Arrays Educative</title>
+      <link>https://www.davidjnevin.com/code/arrays_educative/</link>
+      <pubDate>Fri, 17 Jun 2022 20:43:36 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/arrays_educative/</guid>
+      <description>Finished the Arrays section I&amp;rsquo;ve been working through the Data Structures and Algorithms course on Educative to develop my python skills.</description>
+    </item>
+    
+    <item>
+      <title>PlantUML: First Attempts</title>
+      <link>https://www.davidjnevin.com/code/plantuml_first_attempts/</link>
+      <pubDate>Thu, 16 Jun 2022 23:06:34 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/plantuml_first_attempts/</guid>
+      <description>Let&amp;rsquo;s try out PlantUML PlantUML seems at first glance somewhat similar to Mermaid but with a wider function list.</description>
+    </item>
+    
+    <item>
+      <title>Mermaid: First Attempts</title>
+      <link>https://www.davidjnevin.com/code/mermaid_first_attempts/</link>
+      <pubDate>Thu, 16 Jun 2022 09:23:13 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/mermaid_first_attempts/</guid>
+      <description>Mermaid setup. Really basic first effort.
+I created a shortcodes folder under my theme layouts folder, adn there created a mermaid.</description>
+    </item>
+    
+    <item>
+      <title>Hugo Section Theme 3</title>
+      <link>https://www.davidjnevin.com/code/hugo_section_theme_003/</link>
+      <pubDate>Wed, 15 Jun 2022 22:03:26 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/hugo_section_theme_003/</guid>
+      <description>Okay so that&amp;rsquo;s better. A simpler approach worked. I got playing with a copy of my primary *.</description>
+    </item>
+    
+    <item>
+      <title>Hugo Section Theme 2 (didn&#39;t work)</title>
+      <link>https://www.davidjnevin.com/code/hugo_section_theme_002/</link>
+      <pubDate>Wed, 15 Jun 2022 02:16:41 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/hugo_section_theme_002/</guid>
+      <description>Question: If I just copy the template? What happens if I just copy the single.</description>
+    </item>
+    
+    <item>
+      <title>Hugo Section Theme (didn&#39;t work)</title>
+      <link>https://www.davidjnevin.com/code/hugo_section_theme/</link>
+      <pubDate>Wed, 15 Jun 2022 00:25:06 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/hugo_section_theme/</guid>
+      <description>Hugo Section: A different look and feel. I though that in order to set a different look and feel for a Hugo section, I&amp;rsquo;d create a folder in the current theme layout folder with the same name as the section.</description>
+    </item>
+    
+    <item>
+      <title>Critique Wheel C#</title>
+      <link>https://www.davidjnevin.com/code/critique_wheel_csharp/</link>
+      <pubDate>Tue, 14 Jun 2022 21:43:57 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/critique_wheel_csharp/</guid>
+      <description>Raison d&amp;rsquo;être o el porque I built and deployed the Beta version of the critique wheel site in response to a need for the fiction writers in my writing groups to get faster and more actionable critiques on their short stories.</description>
+    </item>
+    
+    <item>
+      <title>First Commit</title>
+      <link>https://www.davidjnevin.com/code/first_commit/</link>
+      <pubDate>Tue, 14 Jun 2022 21:01:56 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/first_commit/</guid>
+      <description>Start here As of today, I&amp;rsquo;ve been re-experimenting with programming for 13 months.</description>
+    </item>
+    
   </channel>
 </rss>
-

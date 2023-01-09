@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>sphinx on David J Nevin</title>
+    <link>https://www.davidjnevin.com/categories/sphinx/</link>
+    <description>Recent content in sphinx on David J Nevin</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>David J. Nevin</copyright>
+    <lastBuildDate>Thu, 10 Nov 2022 00:40:23 +0100</lastBuildDate><atom:link href="https://www.davidjnevin.com/categories/sphinx/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Sphinx Complete but not Finished</title>
+      <link>https://www.davidjnevin.com/code/sphinx_complete/</link>
+      <pubDate>Thu, 10 Nov 2022 00:40:23 +0100</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/sphinx_complete/</guid>
+      <description>Ok. If you&amp;rsquo;re following along with the series, you should have a nice looking documentation site.</description>
+    </item>
+    
+    <item>
+      <title>Sphinx in Markdown</title>
+      <link>https://www.davidjnevin.com/code/sphinx_next_level/</link>
+      <pubDate>Thu, 03 Nov 2022 11:46:02 +0100</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/sphinx_next_level/</guid>
+      <description>From my previous post, sphinx appears to be just another static site generator.</description>
+    </item>
+    
+    <item>
+      <title>Sphinx Setup</title>
+      <link>https://www.davidjnevin.com/code/sphinx_setup/</link>
+      <pubDate>Thu, 03 Nov 2022 02:13:58 +0100</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/sphinx_setup/</guid>
+      <description>Sphinx: Setup I&amp;rsquo;m interested in building a useful documentation pipeline and will use it initially on these blog posts.</description>
+    </item>
+    
+  </channel>
+</rss>

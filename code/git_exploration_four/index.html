@@ -1,0 +1,1370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<meta name="HandheldFriendly" content="True" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta name="generator" content="Hugo 0.108.0">
+
+
+  <link rel="icon" href="https://davidjnevin.com/favicon.ico">
+
+
+
+<title>Git Exploration: Part Four - David J Nevin</title>
+
+
+
+
+<meta name="keywords" content="git, developer, skills" />
+
+
+<meta property="og:title" content="Git Exploration: Part Four" />
+<meta name="twitter:title" content="Git Exploration: Part Four" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.davidjnevin.com/code/git_exploration_four/" /><meta property="og:description" content="Rewriting History Golden Rule: Don&rsquo;t rewrite public history.
+To undo local commits, use:" />
+<meta name="twitter:description" content="Rewriting History Golden Rule: Don&rsquo;t rewrite public history.
+To undo local commits, use:" /><meta name="twitter:card" content="summary" /><meta property="article:published_time" content="2022-10-26T01:40:35+02:00" /><meta property="article:modified_time" content="2022-10-26T01:40:35+02:00" />
+
+
+<style>
+    @media (prefers-color-scheme: dark) {
+        body[data-theme='auto'] img {
+            filter: brightness(60%);
+        }
+    }
+
+    body[data-theme='dark'] img {
+        filter: brightness(60%);
+    }
+</style>
+
+
+
+
+<link rel="stylesheet" href="https://www.davidjnevin.com/assets/css/fuji.min.css" />
+
+
+
+
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'G-VGVQ6SM9N7');
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VGVQ6SM9N7"></script>
+
+
+
+
+
+</head>
+
+<body
+  data-theme="auto"
+  data-theme-auto='true'
+  >
+    <script data-cfasync="false">
+  
+  var fujiThemeData = localStorage.getItem('fuji_data-theme');
+  
+  if (!fujiThemeData) {
+    localStorage.setItem('fuji_data-theme', 'auto');
+  } else {
+    
+    if (fujiThemeData !== 'auto') {
+      document.body.setAttribute('data-theme', fujiThemeData === 'dark' ? 'dark' : 'light');
+    }
+  }
+</script>
+
+    <header>
+    <div class="container-lg clearfix">
+        <div class="col-12 header">
+            <a class="title-main" href="\">David J Nevin</a> <a class="title-main" href="/code">+= Code</a>
+            
+        </div>
+    </div>
+</header>
+
+
+    <main>
+        <div class="container-lg clearfix">
+            
+            <div class="col-12 col-md-9 float-left content">
+                
+<article>
+    
+    <h1 class="post-item post-title">
+        <a href="/code/git_exploration_four/">Git Exploration: Part Four</a>
+    </h1>
+    <div class="post-item post-meta">
+        <span>Last updated:&nbsp;2022-10-26</span>
+
+<span>&nbsp;789 words</span>
+<span>&nbsp;4 minutes</span>
+
+
+    </div>
+    
+    <div class="post-content markdown-body">
+ <h2 id="rewriting-history">Rewriting History<a href="#rewriting-history" class="hanchor" ariaLabel="Anchor">#</a></h2>
+<p>Golden Rule: Don&rsquo;t rewrite public history.</p>
+<p>To undo local commits, use:</p>
+<pre><code class="language-bash"># Undoing comiits
+git reset --soft # Removes the commit only
+git reset --mixed # Removes commit and unstages files
+git reset --hard # removes commit, unstages changes, discards local changes
+# to undo the last commit
+git reset --hard HEAD~1 # hard revert to commit previous to current head
+position, i.e undo last commit.
+
+git reset --(option) HEAD~3..HEAD # reverts the commits between the 4th last
+and the head. Any similar combination of start..stop settings can be used.
+</code></pre>
+<p>To undo/change shared/published commits, use:</p>
+<pre><code class="language-bash">git revert &lt;commitRef&gt;   # Reverts a specific commit
+git revert HEAD~3..HEAD  # TReverts the last three commits
+git revert HEAD~3..     # HEAD is the default end and can be left out
+git revert --no-commit HEAD~3.. # Doesn't make a seperate commit for each
+revert and instad the are combined
+git revert --abort # to cancel the revert
+git revert --continue # to commit the revert
+</code></pre>
+<h2 id="recover-lost-commits">Recover lost Commits<a href="#recover-lost-commits" class="hanchor" ariaLabel="Anchor">#</a></h2>
+<p>In case you accidentally removed some commits.</p>
+<pre><code class="language-bash">git reflog
+git reset --hard HEAD@{X} # where X is the number of the head pointer you wish
+to recover.
+</code></pre>
+<p>To see the history of other commit pointers, use:</p>
+<pre><code class="language-bash">git reflog show &lt;branchName&gt; # show history of &lt;branchName&gt; pointer.
+
+</code></pre>
+<h2 id="amending-the-last-commit">Amending the Last Commit<a href="#amending-the-last-commit" class="hanchor" ariaLabel="Anchor">#</a></h2>
+<p>If you&rsquo;ve committed and then realised there&rsquo;s a typo, we shouldn&rsquo;t do another
+commit. Instead we should amend that last commit.</p>
+<p>We correct our typo, <code>git add</code> it and then:</p>
+<pre><code class="language-bash">git commit --amend  # We can add a new message or leave blank and accept the
+orginal message from the previous commit.
+</code></pre>
+<p>If we want to include a file in the last commit. We make our changes, then add
+the file to the staging area and then commit using:</p>
+<pre><code class="language-bash">git commit --amend
+</code></pre>
+<p>If we want to remove a file form the last commit:</p>
+<pre><code class="language-bash">git reset --mixed HEAD~!
+git status -s
+git clean -fd # remove untracked files from working directory
+git add .
+git commit -m &quot;New commit messages&quot;
+</code></pre>
+<h2 id="amend-an-earlier-commit">Amend an Earlier Commit<a href="#amend-an-earlier-commit" class="hanchor" ariaLabel="Anchor">#</a></h2>
+<p>We are going to use interactive rebasing.
+Identify the parent commit reference to where you wish to start the rebase.</p>
+<p>The begin interactive rebasing.</p>
+<pre><code class="language-bash">git rebase -i &lt;parentCommitref&gt;
+</code></pre>
+<p>Edit the rebase plan. Select the key word of the commit you wish to change and
+replace them with the appropriate keyword from the included documentation.
+Make the changes and add, and commit them.</p>
+<p>If you mess up:</p>
+<pre><code class="language-bash">git rebase --abort
+</code></pre>
+<p>If you&rsquo;re happy with the changes:</p>
+<pre><code class="language-bash">git rebase --continue  # look at the logs to see the changes.
+</code></pre>
+<h2 id="dropping-commits">Dropping Commits<a href="#dropping-commits" class="hanchor" ariaLabel="Anchor">#</a></h2>
+<p>To remove or drop commits we use:</p>
+<pre><code class="language-bash">git rebase -i &lt;commitRefOfParent&gt;
+# We can use the parent refence, the refernce it self with ^ or the refernce
+~1.
+git rebase -i oiu76532^
+git rebase -i oiu76532~1
+</code></pre>
+<p>In the rebase window, remove the reference to the commit we wish to drop. Save.
+This may generate conflicts. Use</p>
+<pre><code class="language-bash">git mergetool
+</code></pre>
+<p>to resolve commits.</p>
+<pre><code class="language-bash">git rebase --continue  # If you screw up, git rebase --abort takes us back to
+the state before we started.
+</code></pre>
+<h2 id="rewording-commit-messages">Rewording Commit Messages<a href="#rewording-commit-messages" class="hanchor" ariaLabel="Anchor">#</a></h2>
+<p>To reword we use</p>
+<pre><code class="language-bash">git rebase -i &lt;parentRefernce&gt;
+</code></pre>
+<p>Edit the rebase window to replace <code>pick</code> with <code>reword</code>. (Do not change the
+commit messages here). After saving, git will run through the list of commits,
+pause, and allow us to edit the commit messages for the commits we selected for
+rewording.</p>
+<h2 id="reordering-commits">Reordering Commits<a href="#reordering-commits" class="hanchor" ariaLabel="Anchor">#</a></h2>
+<pre><code class="language-bash">git rebase -i &lt;parentRefernce&gt; # of oldest commit to reorder.
+</code></pre>
+<p>In the rebase window reorder the commits. In order to avoid multiple and
+difficult merge conflicts, try reordering on commit at a time.</p>
+<h2 id="squashing-commits">Squashing Commits<a href="#squashing-commits" class="hanchor" ariaLabel="Anchor">#</a></h2>
+<p>To combine related batches of work, logically parts of the same unit of work.</p>
+<pre><code class="language-bash">git rebase -i &lt;parentRef&gt;
+</code></pre>
+<p>Edit the rebase window to replace <code>pick</code> with <code>squash</code>. After saving, git will
+run through the list of commits, pause, and allow us to edit the commit
+messages for the combined/squashed commit. Edit as required and save.</p>
+<p>To avoid editing the commit messages, we can instead choose to ignore the
+commit messages of some commits using <code>fixup</code> in place of <code>squash</code>.</p>
+<h2 id="split-a-commit">Split a Commit<a href="#split-a-commit" class="hanchor" ariaLabel="Anchor">#</a></h2>
+<p>To separate into multiple commits a previous commit that contains more than one
+logical units of change.</p>
+<pre><code class="language-bash">git rebase -i &lt;parentRef&gt;
+</code></pre>
+<p>In the rebase window we change the keyword from pick to edit on the commit we
+wish to split. Save.</p>
+<p>The HEAD is now at the commit, and we can reset and make changes here.</p>
+<pre><code class="language-bash">git rebase -i &lt;parentRef&gt;
+# pick -&gt; edit. The save
+git reset --soft Head~1 # the changes will remain as staged
+# or
+git reset --mixed Head~1 # the changes will be in the working
+                         # directory
+</code></pre>
+<p>Make the appropriate commits reflecting logical units of change and once we&rsquo;re done.</p>
+<pre><code class="language-bash">git rebase --continue
+</code></pre>
+
+    </div>
+</article>
+  <article class="md prev_next">
+    <hr>
+    <div>
+    <div class="post_next">
+      Next: <a href=/code/mkdocs_first_look/>Mkdocs: First Look</a>
+    
+    <div class="post_previous">
+      Previous: <a href=/code/git_exploration_three/>Git Exploration: Part Three</a>
+    
+    </div>
+  </article>  <article class="md prev_next">
+    <hr>
+    
+    
+  </article>
+
+<div class="next-post">
+	
+</div>
+
+<div class="previous-post">
+	
+</div>
+
+
+
+
+            </div>
+            <aside class="col-12 col-md-3 float-left sidebar">
+    
+    
+        
+        
+            
+        
+    
+    
+    
+        
+        
+            
+        
+    
+    
+    
+        
+        
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+        
+    
+    <div class="sidebar-item sidebar-toc">
+        <h3>Table of Contents</h3><nav id="TableOfContents">
+  <ul>
+    <li><a href="#rewriting-history">Rewriting History</a></li>
+    <li><a href="#recover-lost-commits">Recover lost Commits</a></li>
+    <li><a href="#amending-the-last-commit">Amending the Last Commit</a></li>
+    <li><a href="#amend-an-earlier-commit">Amend an Earlier Commit</a></li>
+    <li><a href="#dropping-commits">Dropping Commits</a></li>
+    <li><a href="#rewording-commit-messages">Rewording Commit Messages</a></li>
+    <li><a href="#reordering-commits">Reordering Commits</a></li>
+    <li><a href="#squashing-commits">Squashing Commits</a></li>
+    <li><a href="#split-a-commit">Split a Commit</a></li>
+  </ul>
+</nav></div>
+</aside>
+
+        </div>
+        <div class="btn">
+    <div class="btn-menu" id="btn-menu">
+        <i class="iconfont icon-grid-sharp"></i>
+    </div>
+    <div class="btn-toggle-mode">
+        <i class="iconfont icon-contrast-sharp"></i>
+    </div>
+    <div class="btn-scroll-top">
+        <i class="iconfont icon-chevron-up-circle-sharp"></i>
+    </div>
+</div>
+<aside class="sidebar-mobile" style="display: none;">
+  <div class="sidebar-wrapper">
+    
+    <div class="sidebar-item sidebar-pages">
+        <h3>Pages</h3>
+        <ul>
+            
+        </ul>
+    </div>
+    
+    <div class="sidebar-item sidebar-links">
+        <h3>Links</h3>
+        <ul>
+            
+        </ul>
+    </div>
+    
+    <div class="sidebar-item sidebar-tags">
+        <h3>Tags</h3>
+        <div>
+            
+            <span>
+                <a href="/tags/.net/">.Net</a>
+            </span>
+            
+            <span>
+                <a href="/tags/abstraction/">Abstraction</a>
+            </span>
+            
+            <span>
+                <a href="/tags/arrays/">Arrays</a>
+            </span>
+            
+            <span>
+                <a href="/tags/base-class/">Base Class</a>
+            </span>
+            
+            <span>
+                <a href="/tags/binary/">Binary</a>
+            </span>
+            
+            <span>
+                <a href="/tags/binary-search/">Binary Search</a>
+            </span>
+            
+            <span>
+                <a href="/tags/binary-tree/">Binary Tree</a>
+            </span>
+            
+            <span>
+                <a href="/tags/bites/">Bites</a>
+            </span>
+            
+            <span>
+                <a href="/tags/bitonic-point/">Bitonic Point</a>
+            </span>
+            
+            <span>
+                <a href="/tags/blazor/">Blazor</a>
+            </span>
+            
+            <span>
+                <a href="/tags/blog/">blog</a>
+            </span>
+            
+            <span>
+                <a href="/tags/branch/">branch</a>
+            </span>
+            
+            <span>
+                <a href="/tags/burnout/">Burnout</a>
+            </span>
+            
+            <span>
+                <a href="/tags/c#/">C#</a>
+            </span>
+            
+            <span>
+                <a href="/tags/celery/">celery</a>
+            </span>
+            
+            <span>
+                <a href="/tags/certificates/">Certificates</a>
+            </span>
+            
+            <span>
+                <a href="/tags/charts/">charts</a>
+            </span>
+            
+            <span>
+                <a href="/tags/check/">check</a>
+            </span>
+            
+            <span>
+                <a href="/tags/child-class/">Child Class</a>
+            </span>
+            
+            <span>
+                <a href="/tags/class/">Class</a>
+            </span>
+            
+            <span>
+                <a href="/tags/classes/">Classes</a>
+            </span>
+            
+            <span>
+                <a href="/tags/coding/">Coding</a>
+            </span>
+            
+            <span>
+                <a href="/tags/collaborating/">collaborating</a>
+            </span>
+            
+            <span>
+                <a href="/tags/collections/">Collections</a>
+            </span>
+            
+            <span>
+                <a href="/tags/commands/">Commands</a>
+            </span>
+            
+            <span>
+                <a href="/tags/community/">Community</a>
+            </span>
+            
+            <span>
+                <a href="/tags/courses/">Courses</a>
+            </span>
+            
+            <span>
+                <a href="/tags/critiquewheel/">critiquewheel</a>
+            </span>
+            
+            <span>
+                <a href="/tags/cross-reference/">cross reference</a>
+            </span>
+            
+            <span>
+                <a href="/tags/css/">CSS</a>
+            </span>
+            
+            <span>
+                <a href="/tags/data-science-linkedin-leetcode-pybites/">Data Science, LinkedIn, LeetCode, PyBites </a>
+            </span>
+            
+            <span>
+                <a href="/tags/data-structure/">Data Structure</a>
+            </span>
+            
+            <span>
+                <a href="/tags/data-types/">Data Types</a>
+            </span>
+            
+            <span>
+                <a href="/tags/deploy/">Deploy</a>
+            </span>
+            
+            <span>
+                <a href="/tags/depth/">Depth</a>
+            </span>
+            
+            <span>
+                <a href="/tags/derived-class/">Derived Class</a>
+            </span>
+            
+            <span>
+                <a href="/tags/design/">Design</a>
+            </span>
+            
+            <span>
+                <a href="/tags/design-updates/">Design Updates</a>
+            </span>
+            
+            <span>
+                <a href="/tags/developer/">developer</a>
+            </span>
+            
+            <span>
+                <a href="/tags/django/">django</a>
+            </span>
+            
+            <span>
+                <a href="/tags/docker/">docker</a>
+            </span>
+            
+            <span>
+                <a href="/tags/documentation/">documentation</a>
+            </span>
+            
+            <span>
+                <a href="/tags/duplicates/">Duplicates</a>
+            </span>
+            
+            <span>
+                <a href="/tags/educative/">Educative</a>
+            </span>
+            
+            <span>
+                <a href="/tags/encapsulation/">Encapsulation</a>
+            </span>
+            
+            <span>
+                <a href="/tags/find-closest-number/">Find Closest Number</a>
+            </span>
+            
+            <span>
+                <a href="/tags/first/">First</a>
+            </span>
+            
+            <span>
+                <a href="/tags/first-steps/">First Steps</a>
+            </span>
+            
+            <span>
+                <a href="/tags/fixed-point/">Fixed Point</a>
+            </span>
+            
+            <span>
+                <a href="/tags/flake8/">Flake8</a>
+            </span>
+            
+            <span>
+                <a href="/tags/git/">git</a>
+            </span>
+            
+            <span>
+                <a href="/tags/goyo/">Goyo</a>
+            </span>
+            
+            <span>
+                <a href="/tags/guidelines/">guidelines</a>
+            </span>
+            
+            <span>
+                <a href="/tags/hash-function/">Hash Function</a>
+            </span>
+            
+            <span>
+                <a href="/tags/hash-table/">Hash Table</a>
+            </span>
+            
+            <span>
+                <a href="/tags/hashing/">Hashing</a>
+            </span>
+            
+            <span>
+                <a href="/tags/height/">Height</a>
+            </span>
+            
+            <span>
+                <a href="/tags/hugo/">Hugo</a>
+            </span>
+            
+            <span>
+                <a href="/tags/inheritance/">Inheritance</a>
+            </span>
+            
+            <span>
+                <a href="/tags/inorder/">Inorder</a>
+            </span>
+            
+            <span>
+                <a href="/tags/interface/">Interface</a>
+            </span>
+            
+            <span>
+                <a href="/tags/learning/">learning</a>
+            </span>
+            
+            <span>
+                <a href="/tags/learning-paths/">learning paths</a>
+            </span>
+            
+            <span>
+                <a href="/tags/level-order/">Level Order</a>
+            </span>
+            
+            <span>
+                <a href="/tags/level-order-traversal/">Level Order Traversal</a>
+            </span>
+            
+            <span>
+                <a href="/tags/linkedin/">LinkedIn</a>
+            </span>
+            
+            <span>
+                <a href="/tags/lint/">lint</a>
+            </span>
+            
+            <span>
+                <a href="/tags/markdown/">Markdown</a>
+            </span>
+            
+            <span>
+                <a href="/tags/methods/">Methods</a>
+            </span>
+            
+            <span>
+                <a href="/tags/mkdocs/">mkDocs</a>
+            </span>
+            
+            <span>
+                <a href="/tags/modifiers/">Modifiers</a>
+            </span>
+            
+            <span>
+                <a href="/tags/motivation/">Motivation</a>
+            </span>
+            
+            <span>
+                <a href="/tags/next-post/">Next Post</a>
+            </span>
+            
+            <span>
+                <a href="/tags/node/">Node</a>
+            </span>
+            
+            <span>
+                <a href="/tags/notes/">notes</a>
+            </span>
+            
+            <span>
+                <a href="/tags/pair/">pair</a>
+            </span>
+            
+            <span>
+                <a href="/tags/parent-class/">Parent Class</a>
+            </span>
+            
+            <span>
+                <a href="/tags/pep8/">pep8</a>
+            </span>
+            
+            <span>
+                <a href="/tags/phases/">Phases</a>
+            </span>
+            
+            <span>
+                <a href="/tags/plantuml/">plantUML</a>
+            </span>
+            
+            <span>
+                <a href="/tags/postgres/">postgres</a>
+            </span>
+            
+            <span>
+                <a href="/tags/postorder/">Postorder</a>
+            </span>
+            
+            <span>
+                <a href="/tags/preorder/">Preorder</a>
+            </span>
+            
+            <span>
+                <a href="/tags/previous/">Previous</a>
+            </span>
+            
+            <span>
+                <a href="/tags/projects/">Projects</a>
+            </span>
+            
+            <span>
+                <a href="/tags/properties/">Properties</a>
+            </span>
+            
+            <span>
+                <a href="/tags/pybites/">Pybites</a>
+            </span>
+            
+            <span>
+                <a href="/tags/pytest/">pytest</a>
+            </span>
+            
+            <span>
+                <a href="/tags/python/">Python</a>
+            </span>
+            
+            <span>
+                <a href="/tags/razorpages/">RazorPages</a>
+            </span>
+            
+            <span>
+                <a href="/tags/readability/">readability</a>
+            </span>
+            
+            <span>
+                <a href="/tags/recent-posts/">Recent Posts</a>
+            </span>
+            
+            <span>
+                <a href="/tags/refactoring/">Refactoring</a>
+            </span>
+            
+            <span>
+                <a href="/tags/regex/">regex</a>
+            </span>
+            
+            <span>
+                <a href="/tags/regular-expressions/">regular expressions</a>
+            </span>
+            
+            <span>
+                <a href="/tags/relationship/">Relationship</a>
+            </span>
+            
+            <span>
+                <a href="/tags/render/">render</a>
+            </span>
+            
+            <span>
+                <a href="/tags/render.com/">Render.com</a>
+            </span>
+            
+            <span>
+                <a href="/tags/search/">Search</a>
+            </span>
+            
+            <span>
+                <a href="/tags/size/">Size</a>
+            </span>
+            
+            <span>
+                <a href="/tags/skills/">skills</a>
+            </span>
+            
+            <span>
+                <a href="/tags/sphinx/">sphinx</a>
+            </span>
+            
+            <span>
+                <a href="/tags/sql/">SQL</a>
+            </span>
+            
+            <span>
+                <a href="/tags/string/">String</a>
+            </span>
+            
+            <span>
+                <a href="/tags/sub-class/">Sub Class</a>
+            </span>
+            
+            <span>
+                <a href="/tags/super-class/">Super Class</a>
+            </span>
+            
+            <span>
+                <a href="/tags/syntastic/">Syntastic</a>
+            </span>
+            
+            <span>
+                <a href="/tags/taking-stock/">Taking Stock</a>
+            </span>
+            
+            <span>
+                <a href="/tags/tdd/">TDD</a>
+            </span>
+            
+            <span>
+                <a href="/tags/templates/">Templates</a>
+            </span>
+            
+            <span>
+                <a href="/tags/terminal/">Terminal</a>
+            </span>
+            
+            <span>
+                <a href="/tags/tree/">Tree</a>
+            </span>
+            
+            <span>
+                <a href="/tags/tweaks/">Tweaks</a>
+            </span>
+            
+            <span>
+                <a href="/tags/twitter/">Twitter</a>
+            </span>
+            
+            <span>
+                <a href="/tags/update/">Update</a>
+            </span>
+            
+            <span>
+                <a href="/tags/upwork/">Upwork</a>
+            </span>
+            
+            <span>
+                <a href="/tags/usability/">Usability</a>
+            </span>
+            
+            <span>
+                <a href="/tags/vale/">vale</a>
+            </span>
+            
+            <span>
+                <a href="/tags/variables/">Variables</a>
+            </span>
+            
+            <span>
+                <a href="/tags/vim/">Vim</a>
+            </span>
+            
+            <span>
+                <a href="/tags/widget/">Widget</a>
+            </span>
+            
+        </div>
+    </div>
+    
+    
+    
+    <div class="sidebar-item sidebar-toc">
+        <h3>Table of Contents</h3>
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#rewriting-history">Rewriting History</a></li>
+    <li><a href="#recover-lost-commits">Recover lost Commits</a></li>
+    <li><a href="#amending-the-last-commit">Amending the Last Commit</a></li>
+    <li><a href="#amend-an-earlier-commit">Amend an Earlier Commit</a></li>
+    <li><a href="#dropping-commits">Dropping Commits</a></li>
+    <li><a href="#rewording-commit-messages">Rewording Commit Messages</a></li>
+    <li><a href="#reordering-commits">Reordering Commits</a></li>
+    <li><a href="#squashing-commits">Squashing Commits</a></li>
+    <li><a href="#split-a-commit">Split a Commit</a></li>
+  </ul>
+</nav>
+    </div>
+    
+    
+  </div>
+</aside>
+    </main>
+
+    <footer>
+    <div class="container-lg clearfix">
+        <div class="col-12 footer">
+            
+            <span>&copy; 2023
+              <a href="/">David J Nevin</a> 
+                
+                
+                   
+                                                    
+            </span>
+        </div>
+    </div>
+</footer>
+
+    
+<script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/prismjs@1.27.0/components/prism-core.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/prismjs@1.27.0/plugins/autoloader/prism-autoloader.min.js"></script>
+
+
+
+<script defer src="/assets/js/fuji.min.js"></script>
+
+
+
+</body>
+
+</html>

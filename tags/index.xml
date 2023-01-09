@@ -6,8 +6,1096 @@
     <description>Recent content in Tags on David J Nevin</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>© 2022 David J. Nevin</copyright>
-    <lastBuildDate>Sun, 16 Oct 2022 12:46:10 +0200</lastBuildDate><atom:link href="https://www.davidjnevin.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>David J. Nevin</copyright>
+    <lastBuildDate>Mon, 09 Jan 2023 13:54:06 +0100</lastBuildDate><atom:link href="https://www.davidjnevin.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>developer</title>
+      <link>https://www.davidjnevin.com/tags/developer/</link>
+      <pubDate>Mon, 09 Jan 2023 13:54:06 +0100</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/developer/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>learning</title>
+      <link>https://www.davidjnevin.com/tags/learning/</link>
+      <pubDate>Mon, 09 Jan 2023 13:54:06 +0100</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/learning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>regex</title>
+      <link>https://www.davidjnevin.com/tags/regex/</link>
+      <pubDate>Mon, 09 Jan 2023 13:54:06 +0100</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/regex/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>regular expressions</title>
+      <link>https://www.davidjnevin.com/tags/regular-expressions/</link>
+      <pubDate>Mon, 09 Jan 2023 13:54:06 +0100</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/regular-expressions/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>blog</title>
+      <link>https://www.davidjnevin.com/tags/blog/</link>
+      <pubDate>Thu, 17 Nov 2022 21:58:20 +0100</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/blog/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>celery</title>
+      <link>https://www.davidjnevin.com/tags/celery/</link>
+      <pubDate>Thu, 17 Nov 2022 21:58:20 +0100</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/celery/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>django</title>
+      <link>https://www.davidjnevin.com/tags/django/</link>
+      <pubDate>Thu, 17 Nov 2022 21:58:20 +0100</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/django/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>docker</title>
+      <link>https://www.davidjnevin.com/tags/docker/</link>
+      <pubDate>Thu, 17 Nov 2022 21:58:20 +0100</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/docker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>render</title>
+      <link>https://www.davidjnevin.com/tags/render/</link>
+      <pubDate>Thu, 17 Nov 2022 21:58:20 +0100</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/render/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>check</title>
+      <link>https://www.davidjnevin.com/tags/check/</link>
+      <pubDate>Thu, 10 Nov 2022 15:55:36 +0100</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/check/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>lint</title>
+      <link>https://www.davidjnevin.com/tags/lint/</link>
+      <pubDate>Thu, 10 Nov 2022 15:55:36 +0100</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/lint/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>vale</title>
+      <link>https://www.davidjnevin.com/tags/vale/</link>
+      <pubDate>Thu, 10 Nov 2022 15:55:36 +0100</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/vale/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Vim</title>
+      <link>https://www.davidjnevin.com/tags/vim/</link>
+      <pubDate>Thu, 10 Nov 2022 15:55:36 +0100</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/vim/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cross reference</title>
+      <link>https://www.davidjnevin.com/tags/cross-reference/</link>
+      <pubDate>Thu, 10 Nov 2022 00:40:23 +0100</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/cross-reference/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>documentation</title>
+      <link>https://www.davidjnevin.com/tags/documentation/</link>
+      <pubDate>Thu, 10 Nov 2022 00:40:23 +0100</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/documentation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Markdown</title>
+      <link>https://www.davidjnevin.com/tags/markdown/</link>
+      <pubDate>Thu, 10 Nov 2022 00:40:23 +0100</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/markdown/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sphinx</title>
+      <link>https://www.davidjnevin.com/tags/sphinx/</link>
+      <pubDate>Thu, 10 Nov 2022 00:40:23 +0100</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/sphinx/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>guidelines</title>
+      <link>https://www.davidjnevin.com/tags/guidelines/</link>
+      <pubDate>Tue, 01 Nov 2022 20:10:50 +0100</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/guidelines/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>readability</title>
+      <link>https://www.davidjnevin.com/tags/readability/</link>
+      <pubDate>Tue, 01 Nov 2022 20:10:50 +0100</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/readability/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>charts</title>
+      <link>https://www.davidjnevin.com/tags/charts/</link>
+      <pubDate>Thu, 27 Oct 2022 11:48:27 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/charts/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mkDocs</title>
+      <link>https://www.davidjnevin.com/tags/mkdocs/</link>
+      <pubDate>Thu, 27 Oct 2022 11:48:27 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/mkdocs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>plantUML</title>
+      <link>https://www.davidjnevin.com/tags/plantuml/</link>
+      <pubDate>Thu, 27 Oct 2022 11:48:27 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/plantuml/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>git</title>
+      <link>https://www.davidjnevin.com/tags/git/</link>
+      <pubDate>Wed, 26 Oct 2022 01:40:35 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/git/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>skills</title>
+      <link>https://www.davidjnevin.com/tags/skills/</link>
+      <pubDate>Wed, 26 Oct 2022 01:40:35 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/skills/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>collaborating</title>
+      <link>https://www.davidjnevin.com/tags/collaborating/</link>
+      <pubDate>Sun, 23 Oct 2022 15:23:47 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/collaborating/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>branch</title>
+      <link>https://www.davidjnevin.com/tags/branch/</link>
+      <pubDate>Sat, 22 Oct 2022 13:54:20 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/branch/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>notes</title>
+      <link>https://www.davidjnevin.com/tags/notes/</link>
+      <pubDate>Fri, 21 Oct 2022 14:52:52 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/notes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>pair</title>
+      <link>https://www.davidjnevin.com/tags/pair/</link>
+      <pubDate>Sun, 16 Oct 2022 12:46:10 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/pair/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Deploy</title>
+      <link>https://www.davidjnevin.com/tags/deploy/</link>
+      <pubDate>Sun, 25 Sep 2022 01:00:26 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/deploy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Render.com</title>
+      <link>https://www.davidjnevin.com/tags/render.com/</link>
+      <pubDate>Sun, 25 Sep 2022 01:00:26 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/render.com/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Educative</title>
+      <link>https://www.davidjnevin.com/tags/educative/</link>
+      <pubDate>Mon, 19 Sep 2022 19:03:47 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/educative/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>postgres</title>
+      <link>https://www.davidjnevin.com/tags/postgres/</link>
+      <pubDate>Mon, 19 Sep 2022 19:03:47 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/postgres/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>SQL</title>
+      <link>https://www.davidjnevin.com/tags/sql/</link>
+      <pubDate>Mon, 19 Sep 2022 19:03:47 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/sql/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Bites</title>
+      <link>https://www.davidjnevin.com/tags/bites/</link>
+      <pubDate>Sun, 11 Sep 2022 18:54:37 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/bites/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Collections</title>
+      <link>https://www.davidjnevin.com/tags/collections/</link>
+      <pubDate>Sun, 11 Sep 2022 18:54:37 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/collections/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Data Types</title>
+      <link>https://www.davidjnevin.com/tags/data-types/</link>
+      <pubDate>Sun, 11 Sep 2022 18:54:37 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/data-types/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>learning paths</title>
+      <link>https://www.davidjnevin.com/tags/learning-paths/</link>
+      <pubDate>Sun, 11 Sep 2022 18:54:37 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/learning-paths/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Pybites</title>
+      <link>https://www.davidjnevin.com/tags/pybites/</link>
+      <pubDate>Sun, 11 Sep 2022 18:54:37 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/pybites/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>pytest</title>
+      <link>https://www.davidjnevin.com/tags/pytest/</link>
+      <pubDate>Sun, 11 Sep 2022 18:54:37 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/pytest/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hugo</title>
+      <link>https://www.davidjnevin.com/tags/hugo/</link>
+      <pubDate>Fri, 26 Aug 2022 22:29:09 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/hugo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Search</title>
+      <link>https://www.davidjnevin.com/tags/search/</link>
+      <pubDate>Fri, 26 Aug 2022 22:29:09 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/search/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Data Science, LinkedIn, LeetCode, PyBites </title>
+      <link>https://www.davidjnevin.com/tags/data-science-linkedin-leetcode-pybites/</link>
+      <pubDate>Mon, 22 Aug 2022 09:39:43 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/data-science-linkedin-leetcode-pybites/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Flake8</title>
+      <link>https://www.davidjnevin.com/tags/flake8/</link>
+      <pubDate>Sat, 30 Jul 2022 19:33:30 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/flake8/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Syntastic</title>
+      <link>https://www.davidjnevin.com/tags/syntastic/</link>
+      <pubDate>Sat, 30 Jul 2022 19:33:30 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/syntastic/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>First Steps</title>
+      <link>https://www.davidjnevin.com/tags/first-steps/</link>
+      <pubDate>Sat, 30 Jul 2022 13:29:21 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/first-steps/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Refactoring</title>
+      <link>https://www.davidjnevin.com/tags/refactoring/</link>
+      <pubDate>Sat, 30 Jul 2022 13:29:21 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/refactoring/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>TDD</title>
+      <link>https://www.davidjnevin.com/tags/tdd/</link>
+      <pubDate>Sat, 30 Jul 2022 13:29:21 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/tdd/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Coding</title>
+      <link>https://www.davidjnevin.com/tags/coding/</link>
+      <pubDate>Sat, 09 Jul 2022 13:37:22 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/coding/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Motivation</title>
+      <link>https://www.davidjnevin.com/tags/motivation/</link>
+      <pubDate>Sat, 09 Jul 2022 13:37:22 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/motivation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Update</title>
+      <link>https://www.davidjnevin.com/tags/update/</link>
+      <pubDate>Sat, 09 Jul 2022 13:37:22 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/update/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>String</title>
+      <link>https://www.davidjnevin.com/tags/string/</link>
+      <pubDate>Sat, 02 Jul 2022 15:21:02 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/string/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Courses</title>
+      <link>https://www.davidjnevin.com/tags/courses/</link>
+      <pubDate>Wed, 29 Jun 2022 23:28:06 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/courses/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Upwork</title>
+      <link>https://www.davidjnevin.com/tags/upwork/</link>
+      <pubDate>Wed, 29 Jun 2022 23:28:06 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/upwork/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Class</title>
+      <link>https://www.davidjnevin.com/tags/class/</link>
+      <pubDate>Tue, 28 Jun 2022 11:39:46 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/class/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Classes</title>
+      <link>https://www.davidjnevin.com/tags/classes/</link>
+      <pubDate>Tue, 28 Jun 2022 11:39:46 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/classes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Goyo</title>
+      <link>https://www.davidjnevin.com/tags/goyo/</link>
+      <pubDate>Tue, 28 Jun 2022 11:39:46 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/goyo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Inheritance</title>
+      <link>https://www.davidjnevin.com/tags/inheritance/</link>
+      <pubDate>Tue, 28 Jun 2022 11:39:46 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/inheritance/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>pep8</title>
+      <link>https://www.davidjnevin.com/tags/pep8/</link>
+      <pubDate>Tue, 28 Jun 2022 11:39:46 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/pep8/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Terminal</title>
+      <link>https://www.davidjnevin.com/tags/terminal/</link>
+      <pubDate>Sun, 26 Jun 2022 12:41:21 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/terminal/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tweaks</title>
+      <link>https://www.davidjnevin.com/tags/tweaks/</link>
+      <pubDate>Sun, 26 Jun 2022 12:41:21 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/tweaks/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Base Class</title>
+      <link>https://www.davidjnevin.com/tags/base-class/</link>
+      <pubDate>Sun, 26 Jun 2022 00:25:42 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/base-class/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Child Class</title>
+      <link>https://www.davidjnevin.com/tags/child-class/</link>
+      <pubDate>Sun, 26 Jun 2022 00:25:42 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/child-class/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Derived Class</title>
+      <link>https://www.davidjnevin.com/tags/derived-class/</link>
+      <pubDate>Sun, 26 Jun 2022 00:25:42 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/derived-class/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Parent Class</title>
+      <link>https://www.davidjnevin.com/tags/parent-class/</link>
+      <pubDate>Sun, 26 Jun 2022 00:25:42 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/parent-class/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Relationship</title>
+      <link>https://www.davidjnevin.com/tags/relationship/</link>
+      <pubDate>Sun, 26 Jun 2022 00:25:42 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/relationship/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Sub Class</title>
+      <link>https://www.davidjnevin.com/tags/sub-class/</link>
+      <pubDate>Sun, 26 Jun 2022 00:25:42 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/sub-class/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Super Class</title>
+      <link>https://www.davidjnevin.com/tags/super-class/</link>
+      <pubDate>Sun, 26 Jun 2022 00:25:42 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/super-class/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Abstraction</title>
+      <link>https://www.davidjnevin.com/tags/abstraction/</link>
+      <pubDate>Sat, 25 Jun 2022 23:56:24 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/abstraction/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Encapsulation</title>
+      <link>https://www.davidjnevin.com/tags/encapsulation/</link>
+      <pubDate>Sat, 25 Jun 2022 23:56:24 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/encapsulation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Interface</title>
+      <link>https://www.davidjnevin.com/tags/interface/</link>
+      <pubDate>Sat, 25 Jun 2022 23:56:24 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/interface/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>LinkedIn</title>
+      <link>https://www.davidjnevin.com/tags/linkedin/</link>
+      <pubDate>Sat, 25 Jun 2022 22:31:48 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/linkedin/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Twitter</title>
+      <link>https://www.davidjnevin.com/tags/twitter/</link>
+      <pubDate>Sat, 25 Jun 2022 22:31:48 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/twitter/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Widget</title>
+      <link>https://www.davidjnevin.com/tags/widget/</link>
+      <pubDate>Sat, 25 Jun 2022 22:31:48 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/widget/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Methods</title>
+      <link>https://www.davidjnevin.com/tags/methods/</link>
+      <pubDate>Sat, 25 Jun 2022 21:37:14 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/methods/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Modifiers</title>
+      <link>https://www.davidjnevin.com/tags/modifiers/</link>
+      <pubDate>Sat, 25 Jun 2022 21:37:14 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/modifiers/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Properties</title>
+      <link>https://www.davidjnevin.com/tags/properties/</link>
+      <pubDate>Sat, 25 Jun 2022 21:37:14 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/properties/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Variables</title>
+      <link>https://www.davidjnevin.com/tags/variables/</link>
+      <pubDate>Sat, 25 Jun 2022 21:37:14 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/variables/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Python</title>
+      <link>https://www.davidjnevin.com/tags/python/</link>
+      <pubDate>Sat, 25 Jun 2022 19:13:51 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Projects</title>
+      <link>https://www.davidjnevin.com/tags/projects/</link>
+      <pubDate>Sat, 25 Jun 2022 16:00:49 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/projects/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Design Updates</title>
+      <link>https://www.davidjnevin.com/tags/design-updates/</link>
+      <pubDate>Sat, 25 Jun 2022 12:14:06 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/design-updates/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Templates</title>
+      <link>https://www.davidjnevin.com/tags/templates/</link>
+      <pubDate>Sat, 25 Jun 2022 12:14:06 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/templates/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Usability</title>
+      <link>https://www.davidjnevin.com/tags/usability/</link>
+      <pubDate>Sat, 25 Jun 2022 12:14:06 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/usability/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Burnout</title>
+      <link>https://www.davidjnevin.com/tags/burnout/</link>
+      <pubDate>Fri, 24 Jun 2022 21:53:12 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/burnout/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Community</title>
+      <link>https://www.davidjnevin.com/tags/community/</link>
+      <pubDate>Fri, 24 Jun 2022 21:53:12 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/community/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Taking Stock</title>
+      <link>https://www.davidjnevin.com/tags/taking-stock/</link>
+      <pubDate>Fri, 24 Jun 2022 21:53:12 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/taking-stock/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Commands</title>
+      <link>https://www.davidjnevin.com/tags/commands/</link>
+      <pubDate>Wed, 22 Jun 2022 10:47:37 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/commands/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Phases</title>
+      <link>https://www.davidjnevin.com/tags/phases/</link>
+      <pubDate>Wed, 22 Jun 2022 10:47:37 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/phases/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Binary Search</title>
+      <link>https://www.davidjnevin.com/tags/binary-search/</link>
+      <pubDate>Tue, 21 Jun 2022 19:02:01 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/binary-search/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Bitonic Point</title>
+      <link>https://www.davidjnevin.com/tags/bitonic-point/</link>
+      <pubDate>Tue, 21 Jun 2022 19:02:01 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/bitonic-point/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Duplicates</title>
+      <link>https://www.davidjnevin.com/tags/duplicates/</link>
+      <pubDate>Tue, 21 Jun 2022 19:02:01 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/duplicates/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Find Closest Number</title>
+      <link>https://www.davidjnevin.com/tags/find-closest-number/</link>
+      <pubDate>Tue, 21 Jun 2022 19:02:01 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/find-closest-number/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Fixed Point</title>
+      <link>https://www.davidjnevin.com/tags/fixed-point/</link>
+      <pubDate>Tue, 21 Jun 2022 19:02:01 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/fixed-point/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hash Function</title>
+      <link>https://www.davidjnevin.com/tags/hash-function/</link>
+      <pubDate>Mon, 20 Jun 2022 22:04:42 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/hash-function/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hash Table</title>
+      <link>https://www.davidjnevin.com/tags/hash-table/</link>
+      <pubDate>Mon, 20 Jun 2022 22:04:42 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/hash-table/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hashing</title>
+      <link>https://www.davidjnevin.com/tags/hashing/</link>
+      <pubDate>Mon, 20 Jun 2022 22:04:42 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/hashing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Certificates</title>
+      <link>https://www.davidjnevin.com/tags/certificates/</link>
+      <pubDate>Sun, 19 Jun 2022 12:41:56 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/certificates/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Next Post</title>
+      <link>https://www.davidjnevin.com/tags/next-post/</link>
+      <pubDate>Sun, 19 Jun 2022 12:41:56 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/next-post/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Previous</title>
+      <link>https://www.davidjnevin.com/tags/previous/</link>
+      <pubDate>Sun, 19 Jun 2022 12:41:56 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/previous/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Recent Posts</title>
+      <link>https://www.davidjnevin.com/tags/recent-posts/</link>
+      <pubDate>Sun, 19 Jun 2022 12:41:56 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/recent-posts/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Binary</title>
+      <link>https://www.davidjnevin.com/tags/binary/</link>
+      <pubDate>Sun, 19 Jun 2022 02:08:26 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/binary/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tree</title>
+      <link>https://www.davidjnevin.com/tags/tree/</link>
+      <pubDate>Sun, 19 Jun 2022 02:08:26 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/tree/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Binary Tree</title>
+      <link>https://www.davidjnevin.com/tags/binary-tree/</link>
+      <pubDate>Sun, 19 Jun 2022 02:08:09 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/binary-tree/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Level Order</title>
+      <link>https://www.davidjnevin.com/tags/level-order/</link>
+      <pubDate>Sun, 19 Jun 2022 02:08:09 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/level-order/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Level Order Traversal</title>
+      <link>https://www.davidjnevin.com/tags/level-order-traversal/</link>
+      <pubDate>Sun, 19 Jun 2022 02:08:09 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/level-order-traversal/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Inorder</title>
+      <link>https://www.davidjnevin.com/tags/inorder/</link>
+      <pubDate>Sat, 18 Jun 2022 15:10:51 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/inorder/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Postorder</title>
+      <link>https://www.davidjnevin.com/tags/postorder/</link>
+      <pubDate>Sat, 18 Jun 2022 15:10:51 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/postorder/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Preorder</title>
+      <link>https://www.davidjnevin.com/tags/preorder/</link>
+      <pubDate>Sat, 18 Jun 2022 15:10:51 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/preorder/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Data Structure</title>
+      <link>https://www.davidjnevin.com/tags/data-structure/</link>
+      <pubDate>Fri, 17 Jun 2022 23:42:31 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/data-structure/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Depth</title>
+      <link>https://www.davidjnevin.com/tags/depth/</link>
+      <pubDate>Fri, 17 Jun 2022 23:42:31 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/depth/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Height</title>
+      <link>https://www.davidjnevin.com/tags/height/</link>
+      <pubDate>Fri, 17 Jun 2022 23:42:31 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/height/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Node</title>
+      <link>https://www.davidjnevin.com/tags/node/</link>
+      <pubDate>Fri, 17 Jun 2022 23:42:31 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/node/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Size</title>
+      <link>https://www.davidjnevin.com/tags/size/</link>
+      <pubDate>Fri, 17 Jun 2022 23:42:31 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/size/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Arrays</title>
+      <link>https://www.davidjnevin.com/tags/arrays/</link>
+      <pubDate>Fri, 17 Jun 2022 20:43:36 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/arrays/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Design</title>
+      <link>https://www.davidjnevin.com/tags/design/</link>
+      <pubDate>Thu, 16 Jun 2022 23:06:34 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/design/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>.Net</title>
+      <link>https://www.davidjnevin.com/tags/.net/</link>
+      <pubDate>Tue, 14 Jun 2022 21:43:57 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/.net/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Blazor</title>
+      <link>https://www.davidjnevin.com/tags/blazor/</link>
+      <pubDate>Tue, 14 Jun 2022 21:43:57 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/blazor/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>C#</title>
+      <link>https://www.davidjnevin.com/tags/c#/</link>
+      <pubDate>Tue, 14 Jun 2022 21:43:57 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/c#/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>critiquewheel</title>
+      <link>https://www.davidjnevin.com/tags/critiquewheel/</link>
+      <pubDate>Tue, 14 Jun 2022 21:43:57 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/critiquewheel/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>CSS</title>
+      <link>https://www.davidjnevin.com/tags/css/</link>
+      <pubDate>Tue, 14 Jun 2022 21:43:57 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/css/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>RazorPages</title>
+      <link>https://www.davidjnevin.com/tags/razorpages/</link>
+      <pubDate>Tue, 14 Jun 2022 21:43:57 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/razorpages/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>First</title>
+      <link>https://www.davidjnevin.com/tags/first/</link>
+      <pubDate>Tue, 14 Jun 2022 21:01:56 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/first/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>
-

@@ -6,15 +6,134 @@
     <description>Recent content on David J Nevin</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>© 2022 David J. Nevin</copyright>
+    <copyright>David J. Nevin</copyright>
     <lastBuildDate>Thu, 05 Aug 2021 21:57:27 +0200</lastBuildDate><atom:link href="https://www.davidjnevin.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Regular Expressions</title>
+      <link>https://www.davidjnevin.com/code/regular_expressions/</link>
+      <pubDate>Mon, 09 Jan 2023 13:54:06 +0100</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/regular_expressions/</guid>
+      <description>A powerful tool for my IT toolbox.
+A search query of text using a string.</description>
+    </item>
+    
+    <item>
+      <title>Django Templates</title>
+      <link>https://www.davidjnevin.com/code/django_templates/</link>
+      <pubDate>Thu, 17 Nov 2022 21:58:20 +0100</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/django_templates/</guid>
+      <description>Using the django-admin startporject --template flag, I wanted to create my projects with a lot of the tedious work already done.</description>
+    </item>
+    
+    <item>
+      <title>Vale Lint Setup</title>
+      <link>https://www.davidjnevin.com/code/vale-lint-setup/</link>
+      <pubDate>Thu, 10 Nov 2022 15:55:36 +0100</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/vale-lint-setup/</guid>
+      <description>Vale Prose Linting With sphinx up and running, the next step is getting the prose linter setup and configured.</description>
+    </item>
+    
+    <item>
+      <title>Sphinx Complete but not Finished</title>
+      <link>https://www.davidjnevin.com/code/sphinx_complete/</link>
+      <pubDate>Thu, 10 Nov 2022 00:40:23 +0100</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/sphinx_complete/</guid>
+      <description>Ok. If you&amp;rsquo;re following along with the series, you should have a nice looking documentation site.</description>
+    </item>
+    
+    <item>
+      <title>Sphinx in Markdown</title>
+      <link>https://www.davidjnevin.com/code/sphinx_next_level/</link>
+      <pubDate>Thu, 03 Nov 2022 11:46:02 +0100</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/sphinx_next_level/</guid>
+      <description>From my previous post, sphinx appears to be just another static site generator.</description>
+    </item>
+    
+    <item>
+      <title>Sphinx Setup</title>
+      <link>https://www.davidjnevin.com/code/sphinx_setup/</link>
+      <pubDate>Thu, 03 Nov 2022 02:13:58 +0100</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/sphinx_setup/</guid>
+      <description>Sphinx: Setup I&amp;rsquo;m interested in building a useful documentation pipeline and will use it initially on these blog posts.</description>
+    </item>
+    
+    <item>
+      <title>Documentation: Intentions</title>
+      <link>https://www.davidjnevin.com/code/documentation_intentions/</link>
+      <pubDate>Tue, 01 Nov 2022 20:10:50 +0100</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/documentation_intentions/</guid>
+      <description>It&amp;rsquo;s time to start my first big personal python project. I&amp;rsquo;ve put in the hours (and hours) in tutorials, build out a few apps, some simple some more complex, contributed to open source, and joined and contributed to a variety of python related groups.</description>
+    </item>
+    
+    <item>
+      <title>Docker First Look</title>
+      <link>https://www.davidjnevin.com/code/docker_first_look/</link>
+      <pubDate>Sun, 30 Oct 2022 00:00:05 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/docker_first_look/</guid>
+      <description>What is Docker? &amp;ldquo;Docker is an open platform for developing, shipping, and running applications.</description>
+    </item>
+    
+    <item>
+      <title>Mkdocs: First Look</title>
+      <link>https://www.davidjnevin.com/code/mkdocs_first_look/</link>
+      <pubDate>Thu, 27 Oct 2022 11:48:27 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/mkdocs_first_look/</guid>
+      <description>MkDocs Getting Started MKDocs is a documentation oriented static website builder using a single .</description>
+    </item>
+    
+    <item>
+      <title>Git Exploration: Part Four</title>
+      <link>https://www.davidjnevin.com/code/git_exploration_four/</link>
+      <pubDate>Wed, 26 Oct 2022 01:40:35 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/git_exploration_four/</guid>
+      <description>Rewriting History Golden Rule: Don&amp;rsquo;t rewrite public history.
+To undo local commits, use:</description>
+    </item>
+    
+    <item>
+      <title>Git Exploration: Part Three</title>
+      <link>https://www.davidjnevin.com/code/git_exploration_three/</link>
+      <pubDate>Sun, 23 Oct 2022 15:23:47 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/git_exploration_three/</guid>
+      <description>Cloning a branch from GitHub To clone, or make a local copy of a repository, use:</description>
+    </item>
+    
+    <item>
+      <title>Git Exploration: Part Two</title>
+      <link>https://www.davidjnevin.com/code/git_exploration_two/</link>
+      <pubDate>Sat, 22 Oct 2022 13:54:20 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/git_exploration_two/</guid>
+      <description>Branching Branching allows us to diverge from the the primary line of work and work in isolation.</description>
+    </item>
+    
+    <item>
+      <title>Git Exploration: Part One</title>
+      <link>https://www.davidjnevin.com/code/git_exploration_one/</link>
+      <pubDate>Fri, 21 Oct 2022 14:52:52 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/git_exploration_one/</guid>
+      <description>Git Tutorial Notes Track history and work together. Distributed version control system.</description>
+    </item>
+    
     <item>
       <title>Pair Programming: First Steps</title>
       <link>https://www.davidjnevin.com/code/pair_programming_first_steps/</link>
       <pubDate>Sun, 16 Oct 2022 12:46:10 +0200</pubDate>
       
       <guid>https://www.davidjnevin.com/code/pair_programming_first_steps/</guid>
-      <description>One thing I have learned it that inote taking only works if you take good notes.</description>
+      <description>One thing I have learned it that note taking only works if you take good notes.</description>
     </item>
     
     <item>

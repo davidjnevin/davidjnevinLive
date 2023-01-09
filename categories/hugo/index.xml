@@ -6,8 +6,80 @@
     <description>Recent content in Hugo on David J Nevin</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>© 2022 David J. Nevin</copyright>
+    <copyright>David J. Nevin</copyright>
     <lastBuildDate>Fri, 26 Aug 2022 22:29:09 +0200</lastBuildDate><atom:link href="https://www.davidjnevin.com/categories/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>RSS Python Search Hugo</title>
+      <link>https://www.davidjnevin.com/code/rss_python_search_hugo/</link>
+      <pubDate>Fri, 26 Aug 2022 22:29:09 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/rss_python_search_hugo/</guid>
+      <description>Slack Community So I&amp;rsquo;ve been hanging out in the PyBites Slack Community for a few weeks.</description>
+    </item>
+    
+    <item>
+      <title>Share This Widget</title>
+      <link>https://www.davidjnevin.com/code/share_this_widget/</link>
+      <pubDate>Sat, 25 Jun 2022 22:31:48 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/share_this_widget/</guid>
+      <description>Share This Post Widget I&amp;rsquo;m working on implementing the code and methods detailed by Christian Oliff at this page.</description>
+    </item>
+    
+    <item>
+      <title>Site Design Update</title>
+      <link>https://www.davidjnevin.com/code/site_design_update_2022_06_25/</link>
+      <pubDate>Sat, 25 Jun 2022 12:14:06 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/site_design_update_2022_06_25/</guid>
+      <description>Adding Some Flair I was unhappy with the functionality of the standard list page of the minima theme.</description>
+    </item>
+    
+    <item>
+      <title>PlantUML: First Attempts</title>
+      <link>https://www.davidjnevin.com/code/plantuml_first_attempts/</link>
+      <pubDate>Thu, 16 Jun 2022 23:06:34 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/plantuml_first_attempts/</guid>
+      <description>Let&amp;rsquo;s try out PlantUML PlantUML seems at first glance somewhat similar to Mermaid but with a wider function list.</description>
+    </item>
+    
+    <item>
+      <title>Mermaid: First Attempts</title>
+      <link>https://www.davidjnevin.com/code/mermaid_first_attempts/</link>
+      <pubDate>Thu, 16 Jun 2022 09:23:13 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/mermaid_first_attempts/</guid>
+      <description>Mermaid setup. Really basic first effort.
+I created a shortcodes folder under my theme layouts folder, adn there created a mermaid.</description>
+    </item>
+    
+    <item>
+      <title>Hugo Section Theme 3</title>
+      <link>https://www.davidjnevin.com/code/hugo_section_theme_003/</link>
+      <pubDate>Wed, 15 Jun 2022 22:03:26 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/hugo_section_theme_003/</guid>
+      <description>Okay so that&amp;rsquo;s better. A simpler approach worked. I got playing with a copy of my primary *.</description>
+    </item>
+    
+    <item>
+      <title>Hugo Section Theme 2 (didn&#39;t work)</title>
+      <link>https://www.davidjnevin.com/code/hugo_section_theme_002/</link>
+      <pubDate>Wed, 15 Jun 2022 02:16:41 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/hugo_section_theme_002/</guid>
+      <description>Question: If I just copy the template? What happens if I just copy the single.</description>
+    </item>
+    
+    <item>
+      <title>Hugo Section Theme (didn&#39;t work)</title>
+      <link>https://www.davidjnevin.com/code/hugo_section_theme/</link>
+      <pubDate>Wed, 15 Jun 2022 00:25:06 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/hugo_section_theme/</guid>
+      <description>Hugo Section: A different look and feel. I though that in order to set a different look and feel for a Hugo section, I&amp;rsquo;d create a folder in the current theme layout folder with the same name as the section.</description>
+    </item>
+    
   </channel>
 </rss>
-

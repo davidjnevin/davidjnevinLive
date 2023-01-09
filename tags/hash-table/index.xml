@@ -6,8 +6,16 @@
     <description>Recent content in Hash Table on David J Nevin</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>© 2022 David J. Nevin</copyright>
+    <copyright>David J. Nevin</copyright>
     <lastBuildDate>Mon, 20 Jun 2022 22:04:42 +0200</lastBuildDate><atom:link href="https://www.davidjnevin.com/tags/hash-table/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hashing First Steps</title>
+      <link>https://www.davidjnevin.com/code/hashing_first_steps/</link>
+      <pubDate>Mon, 20 Jun 2022 22:04:42 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/hashing_first_steps/</guid>
+      <description>Tentative steps. Today, I took some first tentative steps into understanding Hash tables:</description>
+    </item>
+    
   </channel>
 </rss>
-

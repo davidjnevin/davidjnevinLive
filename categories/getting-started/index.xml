@@ -6,8 +6,16 @@
     <description>Recent content in Getting Started on David J Nevin</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>© 2022 David J. Nevin</copyright>
+    <copyright>David J. Nevin</copyright>
     <lastBuildDate>Wed, 22 Jun 2022 10:47:37 +0200</lastBuildDate><atom:link href="https://www.davidjnevin.com/categories/getting-started/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Vim Commands</title>
+      <link>https://www.davidjnevin.com/code/vim_commands/</link>
+      <pubDate>Wed, 22 Jun 2022 10:47:37 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/vim_commands/</guid>
+      <description>Too Many Vim Commands Getting back into Vim again and decided this time to take it slower and get the basics well in place before I try and incorporate too many commands.</description>
+    </item>
+    
   </channel>
 </rss>
-

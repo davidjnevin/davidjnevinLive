@@ -6,8 +6,43 @@
     <description>Recent content in git on David J Nevin</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>© 2022 David J. Nevin</copyright>
-    <lastBuildDate>Fri, 26 Aug 2022 22:29:09 +0200</lastBuildDate><atom:link href="https://www.davidjnevin.com/categories/git/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>David J. Nevin</copyright>
+    <lastBuildDate>Sun, 23 Oct 2022 15:23:47 +0200</lastBuildDate><atom:link href="https://www.davidjnevin.com/categories/git/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Git Exploration: Part Three</title>
+      <link>https://www.davidjnevin.com/code/git_exploration_three/</link>
+      <pubDate>Sun, 23 Oct 2022 15:23:47 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/git_exploration_three/</guid>
+      <description>Cloning a branch from GitHub To clone, or make a local copy of a repository, use:</description>
+    </item>
+    
+    <item>
+      <title>Git Exploration: Part Two</title>
+      <link>https://www.davidjnevin.com/code/git_exploration_two/</link>
+      <pubDate>Sat, 22 Oct 2022 13:54:20 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/git_exploration_two/</guid>
+      <description>Branching Branching allows us to diverge from the the primary line of work and work in isolation.</description>
+    </item>
+    
+    <item>
+      <title>Git Exploration: Part One</title>
+      <link>https://www.davidjnevin.com/code/git_exploration_one/</link>
+      <pubDate>Fri, 21 Oct 2022 14:52:52 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/git_exploration_one/</guid>
+      <description>Git Tutorial Notes Track history and work together. Distributed version control system.</description>
+    </item>
+    
+    <item>
+      <title>RSS Python Search Hugo</title>
+      <link>https://www.davidjnevin.com/code/rss_python_search_hugo/</link>
+      <pubDate>Fri, 26 Aug 2022 22:29:09 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/rss_python_search_hugo/</guid>
+      <description>Slack Community So I&amp;rsquo;ve been hanging out in the PyBites Slack Community for a few weeks.</description>
+    </item>
+    
   </channel>
 </rss>
-

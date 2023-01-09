@@ -6,8 +6,26 @@
     <description>Recent content in Displaying linked lists on David J Nevin</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>© 2022 David J. Nevin</copyright>
+    <copyright>David J. Nevin</copyright>
     <lastBuildDate>Thu, 16 Jun 2022 23:06:34 +0200</lastBuildDate><atom:link href="https://www.davidjnevin.com/series/displaying-linked-lists/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>PlantUML: First Attempts</title>
+      <link>https://www.davidjnevin.com/code/plantuml_first_attempts/</link>
+      <pubDate>Thu, 16 Jun 2022 23:06:34 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/plantuml_first_attempts/</guid>
+      <description>Let&amp;rsquo;s try out PlantUML PlantUML seems at first glance somewhat similar to Mermaid but with a wider function list.</description>
+    </item>
+    
+    <item>
+      <title>Mermaid: First Attempts</title>
+      <link>https://www.davidjnevin.com/code/mermaid_first_attempts/</link>
+      <pubDate>Thu, 16 Jun 2022 09:23:13 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/mermaid_first_attempts/</guid>
+      <description>Mermaid setup. Really basic first effort.
+I created a shortcodes folder under my theme layouts folder, adn there created a mermaid.</description>
+    </item>
+    
   </channel>
 </rss>
-
