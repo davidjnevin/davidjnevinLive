@@ -1,0 +1,1441 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<meta name="HandheldFriendly" content="True" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta name="generator" content="Hugo 0.108.0">
+
+
+  <link rel="icon" href="https://davidjnevin.com/favicon.ico">
+
+
+
+<title>Regular Expressions - David J Nevin</title>
+
+
+
+<meta name="description" content="Regular Expressions: Notes from Coursera course" />
+
+
+<meta name="keywords" content="developer, learning, regular expressions, regex" />
+
+
+<meta property="og:title" content="Regular Expressions" />
+<meta name="twitter:title" content="Regular Expressions" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.davidjnevin.com/code/regular_expressions/" /><meta property="og:description" content="Regular Expressions: Notes from Coursera course" />
+<meta name="twitter:description" content="Regular Expressions: Notes from Coursera course" /><meta name="twitter:card" content="summary" /><meta property="article:published_time" content="2023-01-09T13:54:06+01:00" /><meta property="article:modified_time" content="2023-01-09T13:54:06+01:00" />
+
+
+<style>
+    @media (prefers-color-scheme: dark) {
+        body[data-theme='auto'] img {
+            filter: brightness(60%);
+        }
+    }
+
+    body[data-theme='dark'] img {
+        filter: brightness(60%);
+    }
+</style>
+
+
+
+
+<link rel="stylesheet" href="https://www.davidjnevin.com/assets/css/fuji.min.css" />
+
+
+
+
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'G-VGVQ6SM9N7');
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VGVQ6SM9N7"></script>
+
+
+
+
+
+</head>
+
+<body
+  data-theme="auto"
+  data-theme-auto='true'
+  >
+    <script data-cfasync="false">
+  
+  var fujiThemeData = localStorage.getItem('fuji_data-theme');
+  
+  if (!fujiThemeData) {
+    localStorage.setItem('fuji_data-theme', 'auto');
+  } else {
+    
+    if (fujiThemeData !== 'auto') {
+      document.body.setAttribute('data-theme', fujiThemeData === 'dark' ? 'dark' : 'light');
+    }
+  }
+</script>
+
+    <header>
+    <div class="container-lg clearfix">
+        <div class="col-12 header">
+            <a class="title-main" href="\">David J Nevin</a> <a class="title-main" href="/code">+= Code</a>
+            
+        </div>
+    </div>
+</header>
+
+
+    <main>
+        <div class="container-lg clearfix">
+            
+            <div class="col-12 col-md-9 float-left content">
+                
+<article>
+    
+    <h1 class="post-item post-title">
+        <a href="/code/regular_expressions/">Regular Expressions</a>
+    </h1>
+    <div class="post-item post-meta">
+        <span>Last updated:&nbsp;2023-01-09</span>
+
+<span>&nbsp;1354 words</span>
+<span>&nbsp;7 minutes</span>
+
+
+    </div>
+    
+    <div class="post-content markdown-body">
+ <p>A powerful tool for my IT toolbox.</p>
+<p>A search query of text using a string. They allow us to search a text fro strings matching a specific expression.</p>
+<p>Why use regex?</p>
+<p>They a both powerful and flexible tools and offer a less brittle method to search for patterns in strings.</p>
+<h2 id="grep">Grep<a href="#grep" class="hanchor" ariaLabel="Anchor">#</a></h2>
+<p>It prints out any line that matches the query we pass it.</p>
+<p>example:</p>
+<pre><code class="language-bash">grep thon /usr/share/dict/words
+</code></pre>
+<p>The search is case sensitive. The <code>-i</code> flag sets the search as case insensitive.</p>
+<pre><code class="language-bash">grep -i python /usr/share/dict/words
+</code></pre>
+<h2 id="regular-expressions-reserved-characters">Regular Expressions Reserved Characters<a href="#regular-expressions-reserved-characters" class="hanchor" ariaLabel="Anchor">#</a></h2>
+<p>The dot <code>.</code> is a wildcard. It can be represent any character.</p>
+<pre><code class="language-bash">grep l.rts /usr/shar/dict/words
+
+# Returns:	alerts 	blurts 	flirts
+</code></pre>
+<p>The circumflex <code>^</code> denotes the beginning of a line of text, not for particular words.</p>
+<pre><code class="language-bash">grep ^fruit /usr/share/dict/words
+</code></pre>
+<p>Returns a list of words starting with <code>fruit</code>.</p>
+<p>The dollar sign <code>$</code> denotes the end of a line.</p>
+<pre><code class="language-bash">grep cat$ /usr/share/words/dict
+</code></pre>
+<p>Returns a list of words ending with cat.</p>
+<blockquote>
+<p>Note:
+Both <code>^</code> and <code>$</code> match the beginning and end of the line we are searching and not individual words in the line.</p>
+</blockquote>
+<h2 id="regex-in-python">Regex in Python<a href="#regex-in-python" class="hanchor" ariaLabel="Anchor">#</a></h2>
+<pre><code class="language-python">import re
+
+result = re.search(r&quot;aza&quot;, &quot;plaza&quot;)
+</code></pre>
+<p>The re.search function searches for the &ldquo;aza&rdquo; string in the word &ldquo;plaza&rdquo;. The &ldquo;r&rdquo; indicates that the search pattern is a <code>rawstring</code>. It&rsquo;s a good idea to always use raw strings for regular expressions in Python.</p>
+<p>The result is</p>
+<pre><code class="language-python">&lt;re.Match object; span(2, 5), match=&quot;aza&quot;&gt;
+</code></pre>
+<p>If there is no match:</p>
+<pre><code class="language-python">import re
+
+result = re.search(r&quot;aza&quot;, &quot;maze&quot;)
+</code></pre>
+<p>The result is</p>
+<pre><code class="language-python">None
+</code></pre>
+<p>Using the special characters from earlier:</p>
+<pre><code class="language-python">print( re.search(r&quot;p.ing&quot;, &quot;penguin&quot;) )
+print( re.search(r&quot;p.ing&quot;, &quot;Penguin&quot;, re.IGNORECASE ))
+</code></pre>
+<p>The second option above is the equivalent to passing the <code>-i</code> flag to grep.</p>
+<h2 id="wildcards-and-character-classes">Wildcards and Character Classes<a href="#wildcards-and-character-classes" class="hanchor" ariaLabel="Anchor">#</a></h2>
+<p>Using the square brackets, <code>[]</code> we can define a character class.</p>
+<pre><code class="language-python">print( re.search( r&quot;[Pp]ython&quot;, &quot;Python&quot;) )
+</code></pre>
+<p>This search for both &ldquo;Python&rdquo; and &ldquo;python&rdquo;.</p>
+<p>We can also use a dash, <code>-</code>, for a range of characters. For example, <code>[a-z]</code> to search for any letter.</p>
+<pre><code class="language-python">print( re.search( r&quot;[a-z]way&quot;, &quot;The end of the highway&quot;))
+</code></pre>
+<p>We can define other ranges, <code>[A-Z]</code> for all uppercase letters, of <code>[0-9]</code> for all digits. We can combine as many ranges and symbols as we want.</p>
+<pre><code class="language-python">print( re.search( r&quot;cloud[a-zA-Z0-9]&quot;, &quot;cloud9&quot;))
+</code></pre>
+<p>To exclude a character range in the search pattern we use the circumflex (<code>^</code>) inside the square brackets.</p>
+<pre><code class="language-python">print( re.search( r&quot;[^a-zA-Z]&quot;, &quot;This is a text with spaces.&quot;))
+</code></pre>
+<p>This searches for any characters that are not a letter and returns the index of the first occurrence of a space.</p>
+<p>We can also add the <code>space</code> to the list of characters we don&rsquo;t want to match.</p>
+<pre><code class="language-python">print( re.search( r&quot;[^a-zA-Z ]&quot;, &quot;This is a text with spaces.&quot;))
+</code></pre>
+<p>The above search returns the index of the full stop, <code>.</code>.</p>
+<p>To match one symbol or another, we use the pipe symbol, <code>|</code>.</p>
+<p>In each of the searches below we get a match.</p>
+<pre><code class="language-python">print( re.search( r&quot;cat|dog&quot;, &quot;There once was a cat.&quot;))
+</code></pre>
+<pre><code class="language-python">print( re.search( r&quot;cat|dog&quot;, &quot;I like dogs.&quot;))
+</code></pre>
+<pre><code class="language-python">print( re.search( r&quot;cat|dog&quot;, &quot;I like both cats and dogs.&quot;))
+</code></pre>
+<p>In this case, we only get the first match in the third search.</p>
+<p>If we want to get all matches we need to use the <code>re.findall()</code> module.</p>
+<pre><code class="language-python">print( re.findall( r&quot;cat|dog&quot;, &quot;I like both cats and dogs.&quot;))
+</code></pre>
+<p>The result is a list of the strings found.</p>
+<h2 id="repetition-qualifiers">Repetition Qualifiers<a href="#repetition-qualifiers" class="hanchor" ariaLabel="Anchor">#</a></h2>
+<p>To use the repetition qualifier, we use the <code>.*</code>, to indicate any character repeated as many times as possible including zero.</p>
+<pre><code class="language-python">print( re.search( r&quot;Py.*n&quot;, &quot;Pygmalion&quot;))
+# returns -&gt; Pygmilion
+</code></pre>
+<p>The above search, searches for any string starting with &ldquo;Py&rdquo;, proceeded by any number of any character, with &ldquo;n&rdquo; as the last character.</p>
+<pre><code class="language-python">print( re.search( r&quot;Py.*n&quot;, &quot;Python Programming&quot;))
+# returns -&gt; Python Programming, becuase the * takes as many characters as possible.
+</code></pre>
+<p>This is a demonstration of the repetition modifier being <code>greedy</code>.</p>
+<p>To only match characters, we need to use the character class.</p>
+<pre><code class="language-python">print( re.search( r&quot;Py[a-z]*n&quot;, &quot;Python Programming&quot;))
+# returns -&gt; Python, becuase the [a-z] is limited to characters a-z only.
+</code></pre>
+<p>Grep only includes the <code>*</code> repetition qualifier.</p>
+<p>Python and <code>egrep</code> include others.</p>
+<p>Where the <code>*</code> is any number of the characters before it, the <code>+</code> repetition modifier, matches one or more of the characters before it.</p>
+<pre><code class="language-python">print( re.search( r&quot;Py[a-z]+n&quot;, &quot;Python Programming&quot;))
+# returns -&gt; Python
+</code></pre>
+<pre><code class="language-python">print( re.search( r&quot;Py[a-z]+n&quot;, &quot;Pyn&quot;))
+
+# returns -&gt; None, as there must be one or more a-z characters before the `n` at the end of the result.
+</code></pre>
+<p>Let&rsquo;s try <code>o+l+</code></p>
+<pre><code class="language-python">print( re.search( r&quot;o+l+&quot;, &quot;goldfish&quot;))
+# returns -&gt; 'ol'
+print( re.search( r&quot;o+l+&quot;, &quot;woolly&quot;))
+# returns -&gt; 'ooll'
+print( re.search( r&quot;o+l+&quot;, &quot;boil&quot;))
+# returns -&gt; None,  although the string had an `o` and an 'l', it had another character between them.
+</code></pre>
+<p>To find words with at least one repetition (minimum two occurrences) of the letter A or a,</p>
+<pre><code class="language-python">print( re.search( r&quot;[Aa].*[Aa]&quot;, &quot;pineapple&quot;))
+# returns -&gt; None
+
+print( re.search( r&quot;[Aa].*[Aa]&quot;, &quot;banana&quot;))
+# returns -&gt; 'anana' (greedy!)
+</code></pre>
+<p>The question mark, <code>?</code> repetition modifier matches either zero or one occurrence of the character before it.</p>
+<pre><code class="language-python">print( re.search( r&quot;p?each&quot;, &quot;To each their own&quot;))
+# returns -&gt; each
+# The 'p' was marked as optional by using the '?'.
+</code></pre>
+<p>And when the <code>p</code> is present.</p>
+<pre><code class="language-python">print( re.search( r&quot;p?each&quot;, &quot;Do I dare to eat a peach?&quot;))
+# returns -&gt; peach
+</code></pre>
+<h2 id="escape-characters">Escape Characters<a href="#escape-characters" class="hanchor" ariaLabel="Anchor">#</a></h2>
+<p>In case of regex, the escape character is the backslash, <code>\</code>.</p>
+<p>In this case we want to find the string <code>.com</code>.</p>
+<pre><code class="language-python">print( re.search( r&quot;.com&quot;, &quot;Welcome&quot;))
+# returns -&gt; lcom
+# Not correct
+
+print( re.search( r&quot;\.com&quot;, &quot;Welcome&quot;))
+# returns -&gt; None
+# Correct
+</code></pre>
+<blockquote>
+<p>Note:
+When we see a <code>\</code> is could be escaping a special character OR is could be a special string character such as <code>\n</code>. Using raw strings avoids some of these problems, because the special characters won&rsquo;t be interpreted when generating the string, it will only be interpreted when parsing the regular expression.</p>
+</blockquote>
+<p>The <code>\w</code> is a shorthand character class that matches any alphanumeric character (including underscores). It is equivalent to the character class &ldquo;[A-Za-z0-9_]&rdquo;.</p>
+<pre><code class="language-python">print( re.search( r&quot;\w*&quot;, &quot;Welcome to the party&quot;))
+# returns -&gt; Welcome
+
+print( re.search( r&quot;\w*&quot;, &quot;Welcome_to_the_party&quot;))
+# returns -&gt; Welcome_to_the_party
+</code></pre>
+<p>The <code>\d</code> is a shorthand character class that matches any digits. It is equivalent to the character class <code>[0-9]</code>.</p>
+<p>The <code>\s</code> is a shorthand character class that matches any whitespace characters. It is equivalent to the character class <code>[ \t\r\n\f]</code>.</p>
+<p>In regular expressions, <code>\b</code> is a special character that matches a word boundary. A word boundary is the position between a word character (as defined by <code>\w</code>) and a non-word character.</p>
+<p>Note that <code>\b</code> only matches at the start or end of a word, not at the start or end of a line. To match the start or end of a line, you can use the special characters <code>^</code> and <code>$</code>, respectively.</p>
+<blockquote>
+<p>Note: A useful site to check regex is
+<a href="https://www.regex101.com" target="_blank">www.regex101.com</a>.</p>
+</blockquote>
+<h2 id="regular-expressions-in-action">Regular expressions in Action<a href="#regular-expressions-in-action" class="hanchor" ariaLabel="Anchor">#</a></h2>
+<p>Let&rsquo;s say I want to find the names of countries that start and finish with <code>a</code>.</p>
+<pre><code class="language-python">print( re.search( r&quot;A.*a&quot;, &quot;Argentina&quot;))
+# Returns match Argentina
+
+print( re.search( r&quot;A.*a&quot;, &quot;Azerbaijan&quot;))
+# returns a match Azerbaija, not what we want.
+
+# To make our seach stricter
+
+print( re.search( r&quot;^A.*a$&quot;, &quot;Azerbaijan&quot;))
+# returns None
+</code></pre>
+<p>To build a pattern to search for valid variable names.</p>
+<pre><code class="language-python"># This will be a serach pattern for a complete line.
+pattern = r&quot;
+# We want the first character to be a word character
+pattern = r&quot;^[a-zA-Z_]
+# We want the remainder (to the end) of the string to be a non space character, that is a word character.
+pattern = r&quot;^[a-zA-Z_][a-zA-Z0-9]*$&quot;
+</code></pre>
+<p>The pattern above can be used to check for valid variable names.</p>
+<pre><code class="language-python">print( re.search( pattern, &quot;_this_is_a_valid_varialbe_name&quot;))
+# Returns a match
+
+print( re.search( pattern, &quot;this is not a valid variable name&quot;))
+# returns None
+
+print( re.search( pattern, &quot;2This_is_not_valid&quot;))
+# returns None
+# The first character has to be a letter or an underscore, and not a number.
+</code></pre>
+<p>What about to check if a string is a complete sentence?
+It starts with an uppercase letter, followed by at least some lowercase letters or a space, and ends with a period, question mark, or exclamation point.</p>
+<pre><code class="language-python">result = re.search(r&quot;^[A-Z][a-z ]+[.?!]$&quot;, text)
+</code></pre>
+<p>More to follow. These are my notes from the first module of week three of the Coursera <a href="https://www.coursera.org/learn/python-operating-system/home/welcome" target="_blank">Using Python to interact with the Operating System</a> course.</p>
+
+    </div>
+</article>
+  <article class="md prev_next">
+    <hr>
+    <div>
+    
+    <div class="post_previous">
+      Previous: <a href=/code/django_templates/>Django Templates</a>
+    
+    </div>
+  </article>  <article class="md prev_next">
+    <hr>
+    
+    
+  </article>
+
+<div class="next-post">
+	
+</div>
+
+<div class="previous-post">
+	
+</div>
+
+
+
+
+            </div>
+            <aside class="col-12 col-md-3 float-left sidebar">
+    
+    
+        
+        
+            
+        
+    
+    
+    
+        
+        
+            
+        
+    
+    
+    
+        
+        
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+        
+    
+    <div class="sidebar-item sidebar-toc">
+        <h3>Table of Contents</h3><nav id="TableOfContents">
+  <ul>
+    <li><a href="#grep">Grep</a></li>
+    <li><a href="#regular-expressions-reserved-characters">Regular Expressions Reserved Characters</a></li>
+    <li><a href="#regex-in-python">Regex in Python</a></li>
+    <li><a href="#wildcards-and-character-classes">Wildcards and Character Classes</a></li>
+    <li><a href="#repetition-qualifiers">Repetition Qualifiers</a></li>
+    <li><a href="#escape-characters">Escape Characters</a></li>
+    <li><a href="#regular-expressions-in-action">Regular expressions in Action</a></li>
+  </ul>
+</nav></div>
+</aside>
+
+        </div>
+        <div class="btn">
+    <div class="btn-menu" id="btn-menu">
+        <i class="iconfont icon-grid-sharp"></i>
+    </div>
+    <div class="btn-toggle-mode">
+        <i class="iconfont icon-contrast-sharp"></i>
+    </div>
+    <div class="btn-scroll-top">
+        <i class="iconfont icon-chevron-up-circle-sharp"></i>
+    </div>
+</div>
+<aside class="sidebar-mobile" style="display: none;">
+  <div class="sidebar-wrapper">
+    
+    <div class="sidebar-item sidebar-pages">
+        <h3>Pages</h3>
+        <ul>
+            
+        </ul>
+    </div>
+    
+    <div class="sidebar-item sidebar-links">
+        <h3>Links</h3>
+        <ul>
+            
+        </ul>
+    </div>
+    
+    <div class="sidebar-item sidebar-tags">
+        <h3>Tags</h3>
+        <div>
+            
+            <span>
+                <a href="/tags/.net/">.Net</a>
+            </span>
+            
+            <span>
+                <a href="/tags/abstraction/">Abstraction</a>
+            </span>
+            
+            <span>
+                <a href="/tags/arrays/">Arrays</a>
+            </span>
+            
+            <span>
+                <a href="/tags/base-class/">Base Class</a>
+            </span>
+            
+            <span>
+                <a href="/tags/binary/">Binary</a>
+            </span>
+            
+            <span>
+                <a href="/tags/binary-search/">Binary Search</a>
+            </span>
+            
+            <span>
+                <a href="/tags/binary-tree/">Binary Tree</a>
+            </span>
+            
+            <span>
+                <a href="/tags/bites/">Bites</a>
+            </span>
+            
+            <span>
+                <a href="/tags/bitonic-point/">Bitonic Point</a>
+            </span>
+            
+            <span>
+                <a href="/tags/blazor/">Blazor</a>
+            </span>
+            
+            <span>
+                <a href="/tags/blog/">blog</a>
+            </span>
+            
+            <span>
+                <a href="/tags/branch/">branch</a>
+            </span>
+            
+            <span>
+                <a href="/tags/burnout/">Burnout</a>
+            </span>
+            
+            <span>
+                <a href="/tags/c#/">C#</a>
+            </span>
+            
+            <span>
+                <a href="/tags/celery/">celery</a>
+            </span>
+            
+            <span>
+                <a href="/tags/certificates/">Certificates</a>
+            </span>
+            
+            <span>
+                <a href="/tags/charts/">charts</a>
+            </span>
+            
+            <span>
+                <a href="/tags/check/">check</a>
+            </span>
+            
+            <span>
+                <a href="/tags/child-class/">Child Class</a>
+            </span>
+            
+            <span>
+                <a href="/tags/class/">Class</a>
+            </span>
+            
+            <span>
+                <a href="/tags/classes/">Classes</a>
+            </span>
+            
+            <span>
+                <a href="/tags/coding/">Coding</a>
+            </span>
+            
+            <span>
+                <a href="/tags/collaborating/">collaborating</a>
+            </span>
+            
+            <span>
+                <a href="/tags/collections/">Collections</a>
+            </span>
+            
+            <span>
+                <a href="/tags/commands/">Commands</a>
+            </span>
+            
+            <span>
+                <a href="/tags/community/">Community</a>
+            </span>
+            
+            <span>
+                <a href="/tags/courses/">Courses</a>
+            </span>
+            
+            <span>
+                <a href="/tags/critiquewheel/">critiquewheel</a>
+            </span>
+            
+            <span>
+                <a href="/tags/cross-reference/">cross reference</a>
+            </span>
+            
+            <span>
+                <a href="/tags/css/">CSS</a>
+            </span>
+            
+            <span>
+                <a href="/tags/data-science-linkedin-leetcode-pybites/">Data Science, LinkedIn, LeetCode, PyBites </a>
+            </span>
+            
+            <span>
+                <a href="/tags/data-structure/">Data Structure</a>
+            </span>
+            
+            <span>
+                <a href="/tags/data-types/">Data Types</a>
+            </span>
+            
+            <span>
+                <a href="/tags/deploy/">Deploy</a>
+            </span>
+            
+            <span>
+                <a href="/tags/depth/">Depth</a>
+            </span>
+            
+            <span>
+                <a href="/tags/derived-class/">Derived Class</a>
+            </span>
+            
+            <span>
+                <a href="/tags/design/">Design</a>
+            </span>
+            
+            <span>
+                <a href="/tags/design-updates/">Design Updates</a>
+            </span>
+            
+            <span>
+                <a href="/tags/developer/">developer</a>
+            </span>
+            
+            <span>
+                <a href="/tags/django/">django</a>
+            </span>
+            
+            <span>
+                <a href="/tags/docker/">docker</a>
+            </span>
+            
+            <span>
+                <a href="/tags/documentation/">documentation</a>
+            </span>
+            
+            <span>
+                <a href="/tags/duplicates/">Duplicates</a>
+            </span>
+            
+            <span>
+                <a href="/tags/educative/">Educative</a>
+            </span>
+            
+            <span>
+                <a href="/tags/encapsulation/">Encapsulation</a>
+            </span>
+            
+            <span>
+                <a href="/tags/find-closest-number/">Find Closest Number</a>
+            </span>
+            
+            <span>
+                <a href="/tags/first/">First</a>
+            </span>
+            
+            <span>
+                <a href="/tags/first-steps/">First Steps</a>
+            </span>
+            
+            <span>
+                <a href="/tags/fixed-point/">Fixed Point</a>
+            </span>
+            
+            <span>
+                <a href="/tags/flake8/">Flake8</a>
+            </span>
+            
+            <span>
+                <a href="/tags/git/">git</a>
+            </span>
+            
+            <span>
+                <a href="/tags/goyo/">Goyo</a>
+            </span>
+            
+            <span>
+                <a href="/tags/guidelines/">guidelines</a>
+            </span>
+            
+            <span>
+                <a href="/tags/hash-function/">Hash Function</a>
+            </span>
+            
+            <span>
+                <a href="/tags/hash-table/">Hash Table</a>
+            </span>
+            
+            <span>
+                <a href="/tags/hashing/">Hashing</a>
+            </span>
+            
+            <span>
+                <a href="/tags/height/">Height</a>
+            </span>
+            
+            <span>
+                <a href="/tags/hugo/">Hugo</a>
+            </span>
+            
+            <span>
+                <a href="/tags/inheritance/">Inheritance</a>
+            </span>
+            
+            <span>
+                <a href="/tags/inorder/">Inorder</a>
+            </span>
+            
+            <span>
+                <a href="/tags/interface/">Interface</a>
+            </span>
+            
+            <span>
+                <a href="/tags/learning/">learning</a>
+            </span>
+            
+            <span>
+                <a href="/tags/learning-paths/">learning paths</a>
+            </span>
+            
+            <span>
+                <a href="/tags/level-order/">Level Order</a>
+            </span>
+            
+            <span>
+                <a href="/tags/level-order-traversal/">Level Order Traversal</a>
+            </span>
+            
+            <span>
+                <a href="/tags/linkedin/">LinkedIn</a>
+            </span>
+            
+            <span>
+                <a href="/tags/lint/">lint</a>
+            </span>
+            
+            <span>
+                <a href="/tags/markdown/">Markdown</a>
+            </span>
+            
+            <span>
+                <a href="/tags/methods/">Methods</a>
+            </span>
+            
+            <span>
+                <a href="/tags/mkdocs/">mkDocs</a>
+            </span>
+            
+            <span>
+                <a href="/tags/modifiers/">Modifiers</a>
+            </span>
+            
+            <span>
+                <a href="/tags/motivation/">Motivation</a>
+            </span>
+            
+            <span>
+                <a href="/tags/next-post/">Next Post</a>
+            </span>
+            
+            <span>
+                <a href="/tags/node/">Node</a>
+            </span>
+            
+            <span>
+                <a href="/tags/notes/">notes</a>
+            </span>
+            
+            <span>
+                <a href="/tags/pair/">pair</a>
+            </span>
+            
+            <span>
+                <a href="/tags/parent-class/">Parent Class</a>
+            </span>
+            
+            <span>
+                <a href="/tags/pep8/">pep8</a>
+            </span>
+            
+            <span>
+                <a href="/tags/phases/">Phases</a>
+            </span>
+            
+            <span>
+                <a href="/tags/plantuml/">plantUML</a>
+            </span>
+            
+            <span>
+                <a href="/tags/postgres/">postgres</a>
+            </span>
+            
+            <span>
+                <a href="/tags/postorder/">Postorder</a>
+            </span>
+            
+            <span>
+                <a href="/tags/preorder/">Preorder</a>
+            </span>
+            
+            <span>
+                <a href="/tags/previous/">Previous</a>
+            </span>
+            
+            <span>
+                <a href="/tags/projects/">Projects</a>
+            </span>
+            
+            <span>
+                <a href="/tags/properties/">Properties</a>
+            </span>
+            
+            <span>
+                <a href="/tags/pybites/">Pybites</a>
+            </span>
+            
+            <span>
+                <a href="/tags/pytest/">pytest</a>
+            </span>
+            
+            <span>
+                <a href="/tags/python/">Python</a>
+            </span>
+            
+            <span>
+                <a href="/tags/razorpages/">RazorPages</a>
+            </span>
+            
+            <span>
+                <a href="/tags/readability/">readability</a>
+            </span>
+            
+            <span>
+                <a href="/tags/recent-posts/">Recent Posts</a>
+            </span>
+            
+            <span>
+                <a href="/tags/refactoring/">Refactoring</a>
+            </span>
+            
+            <span>
+                <a href="/tags/regex/">regex</a>
+            </span>
+            
+            <span>
+                <a href="/tags/regular-expressions/">regular expressions</a>
+            </span>
+            
+            <span>
+                <a href="/tags/relationship/">Relationship</a>
+            </span>
+            
+            <span>
+                <a href="/tags/render/">render</a>
+            </span>
+            
+            <span>
+                <a href="/tags/render.com/">Render.com</a>
+            </span>
+            
+            <span>
+                <a href="/tags/search/">Search</a>
+            </span>
+            
+            <span>
+                <a href="/tags/size/">Size</a>
+            </span>
+            
+            <span>
+                <a href="/tags/skills/">skills</a>
+            </span>
+            
+            <span>
+                <a href="/tags/sphinx/">sphinx</a>
+            </span>
+            
+            <span>
+                <a href="/tags/sql/">SQL</a>
+            </span>
+            
+            <span>
+                <a href="/tags/string/">String</a>
+            </span>
+            
+            <span>
+                <a href="/tags/sub-class/">Sub Class</a>
+            </span>
+            
+            <span>
+                <a href="/tags/super-class/">Super Class</a>
+            </span>
+            
+            <span>
+                <a href="/tags/syntastic/">Syntastic</a>
+            </span>
+            
+            <span>
+                <a href="/tags/taking-stock/">Taking Stock</a>
+            </span>
+            
+            <span>
+                <a href="/tags/tdd/">TDD</a>
+            </span>
+            
+            <span>
+                <a href="/tags/templates/">Templates</a>
+            </span>
+            
+            <span>
+                <a href="/tags/terminal/">Terminal</a>
+            </span>
+            
+            <span>
+                <a href="/tags/tree/">Tree</a>
+            </span>
+            
+            <span>
+                <a href="/tags/tweaks/">Tweaks</a>
+            </span>
+            
+            <span>
+                <a href="/tags/twitter/">Twitter</a>
+            </span>
+            
+            <span>
+                <a href="/tags/update/">Update</a>
+            </span>
+            
+            <span>
+                <a href="/tags/upwork/">Upwork</a>
+            </span>
+            
+            <span>
+                <a href="/tags/usability/">Usability</a>
+            </span>
+            
+            <span>
+                <a href="/tags/vale/">vale</a>
+            </span>
+            
+            <span>
+                <a href="/tags/variables/">Variables</a>
+            </span>
+            
+            <span>
+                <a href="/tags/vim/">Vim</a>
+            </span>
+            
+            <span>
+                <a href="/tags/widget/">Widget</a>
+            </span>
+            
+        </div>
+    </div>
+    
+    
+    
+    <div class="sidebar-item sidebar-toc">
+        <h3>Table of Contents</h3>
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#grep">Grep</a></li>
+    <li><a href="#regular-expressions-reserved-characters">Regular Expressions Reserved Characters</a></li>
+    <li><a href="#regex-in-python">Regex in Python</a></li>
+    <li><a href="#wildcards-and-character-classes">Wildcards and Character Classes</a></li>
+    <li><a href="#repetition-qualifiers">Repetition Qualifiers</a></li>
+    <li><a href="#escape-characters">Escape Characters</a></li>
+    <li><a href="#regular-expressions-in-action">Regular expressions in Action</a></li>
+  </ul>
+</nav>
+    </div>
+    
+    
+  </div>
+</aside>
+    </main>
+
+    <footer>
+    <div class="container-lg clearfix">
+        <div class="col-12 footer">
+            
+            <span>&copy; 2023
+              <a href="/">David J Nevin</a> 
+                
+                
+                   
+                                                    
+            </span>
+        </div>
+    </div>
+</footer>
+
+    
+<script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/prismjs@1.27.0/components/prism-core.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/prismjs@1.27.0/plugins/autoloader/prism-autoloader.min.js"></script>
+
+
+
+<script defer src="/assets/js/fuji.min.js"></script>
+
+
+
+</body>
+
+</html>
