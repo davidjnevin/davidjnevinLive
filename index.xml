@@ -9,6 +9,16 @@
     <copyright>David J. Nevin</copyright>
     <lastBuildDate>Thu, 05 Aug 2021 21:57:27 +0200</lastBuildDate><atom:link href="https://www.davidjnevin.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Regular Expressions</title>
+      <link>https://www.davidjnevin.com/code/regular_expressions/</link>
+      <pubDate>Mon, 09 Jan 2023 13:54:06 +0100</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/regular_expressions/</guid>
+      <description>A powerful tool for my IT toolbox.
+A search query of text using a string.</description>
+    </item>
+    
+    <item>
       <title>Django Templates</title>
       <link>https://www.davidjnevin.com/code/django_templates/</link>
       <pubDate>Thu, 17 Nov 2022 21:58:20 +0100</pubDate>

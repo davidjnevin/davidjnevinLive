@@ -7,7 +7,43 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>David J. Nevin</copyright>
-    <lastBuildDate>Thu, 17 Nov 2022 21:58:20 +0100</lastBuildDate><atom:link href="https://www.davidjnevin.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 09 Jan 2023 13:54:06 +0100</lastBuildDate><atom:link href="https://www.davidjnevin.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>developer</title>
+      <link>https://www.davidjnevin.com/tags/developer/</link>
+      <pubDate>Mon, 09 Jan 2023 13:54:06 +0100</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/developer/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>learning</title>
+      <link>https://www.davidjnevin.com/tags/learning/</link>
+      <pubDate>Mon, 09 Jan 2023 13:54:06 +0100</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/learning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>regex</title>
+      <link>https://www.davidjnevin.com/tags/regex/</link>
+      <pubDate>Mon, 09 Jan 2023 13:54:06 +0100</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/regex/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>regular expressions</title>
+      <link>https://www.davidjnevin.com/tags/regular-expressions/</link>
+      <pubDate>Mon, 09 Jan 2023 13:54:06 +0100</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/regular-expressions/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>blog</title>
       <link>https://www.davidjnevin.com/tags/blog/</link>
@@ -171,15 +207,6 @@
     </item>
     
     <item>
-      <title>developer</title>
-      <link>https://www.davidjnevin.com/tags/developer/</link>
-      <pubDate>Wed, 26 Oct 2022 01:40:35 +0200</pubDate>
-      
-      <guid>https://www.davidjnevin.com/tags/developer/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>git</title>
       <link>https://www.davidjnevin.com/tags/git/</link>
       <pubDate>Wed, 26 Oct 2022 01:40:35 +0200</pubDate>
@@ -203,15 +230,6 @@
       <pubDate>Sun, 23 Oct 2022 15:23:47 +0200</pubDate>
       
       <guid>https://www.davidjnevin.com/tags/collaborating/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>learning</title>
-      <link>https://www.davidjnevin.com/tags/learning/</link>
-      <pubDate>Sun, 23 Oct 2022 15:23:47 +0200</pubDate>
-      
-      <guid>https://www.davidjnevin.com/tags/learning/</guid>
       <description></description>
     </item>
     

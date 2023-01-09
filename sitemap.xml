@@ -2,10 +2,31 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://www.davidjnevin.com/tags/blog/</loc>
-    <lastmod>2022-11-17T21:58:20+01:00</lastmod>
-  </url><url>
     <loc>https://www.davidjnevin.com/categories/</loc>
+    <lastmod>2023-01-09T13:54:06+01:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/categories/choose-one-category/</loc>
+    <lastmod>2023-01-09T13:54:06+01:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/tags/developer/</loc>
+    <lastmod>2023-01-09T13:54:06+01:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/tags/learning/</loc>
+    <lastmod>2023-01-09T13:54:06+01:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/tags/regex/</loc>
+    <lastmod>2023-01-09T13:54:06+01:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/tags/regular-expressions/</loc>
+    <lastmod>2023-01-09T13:54:06+01:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/code/regular_expressions/</loc>
+    <lastmod>2023-01-09T13:54:06+01:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/tags/</loc>
+    <lastmod>2023-01-09T13:54:06+01:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/tags/blog/</loc>
     <lastmod>2022-11-17T21:58:20+01:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/tags/celery/</loc>
@@ -30,9 +51,6 @@
     <lastmod>2022-11-17T21:58:20+01:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/series/</loc>
-    <lastmod>2022-11-17T21:58:20+01:00</lastmod>
-  </url><url>
-    <loc>https://www.davidjnevin.com/tags/</loc>
     <lastmod>2022-11-17T21:58:20+01:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/tags/check/</loc>
@@ -119,9 +137,6 @@
     <loc>https://www.davidjnevin.com/tags/plantuml/</loc>
     <lastmod>2022-10-27T11:48:27+02:00</lastmod>
   </url><url>
-    <loc>https://www.davidjnevin.com/tags/developer/</loc>
-    <lastmod>2022-10-26T01:40:35+02:00</lastmod>
-  </url><url>
     <loc>https://www.davidjnevin.com/series/getting-good-at-git/</loc>
     <lastmod>2022-10-26T01:40:35+02:00</lastmod>
   </url><url>
@@ -141,9 +156,6 @@
     <lastmod>2022-10-23T15:23:47+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/code/git_exploration_three/</loc>
-    <lastmod>2022-10-23T15:23:47+02:00</lastmod>
-  </url><url>
-    <loc>https://www.davidjnevin.com/tags/learning/</loc>
     <lastmod>2022-10-23T15:23:47+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/tags/branch/</loc>
