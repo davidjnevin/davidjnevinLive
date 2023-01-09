@@ -5,9 +5,6 @@
     <loc>https://www.davidjnevin.com/categories/</loc>
     <lastmod>2023-01-09T13:54:06+01:00</lastmod>
   </url><url>
-    <loc>https://www.davidjnevin.com/categories/choose-one-category/</loc>
-    <lastmod>2023-01-09T13:54:06+01:00</lastmod>
-  </url><url>
     <loc>https://www.davidjnevin.com/tags/developer/</loc>
     <lastmod>2023-01-09T13:54:06+01:00</lastmod>
   </url><url>
@@ -18,6 +15,9 @@
     <lastmod>2023-01-09T13:54:06+01:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/tags/regular-expressions/</loc>
+    <lastmod>2023-01-09T13:54:06+01:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/categories/regular-expressions/</loc>
     <lastmod>2023-01-09T13:54:06+01:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/code/regular_expressions/</loc>
