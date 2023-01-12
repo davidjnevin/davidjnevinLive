@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>branch on David J Nevin</title>
+    <link>https://www.davidjnevin.com/tags/branch/</link>
+    <description>Recent content in branch on David J Nevin</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>David J. Nevin</copyright>
+    <lastBuildDate>Sat, 22 Oct 2022 13:54:20 +0200</lastBuildDate><atom:link href="https://www.davidjnevin.com/tags/branch/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Git Exploration: Part Two</title>
+      <link>https://www.davidjnevin.com/code/git_exploration_two/</link>
+      <pubDate>Sat, 22 Oct 2022 13:54:20 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/git_exploration_two/</guid>
+      <description>Branching Branching allows us to diverge from the the primary line of work and work in isolation.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,1341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<meta name="HandheldFriendly" content="True" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta name="generator" content="Hugo 0.108.0">
+
+
+  <link rel="icon" href="https://davidjnevin.com/favicon.ico">
+
+
+
+<title>Advanced Regular Expressions - David J Nevin</title>
+
+
+
+<meta name="description" content="My course notes for Coursea Python: Interacting with the OS" />
+
+
+<meta name="keywords" content="developer, learning" />
+
+
+<meta property="og:title" content="Advanced Regular Expressions" />
+<meta name="twitter:title" content="Advanced Regular Expressions" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.davidjnevin.com/code/advanced_regular_expressions/" /><meta property="og:description" content="My course notes for Coursea Python: Interacting with the OS" />
+<meta name="twitter:description" content="My course notes for Coursea Python: Interacting with the OS" /><meta name="twitter:card" content="summary" /><meta property="article:published_time" content="2023-01-10T11:09:59+01:00" /><meta property="article:modified_time" content="2023-01-10T11:09:59+01:00" />
+
+
+<style>
+    @media (prefers-color-scheme: dark) {
+        body[data-theme='auto'] img {
+            filter: brightness(60%);
+        }
+    }
+
+    body[data-theme='dark'] img {
+        filter: brightness(60%);
+    }
+</style>
+
+
+
+
+<link rel="stylesheet" href="https://www.davidjnevin.com/assets/css/fuji.min.css" />
+
+
+
+
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'G-VGVQ6SM9N7');
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VGVQ6SM9N7"></script>
+
+
+
+
+
+</head>
+
+<body
+  data-theme="auto"
+  data-theme-auto='true'
+  >
+    <script data-cfasync="false">
+  
+  var fujiThemeData = localStorage.getItem('fuji_data-theme');
+  
+  if (!fujiThemeData) {
+    localStorage.setItem('fuji_data-theme', 'auto');
+  } else {
+    
+    if (fujiThemeData !== 'auto') {
+      document.body.setAttribute('data-theme', fujiThemeData === 'dark' ? 'dark' : 'light');
+    }
+  }
+</script>
+
+    <header>
+    <div class="container-lg clearfix">
+        <div class="col-12 header">
+            <a class="title-main" href="\">David J Nevin</a> <a class="title-main" href="/code">+= Code</a>
+            
+        </div>
+    </div>
+</header>
+
+
+    <main>
+        <div class="container-lg clearfix">
+            
+            <div class="col-12 col-md-9 float-left content">
+                
+<article>
+    
+    <h1 class="post-item post-title">
+        <a href="/code/advanced_regular_expressions/">Advanced Regular Expressions</a>
+    </h1>
+    <div class="post-item post-meta">
+        <span>Last updated:&nbsp;2023-01-10</span>
+
+<span>&nbsp;631 words</span>
+<span>&nbsp;3 minutes</span>
+
+
+    </div>
+    
+    <div class="post-content markdown-body">
+ <h2 id="capturing-groups">Capturing Groups<a href="#capturing-groups" class="hanchor" ariaLabel="Anchor">#</a></h2>
+<p>Say we want to do more than just print or return a match, but instead want to use the result and/or manipulate it. That&rsquo;s where capture groups come into play.</p>
+<pre><code class="language-python">import re
+
+def rearrange_name(name):
+	# Use () to define capture groups.
+    result = re.search(&quot;^(\w*), (\w* [A-Z]\.)$&quot;, name)
+    if result is None:
+        return name
+    return &quot;{} {}&quot;.format(result[2], result[1])
+
+
+print(rearrange_name(&quot;Lovelace, Ada B.&quot;))
+</code></pre>
+<p>The above code, search for a last name and initial, separated from a second name by a comma and returns the results as a string of first name, followed by the initial followed by the last name. We achieve this by accessing the <code>result.groups</code> tuple. The first position is the result match, the second and third position is defined by the <code>()</code> in the search pattern. Pretty neat!</p>
+<h2 id="repetition-modifiers">Repetition Modifiers<a href="#repetition-modifiers" class="hanchor" ariaLabel="Anchor">#</a></h2>
+<p>While we can use <code>*</code>, <code>+</code>, and <code>?</code> to define characteristics of repetition, we can also request a repetition of the query or part of the query itself using the curly braces, <code>{}</code>.</p>
+<pre><code class="language-python">import re
+# search for a sequence of five letters, case insensitive.
+result = re.search( r&quot;[a-zA-Z]{5}&quot;, &quot;a whale&quot;)
+# returns whale
+
+result = re.search( r&quot;[a-zA-Z]{5}&quot;, &quot;a great white whale&quot;)
+# returns whale
+#to find all occurences we use the findall function
+
+result = re.findall( r&quot;[a-zA-Z]{5}&quot;, &quot;a great white whale appeared&quot;)
+# returns great white whale appea
+
+#To limit to exactly five letters we include word boundries
+result = re.findall( r&quot;\b[a-zA-Z]{5}\b&quot;, &quot;a great white whale appeared&quot;)
+# returns great white whale
+
+# To add a range to teh length or repetition of the sequence
+result = re.findall( r&quot;\w{5,10}&quot;, &quot;a big shot lawyer flustered the client&quot;)
+# return lawyer flustered client
+
+# The number of repetions can have no upper limit and is determined by the text searched. {5,}
+result = re.findall( r&quot;\w{5,}&quot;, &quot;a big shot lawyer flustered the client&quot;)
+# return lawyer flustered client
+
+# The maximum number of repitions letter can be set
+result = re.findall( r&quot;s\w{,5}\b&quot;, &quot;a smaller shirt size was available&quot;)
+# returns shirt size s
+# ( the letter s followed by 0 to 5 letters and a word boundary)
+
+</code></pre>
+<p>Here&rsquo;s a nice example to extract a PID and the uppercase message from log lines.</p>
+<pre><code class="language-python">import re
+
+def extract_pid(log_line):
+	regex = r&quot;\[(\d+)\]: ([A-Za-z]+)&quot;
+	result = re.search(regex, log_line)
+	# No index error if there is no match
+	if result is None:
+		return None
+	return &quot;{} ({})&quot;.format(result[1], result[2])
+
+
+print(extract_pid(&quot;July 31 07:51:48 mycomputer bad_process[12345]: ERROR Performing package upgrade&quot;))
+# 12345 (ERROR)
+
+print(extract_pid(&quot;99 elephants in a [cage]&quot;))
+# None
+
+print(extract_pid(&quot;A string that also has numbers [34567] but no uppercase message&quot;))
+# None
+
+print(extract_pid(&quot;July 31 08:08:08 mycomputer new_process[67890]: RUNNING Performing backup&quot;))
+# 67890 (RUNNING)
+</code></pre>
+<h2 id="splitting">Splitting<a href="#splitting" class="hanchor" ariaLabel="Anchor">#</a></h2>
+<p>We can use regex expressions in the split() and replace() string methods.</p>
+<pre><code class="language-python"># Split the text into sentences.
+re.split( r&quot;[.?!]&quot;, &quot;Hello! There are short phrases. Aren't there?&quot;)
+# Returns [&quot;Hello&quot;, &quot;There are short phrases&quot;, &quot;Aren't there&quot;, &quot;&quot;]
+</code></pre>
+<p>To return the characters we use to split the text we can use <code>()</code>, to create capture groups.</p>
+<pre><code class="language-python"># Split the text into sentences.
+re.split( r&quot;([.?!])&quot;, &quot;Hello! There are short phrases. Aren't there?&quot;)
+# Returns ['Hello', '!', ' There are short phrases', '.', &quot; Aren't there&quot;, '?', '']
+</code></pre>
+<h2 id="substitution">Substitution<a href="#substitution" class="hanchor" ariaLabel="Anchor">#</a></h2>
+<p>To redact email addresses in a text we could use the following:</p>
+<pre><code class="language-python">re.sub( r&quot;[\w.%+-]+@[\w.-]+&quot;, &quot;[REDACTED]&quot;, &quot;Email recieved from email@example.com&quot;)
+
+# Returns 'Email recieved from [REDACTED]'
+</code></pre>
+<p>We can use re.sub() to both search using regex and to replace using regex. From the capture groups example:</p>
+<pre><code class="language-python">import re
+
+def rearrange_name(name):
+	# Use () to define capture groups.
+    result = re.search(&quot;^(\w*), (\w* [A-Z]\.)$&quot;, name)
+    if result is None:
+        return name
+    return &quot;{} {}&quot;.format(result[2], result[1])
+
+
+print(rearrange_name(&quot;Lovelace, Ada B.&quot;))
+</code></pre>
+<pre><code class="language-python">re.sub( r&quot;^([\w .-]*), ([\w .-]*)$&quot;, r&quot;\2 \1&quot;, &quot;Lovelace, Ada&quot;)
+# Returns &quot;Ada Lovelace&quot;
+</code></pre>
+<p>The <code>\2</code> and <code>\1</code> are used in the replace query to reference the capture groups found in the search query.</p>
+
+    </div>
+</article>
+  <article class="md prev_next">
+    <hr>
+    <div>
+    
+    <div class="post_previous">
+      Previous: <a href=/code/regular_expressions/>Regular Expressions</a>
+    
+    </div>
+  </article>  <article class="md prev_next">
+    <hr>
+    
+    
+  </article>
+
+<div class="next-post">
+	
+</div>
+
+<div class="previous-post">
+	
+</div>
+
+
+
+
+            </div>
+            <aside class="col-12 col-md-3 float-left sidebar">
+    
+    
+        
+        
+            
+        
+    
+    
+    
+        
+        
+            
+        
+    
+    
+    
+        
+        
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+        
+    
+    <div class="sidebar-item sidebar-toc">
+        <h3>Table of Contents</h3><nav id="TableOfContents">
+  <ul>
+    <li><a href="#capturing-groups">Capturing Groups</a></li>
+    <li><a href="#repetition-modifiers">Repetition Modifiers</a></li>
+    <li><a href="#splitting">Splitting</a></li>
+    <li><a href="#substitution">Substitution</a></li>
+  </ul>
+</nav></div>
+</aside>
+
+        </div>
+        <div class="btn">
+    <div class="btn-menu" id="btn-menu">
+        <i class="iconfont icon-grid-sharp"></i>
+    </div>
+    <div class="btn-toggle-mode">
+        <i class="iconfont icon-contrast-sharp"></i>
+    </div>
+    <div class="btn-scroll-top">
+        <i class="iconfont icon-chevron-up-circle-sharp"></i>
+    </div>
+</div>
+<aside class="sidebar-mobile" style="display: none;">
+  <div class="sidebar-wrapper">
+    
+    <div class="sidebar-item sidebar-pages">
+        <h3>Pages</h3>
+        <ul>
+            
+        </ul>
+    </div>
+    
+    <div class="sidebar-item sidebar-links">
+        <h3>Links</h3>
+        <ul>
+            
+        </ul>
+    </div>
+    
+    <div class="sidebar-item sidebar-tags">
+        <h3>Tags</h3>
+        <div>
+            
+            <span>
+                <a href="/tags/.net/">.Net</a>
+            </span>
+            
+            <span>
+                <a href="/tags/abstraction/">Abstraction</a>
+            </span>
+            
+            <span>
+                <a href="/tags/arrays/">Arrays</a>
+            </span>
+            
+            <span>
+                <a href="/tags/base-class/">Base Class</a>
+            </span>
+            
+            <span>
+                <a href="/tags/binary/">Binary</a>
+            </span>
+            
+            <span>
+                <a href="/tags/binary-search/">Binary Search</a>
+            </span>
+            
+            <span>
+                <a href="/tags/binary-tree/">Binary Tree</a>
+            </span>
+            
+            <span>
+                <a href="/tags/bites/">Bites</a>
+            </span>
+            
+            <span>
+                <a href="/tags/bitonic-point/">Bitonic Point</a>
+            </span>
+            
+            <span>
+                <a href="/tags/blazor/">Blazor</a>
+            </span>
+            
+            <span>
+                <a href="/tags/blog/">blog</a>
+            </span>
+            
+            <span>
+                <a href="/tags/branch/">branch</a>
+            </span>
+            
+            <span>
+                <a href="/tags/burnout/">Burnout</a>
+            </span>
+            
+            <span>
+                <a href="/tags/c#/">C#</a>
+            </span>
+            
+            <span>
+                <a href="/tags/celery/">celery</a>
+            </span>
+            
+            <span>
+                <a href="/tags/certificates/">Certificates</a>
+            </span>
+            
+            <span>
+                <a href="/tags/charts/">charts</a>
+            </span>
+            
+            <span>
+                <a href="/tags/check/">check</a>
+            </span>
+            
+            <span>
+                <a href="/tags/child-class/">Child Class</a>
+            </span>
+            
+            <span>
+                <a href="/tags/class/">Class</a>
+            </span>
+            
+            <span>
+                <a href="/tags/classes/">Classes</a>
+            </span>
+            
+            <span>
+                <a href="/tags/coding/">Coding</a>
+            </span>
+            
+            <span>
+                <a href="/tags/collaborating/">collaborating</a>
+            </span>
+            
+            <span>
+                <a href="/tags/collections/">Collections</a>
+            </span>
+            
+            <span>
+                <a href="/tags/commands/">Commands</a>
+            </span>
+            
+            <span>
+                <a href="/tags/community/">Community</a>
+            </span>
+            
+            <span>
+                <a href="/tags/courses/">Courses</a>
+            </span>
+            
+            <span>
+                <a href="/tags/critiquewheel/">critiquewheel</a>
+            </span>
+            
+            <span>
+                <a href="/tags/cross-reference/">cross reference</a>
+            </span>
+            
+            <span>
+                <a href="/tags/css/">CSS</a>
+            </span>
+            
+            <span>
+                <a href="/tags/data-science-linkedin-leetcode-pybites/">Data Science, LinkedIn, LeetCode, PyBites </a>
+            </span>
+            
+            <span>
+                <a href="/tags/data-structure/">Data Structure</a>
+            </span>
+            
+            <span>
+                <a href="/tags/data-types/">Data Types</a>
+            </span>
+            
+            <span>
+                <a href="/tags/deploy/">Deploy</a>
+            </span>
+            
+            <span>
+                <a href="/tags/depth/">Depth</a>
+            </span>
+            
+            <span>
+                <a href="/tags/derived-class/">Derived Class</a>
+            </span>
+            
+            <span>
+                <a href="/tags/design/">Design</a>
+            </span>
+            
+            <span>
+                <a href="/tags/design-updates/">Design Updates</a>
+            </span>
+            
+            <span>
+                <a href="/tags/developer/">developer</a>
+            </span>
+            
+            <span>
+                <a href="/tags/django/">django</a>
+            </span>
+            
+            <span>
+                <a href="/tags/docker/">docker</a>
+            </span>
+            
+            <span>
+                <a href="/tags/documentation/">documentation</a>
+            </span>
+            
+            <span>
+                <a href="/tags/duplicates/">Duplicates</a>
+            </span>
+            
+            <span>
+                <a href="/tags/educative/">Educative</a>
+            </span>
+            
+            <span>
+                <a href="/tags/encapsulation/">Encapsulation</a>
+            </span>
+            
+            <span>
+                <a href="/tags/find-closest-number/">Find Closest Number</a>
+            </span>
+            
+            <span>
+                <a href="/tags/first/">First</a>
+            </span>
+            
+            <span>
+                <a href="/tags/first-steps/">First Steps</a>
+            </span>
+            
+            <span>
+                <a href="/tags/fixed-point/">Fixed Point</a>
+            </span>
+            
+            <span>
+                <a href="/tags/flake8/">Flake8</a>
+            </span>
+            
+            <span>
+                <a href="/tags/git/">git</a>
+            </span>
+            
+            <span>
+                <a href="/tags/goyo/">Goyo</a>
+            </span>
+            
+            <span>
+                <a href="/tags/guidelines/">guidelines</a>
+            </span>
+            
+            <span>
+                <a href="/tags/hash-function/">Hash Function</a>
+            </span>
+            
+            <span>
+                <a href="/tags/hash-table/">Hash Table</a>
+            </span>
+            
+            <span>
+                <a href="/tags/hashing/">Hashing</a>
+            </span>
+            
+            <span>
+                <a href="/tags/height/">Height</a>
+            </span>
+            
+            <span>
+                <a href="/tags/hugo/">Hugo</a>
+            </span>
+            
+            <span>
+                <a href="/tags/inheritance/">Inheritance</a>
+            </span>
+            
+            <span>
+                <a href="/tags/inorder/">Inorder</a>
+            </span>
+            
+            <span>
+                <a href="/tags/interface/">Interface</a>
+            </span>
+            
+            <span>
+                <a href="/tags/learning/">learning</a>
+            </span>
+            
+            <span>
+                <a href="/tags/learning-paths/">learning paths</a>
+            </span>
+            
+            <span>
+                <a href="/tags/level-order/">Level Order</a>
+            </span>
+            
+            <span>
+                <a href="/tags/level-order-traversal/">Level Order Traversal</a>
+            </span>
+            
+            <span>
+                <a href="/tags/linkedin/">LinkedIn</a>
+            </span>
+            
+            <span>
+                <a href="/tags/lint/">lint</a>
+            </span>
+            
+            <span>
+                <a href="/tags/markdown/">Markdown</a>
+            </span>
+            
+            <span>
+                <a href="/tags/methods/">Methods</a>
+            </span>
+            
+            <span>
+                <a href="/tags/mkdocs/">mkDocs</a>
+            </span>
+            
+            <span>
+                <a href="/tags/modifiers/">Modifiers</a>
+            </span>
+            
+            <span>
+                <a href="/tags/motivation/">Motivation</a>
+            </span>
+            
+            <span>
+                <a href="/tags/next-post/">Next Post</a>
+            </span>
+            
+            <span>
+                <a href="/tags/node/">Node</a>
+            </span>
+            
+            <span>
+                <a href="/tags/notes/">notes</a>
+            </span>
+            
+            <span>
+                <a href="/tags/pair/">pair</a>
+            </span>
+            
+            <span>
+                <a href="/tags/parent-class/">Parent Class</a>
+            </span>
+            
+            <span>
+                <a href="/tags/pep8/">pep8</a>
+            </span>
+            
+            <span>
+                <a href="/tags/phases/">Phases</a>
+            </span>
+            
+            <span>
+                <a href="/tags/plantuml/">plantUML</a>
+            </span>
+            
+            <span>
+                <a href="/tags/postgres/">postgres</a>
+            </span>
+            
+            <span>
+                <a href="/tags/postorder/">Postorder</a>
+            </span>
+            
+            <span>
+                <a href="/tags/preorder/">Preorder</a>
+            </span>
+            
+            <span>
+                <a href="/tags/previous/">Previous</a>
+            </span>
+            
+            <span>
+                <a href="/tags/projects/">Projects</a>
+            </span>
+            
+            <span>
+                <a href="/tags/properties/">Properties</a>
+            </span>
+            
+            <span>
+                <a href="/tags/pybites/">Pybites</a>
+            </span>
+            
+            <span>
+                <a href="/tags/pytest/">pytest</a>
+            </span>
+            
+            <span>
+                <a href="/tags/python/">Python</a>
+            </span>
+            
+            <span>
+                <a href="/tags/razorpages/">RazorPages</a>
+            </span>
+            
+            <span>
+                <a href="/tags/readability/">readability</a>
+            </span>
+            
+            <span>
+                <a href="/tags/recent-posts/">Recent Posts</a>
+            </span>
+            
+            <span>
+                <a href="/tags/refactoring/">Refactoring</a>
+            </span>
+            
+            <span>
+                <a href="/tags/regex/">regex</a>
+            </span>
+            
+            <span>
+                <a href="/tags/regular-expressions/">regular expressions</a>
+            </span>
+            
+            <span>
+                <a href="/tags/relationship/">Relationship</a>
+            </span>
+            
+            <span>
+                <a href="/tags/render/">render</a>
+            </span>
+            
+            <span>
+                <a href="/tags/render.com/">Render.com</a>
+            </span>
+            
+            <span>
+                <a href="/tags/search/">Search</a>
+            </span>
+            
+            <span>
+                <a href="/tags/size/">Size</a>
+            </span>
+            
+            <span>
+                <a href="/tags/skills/">skills</a>
+            </span>
+            
+            <span>
+                <a href="/tags/sphinx/">sphinx</a>
+            </span>
+            
+            <span>
+                <a href="/tags/sql/">SQL</a>
+            </span>
+            
+            <span>
+                <a href="/tags/string/">String</a>
+            </span>
+            
+            <span>
+                <a href="/tags/sub-class/">Sub Class</a>
+            </span>
+            
+            <span>
+                <a href="/tags/super-class/">Super Class</a>
+            </span>
+            
+            <span>
+                <a href="/tags/syntastic/">Syntastic</a>
+            </span>
+            
+            <span>
+                <a href="/tags/taking-stock/">Taking Stock</a>
+            </span>
+            
+            <span>
+                <a href="/tags/tdd/">TDD</a>
+            </span>
+            
+            <span>
+                <a href="/tags/templates/">Templates</a>
+            </span>
+            
+            <span>
+                <a href="/tags/terminal/">Terminal</a>
+            </span>
+            
+            <span>
+                <a href="/tags/tree/">Tree</a>
+            </span>
+            
+            <span>
+                <a href="/tags/tweaks/">Tweaks</a>
+            </span>
+            
+            <span>
+                <a href="/tags/twitter/">Twitter</a>
+            </span>
+            
+            <span>
+                <a href="/tags/update/">Update</a>
+            </span>
+            
+            <span>
+                <a href="/tags/upwork/">Upwork</a>
+            </span>
+            
+            <span>
+                <a href="/tags/usability/">Usability</a>
+            </span>
+            
+            <span>
+                <a href="/tags/vale/">vale</a>
+            </span>
+            
+            <span>
+                <a href="/tags/variables/">Variables</a>
+            </span>
+            
+            <span>
+                <a href="/tags/vim/">Vim</a>
+            </span>
+            
+            <span>
+                <a href="/tags/widget/">Widget</a>
+            </span>
+            
+        </div>
+    </div>
+    
+    
+    
+    <div class="sidebar-item sidebar-toc">
+        <h3>Table of Contents</h3>
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#capturing-groups">Capturing Groups</a></li>
+    <li><a href="#repetition-modifiers">Repetition Modifiers</a></li>
+    <li><a href="#splitting">Splitting</a></li>
+    <li><a href="#substitution">Substitution</a></li>
+  </ul>
+</nav>
+    </div>
+    
+    
+  </div>
+</aside>
+    </main>
+
+    <footer>
+    <div class="container-lg clearfix">
+        <div class="col-12 footer">
+            
+            <span>&copy; 2023
+              <a href="/">David J Nevin</a> 
+                
+                
+                   
+                                                    
+            </span>
+        </div>
+    </div>
+</footer>
+
+    
+<script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/prismjs@1.27.0/components/prism-core.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/prismjs@1.27.0/plugins/autoloader/prism-autoloader.min.js"></script>
+
+
+
+<script defer src="/assets/js/fuji.min.js"></script>
+
+
+
+</body>
+
+</html>

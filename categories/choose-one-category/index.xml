@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>choose one category on David J Nevin</title>
+    <link>https://www.davidjnevin.com/categories/choose-one-category/</link>
+    <description>Recent content in choose one category on David J Nevin</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>David J. Nevin</copyright>
+    <lastBuildDate>Mon, 09 Jan 2023 13:54:06 +0100</lastBuildDate><atom:link href="https://www.davidjnevin.com/categories/choose-one-category/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Regular Expressions</title>
+      <link>https://www.davidjnevin.com/code/regular_expressions/</link>
+      <pubDate>Mon, 09 Jan 2023 13:54:06 +0100</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/regular_expressions/</guid>
+      <description>A powerful tool for my IT toolbox.
+A search query of text using a string.</description>
+    </item>
+    
+  </channel>
+</rss>

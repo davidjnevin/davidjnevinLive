@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>skills on David J Nevin</title>
+    <link>https://www.davidjnevin.com/tags/skills/</link>
+    <description>Recent content in skills on David J Nevin</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>David J. Nevin</copyright>
+    <lastBuildDate>Wed, 26 Oct 2022 01:40:35 +0200</lastBuildDate><atom:link href="https://www.davidjnevin.com/tags/skills/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Git Exploration: Part Four</title>
+      <link>https://www.davidjnevin.com/code/git_exploration_four/</link>
+      <pubDate>Wed, 26 Oct 2022 01:40:35 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/git_exploration_four/</guid>
+      <description>Rewriting History Golden Rule: Don&amp;rsquo;t rewrite public history.
+To undo local commits, use:</description>
+    </item>
+    
+  </channel>
+</rss>

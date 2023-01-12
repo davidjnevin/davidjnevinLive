@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>git on David J Nevin</title>
+    <link>https://www.davidjnevin.com/tags/git/</link>
+    <description>Recent content in git on David J Nevin</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>David J. Nevin</copyright>
+    <lastBuildDate>Wed, 26 Oct 2022 01:40:35 +0200</lastBuildDate><atom:link href="https://www.davidjnevin.com/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Git Exploration: Part Four</title>
+      <link>https://www.davidjnevin.com/code/git_exploration_four/</link>
+      <pubDate>Wed, 26 Oct 2022 01:40:35 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/git_exploration_four/</guid>
+      <description>Rewriting History Golden Rule: Don&amp;rsquo;t rewrite public history.
+To undo local commits, use:</description>
+    </item>
+    
+    <item>
+      <title>Git Exploration: Part Three</title>
+      <link>https://www.davidjnevin.com/code/git_exploration_three/</link>
+      <pubDate>Sun, 23 Oct 2022 15:23:47 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/git_exploration_three/</guid>
+      <description>Cloning a branch from GitHub To clone, or make a local copy of a repository, use:</description>
+    </item>
+    
+    <item>
+      <title>Git Exploration: Part Two</title>
+      <link>https://www.davidjnevin.com/code/git_exploration_two/</link>
+      <pubDate>Sat, 22 Oct 2022 13:54:20 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/git_exploration_two/</guid>
+      <description>Branching Branching allows us to diverge from the the primary line of work and work in isolation.</description>
+    </item>
+    
+    <item>
+      <title>Git Exploration: Part One</title>
+      <link>https://www.davidjnevin.com/code/git_exploration_one/</link>
+      <pubDate>Fri, 21 Oct 2022 14:52:52 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/git_exploration_one/</guid>
+      <description>Git Tutorial Notes Track history and work together. Distributed version control system.</description>
+    </item>
+    
+    <item>
+      <title>Pair Programming: First Steps</title>
+      <link>https://www.davidjnevin.com/code/pair_programming_first_steps/</link>
+      <pubDate>Sun, 16 Oct 2022 12:46:10 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/pair_programming_first_steps/</guid>
+      <description>One thing I have learned it that note taking only works if you take good notes.</description>
+    </item>
+    
+  </channel>
+</rss>

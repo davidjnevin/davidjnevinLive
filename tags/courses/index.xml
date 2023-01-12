@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Courses on David J Nevin</title>
+    <link>https://www.davidjnevin.com/tags/courses/</link>
+    <description>Recent content in Courses on David J Nevin</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>David J. Nevin</copyright>
+    <lastBuildDate>Wed, 29 Jun 2022 23:28:06 +0200</lastBuildDate><atom:link href="https://www.davidjnevin.com/tags/courses/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Where I&#39;m at</title>
+      <link>https://www.davidjnevin.com/code/where_im_at_june_29/</link>
+      <pubDate>Wed, 29 Jun 2022 23:28:06 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/where_im_at_june_29/</guid>
+      <description>It&amp;rsquo;s been a full few days The Educative OOP course is almost done.</description>
+    </item>
+    
+  </channel>
+</rss>

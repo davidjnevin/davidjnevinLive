@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>notes on David J Nevin</title>
+    <link>https://www.davidjnevin.com/tags/notes/</link>
+    <description>Recent content in notes on David J Nevin</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>David J. Nevin</copyright>
+    <lastBuildDate>Fri, 21 Oct 2022 14:52:52 +0200</lastBuildDate><atom:link href="https://www.davidjnevin.com/tags/notes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Git Exploration: Part One</title>
+      <link>https://www.davidjnevin.com/code/git_exploration_one/</link>
+      <pubDate>Fri, 21 Oct 2022 14:52:52 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/git_exploration_one/</guid>
+      <description>Git Tutorial Notes Track history and work together. Distributed version control system.</description>
+    </item>
+    
+    <item>
+      <title>Pair Programming: First Steps</title>
+      <link>https://www.davidjnevin.com/code/pair_programming_first_steps/</link>
+      <pubDate>Sun, 16 Oct 2022 12:46:10 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/pair_programming_first_steps/</guid>
+      <description>One thing I have learned it that note taking only works if you take good notes.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>learning on David J Nevin</title>
+    <link>https://www.davidjnevin.com/tags/learning/</link>
+    <description>Recent content in learning on David J Nevin</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>David J. Nevin</copyright>
+    <lastBuildDate>Tue, 10 Jan 2023 11:09:59 +0100</lastBuildDate><atom:link href="https://www.davidjnevin.com/tags/learning/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Advanced Regular Expressions</title>
+      <link>https://www.davidjnevin.com/code/advanced_regular_expressions/</link>
+      <pubDate>Tue, 10 Jan 2023 11:09:59 +0100</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/advanced_regular_expressions/</guid>
+      <description>Capturing Groups Say we want to do more than just print or return a match, but instead want to use the result and/or manipulate it.</description>
+    </item>
+    
+    <item>
+      <title>Regular Expressions</title>
+      <link>https://www.davidjnevin.com/code/regular_expressions/</link>
+      <pubDate>Mon, 09 Jan 2023 13:54:06 +0100</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/regular_expressions/</guid>
+      <description>A powerful tool for my IT toolbox.
+A search query of text using a string.</description>
+    </item>
+    
+    <item>
+      <title>Git Exploration: Part Three</title>
+      <link>https://www.davidjnevin.com/code/git_exploration_three/</link>
+      <pubDate>Sun, 23 Oct 2022 15:23:47 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/git_exploration_three/</guid>
+      <description>Cloning a branch from GitHub To clone, or make a local copy of a repository, use:</description>
+    </item>
+    
+    <item>
+      <title>Git Exploration: Part Two</title>
+      <link>https://www.davidjnevin.com/code/git_exploration_two/</link>
+      <pubDate>Sat, 22 Oct 2022 13:54:20 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/git_exploration_two/</guid>
+      <description>Branching Branching allows us to diverge from the the primary line of work and work in isolation.</description>
+    </item>
+    
+    <item>
+      <title>Git Exploration: Part One</title>
+      <link>https://www.davidjnevin.com/code/git_exploration_one/</link>
+      <pubDate>Fri, 21 Oct 2022 14:52:52 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/git_exploration_one/</guid>
+      <description>Git Tutorial Notes Track history and work together. Distributed version control system.</description>
+    </item>
+    
+    <item>
+      <title>RSS Python Search Hugo</title>
+      <link>https://www.davidjnevin.com/code/rss_python_search_hugo/</link>
+      <pubDate>Fri, 26 Aug 2022 22:29:09 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/rss_python_search_hugo/</guid>
+      <description>Slack Community So I&amp;rsquo;ve been hanging out in the PyBites Slack Community for a few weeks.</description>
+    </item>
+    
+    <item>
+      <title>Back at It</title>
+      <link>https://www.davidjnevin.com/code/back_at_it/</link>
+      <pubDate>Thu, 28 Jul 2022 19:30:38 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/back_at_it/</guid>
+      <description>Sometimes it takes more than Motivation Lessons learned:
+It&amp;rsquo;s so easy to fall out of practice A short break, to catch up on some reading, a delve into some other interests and lo-and-behold I felt almost back at stage one when I tried to do a Leetcode exercise</description>
+    </item>
+    
+  </channel>
+</rss>
