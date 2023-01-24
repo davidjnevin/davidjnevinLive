@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>collaborating on David J Nevin</title>
+    <link>https://www.davidjnevin.com/tags/collaborating/</link>
+    <description>Recent content in collaborating on David J Nevin</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>David J. Nevin</copyright>
+    <lastBuildDate>Sun, 23 Oct 2022 15:23:47 +0200</lastBuildDate><atom:link href="https://www.davidjnevin.com/tags/collaborating/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Git Exploration: Part Three</title>
+      <link>https://www.davidjnevin.com/code/git_exploration_three/</link>
+      <pubDate>Sun, 23 Oct 2022 15:23:47 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/git_exploration_three/</guid>
+      <description>Cloning a branch from GitHub To clone, or make a local copy of a repository, use:</description>
+    </item>
+    
+  </channel>
+</rss>

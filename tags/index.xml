@@ -7,11 +7,11 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>David J. Nevin</copyright>
-    <lastBuildDate>Tue, 10 Jan 2023 11:09:59 +0100</lastBuildDate><atom:link href="https://www.davidjnevin.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 24 Jan 2023 10:45:18 +0100</lastBuildDate><atom:link href="https://www.davidjnevin.com/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>developer</title>
       <link>https://www.davidjnevin.com/tags/developer/</link>
-      <pubDate>Tue, 10 Jan 2023 11:09:59 +0100</pubDate>
+      <pubDate>Tue, 24 Jan 2023 10:45:18 +0100</pubDate>
       
       <guid>https://www.davidjnevin.com/tags/developer/</guid>
       <description></description>
@@ -20,9 +20,36 @@
     <item>
       <title>learning</title>
       <link>https://www.davidjnevin.com/tags/learning/</link>
-      <pubDate>Tue, 10 Jan 2023 11:09:59 +0100</pubDate>
+      <pubDate>Tue, 24 Jan 2023 10:45:18 +0100</pubDate>
       
       <guid>https://www.davidjnevin.com/tags/learning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>psutil</title>
+      <link>https://www.davidjnevin.com/tags/psutil/</link>
+      <pubDate>Tue, 24 Jan 2023 10:45:18 +0100</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/psutil/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>shutil</title>
+      <link>https://www.davidjnevin.com/tags/shutil/</link>
+      <pubDate>Tue, 24 Jan 2023 10:45:18 +0100</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/shutil/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sockets</title>
+      <link>https://www.davidjnevin.com/tags/sockets/</link>
+      <pubDate>Tue, 24 Jan 2023 10:45:18 +0100</pubDate>
+      
+      <guid>https://www.davidjnevin.com/tags/sockets/</guid>
       <description></description>
     </item>
     

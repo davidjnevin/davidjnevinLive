@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>postgres on David J Nevin</title>
+    <link>https://www.davidjnevin.com/tags/postgres/</link>
+    <description>Recent content in postgres on David J Nevin</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>David J. Nevin</copyright>
+    <lastBuildDate>Mon, 19 Sep 2022 19:03:47 +0200</lastBuildDate><atom:link href="https://www.davidjnevin.com/tags/postgres/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Django Users, Login &amp; Registration</title>
+      <link>https://www.davidjnevin.com/code/django_users_registration/</link>
+      <pubDate>Mon, 19 Sep 2022 19:03:47 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/django_users_registration/</guid>
+      <description>The user functionality is created in a seperate app. This project uses built-in user functionality to keep things managable for my first attempts.</description>
+    </item>
+    
+    <item>
+      <title>Django Delete Items</title>
+      <link>https://www.davidjnevin.com/code/django_delete_items/</link>
+      <pubDate>Thu, 15 Sep 2022 18:21:34 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/django_delete_items/</guid>
+      <description>Deleting a listing Again we follow the same pattern as before.</description>
+    </item>
+    
+    <item>
+      <title>Django Edit Items</title>
+      <link>https://www.davidjnevin.com/code/django_edit_delete_items/</link>
+      <pubDate>Thu, 15 Sep 2022 00:52:16 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/django_edit_delete_items/</guid>
+      <description>Editing items in the PostgreSQL DB The pattern now is as before.</description>
+    </item>
+    
+    <item>
+      <title>Django Individual Item Page</title>
+      <link>https://www.davidjnevin.com/code/django_individual_item_page/</link>
+      <pubDate>Wed, 14 Sep 2022 18:07:41 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/django_individual_item_page/</guid>
+      <description>Next step is to setup an individual item page. This tutorial is giving me a some good insights into the Critique Wheel rewrite.</description>
+    </item>
+    
+    <item>
+      <title>Django Dynamic Content</title>
+      <link>https://www.davidjnevin.com/code/django_dynamic_content/</link>
+      <pubDate>Wed, 14 Sep 2022 13:31:27 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/django_dynamic_content/</guid>
+      <description>Day 2: Dynamic Content A few useful django db queries:</description>
+    </item>
+    
+    <item>
+      <title>Django Next Steps</title>
+      <link>https://www.davidjnevin.com/code/django_next_steps/</link>
+      <pubDate>Tue, 13 Sep 2022 20:40:43 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/django_next_steps/</guid>
+      <description>Poetry and Django So poetry is up and running. Django is up and running, and I&amp;rsquo;ve added a simple listing app into the Django project.</description>
+    </item>
+    
+    <item>
+      <title>Django Games First Steps</title>
+      <link>https://www.davidjnevin.com/code/django_games_first_steps/</link>
+      <pubDate>Tue, 13 Sep 2022 15:53:11 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/django_games_first_steps/</guid>
+      <description>Getting a project up and running I had an interesting conversation this morning with Bob from Pybites.</description>
+    </item>
+    
+  </channel>
+</rss>

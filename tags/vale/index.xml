@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>vale on David J Nevin</title>
+    <link>https://www.davidjnevin.com/tags/vale/</link>
+    <description>Recent content in vale on David J Nevin</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>David J. Nevin</copyright>
+    <lastBuildDate>Thu, 10 Nov 2022 15:55:36 +0100</lastBuildDate><atom:link href="https://www.davidjnevin.com/tags/vale/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Vale Lint Setup</title>
+      <link>https://www.davidjnevin.com/code/vale-lint-setup/</link>
+      <pubDate>Thu, 10 Nov 2022 15:55:36 +0100</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/vale-lint-setup/</guid>
+      <description>Vale Prose Linting With sphinx up and running, the next step is getting the prose linter setup and configured.</description>
+    </item>
+    
+  </channel>
+</rss>

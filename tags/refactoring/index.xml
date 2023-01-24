@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Refactoring on David J Nevin</title>
+    <link>https://www.davidjnevin.com/tags/refactoring/</link>
+    <description>Recent content in Refactoring on David J Nevin</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>David J. Nevin</copyright>
+    <lastBuildDate>Sat, 30 Jul 2022 13:29:21 +0200</lastBuildDate><atom:link href="https://www.davidjnevin.com/tags/refactoring/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Test Driven Development: First Steps</title>
+      <link>https://www.davidjnevin.com/code/test_driven_development_first_steps/</link>
+      <pubDate>Sat, 30 Jul 2022 13:29:21 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/test_driven_development_first_steps/</guid>
+      <description>Test Driven Development (A cure for Refactor-phobia) There is an entire C# application running at CritiqueWheel.</description>
+    </item>
+    
+  </channel>
+</rss>
