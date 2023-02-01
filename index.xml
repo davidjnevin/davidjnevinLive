@@ -18,6 +18,15 @@
     </item>
     
     <item>
+      <title>Advanced Regular Expressions</title>
+      <link>https://www.davidjnevin.com/code/advanced_regular_expressions/</link>
+      <pubDate>Tue, 10 Jan 2023 11:09:59 +0100</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/advanced_regular_expressions/</guid>
+      <description>Capturing Groups Say we want to do more than just print or return a match, but instead want to use the result and/or manipulate it.</description>
+    </item>
+    
+    <item>
       <title>Regular Expressions</title>
       <link>https://www.davidjnevin.com/code/regular_expressions/</link>
       <pubDate>Mon, 09 Jan 2023 13:54:06 +0100</pubDate>
