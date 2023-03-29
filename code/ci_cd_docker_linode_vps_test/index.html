@@ -1,0 +1,1459 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<meta name="HandheldFriendly" content="True" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta name="generator" content="Hugo 0.110.0">
+
+
+  <link rel="icon" href="https://davidjnevin.com/favicon.ico">
+
+
+
+<title>Github Actions CI/CD Docker Linode VPS Test - David J Nevin</title>
+
+
+
+
+<meta name="keywords" content="learning, CI/CD, Docker, Linode, VPS, Github Actions" />
+
+
+<meta property="og:title" content="Github Actions CI/CD Docker Linode VPS Test" />
+<meta name="twitter:title" content="Github Actions CI/CD Docker Linode VPS Test" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.davidjnevin.com/code/ci_cd_docker_linode_vps_test/" /><meta property="og:description" content="Goal The goal here is to setup a local development dockerized python project that utilises CI/CD to my linode VPS." />
+<meta name="twitter:description" content="Goal The goal here is to setup a local development dockerized python project that utilises CI/CD to my linode VPS." /><meta name="twitter:card" content="summary" /><meta property="article:published_time" content="2023-03-29T11:31:15+02:00" /><meta property="article:modified_time" content="2023-03-29T11:31:15+02:00" />
+
+
+<style>
+    @media (prefers-color-scheme: dark) {
+        body[data-theme='auto'] img {
+            filter: brightness(60%);
+        }
+    }
+
+    body[data-theme='dark'] img {
+        filter: brightness(60%);
+    }
+</style>
+
+
+
+
+<link rel="stylesheet" href="https://www.davidjnevin.com/assets/css/fuji.min.css" />
+
+
+
+
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'G-VGVQ6SM9N7');
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VGVQ6SM9N7"></script>
+
+
+
+
+
+</head>
+
+<body
+  data-theme="auto"
+  data-theme-auto='true'
+  >
+    <script data-cfasync="false">
+  
+  var fujiThemeData = localStorage.getItem('fuji_data-theme');
+  
+  if (!fujiThemeData) {
+    localStorage.setItem('fuji_data-theme', 'auto');
+  } else {
+    
+    if (fujiThemeData !== 'auto') {
+      document.body.setAttribute('data-theme', fujiThemeData === 'dark' ? 'dark' : 'light');
+    }
+  }
+</script>
+
+    <header>
+    <div class="container-lg clearfix">
+        <div class="col-12 header">
+            <a class="title-main" href="\">David J Nevin</a> <a class="title-main" href="/code">+= Code</a>
+            
+        </div>
+    </div>
+</header>
+
+
+    <main>
+        <div class="container-lg clearfix">
+            
+            <div class="col-12 col-md-9 float-left content">
+                
+<article>
+    
+    <h1 class="post-item post-title">
+        <a href="/code/ci_cd_docker_linode_vps_test/">Github Actions CI/CD Docker Linode VPS Test</a>
+    </h1>
+    <div class="post-item post-meta">
+        <span>Last updated:&nbsp;2023-03-29</span>
+
+<span>&nbsp;697 words</span>
+<span>&nbsp;4 minutes</span>
+
+
+    </div>
+    
+    <div class="post-content markdown-body">
+ <h2 id="goal">Goal<a href="#goal" class="hanchor" ariaLabel="Anchor">#</a></h2>
+<p>The goal here is to setup a local development <code>dockerized</code> python project that utilises <code>CI/CD</code> to my <code>linode VPS</code>.</p>
+<h2 id="first-step">First Step<a href="#first-step" class="hanchor" ariaLabel="Anchor">#</a></h2>
+<p>First step is to get a simple local app running in a docker container.
+I&rsquo;ve chosen the <code>streamlit</code>  example app. (This is an app that I&rsquo;ve previously dockerized and tested on the server. I want at this point to minimise the potential problems.)</p>
+<h2 id="first-problem">First Problem<a href="#first-problem" class="hanchor" ariaLabel="Anchor">#</a></h2>
+<p>The first problem I ran into was that <code>github</code> wouldn&rsquo;t recognise my push requests. It seems <code>github</code> had changed their ssh key. More information here <a href="https://github.blog/2023-03-23-we-updated-our-rsa-ssh-host-key/" target="_blank">https://github.blog/2023-03-23-we-updated-our-rsa-ssh-host-key/</a></p>
+<p>Once I got that sorted, I was ready to move forward.</p>
+<h2 id="test-for-local-development">Test for local development<a href="#test-for-local-development" class="hanchor" ariaLabel="Anchor">#</a></h2>
+<p>However, my <code>streamlit</code> example was pulling directly from the streamlit example git repo. So, I cloned locally, and updated the <code>Dockerfile</code> to use a local file rather than pull from a git repo.</p>
+<p>This did bring up some interesting use cases for the future. #TODO</p>
+<h2 id="faster-build">Faster Build<a href="#faster-build" class="hanchor" ariaLabel="Anchor">#</a></h2>
+<p>I used a split up <code>COPY</code> command to allow my docker build to cache the <code>pip</code> install requirements and then copy the <code>streamlit-example.py</code> file if changed.</p>
+<p>This greatly sped up the build time.</p>
+<p>My finished <code>Dockerfile</code> was:</p>
+<pre><code class="language-dockerfile"># Dockerfile
+
+FROM python:3.9-slim
+
+WORKDIR /app
+
+RUN apt-get update &amp;&amp; apt-get install -y \
+    build-essential \
+    curl \
+    software-properties-common \
+    git \
+    &amp;&amp; rm -rf /var/lib/apt/lists/*
+
+COPY /app/requirements.txt .
+
+RUN pip3 install -r requirements.txt
+
+COPY /app .
+# EXPOSE 8501
+
+# HEALTHCHECK CMD curl --fail http://localhost:8080/_stcore/health
+
+ENTRYPOINT [&quot;streamlit&quot;, &quot;run&quot;, &quot;streamlit_app.py&quot;]
+
+</code></pre>
+<p>And my <code>docker-compose.yaml</code> was:</p>
+<pre><code class="language-yaml">
+version: '3.9'
+services:
+  streamlit_example:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: streamlit_example
+    ports:
+      - '8501:8501'
+    networks:
+      - nginx_default_network
+
+networks:
+  nginx_default_network:
+    external: true
+
+</code></pre>
+<p>Here the <code>network</code> is set to the pre-established <code>nginx</code> docker network on the target <code>VPS</code>. (I&rsquo;m using <code>portainer</code> to manage my docker dockererised sites on the <code>VPS</code>)</p>
+<p>I ran the docker image locally.</p>
+<p>It built.</p>
+<p>I made some slight changes to the streamlit app file to test and rebuilt the docker image:</p>
+<pre><code class="language-bash">docker compose up --build
+</code></pre>
+<p>The changes I made to <code>streamlit_app.py</code> were applied and the image did not need to reinstall the requirements as stated in the requirements.txt.</p>
+<p>Success so far.</p>
+<h2 id="makefile">Makefile<a href="#makefile" class="hanchor" ariaLabel="Anchor">#</a></h2>
+<p>I then wrote a Makefile.</p>
+<p>If you get a  <code>*** missing separator.  Stop.</code>  Error then maybe you&rsquo;re using spaces to indent. Makefile requires <code>tab</code> to indent. Details here <a href="https://stackoverflow.com/questions/920413/make-error-missing-separator" target="_blank">https://stackoverflow.com/questions/920413/make-error-missing-separator</a></p>
+<pre><code># Makefile
+
+build:  
+    docker compose up --build -d --remove-orphans
+up:  
+    docker compose up -d
+down:  
+    docker compose down
+show_logs:  
+    docker compose logs
+
+</code></pre>
+<p>I ran the command:</p>
+<pre><code class="language-bash">make build
+</code></pre>
+<p>The docker image built, updated with changes to the <code>streamlit_app.py</code> file.</p>
+<p>Nice.</p>
+<p>I then pushed it to <code>github</code> and manually cloned it to my <code>VPS</code> into a new folder named &ldquo;streamlit&rdquo;.</p>
+<p>I needed to <code>sudo apt install make</code> to run the Makefile, but it built.</p>
+<p>I then changed the repository to private on <code>github</code> to test if it would still perform as before. It did.</p>
+<h2 id="github-actions">Github Actions<a href="#github-actions" class="hanchor" ariaLabel="Anchor">#</a></h2>
+<p>Back in my local project directory, I ran the following commands to get the <code>CI/CD</code> workflow setup. See the reference below for a full blog post on this written by Yash Prakash.</p>
+<pre><code class="language-bash">mkdir -p .github/workflows  
+touch .github/workflows/main.yml
+</code></pre>
+<pre><code class="language-yml">name: Streamlit Example CI-CD
+
+on:
+  # Triggers the workflow on push or pull request events but only for the main branch
+  
+  push:
+    branches: [main]
+  
+  pull_request:
+    branches: [main]
+  
+  # Run this workflow manually from the Actions tab on Repo homepage
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Deploy to VPS
+      uses: appleboy/ssh-action@master
+      with:
+        # VPS IP
+        host: ${{ secrets.VPS_SSH_HOST }}
+                  
+        # VPS username
+        username: ${{ secrets.VPS_SSH_USERNAME }}
+                  
+        # SSH key (copy it from your local machine)
+        key: ${{ secrets.VPS_SSH_SECRET }}
+	
+	# SSH port
+        port: ${{ secrets.VPS_SSH_PORT }}
+	
+	# passphrase
+        passphrase: ${{ secrets.VPS_SSH_PASSPHRASE }}
+	
+	script: |
+	  cd ${{ secrets.PROJECT_PATH }}
+	  git pull origin main
+	  make down
+	  make build
+</code></pre>
+<p>This lead me to setting up a limited scope <code>ssh</code> user on my <code>VPS</code> to allow this specific <code>github</code> repo to access the hosting server. #TODO short blog on this topic</p>
+<p>All the secrets were stored in the repo  <em>actions secrets and variables</em> section.</p>
+<h2 id="next-step">Next Step<a href="#next-step" class="hanchor" ariaLabel="Anchor">#</a></h2>
+<p>The next step will now be to develop a more in-depth CI/CD to function with a complex project (<code>Dockerized Django - ninja-django - API</code>) with a full suite of tests.</p>
+<h2 id="helpful-references">Helpful References:<a href="#helpful-references" class="hanchor" ariaLabel="Anchor">#</a></h2>
+<p><a href="https://towardsdatascience.com/the-easy-python-ci-cd-pipeline-using-docker-compose-and-github-actions-80498f47b341" target="_blank">https://towardsdatascience.com/the-easy-python-ci-cd-pipeline-using-docker-compose-and-github-actions-80498f47b341</a></p>
+
+    </div>
+</article>
+  <article class="md prev_next">
+    <hr>
+    <div>
+    
+    <div class="post_previous">
+      Previous: <a href=/code/linode_vps_site_recovery_after_update_portainer/>Linode VPS Site Recovery - Portainer</a>
+    
+    </div>
+  </article>  <article class="md prev_next">
+    <hr>
+    
+    
+  </article>
+
+<div class="next-post">
+	
+</div>
+
+<div class="previous-post">
+	
+</div>
+
+
+
+
+            </div>
+            <aside class="col-12 col-md-3 float-left sidebar">
+    
+    
+        
+        
+            
+        
+    
+    
+    
+        
+        
+            
+        
+    
+    
+    
+        
+        
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+        
+    
+    <div class="sidebar-item sidebar-toc">
+        <h3>Table of Contents</h3><nav id="TableOfContents">
+  <ul>
+    <li><a href="#goal">Goal</a></li>
+    <li><a href="#first-step">First Step</a></li>
+    <li><a href="#first-problem">First Problem</a></li>
+    <li><a href="#test-for-local-development">Test for local development</a></li>
+    <li><a href="#faster-build">Faster Build</a></li>
+    <li><a href="#makefile">Makefile</a></li>
+    <li><a href="#github-actions">Github Actions</a></li>
+    <li><a href="#next-step">Next Step</a></li>
+    <li><a href="#helpful-references">Helpful References:</a></li>
+  </ul>
+</nav></div>
+</aside>
+
+        </div>
+        <div class="btn">
+    <div class="btn-menu" id="btn-menu">
+        <i class="iconfont icon-grid-sharp"></i>
+    </div>
+    <div class="btn-toggle-mode">
+        <i class="iconfont icon-contrast-sharp"></i>
+    </div>
+    <div class="btn-scroll-top">
+        <i class="iconfont icon-chevron-up-circle-sharp"></i>
+    </div>
+</div>
+<aside class="sidebar-mobile" style="display: none;">
+  <div class="sidebar-wrapper">
+    
+    <div class="sidebar-item sidebar-pages">
+        <h3>Pages</h3>
+        <ul>
+            
+        </ul>
+    </div>
+    
+    <div class="sidebar-item sidebar-links">
+        <h3>Links</h3>
+        <ul>
+            
+        </ul>
+    </div>
+    
+    <div class="sidebar-item sidebar-tags">
+        <h3>Tags</h3>
+        <div>
+            
+            <span>
+                <a href="/tags/.net/">.Net</a>
+            </span>
+            
+            <span>
+                <a href="/tags/abstraction/">Abstraction</a>
+            </span>
+            
+            <span>
+                <a href="/tags/arrays/">Arrays</a>
+            </span>
+            
+            <span>
+                <a href="/tags/base-class/">Base Class</a>
+            </span>
+            
+            <span>
+                <a href="/tags/binary/">Binary</a>
+            </span>
+            
+            <span>
+                <a href="/tags/binary-search/">Binary Search</a>
+            </span>
+            
+            <span>
+                <a href="/tags/binary-tree/">Binary Tree</a>
+            </span>
+            
+            <span>
+                <a href="/tags/bites/">Bites</a>
+            </span>
+            
+            <span>
+                <a href="/tags/bitonic-point/">Bitonic Point</a>
+            </span>
+            
+            <span>
+                <a href="/tags/blazor/">Blazor</a>
+            </span>
+            
+            <span>
+                <a href="/tags/blog/">blog</a>
+            </span>
+            
+            <span>
+                <a href="/tags/branch/">branch</a>
+            </span>
+            
+            <span>
+                <a href="/tags/burnout/">Burnout</a>
+            </span>
+            
+            <span>
+                <a href="/tags/c#/">C#</a>
+            </span>
+            
+            <span>
+                <a href="/tags/celery/">celery</a>
+            </span>
+            
+            <span>
+                <a href="/tags/certificates/">Certificates</a>
+            </span>
+            
+            <span>
+                <a href="/tags/charts/">charts</a>
+            </span>
+            
+            <span>
+                <a href="/tags/check/">check</a>
+            </span>
+            
+            <span>
+                <a href="/tags/child-class/">Child Class</a>
+            </span>
+            
+            <span>
+                <a href="/tags/ci/cd/">CI/CD</a>
+            </span>
+            
+            <span>
+                <a href="/tags/class/">Class</a>
+            </span>
+            
+            <span>
+                <a href="/tags/classes/">Classes</a>
+            </span>
+            
+            <span>
+                <a href="/tags/coding/">Coding</a>
+            </span>
+            
+            <span>
+                <a href="/tags/collaborating/">collaborating</a>
+            </span>
+            
+            <span>
+                <a href="/tags/collections/">Collections</a>
+            </span>
+            
+            <span>
+                <a href="/tags/commands/">Commands</a>
+            </span>
+            
+            <span>
+                <a href="/tags/community/">Community</a>
+            </span>
+            
+            <span>
+                <a href="/tags/courses/">Courses</a>
+            </span>
+            
+            <span>
+                <a href="/tags/critiquewheel/">critiquewheel</a>
+            </span>
+            
+            <span>
+                <a href="/tags/cross-reference/">cross reference</a>
+            </span>
+            
+            <span>
+                <a href="/tags/css/">CSS</a>
+            </span>
+            
+            <span>
+                <a href="/tags/data-science-linkedin-leetcode-pybites/">Data Science, LinkedIn, LeetCode, PyBites </a>
+            </span>
+            
+            <span>
+                <a href="/tags/data-structure/">Data Structure</a>
+            </span>
+            
+            <span>
+                <a href="/tags/data-types/">Data Types</a>
+            </span>
+            
+            <span>
+                <a href="/tags/deploy/">Deploy</a>
+            </span>
+            
+            <span>
+                <a href="/tags/depth/">Depth</a>
+            </span>
+            
+            <span>
+                <a href="/tags/derived-class/">Derived Class</a>
+            </span>
+            
+            <span>
+                <a href="/tags/design/">Design</a>
+            </span>
+            
+            <span>
+                <a href="/tags/design-updates/">Design Updates</a>
+            </span>
+            
+            <span>
+                <a href="/tags/developer/">developer</a>
+            </span>
+            
+            <span>
+                <a href="/tags/django/">django</a>
+            </span>
+            
+            <span>
+                <a href="/tags/docker/">Docker</a>
+            </span>
+            
+            <span>
+                <a href="/tags/documentation/">documentation</a>
+            </span>
+            
+            <span>
+                <a href="/tags/duplicates/">Duplicates</a>
+            </span>
+            
+            <span>
+                <a href="/tags/educative/">Educative</a>
+            </span>
+            
+            <span>
+                <a href="/tags/encapsulation/">Encapsulation</a>
+            </span>
+            
+            <span>
+                <a href="/tags/find-closest-number/">Find Closest Number</a>
+            </span>
+            
+            <span>
+                <a href="/tags/first/">First</a>
+            </span>
+            
+            <span>
+                <a href="/tags/first-steps/">First Steps</a>
+            </span>
+            
+            <span>
+                <a href="/tags/fixed-point/">Fixed Point</a>
+            </span>
+            
+            <span>
+                <a href="/tags/flake8/">Flake8</a>
+            </span>
+            
+            <span>
+                <a href="/tags/git/">git</a>
+            </span>
+            
+            <span>
+                <a href="/tags/github-actions/">Github Actions</a>
+            </span>
+            
+            <span>
+                <a href="/tags/goyo/">Goyo</a>
+            </span>
+            
+            <span>
+                <a href="/tags/guidelines/">guidelines</a>
+            </span>
+            
+            <span>
+                <a href="/tags/hash-function/">Hash Function</a>
+            </span>
+            
+            <span>
+                <a href="/tags/hash-table/">Hash Table</a>
+            </span>
+            
+            <span>
+                <a href="/tags/hashing/">Hashing</a>
+            </span>
+            
+            <span>
+                <a href="/tags/height/">Height</a>
+            </span>
+            
+            <span>
+                <a href="/tags/hugo/">Hugo</a>
+            </span>
+            
+            <span>
+                <a href="/tags/inheritance/">Inheritance</a>
+            </span>
+            
+            <span>
+                <a href="/tags/inorder/">Inorder</a>
+            </span>
+            
+            <span>
+                <a href="/tags/interface/">Interface</a>
+            </span>
+            
+            <span>
+                <a href="/tags/learning/">learning</a>
+            </span>
+            
+            <span>
+                <a href="/tags/learning-paths/">learning paths</a>
+            </span>
+            
+            <span>
+                <a href="/tags/level-order/">Level Order</a>
+            </span>
+            
+            <span>
+                <a href="/tags/level-order-traversal/">Level Order Traversal</a>
+            </span>
+            
+            <span>
+                <a href="/tags/linkedin/">LinkedIn</a>
+            </span>
+            
+            <span>
+                <a href="/tags/linode/">Linode</a>
+            </span>
+            
+            <span>
+                <a href="/tags/lint/">lint</a>
+            </span>
+            
+            <span>
+                <a href="/tags/markdown/">Markdown</a>
+            </span>
+            
+            <span>
+                <a href="/tags/methods/">Methods</a>
+            </span>
+            
+            <span>
+                <a href="/tags/mkdocs/">mkDocs</a>
+            </span>
+            
+            <span>
+                <a href="/tags/modifiers/">Modifiers</a>
+            </span>
+            
+            <span>
+                <a href="/tags/motivation/">Motivation</a>
+            </span>
+            
+            <span>
+                <a href="/tags/next-post/">Next Post</a>
+            </span>
+            
+            <span>
+                <a href="/tags/node/">Node</a>
+            </span>
+            
+            <span>
+                <a href="/tags/notes/">notes</a>
+            </span>
+            
+            <span>
+                <a href="/tags/pair/">pair</a>
+            </span>
+            
+            <span>
+                <a href="/tags/parent-class/">Parent Class</a>
+            </span>
+            
+            <span>
+                <a href="/tags/pep8/">pep8</a>
+            </span>
+            
+            <span>
+                <a href="/tags/phases/">Phases</a>
+            </span>
+            
+            <span>
+                <a href="/tags/plantuml/">plantUML</a>
+            </span>
+            
+            <span>
+                <a href="/tags/portainer/">Portainer</a>
+            </span>
+            
+            <span>
+                <a href="/tags/postgres/">postgres</a>
+            </span>
+            
+            <span>
+                <a href="/tags/postorder/">Postorder</a>
+            </span>
+            
+            <span>
+                <a href="/tags/preorder/">Preorder</a>
+            </span>
+            
+            <span>
+                <a href="/tags/previous/">Previous</a>
+            </span>
+            
+            <span>
+                <a href="/tags/projects/">Projects</a>
+            </span>
+            
+            <span>
+                <a href="/tags/properties/">Properties</a>
+            </span>
+            
+            <span>
+                <a href="/tags/psutil/">psutil</a>
+            </span>
+            
+            <span>
+                <a href="/tags/pybites/">Pybites</a>
+            </span>
+            
+            <span>
+                <a href="/tags/pytest/">pytest</a>
+            </span>
+            
+            <span>
+                <a href="/tags/python/">Python</a>
+            </span>
+            
+            <span>
+                <a href="/tags/razorpages/">RazorPages</a>
+            </span>
+            
+            <span>
+                <a href="/tags/readability/">readability</a>
+            </span>
+            
+            <span>
+                <a href="/tags/recent-posts/">Recent Posts</a>
+            </span>
+            
+            <span>
+                <a href="/tags/refactoring/">Refactoring</a>
+            </span>
+            
+            <span>
+                <a href="/tags/regex/">regex</a>
+            </span>
+            
+            <span>
+                <a href="/tags/regular-expressions/">regular expressions</a>
+            </span>
+            
+            <span>
+                <a href="/tags/relationship/">Relationship</a>
+            </span>
+            
+            <span>
+                <a href="/tags/render/">render</a>
+            </span>
+            
+            <span>
+                <a href="/tags/render.com/">Render.com</a>
+            </span>
+            
+            <span>
+                <a href="/tags/search/">Search</a>
+            </span>
+            
+            <span>
+                <a href="/tags/shutil/">shutil</a>
+            </span>
+            
+            <span>
+                <a href="/tags/site-recovery/">Site recovery</a>
+            </span>
+            
+            <span>
+                <a href="/tags/size/">Size</a>
+            </span>
+            
+            <span>
+                <a href="/tags/skills/">skills</a>
+            </span>
+            
+            <span>
+                <a href="/tags/sockets/">sockets</a>
+            </span>
+            
+            <span>
+                <a href="/tags/sphinx/">sphinx</a>
+            </span>
+            
+            <span>
+                <a href="/tags/sql/">SQL</a>
+            </span>
+            
+            <span>
+                <a href="/tags/string/">String</a>
+            </span>
+            
+            <span>
+                <a href="/tags/sub-class/">Sub Class</a>
+            </span>
+            
+            <span>
+                <a href="/tags/super-class/">Super Class</a>
+            </span>
+            
+            <span>
+                <a href="/tags/syntastic/">Syntastic</a>
+            </span>
+            
+            <span>
+                <a href="/tags/taking-stock/">Taking Stock</a>
+            </span>
+            
+            <span>
+                <a href="/tags/tdd/">TDD</a>
+            </span>
+            
+            <span>
+                <a href="/tags/templates/">Templates</a>
+            </span>
+            
+            <span>
+                <a href="/tags/terminal/">Terminal</a>
+            </span>
+            
+            <span>
+                <a href="/tags/tree/">Tree</a>
+            </span>
+            
+            <span>
+                <a href="/tags/tweaks/">Tweaks</a>
+            </span>
+            
+            <span>
+                <a href="/tags/twitter/">Twitter</a>
+            </span>
+            
+            <span>
+                <a href="/tags/update/">Update</a>
+            </span>
+            
+            <span>
+                <a href="/tags/upwork/">Upwork</a>
+            </span>
+            
+            <span>
+                <a href="/tags/usability/">Usability</a>
+            </span>
+            
+            <span>
+                <a href="/tags/vale/">vale</a>
+            </span>
+            
+            <span>
+                <a href="/tags/variables/">Variables</a>
+            </span>
+            
+            <span>
+                <a href="/tags/vim/">Vim</a>
+            </span>
+            
+            <span>
+                <a href="/tags/vps/">VPS</a>
+            </span>
+            
+            <span>
+                <a href="/tags/widget/">Widget</a>
+            </span>
+            
+        </div>
+    </div>
+    
+    
+    
+    <div class="sidebar-item sidebar-toc">
+        <h3>Table of Contents</h3>
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#goal">Goal</a></li>
+    <li><a href="#first-step">First Step</a></li>
+    <li><a href="#first-problem">First Problem</a></li>
+    <li><a href="#test-for-local-development">Test for local development</a></li>
+    <li><a href="#faster-build">Faster Build</a></li>
+    <li><a href="#makefile">Makefile</a></li>
+    <li><a href="#github-actions">Github Actions</a></li>
+    <li><a href="#next-step">Next Step</a></li>
+    <li><a href="#helpful-references">Helpful References:</a></li>
+  </ul>
+</nav>
+    </div>
+    
+    
+  </div>
+</aside>
+    </main>
+
+    <footer>
+    <div class="container-lg clearfix">
+        <div class="col-12 footer">
+            
+            <span>&copy; 2023
+              <a href="/">David J Nevin</a> 
+                
+                
+                   
+                                                    
+            </span>
+        </div>
+    </div>
+</footer>
+
+    
+<script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/prismjs@1.27.0/components/prism-core.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/prismjs@1.27.0/plugins/autoloader/prism-autoloader.min.js"></script>
+
+
+
+<script defer src="/assets/js/fuji.min.js"></script>
+
+
+
+</body>
+
+</html>

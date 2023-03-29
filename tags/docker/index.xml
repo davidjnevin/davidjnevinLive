@@ -1,13 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>docker on David J Nevin</title>
+    <title>Docker on David J Nevin</title>
     <link>https://www.davidjnevin.com/tags/docker/</link>
-    <description>Recent content in docker on David J Nevin</description>
+    <description>Recent content in Docker on David J Nevin</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>David J. Nevin</copyright>
-    <lastBuildDate>Thu, 17 Nov 2022 21:58:20 +0100</lastBuildDate><atom:link href="https://www.davidjnevin.com/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 29 Mar 2023 11:31:15 +0200</lastBuildDate><atom:link href="https://www.davidjnevin.com/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Github Actions CI/CD Docker Linode VPS Test</title>
+      <link>https://www.davidjnevin.com/code/ci_cd_docker_linode_vps_test/</link>
+      <pubDate>Wed, 29 Mar 2023 11:31:15 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/ci_cd_docker_linode_vps_test/</guid>
+      <description>Goal The goal here is to setup a local development dockerized python project that utilises CI/CD to my linode VPS.</description>
+    </item>
+    
     <item>
       <title>Django Templates</title>
       <link>https://www.davidjnevin.com/code/django_templates/</link>

@@ -2,13 +2,31 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://www.davidjnevin.com/tags/docker/</loc>
+    <lastmod>2023-03-29T11:31:15+02:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/tags/github-actions/</loc>
+    <lastmod>2023-03-29T11:31:15+02:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/code/ci_cd_docker_linode_vps_test/</loc>
+    <lastmod>2023-03-29T11:31:15+02:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/tags/learning/</loc>
+    <lastmod>2023-03-29T11:31:15+02:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/tags/linode/</loc>
+    <lastmod>2023-03-29T11:31:15+02:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/tags/</loc>
+    <lastmod>2023-03-29T11:31:15+02:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/tags/vps/</loc>
+    <lastmod>2023-03-29T11:31:15+02:00</lastmod>
+  </url><url>
     <loc>https://www.davidjnevin.com/categories/</loc>
     <lastmod>2023-03-29T10:50:43+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/tags/developer/</loc>
-    <lastmod>2023-03-29T10:50:43+02:00</lastmod>
-  </url><url>
-    <loc>https://www.davidjnevin.com/tags/learning/</loc>
     <lastmod>2023-03-29T10:50:43+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/code/linode_vps_site_recovery_after_update_portainer/</loc>
@@ -24,12 +42,6 @@
     <lastmod>2023-03-29T10:50:43+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/tags/site-recovery/</loc>
-    <lastmod>2023-03-29T10:50:43+02:00</lastmod>
-  </url><url>
-    <loc>https://www.davidjnevin.com/tags/</loc>
-    <lastmod>2023-03-29T10:50:43+02:00</lastmod>
-  </url><url>
-    <loc>https://www.davidjnevin.com/tags/vps/</loc>
     <lastmod>2023-03-29T10:50:43+02:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/categories/vps/</loc>
@@ -78,9 +90,6 @@
     <lastmod>2022-11-17T21:58:20+01:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/code/django_templates/</loc>
-    <lastmod>2022-11-17T21:58:20+01:00</lastmod>
-  </url><url>
-    <loc>https://www.davidjnevin.com/tags/docker/</loc>
     <lastmod>2022-11-17T21:58:20+01:00</lastmod>
   </url><url>
     <loc>https://www.davidjnevin.com/series/getting-started-with-django/</loc>
@@ -820,5 +829,9 @@
   </url><url>
     <loc>https://www.davidjnevin.com/</loc>
     <lastmod>2021-08-05T21:57:27+02:00</lastmod>
+  </url><url>
+    <loc>https://www.davidjnevin.com/tags/ci/cd/</loc>
+  </url><url>
+    <loc>https://www.davidjnevin.com/categories/ci/cd/</loc>
   </url>
 </urlset>
