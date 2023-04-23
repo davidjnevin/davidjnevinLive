@@ -142,7 +142,7 @@ PROJECT_PATH — This is the full project path of my project’s root directory 
 <pre><code class="language-bash">scp /path_to_ssh_public_key/name_of_key.pub user@ssh_IP_address:/tmp/key_name.pub
 </code></pre>
 <p>Then when logged into my VPS, I used the following commands to add the public key to the authorized keys on my server.</p>
-<pre><code class="language-bash">cd ~/.ssh/
+<pre><code class="language-bash">cd /tmp/
 cat key_name.pub &gt;&gt; ~/.ssh/authorized_keys
 </code></pre>
 <p>There are neater and more concise ways to do this, and I believe entirely from my local machine, but this worked for me and also served a clear indicator of what I was trying to do.</p>
