@@ -1,0 +1,1363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<meta name="HandheldFriendly" content="True" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta name="generator" content="Hugo 0.110.0">
+
+
+  <link rel="icon" href="https://davidjnevin.com/favicon.ico">
+
+
+
+<title>Github Actions SSH Setup - David J Nevin</title>
+
+
+
+
+<meta name="keywords" content="developer, learning, github, actions" />
+
+
+<meta property="og:title" content="Github Actions SSH Setup" />
+<meta name="twitter:title" content="Github Actions SSH Setup" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.davidjnevin.com/code/github_action_setup/" /><meta property="og:description" content="As a reminder for my future self and anyone that might find it useful, here&rsquo;s a quick look at setting up ssh for GitHub actions." />
+<meta name="twitter:description" content="As a reminder for my future self and anyone that might find it useful, here&rsquo;s a quick look at setting up ssh for GitHub actions." /><meta name="twitter:card" content="summary" /><meta property="article:published_time" content="2023-04-23T13:49:33+02:00" /><meta property="article:modified_time" content="2023-04-23T13:49:33+02:00" />
+
+
+<style>
+    @media (prefers-color-scheme: dark) {
+        body[data-theme='auto'] img {
+            filter: brightness(60%);
+        }
+    }
+
+    body[data-theme='dark'] img {
+        filter: brightness(60%);
+    }
+</style>
+
+
+
+
+<link rel="stylesheet" href="https://www.davidjnevin.com/assets/css/fuji.min.css" />
+
+
+
+
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'G-VGVQ6SM9N7');
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VGVQ6SM9N7"></script>
+
+
+
+
+
+</head>
+
+<body
+  data-theme="auto"
+  data-theme-auto='true'
+  >
+    <script data-cfasync="false">
+  
+  var fujiThemeData = localStorage.getItem('fuji_data-theme');
+  
+  if (!fujiThemeData) {
+    localStorage.setItem('fuji_data-theme', 'auto');
+  } else {
+    
+    if (fujiThemeData !== 'auto') {
+      document.body.setAttribute('data-theme', fujiThemeData === 'dark' ? 'dark' : 'light');
+    }
+  }
+</script>
+
+    <header>
+    <div class="container-lg clearfix">
+        <div class="col-12 header">
+            <a class="title-main" href="\">David J Nevin</a> <a class="title-main" href="/code">+= Code</a>
+            
+        </div>
+    </div>
+</header>
+
+
+    <main>
+        <div class="container-lg clearfix">
+            
+            <div class="col-12 col-md-9 float-left content">
+                
+<article>
+    
+    <h1 class="post-item post-title">
+        <a href="/code/github_action_setup/">Github Actions SSH Setup</a>
+    </h1>
+    <div class="post-item post-meta">
+        <span>Last updated:&nbsp;2023-04-23</span>
+
+<span>&nbsp;460 words</span>
+<span>&nbsp;3 minutes</span>
+
+
+    </div>
+    
+    <div class="post-content markdown-body">
+ <p>As a reminder for my future self and anyone that might find it useful, here&rsquo;s a quick look at setting up ssh for GitHub actions. In this case I&rsquo;m using my <a href="https://davidnevin.net/" target="_blank">portfolio</a> as an example.</p>
+<h2 id="background">Background<a href="#background" class="hanchor" ariaLabel="Anchor">#</a></h2>
+<p>The portfolio site is build in <code>Gatsby</code>, primarily because I found a beautiful template by <a href="https://github.com/bchiang7/v4" target="_blank">Brittany Chiang</a> and was interested in trying out a little react.</p>
+<p>The build of the site is outputted to a subfolder named public and I have this set up as a git <a href="https://github.com/davidjnevin/dnevin_v2_public" target="_blank">submodule</a> of the site repo.</p>
+<p>In a <a href="/code/ci_cd_docker_linode_vps_test/">previous post</a> I wrote about setting up the GitHub actions, here I want a quick reminder of how to set up the ssh keys needed.</p>
+<h2 id="secrets-needed">Secrets needed<a href="#secrets-needed" class="hanchor" ariaLabel="Anchor">#</a></h2>
+<p>I&rsquo;m looking to create these values to use as variables in the <code>.gihub/workflow/main.yml</code> file. They&rsquo;ll all be added to the GitHub secrets for the public repo.</p>
+<pre><code>VPS_SSH_HOST — this the host IP address of my server.
+VPS_SSH_USERNAME — this is the username from my user@ipaddress login.
+VPS_SSH_SECRET — this is the private SSH key that you set up for GitHub access on your server.
+VPS_SSH_PORT — this is the port number for SSH access. A typical choice is port 22.
+SSH_PASSPHRASE — this is the passphrase I supplied during creation of the SSH key.
+PROJECT_PATH — This is the full project path of my project’s root directory on the server. `pwd` to find this when in the directory.
+</code></pre>
+<h2 id="ssh-keys">SSH Keys<a href="#ssh-keys" class="hanchor" ariaLabel="Anchor">#</a></h2>
+<p>I generated the keys on my local machine (not the server), using the following command.</p>
+<pre><code class="language-bash">ssh-keygen -b 4096 -f /path/to/my/ssh/folder/.ssh/name_i_want_for_the_key_pair
+</code></pre>
+<p>This generates both the private, which I need for <code>VPS_SSH_SECRET</code> and the public key which I need to add to my server.</p>
+<p>I choose to use a passphrase during the key generation process, as I found the GitHub actions workflow didn&rsquo;t work without it.</p>
+<h2 id="moving-the-keys">Moving the keys<a href="#moving-the-keys" class="hanchor" ariaLabel="Anchor">#</a></h2>
+<p>To get my public key to the VPS server, I used</p>
+<pre><code class="language-bash">scp /path_to_ssh_public_key/name_of_key.pub key_name.pub user@ssh_IP_address:/tmp/key_name.pub
+</code></pre>
+<p>Then when logged into my VPS, I used the following commands to add the public key to the authorized keys on my server.</p>
+<pre><code class="language-bash">cd ~/.ssh/
+cat key_name.pub &gt;&gt; ~/.ssh/authorized_keys
+</code></pre>
+<p>There are neater and more concise ways to do this, and I believe entirely from my local machine, but this worked for me and also served a clear indicator of what I was trying to do.</p>
+<h2 id="private-ssh-key">Private SSH key<a href="#private-ssh-key" class="hanchor" ariaLabel="Anchor">#</a></h2>
+<p>To get my private key data into GitHub, I used:</p>
+<pre><code class="language-bash">cat ~/.ssh/key_name | pbcopy
+</code></pre>
+<p>This copies the contents of the file into my clipboard and allowed me to simply past in the key.</p>
+<h2 id="the-rest">The rest<a href="#the-rest" class="hanchor" ariaLabel="Anchor">#</a></h2>
+<p>The rest was filling out the details for the other secrets. Running a few tests, and ensuring I was using the correct passphrase, it worked.</p>
+<p>Hope that helps future David, and anyone else that stumbles across these posts.</p>
+
+    </div>
+</article>
+  <article class="md prev_next">
+    <hr>
+    <div>
+    
+    <div class="post_previous">
+      Previous: <a href=/code/ci_cd_docker_linode_vps_test/>Github Actions CI/CD Docker Linode VPS Test</a>
+    
+    </div>
+  </article>  <article class="md prev_next">
+    <hr>
+    
+    
+  </article>
+
+<div class="next-post">
+	
+</div>
+
+<div class="previous-post">
+	
+</div>
+
+
+
+
+            </div>
+            <aside class="col-12 col-md-3 float-left sidebar">
+    
+    
+        
+        
+            
+        
+    
+    
+    
+        
+        
+            
+        
+    
+    
+    
+        
+        
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+            
+                
+            
+            
+        
+    
+    <div class="sidebar-item sidebar-toc">
+        <h3>Table of Contents</h3><nav id="TableOfContents">
+  <ul>
+    <li><a href="#background">Background</a></li>
+    <li><a href="#secrets-needed">Secrets needed</a></li>
+    <li><a href="#ssh-keys">SSH Keys</a></li>
+    <li><a href="#moving-the-keys">Moving the keys</a></li>
+    <li><a href="#private-ssh-key">Private SSH key</a></li>
+    <li><a href="#the-rest">The rest</a></li>
+  </ul>
+</nav></div>
+</aside>
+
+        </div>
+        <div class="btn">
+    <div class="btn-menu" id="btn-menu">
+        <i class="iconfont icon-grid-sharp"></i>
+    </div>
+    <div class="btn-toggle-mode">
+        <i class="iconfont icon-contrast-sharp"></i>
+    </div>
+    <div class="btn-scroll-top">
+        <i class="iconfont icon-chevron-up-circle-sharp"></i>
+    </div>
+</div>
+<aside class="sidebar-mobile" style="display: none;">
+  <div class="sidebar-wrapper">
+    
+    <div class="sidebar-item sidebar-pages">
+        <h3>Pages</h3>
+        <ul>
+            
+        </ul>
+    </div>
+    
+    <div class="sidebar-item sidebar-links">
+        <h3>Links</h3>
+        <ul>
+            
+        </ul>
+    </div>
+    
+    <div class="sidebar-item sidebar-tags">
+        <h3>Tags</h3>
+        <div>
+            
+            <span>
+                <a href="/tags/.net/">.Net</a>
+            </span>
+            
+            <span>
+                <a href="/tags/abstraction/">Abstraction</a>
+            </span>
+            
+            <span>
+                <a href="/tags/actions/">actions</a>
+            </span>
+            
+            <span>
+                <a href="/tags/arrays/">Arrays</a>
+            </span>
+            
+            <span>
+                <a href="/tags/base-class/">Base Class</a>
+            </span>
+            
+            <span>
+                <a href="/tags/binary/">Binary</a>
+            </span>
+            
+            <span>
+                <a href="/tags/binary-search/">Binary Search</a>
+            </span>
+            
+            <span>
+                <a href="/tags/binary-tree/">Binary Tree</a>
+            </span>
+            
+            <span>
+                <a href="/tags/bites/">Bites</a>
+            </span>
+            
+            <span>
+                <a href="/tags/bitonic-point/">Bitonic Point</a>
+            </span>
+            
+            <span>
+                <a href="/tags/blazor/">Blazor</a>
+            </span>
+            
+            <span>
+                <a href="/tags/blog/">blog</a>
+            </span>
+            
+            <span>
+                <a href="/tags/branch/">branch</a>
+            </span>
+            
+            <span>
+                <a href="/tags/burnout/">Burnout</a>
+            </span>
+            
+            <span>
+                <a href="/tags/c#/">C#</a>
+            </span>
+            
+            <span>
+                <a href="/tags/celery/">celery</a>
+            </span>
+            
+            <span>
+                <a href="/tags/certificates/">Certificates</a>
+            </span>
+            
+            <span>
+                <a href="/tags/charts/">charts</a>
+            </span>
+            
+            <span>
+                <a href="/tags/check/">check</a>
+            </span>
+            
+            <span>
+                <a href="/tags/child-class/">Child Class</a>
+            </span>
+            
+            <span>
+                <a href="/tags/ci/cd/">CI/CD</a>
+            </span>
+            
+            <span>
+                <a href="/tags/class/">Class</a>
+            </span>
+            
+            <span>
+                <a href="/tags/classes/">Classes</a>
+            </span>
+            
+            <span>
+                <a href="/tags/coding/">Coding</a>
+            </span>
+            
+            <span>
+                <a href="/tags/collaborating/">collaborating</a>
+            </span>
+            
+            <span>
+                <a href="/tags/collections/">Collections</a>
+            </span>
+            
+            <span>
+                <a href="/tags/commands/">Commands</a>
+            </span>
+            
+            <span>
+                <a href="/tags/community/">Community</a>
+            </span>
+            
+            <span>
+                <a href="/tags/courses/">Courses</a>
+            </span>
+            
+            <span>
+                <a href="/tags/critiquewheel/">critiquewheel</a>
+            </span>
+            
+            <span>
+                <a href="/tags/cross-reference/">cross reference</a>
+            </span>
+            
+            <span>
+                <a href="/tags/css/">CSS</a>
+            </span>
+            
+            <span>
+                <a href="/tags/data-science-linkedin-leetcode-pybites/">Data Science, LinkedIn, LeetCode, PyBites </a>
+            </span>
+            
+            <span>
+                <a href="/tags/data-structure/">Data Structure</a>
+            </span>
+            
+            <span>
+                <a href="/tags/data-types/">Data Types</a>
+            </span>
+            
+            <span>
+                <a href="/tags/deploy/">Deploy</a>
+            </span>
+            
+            <span>
+                <a href="/tags/depth/">Depth</a>
+            </span>
+            
+            <span>
+                <a href="/tags/derived-class/">Derived Class</a>
+            </span>
+            
+            <span>
+                <a href="/tags/design/">Design</a>
+            </span>
+            
+            <span>
+                <a href="/tags/design-updates/">Design Updates</a>
+            </span>
+            
+            <span>
+                <a href="/tags/developer/">developer</a>
+            </span>
+            
+            <span>
+                <a href="/tags/django/">django</a>
+            </span>
+            
+            <span>
+                <a href="/tags/docker/">Docker</a>
+            </span>
+            
+            <span>
+                <a href="/tags/documentation/">documentation</a>
+            </span>
+            
+            <span>
+                <a href="/tags/duplicates/">Duplicates</a>
+            </span>
+            
+            <span>
+                <a href="/tags/educative/">Educative</a>
+            </span>
+            
+            <span>
+                <a href="/tags/encapsulation/">Encapsulation</a>
+            </span>
+            
+            <span>
+                <a href="/tags/find-closest-number/">Find Closest Number</a>
+            </span>
+            
+            <span>
+                <a href="/tags/first/">First</a>
+            </span>
+            
+            <span>
+                <a href="/tags/first-steps/">First Steps</a>
+            </span>
+            
+            <span>
+                <a href="/tags/fixed-point/">Fixed Point</a>
+            </span>
+            
+            <span>
+                <a href="/tags/flake8/">Flake8</a>
+            </span>
+            
+            <span>
+                <a href="/tags/git/">git</a>
+            </span>
+            
+            <span>
+                <a href="/tags/github/">github</a>
+            </span>
+            
+            <span>
+                <a href="/tags/github-actions/">Github Actions</a>
+            </span>
+            
+            <span>
+                <a href="/tags/goyo/">Goyo</a>
+            </span>
+            
+            <span>
+                <a href="/tags/guidelines/">guidelines</a>
+            </span>
+            
+            <span>
+                <a href="/tags/hash-function/">Hash Function</a>
+            </span>
+            
+            <span>
+                <a href="/tags/hash-table/">Hash Table</a>
+            </span>
+            
+            <span>
+                <a href="/tags/hashing/">Hashing</a>
+            </span>
+            
+            <span>
+                <a href="/tags/height/">Height</a>
+            </span>
+            
+            <span>
+                <a href="/tags/hugo/">Hugo</a>
+            </span>
+            
+            <span>
+                <a href="/tags/inheritance/">Inheritance</a>
+            </span>
+            
+            <span>
+                <a href="/tags/inorder/">Inorder</a>
+            </span>
+            
+            <span>
+                <a href="/tags/interface/">Interface</a>
+            </span>
+            
+            <span>
+                <a href="/tags/learning/">learning</a>
+            </span>
+            
+            <span>
+                <a href="/tags/learning-paths/">learning paths</a>
+            </span>
+            
+            <span>
+                <a href="/tags/level-order/">Level Order</a>
+            </span>
+            
+            <span>
+                <a href="/tags/level-order-traversal/">Level Order Traversal</a>
+            </span>
+            
+            <span>
+                <a href="/tags/linkedin/">LinkedIn</a>
+            </span>
+            
+            <span>
+                <a href="/tags/linode/">Linode</a>
+            </span>
+            
+            <span>
+                <a href="/tags/lint/">lint</a>
+            </span>
+            
+            <span>
+                <a href="/tags/markdown/">Markdown</a>
+            </span>
+            
+            <span>
+                <a href="/tags/methods/">Methods</a>
+            </span>
+            
+            <span>
+                <a href="/tags/mkdocs/">mkDocs</a>
+            </span>
+            
+            <span>
+                <a href="/tags/modifiers/">Modifiers</a>
+            </span>
+            
+            <span>
+                <a href="/tags/motivation/">Motivation</a>
+            </span>
+            
+            <span>
+                <a href="/tags/next-post/">Next Post</a>
+            </span>
+            
+            <span>
+                <a href="/tags/node/">Node</a>
+            </span>
+            
+            <span>
+                <a href="/tags/notes/">notes</a>
+            </span>
+            
+            <span>
+                <a href="/tags/pair/">pair</a>
+            </span>
+            
+            <span>
+                <a href="/tags/parent-class/">Parent Class</a>
+            </span>
+            
+            <span>
+                <a href="/tags/pep8/">pep8</a>
+            </span>
+            
+            <span>
+                <a href="/tags/phases/">Phases</a>
+            </span>
+            
+            <span>
+                <a href="/tags/plantuml/">plantUML</a>
+            </span>
+            
+            <span>
+                <a href="/tags/portainer/">Portainer</a>
+            </span>
+            
+            <span>
+                <a href="/tags/postgres/">postgres</a>
+            </span>
+            
+            <span>
+                <a href="/tags/postorder/">Postorder</a>
+            </span>
+            
+            <span>
+                <a href="/tags/preorder/">Preorder</a>
+            </span>
+            
+            <span>
+                <a href="/tags/previous/">Previous</a>
+            </span>
+            
+            <span>
+                <a href="/tags/projects/">Projects</a>
+            </span>
+            
+            <span>
+                <a href="/tags/properties/">Properties</a>
+            </span>
+            
+            <span>
+                <a href="/tags/psutil/">psutil</a>
+            </span>
+            
+            <span>
+                <a href="/tags/pybites/">Pybites</a>
+            </span>
+            
+            <span>
+                <a href="/tags/pytest/">pytest</a>
+            </span>
+            
+            <span>
+                <a href="/tags/python/">Python</a>
+            </span>
+            
+            <span>
+                <a href="/tags/razorpages/">RazorPages</a>
+            </span>
+            
+            <span>
+                <a href="/tags/readability/">readability</a>
+            </span>
+            
+            <span>
+                <a href="/tags/recent-posts/">Recent Posts</a>
+            </span>
+            
+            <span>
+                <a href="/tags/refactoring/">Refactoring</a>
+            </span>
+            
+            <span>
+                <a href="/tags/regex/">regex</a>
+            </span>
+            
+            <span>
+                <a href="/tags/regular-expressions/">regular expressions</a>
+            </span>
+            
+            <span>
+                <a href="/tags/relationship/">Relationship</a>
+            </span>
+            
+            <span>
+                <a href="/tags/render/">render</a>
+            </span>
+            
+            <span>
+                <a href="/tags/render.com/">Render.com</a>
+            </span>
+            
+            <span>
+                <a href="/tags/search/">Search</a>
+            </span>
+            
+            <span>
+                <a href="/tags/shutil/">shutil</a>
+            </span>
+            
+            <span>
+                <a href="/tags/site-recovery/">Site recovery</a>
+            </span>
+            
+            <span>
+                <a href="/tags/size/">Size</a>
+            </span>
+            
+            <span>
+                <a href="/tags/skills/">skills</a>
+            </span>
+            
+            <span>
+                <a href="/tags/sockets/">sockets</a>
+            </span>
+            
+            <span>
+                <a href="/tags/sphinx/">sphinx</a>
+            </span>
+            
+            <span>
+                <a href="/tags/sql/">SQL</a>
+            </span>
+            
+            <span>
+                <a href="/tags/string/">String</a>
+            </span>
+            
+            <span>
+                <a href="/tags/sub-class/">Sub Class</a>
+            </span>
+            
+            <span>
+                <a href="/tags/super-class/">Super Class</a>
+            </span>
+            
+            <span>
+                <a href="/tags/syntastic/">Syntastic</a>
+            </span>
+            
+            <span>
+                <a href="/tags/taking-stock/">Taking Stock</a>
+            </span>
+            
+            <span>
+                <a href="/tags/tdd/">TDD</a>
+            </span>
+            
+            <span>
+                <a href="/tags/templates/">Templates</a>
+            </span>
+            
+            <span>
+                <a href="/tags/terminal/">Terminal</a>
+            </span>
+            
+            <span>
+                <a href="/tags/tree/">Tree</a>
+            </span>
+            
+            <span>
+                <a href="/tags/tweaks/">Tweaks</a>
+            </span>
+            
+            <span>
+                <a href="/tags/twitter/">Twitter</a>
+            </span>
+            
+            <span>
+                <a href="/tags/update/">Update</a>
+            </span>
+            
+            <span>
+                <a href="/tags/upwork/">Upwork</a>
+            </span>
+            
+            <span>
+                <a href="/tags/usability/">Usability</a>
+            </span>
+            
+            <span>
+                <a href="/tags/vale/">vale</a>
+            </span>
+            
+            <span>
+                <a href="/tags/variables/">Variables</a>
+            </span>
+            
+            <span>
+                <a href="/tags/vim/">Vim</a>
+            </span>
+            
+            <span>
+                <a href="/tags/vps/">VPS</a>
+            </span>
+            
+            <span>
+                <a href="/tags/widget/">Widget</a>
+            </span>
+            
+        </div>
+    </div>
+    
+    
+    
+    <div class="sidebar-item sidebar-toc">
+        <h3>Table of Contents</h3>
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#background">Background</a></li>
+    <li><a href="#secrets-needed">Secrets needed</a></li>
+    <li><a href="#ssh-keys">SSH Keys</a></li>
+    <li><a href="#moving-the-keys">Moving the keys</a></li>
+    <li><a href="#private-ssh-key">Private SSH key</a></li>
+    <li><a href="#the-rest">The rest</a></li>
+  </ul>
+</nav>
+    </div>
+    
+    
+  </div>
+</aside>
+    </main>
+
+    <footer>
+    <div class="container-lg clearfix">
+        <div class="col-12 footer">
+            
+            <span>&copy; 2023
+              <a href="/">David J Nevin</a> 
+                
+                
+                   
+                                                    
+            </span>
+        </div>
+    </div>
+</footer>
+
+    
+<script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/prismjs@1.27.0/components/prism-core.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/prismjs@1.27.0/plugins/autoloader/prism-autoloader.min.js"></script>
+
+
+
+<script defer src="/assets/js/fuji.min.js"></script>
+
+
+
+</body>
+
+</html>

@@ -110,7 +110,7 @@
     <div class="post-item post-meta">
         <span>Last updated:&nbsp;2023-03-29</span>
 
-<span>&nbsp;697 words</span>
+<span>&nbsp;722 words</span>
 <span>&nbsp;4 minutes</span>
 
 
@@ -189,13 +189,13 @@ networks:
 <p>If you get a  <code>*** missing separator.  Stop.</code>  Error then maybe you&rsquo;re using spaces to indent. Makefile requires <code>tab</code> to indent. Details here <a href="https://stackoverflow.com/questions/920413/make-error-missing-separator" target="_blank">https://stackoverflow.com/questions/920413/make-error-missing-separator</a></p>
 <pre><code># Makefile
 
-build:  
+build:
     docker compose up --build -d --remove-orphans
-up:  
+up:
     docker compose up -d
-down:  
+down:
     docker compose down
-show_logs:  
+show_logs:
     docker compose logs
 
 </code></pre>
@@ -209,20 +209,20 @@ show_logs:
 <p>I then changed the repository to private on <code>github</code> to test if it would still perform as before. It did.</p>
 <h2 id="github-actions">Github Actions<a href="#github-actions" class="hanchor" ariaLabel="Anchor">#</a></h2>
 <p>Back in my local project directory, I ran the following commands to get the <code>CI/CD</code> workflow setup. See the reference below for a full blog post on this written by Yash Prakash.</p>
-<pre><code class="language-bash">mkdir -p .github/workflows  
+<pre><code class="language-bash">mkdir -p .github/workflows
 touch .github/workflows/main.yml
 </code></pre>
 <pre><code class="language-yml">name: Streamlit Example CI-CD
 
 on:
   # Triggers the workflow on push or pull request events but only for the main branch
-  
+
   push:
     branches: [main]
-  
+
   pull_request:
     branches: [main]
-  
+
   # Run this workflow manually from the Actions tab on Repo homepage
   workflow_dispatch:
 
@@ -235,29 +235,30 @@ jobs:
       with:
         # VPS IP
         host: ${{ secrets.VPS_SSH_HOST }}
-                  
+
         # VPS username
         username: ${{ secrets.VPS_SSH_USERNAME }}
-                  
+
         # SSH key (copy it from your local machine)
         key: ${{ secrets.VPS_SSH_SECRET }}
-	
+
 	# SSH port
         port: ${{ secrets.VPS_SSH_PORT }}
-	
+
 	# passphrase
         passphrase: ${{ secrets.VPS_SSH_PASSPHRASE }}
-	
+
 	script: |
 	  cd ${{ secrets.PROJECT_PATH }}
 	  git pull origin main
 	  make down
 	  make build
 </code></pre>
-<p>This lead me to setting up a limited scope <code>ssh</code> user on my <code>VPS</code> to allow this specific <code>github</code> repo to access the hosting server. #TODO short blog on this topic</p>
-<p>All the secrets were stored in the repo  <em>actions secrets and variables</em> section.</p>
+<p>This lead me to setting up a limited scope <code>ssh</code> user on my <code>VPS</code> to allow this specific <code>github</code> repo to access the hosting server.</p>
+<p>I put together some notes on this <a href="/code/github_action_setup/">here</a>.</p>
 <h2 id="next-step">Next Step<a href="#next-step" class="hanchor" ariaLabel="Anchor">#</a></h2>
 <p>The next step will now be to develop a more in-depth CI/CD to function with a complex project (<code>Dockerized Django - ninja-django - API</code>) with a full suite of tests.</p>
+<p>note: On April 21st, I got my code <a href="https://www.davidnevin.net" target="_blank">portfolio</a> public git submodule to deploy and build using the same setup. It&rsquo;s still a simple static site but it was a good second test of this process.</p>
 <h2 id="helpful-references">Helpful References:<a href="#helpful-references" class="hanchor" ariaLabel="Anchor">#</a></h2>
 <p><a href="https://towardsdatascience.com/the-easy-python-ci-cd-pipeline-using-docker-compose-and-github-actions-80498f47b341" target="_blank">https://towardsdatascience.com/the-easy-python-ci-cd-pipeline-using-docker-compose-and-github-actions-80498f47b341</a></p>
 
@@ -266,6 +267,8 @@ jobs:
   <article class="md prev_next">
     <hr>
     <div>
+    <div class="post_next">
+      Next: <a href=/code/github_action_setup/>Github Actions SSH Setup</a>
     
     <div class="post_previous">
       Previous: <a href=/code/linode_vps_site_recovery_after_update_portainer/>Linode VPS Site Recovery - Portainer</a>
@@ -308,6 +311,14 @@ jobs:
     
         
         
+            
+            
+                
+            
+            
+            
+                
+            
             
             
                 
@@ -889,6 +900,10 @@ jobs:
             </span>
             
             <span>
+                <a href="/tags/actions/">actions</a>
+            </span>
+            
+            <span>
                 <a href="/tags/arrays/">Arrays</a>
             </span>
             
@@ -1086,6 +1101,10 @@ jobs:
             
             <span>
                 <a href="/tags/git/">git</a>
+            </span>
+            
+            <span>
+                <a href="/tags/github/">github</a>
             </span>
             
             <span>

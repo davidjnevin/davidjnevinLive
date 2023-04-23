@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>David J. Nevin</copyright>
-    <lastBuildDate>Wed, 29 Mar 2023 11:31:15 +0200</lastBuildDate><atom:link href="https://www.davidjnevin.com/tags/learning/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 23 Apr 2023 13:49:33 +0200</lastBuildDate><atom:link href="https://www.davidjnevin.com/tags/learning/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Github Actions SSH Setup</title>
+      <link>https://www.davidjnevin.com/code/github_action_setup/</link>
+      <pubDate>Sun, 23 Apr 2023 13:49:33 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/github_action_setup/</guid>
+      <description>As a reminder for my future self and anyone that might find it useful, here&amp;rsquo;s a quick look at setting up ssh for GitHub actions.</description>
+    </item>
+    
     <item>
       <title>Github Actions CI/CD Docker Linode VPS Test</title>
       <link>https://www.davidjnevin.com/code/ci_cd_docker_linode_vps_test/</link>

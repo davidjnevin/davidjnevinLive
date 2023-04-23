@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>choose one category on David J Nevin</title>
+    <link>https://www.davidjnevin.com/categories/choose-one-category/</link>
+    <description>Recent content in choose one category on David J Nevin</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>David J. Nevin</copyright>
+    <lastBuildDate>Sun, 23 Apr 2023 13:49:33 +0200</lastBuildDate><atom:link href="https://www.davidjnevin.com/categories/choose-one-category/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Github Actions SSH Setup</title>
+      <link>https://www.davidjnevin.com/code/github_action_setup/</link>
+      <pubDate>Sun, 23 Apr 2023 13:49:33 +0200</pubDate>
+      
+      <guid>https://www.davidjnevin.com/code/github_action_setup/</guid>
+      <description>As a reminder for my future self and anyone that might find it useful, here&amp;rsquo;s a quick look at setting up ssh for GitHub actions.</description>
+    </item>
+    
+  </channel>
+</rss>
